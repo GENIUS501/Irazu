@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="621d095d20114629882a0eccd02f89b5" Name="Diagram1">
+        <EntityTypeShape EntityType="IrazuModel.Bitacora_Movimientos" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IrazuModel.Bitacora_Sesiones" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IrazuModel.Medicamentos" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="IrazuModel.Permisos" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IrazuModel.Personal" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IrazuModel.Roles" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="IrazuModel.Tipo_Medicamentos" Width="1.5" PointX="7.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IrazuModel.UsuarioCentroDiurno" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IrazuModel.Usuarios" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <AssociationConnector Association="IrazuModel.Fk_MOVIMIENTOS_USUARIOS" ManuallyRouted="false" />
+        <AssociationConnector Association="IrazuModel.Fk_SESIONES_USUARIOS" ManuallyRouted="false" />
+        <AssociationConnector Association="IrazuModel.Fk_PRODUCTOS_TIPO" ManuallyRouted="false" />
+        <AssociationConnector Association="IrazuModel.Fk_PERMISOS_ROLES" ManuallyRouted="false" />
+        <AssociationConnector Association="IrazuModel.Fk_USUARIOS_ROLES" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

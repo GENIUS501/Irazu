@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IrazuModelStoreContainer" CdmEntityContainer="IrazuEntities">
+    <EntitySetMapping Name="Tab_Bitacora_Movimientos">
+      <EntityTypeMapping TypeName="IrazuModel.Tab_Bitacora_Movimientos">
+        <MappingFragment StoreEntitySet="Tab_Bitacora_Movimientos">
+          <ScalarProperty Name="codigo_movimiento_usuario" ColumnName="codigo_movimiento_usuario" />
+          <ScalarProperty Name="fecha_hora_movimiento" ColumnName="fecha_hora_movimiento" />
+          <ScalarProperty Name="tipo_movimiento" ColumnName="tipo_movimiento" />
+          <ScalarProperty Name="modulo" ColumnName="modulo" />
+          <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tab_Bitacora_Sesiones">
+      <EntityTypeMapping TypeName="IrazuModel.Tab_Bitacora_Sesiones">
+        <MappingFragment StoreEntitySet="Tab_Bitacora_Sesiones">
+          <ScalarProperty Name="codigo_ingreso_salida" ColumnName="codigo_ingreso_salida" />
+          <ScalarProperty Name="fecha_hora_ingreso" ColumnName="fecha_hora_ingreso" />
+          <ScalarProperty Name="fecha_hora_salida" ColumnName="fecha_hora_salida" />
+          <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tab_Clientes">
+      <EntityTypeMapping TypeName="IrazuModel.Tab_Clientes">
+        <MappingFragment StoreEntitySet="Tab_Clientes">
+          <ScalarProperty Name="ID_Cliente" ColumnName="ID_Cliente" />
+          <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Primer_Apellido" ColumnName="Primer_Apellido" />
+          <ScalarProperty Name="Segundo_Apellido" ColumnName="Segundo_Apellido" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tab_Permisos">
+      <EntityTypeMapping TypeName="IrazuModel.Tab_Permisos">
+        <MappingFragment StoreEntitySet="Tab_Permisos">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Modulo" ColumnName="Modulo" />
+          <ScalarProperty Name="Accion" ColumnName="Accion" />
+          <ScalarProperty Name="Id_Rol" ColumnName="Id_Rol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tab_Productos">
+      <EntityTypeMapping TypeName="IrazuModel.Tab_Productos">
+        <MappingFragment StoreEntitySet="Tab_Productos">
+          <ScalarProperty Name="ID_Producto" ColumnName="ID_Producto" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="ID_Tipo_Producto" ColumnName="ID_Tipo_Producto" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tab_Roles">
+      <EntityTypeMapping TypeName="IrazuModel.Tab_Roles">
+        <MappingFragment StoreEntitySet="Tab_Roles">
+          <ScalarProperty Name="Id_Rol" ColumnName="Id_Rol" />
+          <ScalarProperty Name="Nombre_Rol" ColumnName="Nombre_Rol" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tab_Tipo_Productos">
+      <EntityTypeMapping TypeName="IrazuModel.Tab_Tipo_Productos">
+        <MappingFragment StoreEntitySet="Tab_Tipo_Productos">
+          <ScalarProperty Name="ID_Tipo_Producto" ColumnName="ID_Tipo_Producto" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tab_Usuarios">
+      <EntityTypeMapping TypeName="IrazuModel.Tab_Usuarios">
+        <MappingFragment StoreEntitySet="Tab_Usuarios">
+          <ScalarProperty Name="ID_Usuario" ColumnName="ID_Usuario" />
+          <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Primer_Apellido" ColumnName="Primer_Apellido" />
+          <ScalarProperty Name="Segundo_Apellido" ColumnName="Segundo_Apellido" />
+          <ScalarProperty Name="Nombre_Usuario" ColumnName="Nombre_Usuario" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+          <ScalarProperty Name="Id_Rol" ColumnName="Id_Rol" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tab_Venta">
+      <EntityTypeMapping TypeName="IrazuModel.Tab_Venta">
+        <MappingFragment StoreEntitySet="Tab_Venta">
+          <ScalarProperty Name="ID_Usuario" ColumnName="ID_Usuario" />
+          <ScalarProperty Name="ID_Cliente" ColumnName="ID_Cliente" />
+          <ScalarProperty Name="Tipo_pago" ColumnName="Tipo_pago" />
+          <ScalarProperty Name="Numero_factura" ColumnName="Numero_factura" />
+          <ScalarProperty Name="Fecha_venta" ColumnName="Fecha_venta" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tab_Venta_detallada">
+      <EntityTypeMapping TypeName="IrazuModel.Tab_Venta_detallada">
+        <MappingFragment StoreEntitySet="Tab_Venta_detallada">
+          <ScalarProperty Name="Numero_factura" ColumnName="Numero_factura" />
+          <ScalarProperty Name="ID_Producto" ColumnName="ID_Producto" />
+          <ScalarProperty Name="Linea" ColumnName="Linea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

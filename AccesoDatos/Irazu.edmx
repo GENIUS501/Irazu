@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="IrazuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Bitacora_Movimientos">
+          <Key>
+            <PropertyRef Name="codigo_movimiento_usuario" />
+          </Key>
+          <Property Name="codigo_movimiento_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fecha_hora_movimiento" Type="datetime" Nullable="false" />
+          <Property Name="tipo_movimiento" Type="varchar" MaxLength="50" />
+          <Property Name="modulo" Type="varchar" MaxLength="20" />
+          <Property Name="Id_Usuario" Type="int" />
+        </EntityType>
+        <EntityType Name="Bitacora_Sesiones">
+          <Key>
+            <PropertyRef Name="codigo_ingreso_salida" />
+          </Key>
+          <Property Name="codigo_ingreso_salida" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fecha_hora_ingreso" Type="datetime" Nullable="false" />
+          <Property Name="fecha_hora_salida" Type="datetime" />
+          <Property Name="Id_Usuario" Type="int" />
+        </EntityType>
+        <EntityType Name="Medicamentos">
+          <Key>
+            <PropertyRef Name="ID_Medicamento" />
+          </Key>
+          <Property Name="ID_Medicamento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+          <Property Name="ID_Tipo_Medicamento" Type="int" Nullable="false" />
+          <Property Name="Precio" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Cantidad" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Permisos">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Modulo" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Accion" Type="varchar" MaxLength="27" />
+          <Property Name="Id_Rol" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Personal">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Cedula" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Primer_Apellido" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Segundo_Apellido" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Nombre_Usuario" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Genero" Type="int" Nullable="false" />
+          <Property Name="Estado" Type="int" Nullable="false" />
+          <Property Name="Telefono" Type="int" />
+          <Property Name="Correo" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Direccion" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="Id_Rol" />
+          </Key>
+          <Property Name="Id_Rol" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre_Rol" Type="varchar" MaxLength="25" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Tipo_Medicamentos">
+          <Key>
+            <PropertyRef Name="ID_Tipo_Medicamento" />
+          </Key>
+          <Property Name="ID_Tipo_Medicamento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="UsuarioCentroDiurno">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Expediente" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Cedula" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="PrimerApellido" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="SegundoApellido" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Genero" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="Familiardirecto" Type="varchar(max)" Nullable="false" />
+          <Property Name="Lugarvivienda" Type="varchar(max)" Nullable="false" />
+          <Property Name="Padecimientos" Type="varchar(max)" Nullable="false" />
+          <Property Name="Medicamentos" Type="varchar(max)" Nullable="false" />
+          <Property Name="Estado" Type="bit" />
+          <Property Name="Telefono" Type="varchar" MaxLength="8" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="ID_Usuario" />
+          </Key>
+          <Property Name="ID_Usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Cedula" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Primer_Apellido" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Segundo_Apellido" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Nombre_Usuario" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Genero" Type="int" Nullable="false" />
+          <Property Name="Id_Rol" Type="int" Nullable="false" />
+          <Property Name="Contrasena" Type="varchar(max)" Nullable="false" />
+          <Property Name="Estado" Type="int" Nullable="false" />
+          <Property Name="Telefono" Type="int" />
+          <Property Name="Correo" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <Association Name="Fk_MOVIMIENTOS_USUARIOS">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+          <End Role="Bitacora_Movimientos" Type="Self.Bitacora_Movimientos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="ID_Usuario" />
+            </Principal>
+            <Dependent Role="Bitacora_Movimientos">
+              <PropertyRef Name="Id_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_PERMISOS_ROLES">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+          <End Role="Permisos" Type="Self.Permisos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Id_Rol" />
+            </Principal>
+            <Dependent Role="Permisos">
+              <PropertyRef Name="Id_Rol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_PRODUCTOS_TIPO">
+          <End Role="Tipo_Medicamentos" Type="Self.Tipo_Medicamentos" Multiplicity="1" />
+          <End Role="Medicamentos" Type="Self.Medicamentos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tipo_Medicamentos">
+              <PropertyRef Name="ID_Tipo_Medicamento" />
+            </Principal>
+            <Dependent Role="Medicamentos">
+              <PropertyRef Name="ID_Tipo_Medicamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_SESIONES_USUARIOS">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+          <End Role="Bitacora_Sesiones" Type="Self.Bitacora_Sesiones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="ID_Usuario" />
+            </Principal>
+            <Dependent Role="Bitacora_Sesiones">
+              <PropertyRef Name="Id_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_USUARIOS_ROLES">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Id_Rol" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="Id_Rol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="IrazuModelStoreContainer">
+          <EntitySet Name="Bitacora_Movimientos" EntityType="Self.Bitacora_Movimientos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Bitacora_Sesiones" EntityType="Self.Bitacora_Sesiones" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Medicamentos" EntityType="Self.Medicamentos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Permisos" EntityType="Self.Permisos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Personal" EntityType="Self.Personal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tipo_Medicamentos" EntityType="Self.Tipo_Medicamentos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UsuarioCentroDiurno" EntityType="Self.UsuarioCentroDiurno" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="Fk_MOVIMIENTOS_USUARIOS" Association="Self.Fk_MOVIMIENTOS_USUARIOS">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Bitacora_Movimientos" EntitySet="Bitacora_Movimientos" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_PERMISOS_ROLES" Association="Self.Fk_PERMISOS_ROLES">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Permisos" EntitySet="Permisos" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_PRODUCTOS_TIPO" Association="Self.Fk_PRODUCTOS_TIPO">
+            <End Role="Tipo_Medicamentos" EntitySet="Tipo_Medicamentos" />
+            <End Role="Medicamentos" EntitySet="Medicamentos" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_SESIONES_USUARIOS" Association="Self.Fk_SESIONES_USUARIOS">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Bitacora_Sesiones" EntitySet="Bitacora_Sesiones" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_USUARIOS_ROLES" Association="Self.Fk_USUARIOS_ROLES">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="IrazuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Bitacora_Movimientos">
+          <Key>
+            <PropertyRef Name="codigo_movimiento_usuario" />
+          </Key>
+          <Property Name="codigo_movimiento_usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fecha_hora_movimiento" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="tipo_movimiento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="modulo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Id_Usuario" Type="Int32" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.Fk_MOVIMIENTOS_USUARIOS" FromRole="Bitacora_Movimientos" ToRole="Usuarios" />
+        </EntityType>
+        <EntityType Name="Bitacora_Sesiones">
+          <Key>
+            <PropertyRef Name="codigo_ingreso_salida" />
+          </Key>
+          <Property Name="codigo_ingreso_salida" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fecha_hora_ingreso" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="fecha_hora_salida" Type="DateTime" Precision="3" />
+          <Property Name="Id_Usuario" Type="Int32" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.Fk_SESIONES_USUARIOS" FromRole="Bitacora_Sesiones" ToRole="Usuarios" />
+        </EntityType>
+        <EntityType Name="Medicamentos">
+          <Key>
+            <PropertyRef Name="ID_Medicamento" />
+          </Key>
+          <Property Name="ID_Medicamento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ID_Tipo_Medicamento" Type="Int32" Nullable="false" />
+          <Property Name="Precio" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Cantidad" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Tipo_Medicamentos" Relationship="Self.Fk_PRODUCTOS_TIPO" FromRole="Medicamentos" ToRole="Tipo_Medicamentos" />
+        </EntityType>
+        <EntityType Name="Permisos">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Modulo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Accion" Type="String" MaxLength="27" FixedLength="false" Unicode="false" />
+          <Property Name="Id_Rol" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Roles" Relationship="Self.Fk_PERMISOS_ROLES" FromRole="Permisos" ToRole="Roles" />
+        </EntityType>
+        <EntityType Name="Personal">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cedula" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Primer_Apellido" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Segundo_Apellido" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nombre_Usuario" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Genero" Type="Int32" Nullable="false" />
+          <Property Name="Estado" Type="Int32" Nullable="false" />
+          <Property Name="Telefono" Type="Int32" />
+          <Property Name="Correo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Direccion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="Id_Rol" />
+          </Key>
+          <Property Name="Id_Rol" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre_Rol" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Permisos" Relationship="Self.Fk_PERMISOS_ROLES" FromRole="Roles" ToRole="Permisos" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.Fk_USUARIOS_ROLES" FromRole="Roles" ToRole="Usuarios" />
+        </EntityType>
+        <EntityType Name="Tipo_Medicamentos">
+          <Key>
+            <PropertyRef Name="ID_Tipo_Medicamento" />
+          </Key>
+          <Property Name="ID_Tipo_Medicamento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Medicamentos" Relationship="Self.Fk_PRODUCTOS_TIPO" FromRole="Tipo_Medicamentos" ToRole="Medicamentos" />
+        </EntityType>
+        <EntityType Name="UsuarioCentroDiurno">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Expediente" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Cedula" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PrimerApellido" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SegundoApellido" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Genero" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Familiardirecto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Lugarvivienda" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Padecimientos" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Medicamentos" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Estado" Type="Boolean" />
+          <Property Name="Telefono" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="ID_Usuario" />
+          </Key>
+          <Property Name="ID_Usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cedula" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Primer_Apellido" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Segundo_Apellido" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nombre_Usuario" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Genero" Type="Int32" Nullable="false" />
+          <Property Name="Id_Rol" Type="Int32" Nullable="false" />
+          <Property Name="Contrasena" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Estado" Type="Int32" Nullable="false" />
+          <Property Name="Telefono" Type="Int32" />
+          <Property Name="Correo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Bitacora_Movimientos" Relationship="Self.Fk_MOVIMIENTOS_USUARIOS" FromRole="Usuarios" ToRole="Bitacora_Movimientos" />
+          <NavigationProperty Name="Bitacora_Sesiones" Relationship="Self.Fk_SESIONES_USUARIOS" FromRole="Usuarios" ToRole="Bitacora_Sesiones" />
+          <NavigationProperty Name="Roles" Relationship="Self.Fk_USUARIOS_ROLES" FromRole="Usuarios" ToRole="Roles" />
+        </EntityType>
+        <Association Name="Fk_MOVIMIENTOS_USUARIOS">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+          <End Role="Bitacora_Movimientos" Type="Self.Bitacora_Movimientos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="ID_Usuario" />
+            </Principal>
+            <Dependent Role="Bitacora_Movimientos">
+              <PropertyRef Name="Id_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_SESIONES_USUARIOS">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+          <End Role="Bitacora_Sesiones" Type="Self.Bitacora_Sesiones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="ID_Usuario" />
+            </Principal>
+            <Dependent Role="Bitacora_Sesiones">
+              <PropertyRef Name="Id_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_PRODUCTOS_TIPO">
+          <End Role="Tipo_Medicamentos" Type="Self.Tipo_Medicamentos" Multiplicity="1" />
+          <End Role="Medicamentos" Type="Self.Medicamentos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tipo_Medicamentos">
+              <PropertyRef Name="ID_Tipo_Medicamento" />
+            </Principal>
+            <Dependent Role="Medicamentos">
+              <PropertyRef Name="ID_Tipo_Medicamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_PERMISOS_ROLES">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+          <End Role="Permisos" Type="Self.Permisos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Id_Rol" />
+            </Principal>
+            <Dependent Role="Permisos">
+              <PropertyRef Name="Id_Rol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_USUARIOS_ROLES">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Id_Rol" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="Id_Rol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="IrazuEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Bitacora_Movimientos" EntityType="Self.Bitacora_Movimientos" />
+          <EntitySet Name="Bitacora_Sesiones" EntityType="Self.Bitacora_Sesiones" />
+          <EntitySet Name="Medicamentos" EntityType="Self.Medicamentos" />
+          <EntitySet Name="Permisos" EntityType="Self.Permisos" />
+          <EntitySet Name="Personal" EntityType="Self.Personal" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" />
+          <EntitySet Name="Tipo_Medicamentos" EntityType="Self.Tipo_Medicamentos" />
+          <EntitySet Name="UsuarioCentroDiurno" EntityType="Self.UsuarioCentroDiurno" />
+          <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
+          <AssociationSet Name="Fk_MOVIMIENTOS_USUARIOS" Association="Self.Fk_MOVIMIENTOS_USUARIOS">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Bitacora_Movimientos" EntitySet="Bitacora_Movimientos" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_SESIONES_USUARIOS" Association="Self.Fk_SESIONES_USUARIOS">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Bitacora_Sesiones" EntitySet="Bitacora_Sesiones" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_PRODUCTOS_TIPO" Association="Self.Fk_PRODUCTOS_TIPO">
+            <End Role="Tipo_Medicamentos" EntitySet="Tipo_Medicamentos" />
+            <End Role="Medicamentos" EntitySet="Medicamentos" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_PERMISOS_ROLES" Association="Self.Fk_PERMISOS_ROLES">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Permisos" EntitySet="Permisos" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_USUARIOS_ROLES" Association="Self.Fk_USUARIOS_ROLES">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="IrazuModelStoreContainer" CdmEntityContainer="IrazuEntities">
+          <EntitySetMapping Name="Bitacora_Movimientos">
+            <EntityTypeMapping TypeName="IrazuModel.Bitacora_Movimientos">
+              <MappingFragment StoreEntitySet="Bitacora_Movimientos">
+                <ScalarProperty Name="codigo_movimiento_usuario" ColumnName="codigo_movimiento_usuario" />
+                <ScalarProperty Name="fecha_hora_movimiento" ColumnName="fecha_hora_movimiento" />
+                <ScalarProperty Name="tipo_movimiento" ColumnName="tipo_movimiento" />
+                <ScalarProperty Name="modulo" ColumnName="modulo" />
+                <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bitacora_Sesiones">
+            <EntityTypeMapping TypeName="IrazuModel.Bitacora_Sesiones">
+              <MappingFragment StoreEntitySet="Bitacora_Sesiones">
+                <ScalarProperty Name="codigo_ingreso_salida" ColumnName="codigo_ingreso_salida" />
+                <ScalarProperty Name="fecha_hora_ingreso" ColumnName="fecha_hora_ingreso" />
+                <ScalarProperty Name="fecha_hora_salida" ColumnName="fecha_hora_salida" />
+                <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Medicamentos">
+            <EntityTypeMapping TypeName="IrazuModel.Medicamentos">
+              <MappingFragment StoreEntitySet="Medicamentos">
+                <ScalarProperty Name="ID_Medicamento" ColumnName="ID_Medicamento" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="ID_Tipo_Medicamento" ColumnName="ID_Tipo_Medicamento" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Permisos">
+            <EntityTypeMapping TypeName="IrazuModel.Permisos">
+              <MappingFragment StoreEntitySet="Permisos">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Modulo" ColumnName="Modulo" />
+                <ScalarProperty Name="Accion" ColumnName="Accion" />
+                <ScalarProperty Name="Id_Rol" ColumnName="Id_Rol" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Personal">
+            <EntityTypeMapping TypeName="IrazuModel.Personal">
+              <MappingFragment StoreEntitySet="Personal">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Primer_Apellido" ColumnName="Primer_Apellido" />
+                <ScalarProperty Name="Segundo_Apellido" ColumnName="Segundo_Apellido" />
+                <ScalarProperty Name="Nombre_Usuario" ColumnName="Nombre_Usuario" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="IrazuModel.Roles">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="Id_Rol" ColumnName="Id_Rol" />
+                <ScalarProperty Name="Nombre_Rol" ColumnName="Nombre_Rol" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tipo_Medicamentos">
+            <EntityTypeMapping TypeName="IrazuModel.Tipo_Medicamentos">
+              <MappingFragment StoreEntitySet="Tipo_Medicamentos">
+                <ScalarProperty Name="ID_Tipo_Medicamento" ColumnName="ID_Tipo_Medicamento" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsuarioCentroDiurno">
+            <EntityTypeMapping TypeName="IrazuModel.UsuarioCentroDiurno">
+              <MappingFragment StoreEntitySet="UsuarioCentroDiurno">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Expediente" ColumnName="Expediente" />
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="PrimerApellido" ColumnName="PrimerApellido" />
+                <ScalarProperty Name="SegundoApellido" ColumnName="SegundoApellido" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="Familiardirecto" ColumnName="Familiardirecto" />
+                <ScalarProperty Name="Lugarvivienda" ColumnName="Lugarvivienda" />
+                <ScalarProperty Name="Padecimientos" ColumnName="Padecimientos" />
+                <ScalarProperty Name="Medicamentos" ColumnName="Medicamentos" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuarios">
+            <EntityTypeMapping TypeName="IrazuModel.Usuarios">
+              <MappingFragment StoreEntitySet="Usuarios">
+                <ScalarProperty Name="ID_Usuario" ColumnName="ID_Usuario" />
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Primer_Apellido" ColumnName="Primer_Apellido" />
+                <ScalarProperty Name="Segundo_Apellido" ColumnName="Segundo_Apellido" />
+                <ScalarProperty Name="Nombre_Usuario" ColumnName="Nombre_Usuario" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="Id_Rol" ColumnName="Id_Rol" />
+                <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

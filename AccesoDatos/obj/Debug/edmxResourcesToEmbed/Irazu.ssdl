@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IrazuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Bitacora_Movimientos">
+    <Key>
+      <PropertyRef Name="codigo_movimiento_usuario" />
+    </Key>
+    <Property Name="codigo_movimiento_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha_hora_movimiento" Type="datetime" Nullable="false" />
+    <Property Name="tipo_movimiento" Type="varchar" MaxLength="50" />
+    <Property Name="modulo" Type="varchar" MaxLength="20" />
+    <Property Name="Id_Usuario" Type="int" />
+  </EntityType>
+  <EntityType Name="Bitacora_Sesiones">
+    <Key>
+      <PropertyRef Name="codigo_ingreso_salida" />
+    </Key>
+    <Property Name="codigo_ingreso_salida" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha_hora_ingreso" Type="datetime" Nullable="false" />
+    <Property Name="fecha_hora_salida" Type="datetime" />
+    <Property Name="Id_Usuario" Type="int" />
+  </EntityType>
+  <EntityType Name="Medicamentos">
+    <Key>
+      <PropertyRef Name="ID_Medicamento" />
+    </Key>
+    <Property Name="ID_Medicamento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+    <Property Name="ID_Tipo_Medicamento" Type="int" Nullable="false" />
+    <Property Name="Precio" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Permisos">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Modulo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Accion" Type="varchar" MaxLength="27" />
+    <Property Name="Id_Rol" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Personal">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cedula" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Primer_Apellido" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Segundo_Apellido" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Nombre_Usuario" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Genero" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="Telefono" Type="int" />
+    <Property Name="Correo" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Direccion" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Id_Rol" />
+    </Key>
+    <Property Name="Id_Rol" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre_Rol" Type="varchar" MaxLength="25" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Tipo_Medicamentos">
+    <Key>
+      <PropertyRef Name="ID_Tipo_Medicamento" />
+    </Key>
+    <Property Name="ID_Tipo_Medicamento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="UsuarioCentroDiurno">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Expediente" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Cedula" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="PrimerApellido" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="SegundoApellido" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Genero" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="Familiardirecto" Type="varchar(max)" Nullable="false" />
+    <Property Name="Lugarvivienda" Type="varchar(max)" Nullable="false" />
+    <Property Name="Padecimientos" Type="varchar(max)" Nullable="false" />
+    <Property Name="Medicamentos" Type="varchar(max)" Nullable="false" />
+    <Property Name="Estado" Type="bit" />
+    <Property Name="Telefono" Type="varchar" MaxLength="8" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="ID_Usuario" />
+    </Key>
+    <Property Name="ID_Usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cedula" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Primer_Apellido" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Segundo_Apellido" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Nombre_Usuario" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Genero" Type="int" Nullable="false" />
+    <Property Name="Id_Rol" Type="int" Nullable="false" />
+    <Property Name="Contrasena" Type="varchar(max)" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="Telefono" Type="int" />
+    <Property Name="Correo" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <Association Name="Fk_MOVIMIENTOS_USUARIOS">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Bitacora_Movimientos" Type="Self.Bitacora_Movimientos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="ID_Usuario" />
+      </Principal>
+      <Dependent Role="Bitacora_Movimientos">
+        <PropertyRef Name="Id_Usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_PERMISOS_ROLES">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+    <End Role="Permisos" Type="Self.Permisos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id_Rol" />
+      </Principal>
+      <Dependent Role="Permisos">
+        <PropertyRef Name="Id_Rol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_PRODUCTOS_TIPO">
+    <End Role="Tipo_Medicamentos" Type="Self.Tipo_Medicamentos" Multiplicity="1" />
+    <End Role="Medicamentos" Type="Self.Medicamentos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Medicamentos">
+        <PropertyRef Name="ID_Tipo_Medicamento" />
+      </Principal>
+      <Dependent Role="Medicamentos">
+        <PropertyRef Name="ID_Tipo_Medicamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_SESIONES_USUARIOS">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Bitacora_Sesiones" Type="Self.Bitacora_Sesiones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="ID_Usuario" />
+      </Principal>
+      <Dependent Role="Bitacora_Sesiones">
+        <PropertyRef Name="Id_Usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_USUARIOS_ROLES">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id_Rol" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="Id_Rol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="IrazuModelStoreContainer">
+    <EntitySet Name="Bitacora_Movimientos" EntityType="Self.Bitacora_Movimientos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bitacora_Sesiones" EntityType="Self.Bitacora_Sesiones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Medicamentos" EntityType="Self.Medicamentos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Permisos" EntityType="Self.Permisos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Personal" EntityType="Self.Personal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tipo_Medicamentos" EntityType="Self.Tipo_Medicamentos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UsuarioCentroDiurno" EntityType="Self.UsuarioCentroDiurno" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="Fk_MOVIMIENTOS_USUARIOS" Association="Self.Fk_MOVIMIENTOS_USUARIOS">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Bitacora_Movimientos" EntitySet="Bitacora_Movimientos" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_PERMISOS_ROLES" Association="Self.Fk_PERMISOS_ROLES">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Permisos" EntitySet="Permisos" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_PRODUCTOS_TIPO" Association="Self.Fk_PRODUCTOS_TIPO">
+      <End Role="Tipo_Medicamentos" EntitySet="Tipo_Medicamentos" />
+      <End Role="Medicamentos" EntitySet="Medicamentos" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_SESIONES_USUARIOS" Association="Self.Fk_SESIONES_USUARIOS">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Bitacora_Sesiones" EntitySet="Bitacora_Sesiones" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_USUARIOS_ROLES" Association="Self.Fk_USUARIOS_ROLES">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
