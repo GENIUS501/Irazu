@@ -221,42 +221,42 @@ namespace Irazu
                 ////////Tipo_Producto//3////////////////////////////////////
                 if (Permisos.Where(x => x.Modulo == "Tipo_Producto").FirstOrDefault() != null)
                 {
-                    this.grp_Tipo_Producto.Enabled = true;
-                    this.chb_Tipo_Producto.Checked = true;
+                    this.grp_Centro_Diurno.Enabled = true;
+                    this.chb_Centro_Diurno.Checked = true;
                     if (Permisos.Where(x => x.Modulo == "Tipo_Producto" && x.Accion == "Agregar").FirstOrDefault() != null)
                     {
-                        this.chk_Tipo_Producto_agregar.Checked = true;
+                        this.chk_Centro_Diurno_agregar.Checked = true;
                     }
                     else
                     {
-                        this.chk_Tipo_Producto_agregar.Checked = false;
+                        this.chk_Centro_Diurno_agregar.Checked = false;
                     }
                     ///
                     if (Permisos.Where(x => x.Modulo == "Tipo_Producto" && x.Accion == "Consultar").FirstOrDefault() != null)
                     {
-                        this.chk_Tipo_Producto_consultar.Checked = true;
+                        this.chk_Centro_Diurno_consultar.Checked = true;
                     }
                     else
                     {
-                        this.chk_Tipo_Producto_consultar.Checked = false;
+                        this.chk_Centro_Diurno_consultar.Checked = false;
                     }
                     /////
                     if (Permisos.Where(x => x.Modulo == "Tipo_Producto" && x.Accion == "Eliminar").FirstOrDefault() != null)
                     {
-                        this.chk_Tipo_Producto_eliminar.Checked = true;
+                        this.chk_Centro_Diurno_eliminar.Checked = true;
                     }
                     else
                     {
-                        this.chk_Tipo_Producto_eliminar.Checked = false;
+                        this.chk_Centro_Diurno_eliminar.Checked = false;
                     }
                     /////
                     if (Permisos.Where(x => x.Modulo == "Tipo_Producto" && x.Accion == "Modificar").FirstOrDefault() != null)
                     {
-                        this.chk_Tipo_Producto_modificar.Checked = true;
+                        this.chk_Centro_Diurno_modificar.Checked = true;
                     }
                     else
                     {
-                        this.chk_Tipo_Producto_modificar.Checked = false;
+                        this.chk_Centro_Diurno_modificar.Checked = false;
                     }
                 }
                 else
@@ -268,42 +268,42 @@ namespace Irazu
                 ////////Clientes//////////////////////////////////////
                 if (Permisos.Where(x => x.Modulo == "Clientes").FirstOrDefault() != null)
                 {
-                    this.grp_clientes.Enabled = true;
-                    this.chb_clientes.Checked = true;
+                    this.grp_personal.Enabled = true;
+                    this.chb_Personal.Checked = true;
                     if (Permisos.Where(x => x.Modulo == "Clientes" && x.Accion == "Agregar").FirstOrDefault() != null)
                     {
-                        this.chk_clientes_agregar.Checked = true;
+                        this.chk_personal_agregar.Checked = true;
                     }
                     else
                     {
-                        this.chk_clientes_agregar.Checked = false;
+                        this.chk_personal_agregar.Checked = false;
                     }
                     ///
                     if (Permisos.Where(x => x.Modulo == "Clientes" && x.Accion == "Consultar").FirstOrDefault() != null)
                     {
-                        this.chk_clientes_consultar.Checked = true;
+                        this.chk_personal_consultar.Checked = true;
                     }
                     else
                     {
-                        this.chk_clientes_consultar.Checked = false;
+                        this.chk_personal_consultar.Checked = false;
                     }
                     /////
                     if (Permisos.Where(x => x.Modulo == "Clientes" && x.Accion == "Eliminar").FirstOrDefault() != null)
                     {
-                        this.chk_clientes_eliminar.Checked = true;
+                        this.chk_personal_eliminar.Checked = true;
                     }
                     else
                     {
-                        this.chk_clientes_eliminar.Checked = false;
+                        this.chk_personal_eliminar.Checked = false;
                     }
                     /////
                     if (Permisos.Where(x => x.Modulo == "Clientes" && x.Accion == "Modificar").FirstOrDefault() != null)
                     {
-                        this.chk_clientes_modificar.Checked = true;
+                        this.chk_personal_modificar.Checked = true;
                     }
                     else
                     {
-                        this.chk_clientes_modificar.Checked = false;
+                        this.chk_personal_modificar.Checked = false;
                     }
                 }
                 else
@@ -313,44 +313,44 @@ namespace Irazu
                 #endregion
                 #region Productos 5
                 ////////Productos//5////////////////////////////////////
-                if (Permisos.Where(x => x.Modulo == "Productos").FirstOrDefault() != null)
+                if (Permisos.Where(x => x.Modulo == "Medicamentos").FirstOrDefault() != null)
                 {
-                    this.grp_productos.Enabled = true;
-                    this.chb_productos.Checked = true;
-                    if (Permisos.Where(x => x.Modulo == "Productos" && x.Accion == "Agregar").FirstOrDefault() != null)
+                    this.grp_medicamentos.Enabled = true;
+                    this.chb_medicamentos.Checked = true;
+                    if (Permisos.Where(x => x.Modulo == "Medicamentos" && x.Accion == "Agregar").FirstOrDefault() != null)
                     {
-                        this.chk_productos_agregar.Checked = true;
+                        this.chk_medicamentos_agregar.Checked = true;
                     }
                     else
                     {
-                        this.chk_productos_agregar.Checked = false;
+                        this.chk_medicamentos_agregar.Checked = false;
                     }
                     ///
-                    if (Permisos.Where(x => x.Modulo == "Productos" && x.Accion == "Consultar").FirstOrDefault() != null)
+                    if (Permisos.Where(x => x.Modulo == "Medicamentos" && x.Accion == "Consultar").FirstOrDefault() != null)
                     {
-                        this.chk_productos_consultar.Checked = true;
+                        this.chk_medicamentos_consultar.Checked = true;
                     }
                     else
                     {
-                        this.chk_productos_consultar.Checked = false;
+                        this.chk_medicamentos_consultar.Checked = false;
                     }
                     /////
-                    if (Permisos.Where(x => x.Modulo == "Productos" && x.Accion == "Eliminar").FirstOrDefault() != null)
+                    if (Permisos.Where(x => x.Modulo == "Medicamentos" && x.Accion == "Eliminar").FirstOrDefault() != null)
                     {
-                        this.chk_productos_eliminar.Checked = true;
+                        this.chk_medicamentos_eliminar.Checked = true;
                     }
                     else
                     {
-                        this.chk_productos_eliminar.Checked = false;
+                        this.chk_medicamentos_eliminar.Checked = false;
                     }
                     /////
-                    if (Permisos.Where(x => x.Modulo == "Productos" && x.Accion == "Modificar").FirstOrDefault() != null)
+                    if (Permisos.Where(x => x.Modulo == "Medicamentos" && x.Accion == "Modificar").FirstOrDefault() != null)
                     {
-                        this.chk_productos_modificar.Checked = true;
+                        this.chk_medicamentos_modificar.Checked = true;
                     }
                     else
                     {
-                        this.chk_productos_modificar.Checked = false;
+                        this.chk_medicamentos_modificar.Checked = false;
                     }
                 }
                 else
@@ -408,24 +408,7 @@ namespace Irazu
 
                 }
                 #endregion
-                #region Procesos
-                if (Permisos.Where(x => x.Modulo == "ProcesoVentas").FirstOrDefault() != null)
-                {
-                    this.chb_ventas.Checked = true;
-                }
-                else
-                {
 
-                }
-                if (Permisos.Where(x => x.Modulo == "ProcesoDevoluciones").FirstOrDefault() != null)
-                {
-                    this.chb_devoluciones.Checked = true;
-                }
-                else
-                {
-
-                }
-                #endregion
             }
             catch (Exception ex)
             {
@@ -531,16 +514,16 @@ namespace Irazu
                     }
                 }
                 /////////Clientes//////3///////////////////////////////////////////////////////////////////////
-                if (this.chb_clientes.Checked == true)
+                if (this.chb_Personal.Checked == true)
                 {
                     Permisos.Id_Rol = Id_Rol;
                     Permisos.Modulo = "Clientes";
                     Permisos.Accion = "Clientes";
                     Lista_Permisos.Add(Permisos);
                     Permisos = new EPermisos();
-                    if (this.grp_clientes.Enabled == true)
+                    if (this.grp_personal.Enabled == true)
                     {
-                        if (chk_clientes_agregar.Checked == true)
+                        if (chk_personal_agregar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
                             Permisos.Modulo = "Clientes";
@@ -548,7 +531,7 @@ namespace Irazu
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
                         }
-                        if (chk_clientes_modificar.Checked == true)
+                        if (chk_personal_modificar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
                             Permisos.Modulo = "Clientes";
@@ -556,7 +539,7 @@ namespace Irazu
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
                         }
-                        if (chk_clientes_eliminar.Checked == true)
+                        if (chk_personal_eliminar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
                             Permisos.Modulo = "Clientes";
@@ -564,7 +547,7 @@ namespace Irazu
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
                         }
-                        if (chk_clientes_consultar.Checked == true)
+                        if (chk_personal_consultar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
                             Permisos.Modulo = "Clientes";
@@ -574,44 +557,44 @@ namespace Irazu
                         }
                     }
                 }
-                /////////Productos/////////////////////////////////////////////////////////////////////////////
-                if (this.chb_productos.Checked == true)
+                /////////Medicamentos/////////////////////////////////////////////////////////////////////////////
+                if (this.chb_medicamentos.Checked == true)
                 {
                     Permisos.Id_Rol = Id_Rol;
-                    Permisos.Modulo = "Productos";
-                    Permisos.Accion = "Productos";
+                    Permisos.Modulo = "Medicamentos";
+                    Permisos.Accion = "Medicamentos";
                     Lista_Permisos.Add(Permisos);
                     Permisos = new EPermisos();
-                    if (this.grp_productos.Enabled == true)
+                    if (this.grp_medicamentos.Enabled == true)
                     {
-                        if (chk_productos_agregar.Checked == true)
+                        if (chk_medicamentos_agregar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
-                            Permisos.Modulo = "Productos";
+                            Permisos.Modulo = "Medicamentos";
                             Permisos.Accion = "Agregar";
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
                         }
-                        if (chk_productos_modificar.Checked == true)
+                        if (chk_medicamentos_modificar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
-                            Permisos.Modulo = "Productos";
+                            Permisos.Modulo = "Medicamentos";
                             Permisos.Accion = "Modificar";
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
                         }
-                        if (chk_productos_eliminar.Checked == true)
+                        if (chk_medicamentos_eliminar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
-                            Permisos.Modulo = "Productos";
+                            Permisos.Modulo = "Medicamentos";
                             Permisos.Accion = "Eliminar";
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
                         }
-                        if (chk_productos_consultar.Checked == true)
+                        if (chk_medicamentos_consultar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
-                            Permisos.Modulo = "Productos";
+                            Permisos.Modulo = "Medicamentos";
                             Permisos.Accion = "Consultar";
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
@@ -619,16 +602,16 @@ namespace Irazu
                     }
                 }
                 /////////Tipo_Producto//////5///////////////////////////////////////////////////////////////////////
-                if (this.chb_Tipo_Producto.Checked == true)
+                if (this.chb_Centro_Diurno.Checked == true)
                 {
                     Permisos.Id_Rol = Id_Rol;
                     Permisos.Modulo = "Tipo_Producto";
                     Permisos.Accion = "Tipo_Producto";
                     Lista_Permisos.Add(Permisos);
                     Permisos = new EPermisos();
-                    if (this.grp_Tipo_Producto.Enabled == true)
+                    if (this.grp_Centro_Diurno.Enabled == true)
                     {
-                        if (chk_Tipo_Producto_agregar.Checked == true)
+                        if (chk_Centro_Diurno_agregar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
                             Permisos.Modulo = "Tipo_Producto";
@@ -636,7 +619,7 @@ namespace Irazu
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
                         }
-                        if (chk_Tipo_Producto_modificar.Checked == true)
+                        if (chk_Centro_Diurno_modificar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
                             Permisos.Modulo = "Tipo_Producto";
@@ -644,7 +627,7 @@ namespace Irazu
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
                         }
-                        if (chk_Tipo_Producto_eliminar.Checked == true)
+                        if (chk_Centro_Diurno_eliminar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
                             Permisos.Modulo = "Tipo_Producto";
@@ -652,7 +635,7 @@ namespace Irazu
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
                         }
-                        if (chk_Tipo_Producto_consultar.Checked == true)
+                        if (chk_Centro_Diurno_consultar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
                             Permisos.Modulo = "Tipo_Producto";
@@ -707,23 +690,6 @@ namespace Irazu
                     Permisos = new EPermisos();
                 }
                 ///////////////////////////////////////////////
-                if (this.chb_ventas.Checked == true)
-                {
-                    Permisos.Id_Rol = Id_Rol;
-                    Permisos.Modulo = "ProcesoVentas";
-                    Permisos.Accion = "ProcesoVentas";
-                    Lista_Permisos.Add(Permisos);
-                    Permisos = new EPermisos();
-                }
-                ///////////////////////////////////////////////
-                if (this.chb_devoluciones.Checked == true)
-                {
-                    Permisos.Id_Rol = Id_Rol;
-                    Permisos.Modulo = "ProcesoDevoluciones";
-                    Permisos.Accion = "ProcesoDevoluciones";
-                    Lista_Permisos.Add(Permisos);
-                    Permisos = new EPermisos();
-                }
                 return Lista_Permisos;
             }
             catch (Exception)
@@ -809,13 +775,13 @@ namespace Irazu
         {
             try
             {
-                if (this.chb_clientes.Checked == true)
+                if (this.chb_Personal.Checked == true)
                 {
-                    grp_clientes.Enabled = true;
+                    grp_personal.Enabled = true;
                 }
                 else
                 {
-                    grp_clientes.Enabled = false;
+                    grp_personal.Enabled = false;
                 }
             }
             catch (Exception ex)
@@ -828,13 +794,13 @@ namespace Irazu
         {
             try
             {
-                if (this.chb_productos.Checked == true)
+                if (this.chb_medicamentos.Checked == true)
                 {
-                    grp_productos.Enabled = true;
+                    grp_medicamentos.Enabled = true;
                 }
                 else
                 {
-                    grp_productos.Enabled = false;
+                    grp_medicamentos.Enabled = false;
                 }
             }
             catch (Exception ex)
@@ -847,13 +813,13 @@ namespace Irazu
         {
             try
             {
-                if (this.chb_Tipo_Producto.Checked == true)
+                if (this.chb_Centro_Diurno.Checked == true)
                 {
-                    grp_Tipo_Producto.Enabled = true;
+                    grp_Centro_Diurno.Enabled = true;
                 }
                 else
                 {
-                    grp_Tipo_Producto.Enabled = false;
+                    grp_Centro_Diurno.Enabled = false;
                 }
             }
             catch (Exception ex)

@@ -102,12 +102,6 @@
     <Compile Include="Mantenimiento_Roles.Designer.cs">
       <DependentUpon>Mantenimiento_Roles.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenimiento_Tipos_Producto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mantenimiento_Tipos_Producto.Designer.cs">
-      <DependentUpon>Mantenimiento_Tipos_Producto.cs</DependentUpon>
-    </Compile>
     <Compile Include="Mantenimiento_Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
