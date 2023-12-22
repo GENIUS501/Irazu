@@ -78,6 +78,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helper.cs" />
+    <Compile Include="ListaCentroDiurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaCentroDiurno.Designer.cs">
+      <DependentUpon>ListaCentroDiurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaMedicamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaMedicamentos.Designer.cs">
+      <DependentUpon>ListaMedicamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaPersonal.Designer.cs">
+      <DependentUpon>ListaPersonal.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListaRolesyPermisos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +107,12 @@
     </Compile>
     <Compile Include="ListarUsuarios.Designer.cs">
       <DependentUpon>ListarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaTipoMedicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaTipoMedicamento.Designer.cs">
+      <DependentUpon>ListaTipoMedicamento.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -114,6 +138,12 @@
     <Compile Include="MantenimientoPersonal.Designer.cs">
       <DependentUpon>MantenimientoPersonal.cs</DependentUpon>
     </Compile>
+    <Compile Include="MantenimientoTipoMedicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoTipoMedicamento.Designer.cs">
+      <DependentUpon>MantenimientoTipoMedicamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimiento_Roles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,11 +165,23 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="ListaCentroDiurno.resx">
+      <DependentUpon>ListaCentroDiurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaMedicamentos.resx">
+      <DependentUpon>ListaMedicamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaPersonal.resx">
+      <DependentUpon>ListaPersonal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListaRolesyPermisos.resx">
       <DependentUpon>ListaRolesyPermisos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListarUsuarios.resx">
       <DependentUpon>ListarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaTipoMedicamento.resx">
+      <DependentUpon>ListaTipoMedicamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -152,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoPersonal.resx">
       <DependentUpon>MantenimientoPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoTipoMedicamento.resx">
+      <DependentUpon>MantenimientoTipoMedicamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento_Roles.resx">
       <DependentUpon>Mantenimiento_Roles.cs</DependentUpon>
