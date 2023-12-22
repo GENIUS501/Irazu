@@ -47,6 +47,7 @@
     <Compile Include="NMedicamentos.cs" />
     <Compile Include="NRoles.cs" />
     <Compile Include="NTipo_Medicamentos.cs" />
+    <Compile Include="NUsuarioCentroDiurno.cs" />
     <Compile Include="NUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
