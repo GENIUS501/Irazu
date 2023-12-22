@@ -73,8 +73,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.chb_productos_reporte = new System.Windows.Forms.CheckBox();
-            this.chb_venta_reporte = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -84,6 +83,7 @@
             this.grp_personal.SuspendLayout();
             this.grp_roles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -133,6 +133,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Controls.Add(this.groupBox5);
             this.groupBox2.Controls.Add(this.grp_usuarios);
             this.groupBox2.Controls.Add(this.chb_Centro_Diurno);
@@ -154,13 +155,11 @@
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.chb_Clientes_reporte);
-            this.groupBox5.Controls.Add(this.chb_venta_reporte);
             this.groupBox5.Controls.Add(this.chb_bit_sesiones);
-            this.groupBox5.Controls.Add(this.chb_productos_reporte);
             this.groupBox5.Controls.Add(this.chb_bit_movimientos);
-            this.groupBox5.Location = new System.Drawing.Point(371, 102);
+            this.groupBox5.Location = new System.Drawing.Point(242, 203);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(200, 213);
+            this.groupBox5.Size = new System.Drawing.Size(199, 134);
             this.groupBox5.TabIndex = 29;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Reportes y Bitácoras";
@@ -178,7 +177,7 @@
             // chb_bit_sesiones
             // 
             this.chb_bit_sesiones.AutoSize = true;
-            this.chb_bit_sesiones.Location = new System.Drawing.Point(21, 134);
+            this.chb_bit_sesiones.Location = new System.Drawing.Point(21, 55);
             this.chb_bit_sesiones.Name = "chb_bit_sesiones";
             this.chb_bit_sesiones.Size = new System.Drawing.Size(165, 17);
             this.chb_bit_sesiones.TabIndex = 40;
@@ -188,7 +187,7 @@
             // chb_bit_movimientos
             // 
             this.chb_bit_movimientos.AutoSize = true;
-            this.chb_bit_movimientos.Location = new System.Drawing.Point(21, 170);
+            this.chb_bit_movimientos.Location = new System.Drawing.Point(21, 78);
             this.chb_bit_movimientos.Name = "chb_bit_movimientos";
             this.chb_bit_movimientos.Size = new System.Drawing.Size(141, 17);
             this.chb_bit_movimientos.TabIndex = 39;
@@ -552,25 +551,15 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // chb_productos_reporte
+            // pictureBox1
             // 
-            this.chb_productos_reporte.AutoSize = true;
-            this.chb_productos_reporte.Location = new System.Drawing.Point(21, 67);
-            this.chb_productos_reporte.Name = "chb_productos_reporte";
-            this.chb_productos_reporte.Size = new System.Drawing.Size(129, 17);
-            this.chb_productos_reporte.TabIndex = 34;
-            this.chb_productos_reporte.Text = "Reporte de productos";
-            this.chb_productos_reporte.UseVisualStyleBackColor = true;
-            // 
-            // chb_venta_reporte
-            // 
-            this.chb_venta_reporte.AutoSize = true;
-            this.chb_venta_reporte.Location = new System.Drawing.Point(21, 98);
-            this.chb_venta_reporte.Name = "chb_venta_reporte";
-            this.chb_venta_reporte.Size = new System.Drawing.Size(109, 17);
-            this.chb_venta_reporte.TabIndex = 36;
-            this.chb_venta_reporte.Text = "Reporte de venta";
-            this.chb_venta_reporte.UseVisualStyleBackColor = true;
+            this.pictureBox1.Image = global::Lienzos.Properties.Resources.Imagen_de_WhatsApp_2023_11_22_a_las_19_30_10_be162142;
+            this.pictureBox1.Location = new System.Drawing.Point(386, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(188, 166);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 89;
+            this.pictureBox1.TabStop = false;
             // 
             // Mantenimiento_Roles
             // 
@@ -603,6 +592,7 @@
             this.grp_roles.ResumeLayout(false);
             this.grp_roles.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -652,7 +642,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.CheckBox chb_venta_reporte;
-        private System.Windows.Forms.CheckBox chb_productos_reporte;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
