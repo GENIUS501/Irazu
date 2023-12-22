@@ -102,6 +102,18 @@
     <Compile Include="MantenimientoCentroDiurno.Designer.cs">
       <DependentUpon>MantenimientoCentroDiurno.cs</DependentUpon>
     </Compile>
+    <Compile Include="MantenimientoMedicamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoMedicamentos.Designer.cs">
+      <DependentUpon>MantenimientoMedicamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoPersonal.Designer.cs">
+      <DependentUpon>MantenimientoPersonal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimiento_Roles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +146,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoCentroDiurno.resx">
       <DependentUpon>MantenimientoCentroDiurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoMedicamentos.resx">
+      <DependentUpon>MantenimientoMedicamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoPersonal.resx">
+      <DependentUpon>MantenimientoPersonal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento_Roles.resx">
       <DependentUpon>Mantenimiento_Roles.cs</DependentUpon>
