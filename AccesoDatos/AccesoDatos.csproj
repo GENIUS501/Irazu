@@ -67,6 +67,7 @@
     <Compile Include="DMedicamentos.cs" />
     <Compile Include="DRoles.cs" />
     <Compile Include="DTipo_Medicamentos.cs" />
+    <Compile Include="DUsuarioCentroDiurno.cs" />
     <Compile Include="DUsuarios.cs" />
     <Compile Include="Irazu.Context.cs">
       <AutoGen>True</AutoGen>
