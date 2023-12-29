@@ -28,8 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MantenimientoMedicamentos));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_apellido1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,16 +44,12 @@
             this.Nombre = new System.Windows.Forms.Label();
             this.txt_cedula = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -70,6 +73,59 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del medicamento";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 109);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 13);
+            this.label2.TabIndex = 93;
+            this.label2.Text = "Tipos de medicamentos";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(9, 125);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(223, 21);
+            this.comboBox1.TabIndex = 92;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Lienzos.Properties.Resources.Imagen_de_WhatsApp_2023_11_22_a_las_19_30_10_be162142;
+            this.pictureBox1.Location = new System.Drawing.Point(278, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(140, 111);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 91;
+            this.pictureBox1.TabStop = false;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(9, 175);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(409, 122);
+            this.textBox5.TabIndex = 33;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 149);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(69, 13);
+            this.label10.TabIndex = 34;
+            this.label10.Text = "Presentacion";
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(132, 84);
+            this.maskedTextBox1.Mask = "000000000000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBox1.TabIndex = 32;
             // 
             // label4
             // 
@@ -129,31 +185,6 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "Codigo de medicamento";
             // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(132, 84);
-            this.maskedTextBox1.Mask = "000000000000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox1.TabIndex = 32;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(9, 175);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(409, 122);
-            this.textBox5.TabIndex = 33;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 149);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 13);
-            this.label10.TabIndex = 34;
-            this.label10.Text = "Presentacion";
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Arial", 9.75F);
@@ -166,6 +197,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
@@ -179,34 +211,11 @@
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // pictureBox1
+            // errorProvider1
             // 
-            this.pictureBox1.Image = global::Lienzos.Properties.Resources.Imagen_de_WhatsApp_2023_11_22_a_las_19_30_10_be162142;
-            this.pictureBox1.Location = new System.Drawing.Point(278, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 111);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 91;
-            this.pictureBox1.TabStop = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(9, 125);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(223, 21);
-            this.comboBox1.TabIndex = 92;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 109);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 13);
-            this.label2.TabIndex = 93;
-            this.label2.Text = "Tipos de medicamentos";
+            this.errorProvider1.ContainerControl = this;
             // 
             // MantenimientoMedicamentos
             // 
@@ -218,9 +227,11 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "MantenimientoMedicamentos";
             this.Text = "MantenimientoMedicamentos";
+            this.Load += new System.EventHandler(this.MantenimientoMedicamentos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -243,5 +254,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

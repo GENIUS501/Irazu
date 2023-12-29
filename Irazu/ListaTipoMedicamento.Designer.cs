@@ -35,13 +35,13 @@
             this.btn_editar = new System.Windows.Forms.Button();
             this.btn_agregar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_buscar_nombre = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btn_buscar = new System.Windows.Forms.Button();
             this.txt_buscar_cedula = new System.Windows.Forms.MaskedTextBox();
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_buscar_nombre = new System.Windows.Forms.Button();
-            this.btn_buscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dat_principal)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,6 +55,7 @@
             this.dat_principal.Name = "dat_principal";
             this.dat_principal.Size = new System.Drawing.Size(739, 185);
             this.dat_principal.TabIndex = 94;
+            this.dat_principal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dat_principal_CellClick);
             // 
             // btn_consultar
             // 
@@ -66,6 +67,7 @@
             this.btn_consultar.TabIndex = 93;
             this.btn_consultar.Text = "Consultar";
             this.btn_consultar.UseVisualStyleBackColor = true;
+            this.btn_consultar.Click += new System.EventHandler(this.btn_consultar_Click);
             // 
             // btn_eliminar
             // 
@@ -77,6 +79,7 @@
             this.btn_eliminar.TabIndex = 92;
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_editar
             // 
@@ -88,6 +91,7 @@
             this.btn_editar.TabIndex = 91;
             this.btn_editar.Text = "Modificar";
             this.btn_editar.UseVisualStyleBackColor = true;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
             // btn_agregar
             // 
@@ -99,6 +103,7 @@
             this.btn_agregar.TabIndex = 90;
             this.btn_agregar.Text = "Agregar";
             this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // groupBox1
             // 
@@ -114,6 +119,17 @@
             this.groupBox1.TabIndex = 89;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de busqueda";
+            // 
+            // btn_buscar_nombre
+            // 
+            this.btn_buscar_nombre.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar_nombre.BackgroundImage")));
+            this.btn_buscar_nombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscar_nombre.Location = new System.Drawing.Point(115, 102);
+            this.btn_buscar_nombre.Name = "btn_buscar_nombre";
+            this.btn_buscar_nombre.Size = new System.Drawing.Size(25, 20);
+            this.btn_buscar_nombre.TabIndex = 3;
+            this.btn_buscar_nombre.UseVisualStyleBackColor = true;
+            this.btn_buscar_nombre.Click += new System.EventHandler(this.btn_buscar_nombre_Click);
             // 
             // label1
             // 
@@ -132,6 +148,17 @@
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 45;
             this.label3.Text = "Nombre";
+            // 
+            // btn_buscar
+            // 
+            this.btn_buscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar.BackgroundImage")));
+            this.btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscar.Location = new System.Drawing.Point(115, 48);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(25, 20);
+            this.btn_buscar.TabIndex = 1;
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // txt_buscar_cedula
             // 
@@ -158,26 +185,6 @@
             this.pictureBox1.TabIndex = 95;
             this.pictureBox1.TabStop = false;
             // 
-            // btn_buscar_nombre
-            // 
-            this.btn_buscar_nombre.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar_nombre.BackgroundImage")));
-            this.btn_buscar_nombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar_nombre.Location = new System.Drawing.Point(115, 102);
-            this.btn_buscar_nombre.Name = "btn_buscar_nombre";
-            this.btn_buscar_nombre.Size = new System.Drawing.Size(25, 20);
-            this.btn_buscar_nombre.TabIndex = 3;
-            this.btn_buscar_nombre.UseVisualStyleBackColor = true;
-            // 
-            // btn_buscar
-            // 
-            this.btn_buscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar.BackgroundImage")));
-            this.btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar.Location = new System.Drawing.Point(115, 48);
-            this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(25, 20);
-            this.btn_buscar.TabIndex = 1;
-            this.btn_buscar.UseVisualStyleBackColor = true;
-            // 
             // ListaTipoMedicamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,6 +199,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "ListaTipoMedicamento";
             this.Text = "ListaTipoMedicamento";
+            this.Load += new System.EventHandler(this.ListarTipoMedicamentos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dat_principal)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

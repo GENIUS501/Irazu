@@ -28,19 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MantenimientoTipoMedicamento));
             this.Grp_Tipo_Productos = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_id = new System.Windows.Forms.Label();
             this.txt_descripcion = new System.Windows.Forms.TextBox();
             this.txt_id = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.Grp_Tipo_Productos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // Grp_Tipo_Productos
@@ -58,6 +61,16 @@
             this.Grp_Tipo_Productos.TabIndex = 30;
             this.Grp_Tipo_Productos.TabStop = false;
             this.Grp_Tipo_Productos.Text = "Datos";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Lienzos.Properties.Resources.Imagen_de_WhatsApp_2023_11_22_a_las_19_30_10_be162142;
+            this.pictureBox1.Location = new System.Drawing.Point(195, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 110);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 73;
+            this.pictureBox1.TabStop = false;
             // 
             // lbl_id
             // 
@@ -109,16 +122,6 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "Nombre";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Lienzos.Properties.Resources.Imagen_de_WhatsApp_2023_11_22_a_las_19_30_10_be162142;
-            this.pictureBox1.Location = new System.Drawing.Point(195, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 110);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 73;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Arial", 9.75F);
@@ -131,6 +134,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
@@ -144,6 +148,11 @@
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // MantenimientoTipoMedicamento
             // 
@@ -155,9 +164,11 @@
             this.Controls.Add(this.Grp_Tipo_Productos);
             this.Name = "MantenimientoTipoMedicamento";
             this.Text = "MantenimientoTipoMedicamento";
+            this.Load += new System.EventHandler(this.MantenimientoTipoMedicamento_Load);
             this.Grp_Tipo_Productos.ResumeLayout(false);
             this.Grp_Tipo_Productos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -174,5 +185,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
