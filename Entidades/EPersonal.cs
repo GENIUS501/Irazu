@@ -13,7 +13,6 @@ namespace Entidades
         public string Nombre { get; set; }
         public string Primer_Apellido { get; set; }
         public string Segundo_Apellido { get; set; }
-        public string Nombre_Usuario { get; set; }
         public int Genero { get; set; }
         public int Estado { get; set; }
         public Nullable<int> Telefono { get; set; }

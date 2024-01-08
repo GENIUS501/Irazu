@@ -52,7 +52,6 @@ CREATE TABLE Personal(
 	Nombre VARCHAR(25) NOT NULL,
 	Primer_Apellido VARCHAR(25) NOT NULL,
 	Segundo_Apellido VARCHAR(25) NOT NULL,
-	Nombre_Usuario VARCHAR(25) NOT NULL,
 	Genero INT NOT NULL,
 	Estado INT NOT NULL,
 	Telefono INT NULL,

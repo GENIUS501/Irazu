@@ -23,7 +23,7 @@ namespace Lienzos
         public string Accion { get; set; }
         public int Id { get; set; }
         #endregion
-        private void MantenimientoCentroDiurno_Load(object sender, EventArgs e)
+        private void MantenimientoPersonal_Load(object sender, EventArgs e)
         {
             try
             {
@@ -47,20 +47,16 @@ namespace Lienzos
         }
         private void llenar()
         {
-            NUsuarioCentroDiurno Negocios = new NUsuarioCentroDiurno();
-            EUsuarioCentroDiurno Obj = new EUsuarioCentroDiurno();
+            NPersonal Negocios = new NPersonal();
+            EPersonal Obj = new EPersonal();
             Obj = Negocios.Mostrar().Where(x => x.ID == Id).FirstOrDefault();
             this.txt_cedula.Text = Obj.Cedula.ToString();
             this.txt_nombre.Text = Obj.Nombre;
-            this.txt_apellido1.Text = Obj.PrimerApellido.ToString();
+            this.txt_apellido1.Text = Obj.Primer_Apellido.ToString();
             this.cbo_Genero.SelectedValue = Obj.Genero;
-            this.txt_apellido2.Text = Obj.SegundoApellido.ToString();
-            this.TxtNumeroExpediente.Text = Obj.Expediente.ToString();
-            this.TxtFamiliar.Text = Obj.Familiardirecto.ToString();
+            this.txt_apellido2.Text = Obj.Segundo_Apellido.ToString();
+            this.TxtDireccion.Text = Obj.Direccion.ToString();
             this.TxtTelefono.Text = Obj.Telefono.ToString();
-            this.TxtPadecimientos.Text = Obj.Padecimientos.ToString();
-            this.TxtLugar.Text = Obj.Lugarvivienda.ToString();
-            this.TxtMedicamentos.Text = Obj.Medicamentos.ToString();
         }
 
         private bool validar()
@@ -88,34 +84,14 @@ namespace Lienzos
                     errorProvider1.SetError(this.txt_cedula, "Debe ingresar la cedula");
                     ok = true;
                 }
-                if (this.TxtNumeroExpediente.Text == "")
-                {
-                    errorProvider1.SetError(this.TxtNumeroExpediente, "Debe ingresar el numero de expediente");
-                    ok = true;
-                }
-                if (this.TxtFamiliar.Text == "")
-                {
-                    errorProvider1.SetError(this.TxtFamiliar, "Debe ingresar el familiar");
-                    ok = true;
-                }
                 if (this.TxtTelefono.Text == "")
                 {
                     errorProvider1.SetError(this.TxtTelefono, "Debe ingresar el telefono");
                     ok = true;
                 }
-                if (this.TxtPadecimientos.Text == "")
+                if (this.TxtDireccion.Text == "")
                 {
-                    errorProvider1.SetError(this.TxtPadecimientos, "Debe ingresar los posibles padecimientos");
-                    ok = true;
-                }
-                if (this.TxtLugar.Text == "")
-                {
-                    errorProvider1.SetError(this.TxtLugar, "Debe ingresar el lugar de vivienda");
-                    ok = true;
-                }
-                if (this.TxtMedicamentos.Text == "")
-                {
-                    errorProvider1.SetError(this.TxtMedicamentos, "Debe ingresar los medicamentos");
+                    errorProvider1.SetError(this.TxtDireccion, "Debe ingresar la direccion");
                     ok = true;
                 }
                 //
@@ -141,17 +117,9 @@ namespace Lienzos
 
                 errorProvider1.SetError(this.txt_cedula, "");
 
-                errorProvider1.SetError(this.TxtNumeroExpediente, "");
-
-                errorProvider1.SetError(this.TxtFamiliar, "");
+                errorProvider1.SetError(this.TxtDireccion, "");
 
                 errorProvider1.SetError(this.TxtTelefono, "");
-
-                errorProvider1.SetError(this.TxtPadecimientos, "");
-
-                errorProvider1.SetError(this.TxtLugar, "");
-
-                errorProvider1.SetError(this.TxtMedicamentos, "");
 
             }
             catch (Exception ex)
@@ -173,19 +141,15 @@ namespace Lienzos
                 {
                     if (Accion == "A" || Accion == "M")
                     {
-                        NUsuarioCentroDiurno Negocios = new NUsuarioCentroDiurno();
-                        EUsuarioCentroDiurno Obj = new EUsuarioCentroDiurno();
+                        NPersonal Negocios = new NPersonal();
+                        EPersonal Obj = new EPersonal();
                         Obj.Cedula = this.txt_cedula.Text;
                         Obj.Nombre = this.txt_nombre.Text;
-                        Obj.PrimerApellido = this.txt_apellido1.Text;
-                        Obj.Genero = this.cbo_Genero.SelectedValue.ToString();
-                        Obj.SegundoApellido = this.txt_apellido2.Text;
-                        Obj.Expediente = this.TxtNumeroExpediente.Text;
-                        Obj.Familiardirecto = this.TxtFamiliar.Text;
-                        Obj.Telefono = this.TxtTelefono.Text;
-                        Obj.Padecimientos = this.TxtPadecimientos.Text;
-                        Obj.Lugarvivienda = this.TxtLugar.Text;
-                        Obj.Medicamentos = this.TxtMedicamentos.Text;
+                        Obj.Primer_Apellido = this.txt_apellido1.Text;
+                        Obj.Genero = int.Parse(this.cbo_Genero.SelectedValue.ToString());
+                        Obj.Segundo_Apellido = this.txt_apellido2.Text;
+                        Obj.Direccion = this.TxtDireccion.Text;
+                        Obj.Telefono = int.Parse(this.TxtTelefono.Text);
                         Int32 FilasAfectadas = 0;
                         #region Agregar
                         if (Accion == "A")

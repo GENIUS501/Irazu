@@ -294,6 +294,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btnAceptar
             // 
@@ -307,6 +308,7 @@
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
             // pictureBox1
             // 
@@ -342,6 +344,7 @@
             this.Controls.Add(this.grpdatos);
             this.Name = "MantenimientoCentroDiurno";
             this.Text = "MantenimientoCentroDiurno";
+            this.Load += new System.EventHandler(this.MantenimientoCentroDiurno_Load);
             this.grpdatos.ResumeLayout(false);
             this.grpdatos.PerformLayout();
             this.GrpOtros.ResumeLayout(false);

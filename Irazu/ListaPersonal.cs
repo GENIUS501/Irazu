@@ -25,7 +25,7 @@ namespace Lienzos
         public int Id_Rol { get; set; }
         #endregion
 
-        private void ListaCentroDiurno_Load(object sender, EventArgs e)
+        private void ListaPersonal_Load(object sender, EventArgs e)
         {
             try
             {
@@ -111,7 +111,7 @@ namespace Lienzos
                             }
                         }
                         valorcelda = -1;
-                        ListaCentroDiurno_Load(null, null);
+                        ListaPersonal_Load(null, null);
                     }
                 }
                 else
@@ -143,7 +143,7 @@ namespace Lienzos
             {
                 if (this.dat_principal.Rows[e.RowIndex].Cells[0].Value.ToString() == "")
                 {
-                    ListaCentroDiurno_Load(null, null);
+                    ListaPersonal_Load(null, null);
                 }
                 else
                 {
@@ -169,7 +169,7 @@ namespace Lienzos
                     frm.Usuario = Usuario;
                     frm.ShowDialog();
                     valorcelda = -1;
-                    ListaCentroDiurno_Load(null, null);
+                    ListaPersonal_Load(null, null);
                 }
                 else
                 {
@@ -181,7 +181,7 @@ namespace Lienzos
                         frm.Usuario = Usuario;
                         frm.ShowDialog();
                         valorcelda = -1;
-                        ListaCentroDiurno_Load(null, null);
+                        ListaPersonal_Load(null, null);
                     }
                     else
                     {
@@ -217,7 +217,7 @@ namespace Lienzos
             {
                 if (this.txt_nombre.Text != "")
                 {
-                    NMedicamentos Negocios = new NMedicamentos();
+                    NPersonal Negocios = new NPersonal();
                     this.dat_principal.DataSource = Negocios.Mostrar().Where(x => x.Nombre.Contains(this.txt_nombre.Text)).ToList();
                 }
             }

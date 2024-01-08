@@ -55,6 +55,7 @@
             this.dat_principal.Name = "dat_principal";
             this.dat_principal.Size = new System.Drawing.Size(739, 185);
             this.dat_principal.TabIndex = 94;
+            this.dat_principal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dat_principal_CellClick);
             // 
             // btn_consultar
             // 
