@@ -67,9 +67,9 @@ CREATE TABLE Tipo_Medicamentos(
 CREATE TABLE Medicamentos(
 	ID_Medicamento INT IDENTITY (1,1) PRIMARY KEY NOT NULL,
 	Nombre VARCHAR(25)NOT NULL,
-	Descripcion VARCHAR(100)NULL,
+	Presentacion VARCHAR(100)NULL,
 	ID_Tipo_Medicamento INT NOT NULL,
-	Precio DECIMAL NOT NULL,
+	Concentracion DECIMAL NOT NULL,
 	Cantidad INT NOT NULL,
 	CONSTRAINT Fk_PRODUCTOS_TIPO FOREIGN KEY(ID_Tipo_Medicamento) REFERENCES Tipo_Medicamentos(ID_Tipo_Medicamento),
 );

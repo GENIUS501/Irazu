@@ -30,49 +30,51 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MantenimientoMedicamentos));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grp_Medicamentos = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbo_tipo_medicamento = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_presentacion = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txt_cantidad = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_apellido1 = new System.Windows.Forms.TextBox();
+            this.txt_concentracion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.Nombre = new System.Windows.Forms.Label();
-            this.txt_cedula = new System.Windows.Forms.MaskedTextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txt_id = new System.Windows.Forms.MaskedTextBox();
+            this.lbl_id = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.groupBox1.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.grp_Medicamentos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // grp_Medicamentos
             // 
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txt_apellido1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txt_nombre);
-            this.groupBox1.Controls.Add(this.Nombre);
-            this.groupBox1.Controls.Add(this.txt_cedula);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(427, 303);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos del medicamento";
+            this.grp_Medicamentos.Controls.Add(this.label1);
+            this.grp_Medicamentos.Controls.Add(this.label2);
+            this.grp_Medicamentos.Controls.Add(this.cbo_tipo_medicamento);
+            this.grp_Medicamentos.Controls.Add(this.pictureBox1);
+            this.grp_Medicamentos.Controls.Add(this.txt_presentacion);
+            this.grp_Medicamentos.Controls.Add(this.label10);
+            this.grp_Medicamentos.Controls.Add(this.txt_cantidad);
+            this.grp_Medicamentos.Controls.Add(this.label4);
+            this.grp_Medicamentos.Controls.Add(this.txt_concentracion);
+            this.grp_Medicamentos.Controls.Add(this.label3);
+            this.grp_Medicamentos.Controls.Add(this.txt_nombre);
+            this.grp_Medicamentos.Controls.Add(this.Nombre);
+            this.grp_Medicamentos.Controls.Add(this.txt_id);
+            this.grp_Medicamentos.Controls.Add(this.lbl_id);
+            this.grp_Medicamentos.Location = new System.Drawing.Point(12, 12);
+            this.grp_Medicamentos.Name = "grp_Medicamentos";
+            this.grp_Medicamentos.Size = new System.Drawing.Size(427, 303);
+            this.grp_Medicamentos.TabIndex = 0;
+            this.grp_Medicamentos.TabStop = false;
+            this.grp_Medicamentos.Text = "Datos del medicamento";
             // 
             // label2
             // 
@@ -83,14 +85,14 @@
             this.label2.TabIndex = 93;
             this.label2.Text = "Tipos de medicamentos";
             // 
-            // comboBox1
+            // cbo_tipo_medicamento
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(9, 125);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(223, 21);
-            this.comboBox1.TabIndex = 92;
+            this.cbo_tipo_medicamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_tipo_medicamento.FormattingEnabled = true;
+            this.cbo_tipo_medicamento.Location = new System.Drawing.Point(9, 125);
+            this.cbo_tipo_medicamento.Name = "cbo_tipo_medicamento";
+            this.cbo_tipo_medicamento.Size = new System.Drawing.Size(223, 21);
+            this.cbo_tipo_medicamento.TabIndex = 92;
             // 
             // pictureBox1
             // 
@@ -102,13 +104,13 @@
             this.pictureBox1.TabIndex = 91;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox5
+            // txt_presentacion
             // 
-            this.textBox5.Location = new System.Drawing.Point(9, 175);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(409, 122);
-            this.textBox5.TabIndex = 33;
+            this.txt_presentacion.Location = new System.Drawing.Point(9, 175);
+            this.txt_presentacion.Multiline = true;
+            this.txt_presentacion.Name = "txt_presentacion";
+            this.txt_presentacion.Size = new System.Drawing.Size(409, 122);
+            this.txt_presentacion.TabIndex = 33;
             // 
             // label10
             // 
@@ -119,29 +121,29 @@
             this.label10.TabIndex = 34;
             this.label10.Text = "Presentacion";
             // 
-            // maskedTextBox1
+            // txt_cantidad
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(132, 84);
-            this.maskedTextBox1.Mask = "000000000000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox1.TabIndex = 32;
+            this.txt_cantidad.Location = new System.Drawing.Point(152, 84);
+            this.txt_cantidad.Mask = "000000000000";
+            this.txt_cantidad.Name = "txt_cantidad";
+            this.txt_cantidad.Size = new System.Drawing.Size(104, 20);
+            this.txt_cantidad.TabIndex = 32;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(129, 68);
+            this.label4.Location = new System.Drawing.Point(149, 68);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 31;
             this.label4.Text = "Cantidad";
             // 
-            // txt_apellido1
+            // txt_concentracion
             // 
-            this.txt_apellido1.Location = new System.Drawing.Point(9, 84);
-            this.txt_apellido1.Name = "txt_apellido1";
-            this.txt_apellido1.Size = new System.Drawing.Size(104, 20);
-            this.txt_apellido1.TabIndex = 28;
+            this.txt_concentracion.Location = new System.Drawing.Point(9, 84);
+            this.txt_concentracion.Name = "txt_concentracion";
+            this.txt_concentracion.Size = new System.Drawing.Size(104, 20);
+            this.txt_concentracion.TabIndex = 28;
             // 
             // label3
             // 
@@ -154,7 +156,7 @@
             // 
             // txt_nombre
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(132, 45);
+            this.txt_nombre.Location = new System.Drawing.Point(152, 45);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(104, 20);
             this.txt_nombre.TabIndex = 25;
@@ -162,28 +164,28 @@
             // Nombre
             // 
             this.Nombre.AutoSize = true;
-            this.Nombre.Location = new System.Drawing.Point(129, 29);
+            this.Nombre.Location = new System.Drawing.Point(149, 29);
             this.Nombre.Name = "Nombre";
             this.Nombre.Size = new System.Drawing.Size(44, 13);
             this.Nombre.TabIndex = 27;
             this.Nombre.Text = "Nombre";
             // 
-            // txt_cedula
+            // txt_id
             // 
-            this.txt_cedula.Location = new System.Drawing.Point(9, 45);
-            this.txt_cedula.Mask = "000000000000";
-            this.txt_cedula.Name = "txt_cedula";
-            this.txt_cedula.Size = new System.Drawing.Size(100, 20);
-            this.txt_cedula.TabIndex = 24;
+            this.txt_id.Location = new System.Drawing.Point(9, 45);
+            this.txt_id.Mask = "000000000000";
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(100, 20);
+            this.txt_id.TabIndex = 24;
             // 
-            // label1
+            // lbl_id
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 13);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Codigo de medicamento";
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.Location = new System.Drawing.Point(6, 29);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(121, 13);
+            this.lbl_id.TabIndex = 26;
+            this.lbl_id.Text = "Codigo de medicamento";
             // 
             // btnCancelar
             // 
@@ -197,7 +199,6 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
@@ -211,11 +212,19 @@
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(119, 91);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 13);
+            this.label1.TabIndex = 94;
+            this.label1.Text = "mg";
             // 
             // MantenimientoMedicamentos
             // 
@@ -224,12 +233,12 @@
             this.ClientSize = new System.Drawing.Size(447, 356);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grp_Medicamentos);
             this.Name = "MantenimientoMedicamentos";
             this.Text = "MantenimientoMedicamentos";
             this.Load += new System.EventHandler(this.MantenimientoMedicamentos_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grp_Medicamentos.ResumeLayout(false);
+            this.grp_Medicamentos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
@@ -238,22 +247,23 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.GroupBox grp_Medicamentos;
+        private System.Windows.Forms.MaskedTextBox txt_cantidad;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_apellido1;
+        private System.Windows.Forms.TextBox txt_concentracion;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_nombre;
         private System.Windows.Forms.Label Nombre;
-        private System.Windows.Forms.MaskedTextBox txt_cedula;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.MaskedTextBox txt_id;
+        private System.Windows.Forms.Label lbl_id;
+        private System.Windows.Forms.TextBox txt_presentacion;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbo_tipo_medicamento;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -30,9 +30,9 @@
           </Key>
           <Property Name="ID_Medicamento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
-          <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+          <Property Name="Presentacion" Type="varchar" MaxLength="100" />
           <Property Name="ID_Tipo_Medicamento" Type="int" Nullable="false" />
-          <Property Name="Precio" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Concentracion" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="Cantidad" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Permisos">
@@ -234,9 +234,9 @@
           </Key>
           <Property Name="ID_Medicamento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Presentacion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="ID_Tipo_Medicamento" Type="Int32" Nullable="false" />
-          <Property Name="Precio" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Concentracion" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="Cantidad" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Tipo_Medicamentos" Relationship="Self.Fk_PRODUCTOS_TIPO" FromRole="Medicamentos" ToRole="Tipo_Medicamentos" />
         </EntityType>
@@ -446,9 +446,9 @@
               <MappingFragment StoreEntitySet="Medicamentos">
                 <ScalarProperty Name="ID_Medicamento" ColumnName="ID_Medicamento" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Presentacion" ColumnName="Presentacion" />
                 <ScalarProperty Name="ID_Tipo_Medicamento" ColumnName="ID_Tipo_Medicamento" />
-                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="Concentracion" ColumnName="Concentracion" />
                 <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
               </MappingFragment>
             </EntityTypeMapping>

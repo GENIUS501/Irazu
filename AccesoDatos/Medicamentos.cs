@@ -16,9 +16,9 @@ namespace AccesoDatos
     {
         public int ID_Medicamento { get; set; }
         public string Nombre { get; set; }
-        public string Descripcion { get; set; }
+        public string Presentacion { get; set; }
         public int ID_Tipo_Medicamento { get; set; }
-        public decimal Precio { get; set; }
+        public decimal Concentracion { get; set; }
         public int Cantidad { get; set; }
     
         public virtual Tipo_Medicamentos Tipo_Medicamentos { get; set; }

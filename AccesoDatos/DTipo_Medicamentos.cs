@@ -32,7 +32,7 @@ namespace AccesoDatos
                     {
                         Ts.Complete();
                         Entidad_Movimientos.Id_Usuario = Id_Usuario;
-                        Entidad_Movimientos.modulo = "Tipo_Productos";
+                        Entidad_Movimientos.modulo = "Tipo_Medicamentos";
                         Entidad_Movimientos.tipo_movimiento = "Agregar";
                         Entidad_Movimientos.fecha_hora_movimiento = DateTime.Now;
                         Movimientos.Agregar(Entidad_Movimientos);
@@ -91,7 +91,7 @@ namespace AccesoDatos
                     {
                         Ts.Complete();
                         Entidad_Movimientos.Id_Usuario = Id_Usuario;
-                        Entidad_Movimientos.modulo = "Tipo_Productos";
+                        Entidad_Movimientos.modulo = "Tipo_Medicamentos";
                         Entidad_Movimientos.tipo_movimiento = "Modificar";
                         Entidad_Movimientos.fecha_hora_movimiento = DateTime.Now;
                         Movimientos.Agregar(Entidad_Movimientos);
@@ -122,7 +122,7 @@ namespace AccesoDatos
                     {
                         Ts.Complete();
                         Entidad_Movimientos.Id_Usuario = Id_Usuario;
-                        Entidad_Movimientos.modulo = "Tipo_Productos";
+                        Entidad_Movimientos.modulo = "Tipo_Medicamentos";
                         Entidad_Movimientos.tipo_movimiento = "Eliminar";
                         Entidad_Movimientos.fecha_hora_movimiento = DateTime.Now;
                         Movimientos.Agregar(Entidad_Movimientos);

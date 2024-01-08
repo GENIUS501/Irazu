@@ -35,13 +35,13 @@
             this.btn_editar = new System.Windows.Forms.Button();
             this.btn_agregar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_buscar_nombre = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_buscar_cedula = new System.Windows.Forms.MaskedTextBox();
+            this.btn_buscar = new System.Windows.Forms.Button();
+            this.txt_buscar_codigo = new System.Windows.Forms.MaskedTextBox();
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_buscar_nombre = new System.Windows.Forms.Button();
-            this.btn_buscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dat_principal)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -99,6 +99,7 @@
             this.btn_agregar.TabIndex = 90;
             this.btn_agregar.Text = "Agregar";
             this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // groupBox1
             // 
@@ -106,7 +107,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btn_buscar);
-            this.groupBox1.Controls.Add(this.txt_buscar_cedula);
+            this.groupBox1.Controls.Add(this.txt_buscar_codigo);
             this.groupBox1.Controls.Add(this.txt_nombre);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -114,6 +115,16 @@
             this.groupBox1.TabIndex = 89;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de busqueda";
+            // 
+            // btn_buscar_nombre
+            // 
+            this.btn_buscar_nombre.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar_nombre.BackgroundImage")));
+            this.btn_buscar_nombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscar_nombre.Location = new System.Drawing.Point(115, 102);
+            this.btn_buscar_nombre.Name = "btn_buscar_nombre";
+            this.btn_buscar_nombre.Size = new System.Drawing.Size(25, 20);
+            this.btn_buscar_nombre.TabIndex = 3;
+            this.btn_buscar_nombre.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -133,13 +144,23 @@
             this.label3.TabIndex = 45;
             this.label3.Text = "Nombre";
             // 
-            // txt_buscar_cedula
+            // btn_buscar
             // 
-            this.txt_buscar_cedula.Location = new System.Drawing.Point(9, 48);
-            this.txt_buscar_cedula.Mask = "0000000000";
-            this.txt_buscar_cedula.Name = "txt_buscar_cedula";
-            this.txt_buscar_cedula.Size = new System.Drawing.Size(100, 20);
-            this.txt_buscar_cedula.TabIndex = 0;
+            this.btn_buscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar.BackgroundImage")));
+            this.btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscar.Location = new System.Drawing.Point(115, 48);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(25, 20);
+            this.btn_buscar.TabIndex = 1;
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            // 
+            // txt_buscar_codigo
+            // 
+            this.txt_buscar_codigo.Location = new System.Drawing.Point(9, 48);
+            this.txt_buscar_codigo.Mask = "0000000000";
+            this.txt_buscar_codigo.Name = "txt_buscar_codigo";
+            this.txt_buscar_codigo.Size = new System.Drawing.Size(100, 20);
+            this.txt_buscar_codigo.TabIndex = 0;
             // 
             // txt_nombre
             // 
@@ -157,26 +178,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 95;
             this.pictureBox1.TabStop = false;
-            // 
-            // btn_buscar_nombre
-            // 
-            this.btn_buscar_nombre.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar_nombre.BackgroundImage")));
-            this.btn_buscar_nombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar_nombre.Location = new System.Drawing.Point(115, 102);
-            this.btn_buscar_nombre.Name = "btn_buscar_nombre";
-            this.btn_buscar_nombre.Size = new System.Drawing.Size(25, 20);
-            this.btn_buscar_nombre.TabIndex = 3;
-            this.btn_buscar_nombre.UseVisualStyleBackColor = true;
-            // 
-            // btn_buscar
-            // 
-            this.btn_buscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar.BackgroundImage")));
-            this.btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar.Location = new System.Drawing.Point(115, 48);
-            this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(25, 20);
-            this.btn_buscar.TabIndex = 1;
-            this.btn_buscar.UseVisualStyleBackColor = true;
             // 
             // ListaMedicamentos
             // 
@@ -213,7 +214,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_buscar;
-        private System.Windows.Forms.MaskedTextBox txt_buscar_cedula;
+        private System.Windows.Forms.MaskedTextBox txt_buscar_codigo;
         private System.Windows.Forms.TextBox txt_nombre;
     }
 }

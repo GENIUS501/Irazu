@@ -24,8 +24,8 @@ namespace AccesoDatos
                     Medicamentos Objbd = new Medicamentos();
                     Objbd.ID_Tipo_Medicamento = obj.ID_Tipo_Medicamento;
                     Objbd.Nombre = obj.Nombre;
-                    Objbd.Descripcion = obj.Descripcion;
-                    Objbd.Precio = obj.Precio;
+                    Objbd.Presentacion = obj.Presentacion;
+                    Objbd.Concentracion = obj.Concentracion;
                     Objbd.Cantidad = obj.Cantidad;
                     db.Medicamentos.Add(Objbd);
 
@@ -35,7 +35,7 @@ namespace AccesoDatos
                     {
                         Ts.Complete();
                         Entidad_Movimientos.Id_Usuario = Id_Usuario;
-                        Entidad_Movimientos.modulo = "Productos";
+                        Entidad_Movimientos.modulo = "Medicamentos";
                         Entidad_Movimientos.tipo_movimiento = "Agregar";
                         Entidad_Movimientos.fecha_hora_movimiento = DateTime.Now;
                         Movimientos.Agregar(Entidad_Movimientos);
@@ -67,8 +67,8 @@ namespace AccesoDatos
                     ID_Medicamento = x.ID_Medicamento,
                     ID_Tipo_Medicamento = x.ID_Tipo_Medicamento,
                     Nombre = x.Nombre,
-                    Descripcion = x.Descripcion,
-                    Precio = x.Precio,
+                    Presentacion = x.Presentacion,
+                    Concentracion = x.Concentracion,
                     Cantidad=x.Cantidad
                 }).ToList();
                 return Lista;
@@ -91,8 +91,8 @@ namespace AccesoDatos
                     var Objbd = db.Medicamentos.Where(x => x.ID_Medicamento == obj.ID_Medicamento).FirstOrDefault();
                     Objbd.ID_Tipo_Medicamento = obj.ID_Tipo_Medicamento;
                     Objbd.Nombre = obj.Nombre;
-                    Objbd.Descripcion = obj.Descripcion;
-                    Objbd.Precio = obj.Precio;
+                    Objbd.Presentacion = obj.Presentacion;
+                    Objbd.Concentracion = obj.Concentracion;
                     Objbd.Cantidad = obj.Cantidad;
                     db.Entry(Objbd).State = EntityState.Modified;
                     int Resultado = db.SaveChanges();
@@ -100,7 +100,7 @@ namespace AccesoDatos
                     {
                         Ts.Complete();
                         Entidad_Movimientos.Id_Usuario = Id_Usuario;
-                        Entidad_Movimientos.modulo = "Productos";
+                        Entidad_Movimientos.modulo = "Medicamentos";
                         Entidad_Movimientos.tipo_movimiento = "Modificar";
                         Entidad_Movimientos.fecha_hora_movimiento = DateTime.Now;
                         Movimientos.Agregar(Entidad_Movimientos);
@@ -131,7 +131,7 @@ namespace AccesoDatos
                     {
                         Ts.Complete();
                         Entidad_Movimientos.Id_Usuario = Id_Usuario;
-                        Entidad_Movimientos.modulo = "Productos";
+                        Entidad_Movimientos.modulo = "Medicamentos";
                         Entidad_Movimientos.tipo_movimiento = "Eliminar";
                         Entidad_Movimientos.fecha_hora_movimiento = DateTime.Now;
                         Movimientos.Agregar(Entidad_Movimientos);
