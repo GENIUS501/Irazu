@@ -57,7 +57,6 @@
           <Property Name="Genero" Type="int" Nullable="false" />
           <Property Name="Estado" Type="int" Nullable="false" />
           <Property Name="Telefono" Type="int" />
-          <Property Name="Correo" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="Direccion" Type="varchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Roles">
@@ -263,7 +262,6 @@
           <Property Name="Genero" Type="Int32" Nullable="false" />
           <Property Name="Estado" Type="Int32" Nullable="false" />
           <Property Name="Telefono" Type="Int32" />
-          <Property Name="Correo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Direccion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="Roles">
@@ -475,7 +473,6 @@
                 <ScalarProperty Name="Genero" ColumnName="Genero" />
                 <ScalarProperty Name="Estado" ColumnName="Estado" />
                 <ScalarProperty Name="Telefono" ColumnName="Telefono" />
-                <ScalarProperty Name="Correo" ColumnName="Correo" />
                 <ScalarProperty Name="Direccion" ColumnName="Direccion" />
               </MappingFragment>
             </EntityTypeMapping>

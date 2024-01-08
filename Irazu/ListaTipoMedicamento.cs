@@ -104,7 +104,7 @@ namespace Lienzos
                     }
                     else
                     {
-                        MessageBox.Show("Debe seleccionar un tipo de producto!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Debe seleccionar un tipo de Medicamento!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -176,7 +176,7 @@ namespace Lienzos
             {
                 if (valorcelda != -1)
                 {
-                    DialogResult dr = MessageBox.Show("Realmente desea eliminar el Tipo de Producto?", "Eliminar el Tipo de Producto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult dr = MessageBox.Show("Realmente desea eliminar el Tipo de Medicamento?", "Eliminar el Tipo de Medicamento", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (dr == DialogResult.Yes)
                     {
                         Int32 FilasAfectadas = 0;
@@ -184,18 +184,18 @@ namespace Lienzos
                         FilasAfectadas = Negocios.Eliminar(valorcelda, Usuario);
                         if (FilasAfectadas > 0)
                         {
-                            MessageBox.Show("Tipo de Producto eliminado satisfactoriamente", "Excelente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Tipo de Medicamento eliminado satisfactoriamente", "Excelente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
                             if (FilasAfectadas == -1)
                             {
-                                MessageBox.Show("Tipo de Producto eliminado satisfactoriamente", "Excelente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Tipo de Medicamento eliminado satisfactoriamente", "Excelente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 MessageBox.Show("Error al registrar la transaccion.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             else
                             {
-                                MessageBox.Show("Error al eliminar el Tipo de Producto!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Error al eliminar el Tipo de Medicamento!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                         valorcelda = -1;
@@ -204,7 +204,7 @@ namespace Lienzos
                 }
                 else
                 {
-                    MessageBox.Show("Debe seleccionar un tipo de producto!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Debe seleccionar un tipo de Medicamento!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)

@@ -29,7 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MantenimientoPersonal));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpdatos = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TxtDireccion = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.TxtTelefono = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.txt_apellido2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_apellido1 = new System.Windows.Forms.TextBox();
@@ -40,40 +45,78 @@
             this.txt_cedula = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox1.SuspendLayout();
+            this.grpdatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // grpdatos
             // 
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.txt_apellido2);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txt_apellido1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.cbo_Genero);
-            this.groupBox1.Controls.Add(this.txt_nombre);
-            this.groupBox1.Controls.Add(this.Nombre);
-            this.groupBox1.Controls.Add(this.txt_cedula);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(427, 308);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos del personal";
+            this.grpdatos.Controls.Add(this.pictureBox1);
+            this.grpdatos.Controls.Add(this.TxtDireccion);
+            this.grpdatos.Controls.Add(this.label10);
+            this.grpdatos.Controls.Add(this.TxtTelefono);
+            this.grpdatos.Controls.Add(this.label7);
+            this.grpdatos.Controls.Add(this.txt_apellido2);
+            this.grpdatos.Controls.Add(this.label4);
+            this.grpdatos.Controls.Add(this.txt_apellido1);
+            this.grpdatos.Controls.Add(this.label3);
+            this.grpdatos.Controls.Add(this.cbo_Genero);
+            this.grpdatos.Controls.Add(this.txt_nombre);
+            this.grpdatos.Controls.Add(this.Nombre);
+            this.grpdatos.Controls.Add(this.txt_cedula);
+            this.grpdatos.Controls.Add(this.label2);
+            this.grpdatos.Controls.Add(this.label1);
+            this.grpdatos.Location = new System.Drawing.Point(12, 12);
+            this.grpdatos.Name = "grpdatos";
+            this.grpdatos.Size = new System.Drawing.Size(427, 308);
+            this.grpdatos.TabIndex = 0;
+            this.grpdatos.TabStop = false;
+            this.grpdatos.Text = "Datos del personal";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Lienzos.Properties.Resources.Imagen_de_WhatsApp_2023_11_22_a_las_19_30_10_be162142;
+            this.pictureBox1.Location = new System.Drawing.Point(252, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(169, 151);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 90;
+            this.pictureBox1.TabStop = false;
+            // 
+            // TxtDireccion
+            // 
+            this.TxtDireccion.Location = new System.Drawing.Point(9, 178);
+            this.TxtDireccion.Multiline = true;
+            this.TxtDireccion.Name = "TxtDireccion";
+            this.TxtDireccion.Size = new System.Drawing.Size(409, 122);
+            this.TxtDireccion.TabIndex = 36;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 162);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 13);
+            this.label10.TabIndex = 37;
+            this.label10.Text = "Direccion";
+            // 
+            // TxtTelefono
+            // 
+            this.TxtTelefono.Location = new System.Drawing.Point(132, 120);
+            this.TxtTelefono.Name = "TxtTelefono";
+            this.TxtTelefono.Size = new System.Drawing.Size(104, 20);
+            this.TxtTelefono.TabIndex = 34;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(129, 104);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(49, 13);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "Telefono";
             // 
             // txt_apellido2
             // 
@@ -158,39 +201,6 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "Cédula";
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(132, 120);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(104, 20);
-            this.textBox2.TabIndex = 34;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(129, 104);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 13);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "Telefono";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(9, 178);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(409, 122);
-            this.textBox5.TabIndex = 36;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 162);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 13);
-            this.label10.TabIndex = 37;
-            this.label10.Text = "Direccion";
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Arial", 9.75F);
@@ -217,16 +227,6 @@
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Lienzos.Properties.Resources.Imagen_de_WhatsApp_2023_11_22_a_las_19_30_10_be162142;
-            this.pictureBox1.Location = new System.Drawing.Point(252, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(169, 151);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 90;
-            this.pictureBox1.TabStop = false;
-            // 
             // MantenimientoPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,11 +234,11 @@
             this.ClientSize = new System.Drawing.Size(456, 359);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpdatos);
             this.Name = "MantenimientoPersonal";
             this.Text = "MantenimientoPersonal";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grpdatos.ResumeLayout(false);
+            this.grpdatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -246,7 +246,7 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpdatos;
         private System.Windows.Forms.TextBox txt_apellido2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_apellido1;
@@ -257,9 +257,9 @@
         private System.Windows.Forms.MaskedTextBox txt_cedula;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtTelefono;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox TxtDireccion;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;

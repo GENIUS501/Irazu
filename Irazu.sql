@@ -56,7 +56,6 @@ CREATE TABLE Personal(
 	Genero INT NOT NULL,
 	Estado INT NOT NULL,
 	Telefono INT NULL,
-	Correo VARCHAR(30) NOT NULL,
 	Direccion VARCHAR(MAX) NOT NULL,
 );
 CREATE TABLE Tipo_Medicamentos(

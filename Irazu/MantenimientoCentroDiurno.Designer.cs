@@ -28,57 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MantenimientoCentroDiurno));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpdatos = new System.Windows.Forms.GroupBox();
             this.txt_apellido2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_apellido1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cbo_Genero = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.Nombre = new System.Windows.Forms.Label();
             this.txt_cedula = new System.Windows.Forms.MaskedTextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.GrpOtros = new System.Windows.Forms.GroupBox();
+            this.TxtNumeroExpediente = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.TxtMedicamentos = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TxtPadecimientos = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TxtLugar = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtFamiliar = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.TxtTelefono = new System.Windows.Forms.MaskedTextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.grpdatos.SuspendLayout();
+            this.GrpOtros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // grpdatos
             // 
-            this.groupBox1.Controls.Add(this.txt_apellido2);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txt_apellido1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.cbo_Genero);
-            this.groupBox1.Controls.Add(this.txt_nombre);
-            this.groupBox1.Controls.Add(this.Nombre);
-            this.groupBox1.Controls.Add(this.txt_cedula);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(257, 187);
-            this.groupBox1.TabIndex = 15;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos del paciente";
+            this.grpdatos.Controls.Add(this.txt_apellido2);
+            this.grpdatos.Controls.Add(this.label4);
+            this.grpdatos.Controls.Add(this.txt_apellido1);
+            this.grpdatos.Controls.Add(this.label3);
+            this.grpdatos.Controls.Add(this.cbo_Genero);
+            this.grpdatos.Controls.Add(this.txt_nombre);
+            this.grpdatos.Controls.Add(this.Nombre);
+            this.grpdatos.Controls.Add(this.txt_cedula);
+            this.grpdatos.Controls.Add(this.label2);
+            this.grpdatos.Controls.Add(this.label1);
+            this.grpdatos.Location = new System.Drawing.Point(12, 12);
+            this.grpdatos.Name = "grpdatos";
+            this.grpdatos.Size = new System.Drawing.Size(257, 187);
+            this.grpdatos.TabIndex = 15;
+            this.grpdatos.TabStop = false;
+            this.grpdatos.Text = "Datos del paciente";
             // 
             // txt_apellido2
             // 
@@ -116,19 +119,13 @@
             // 
             this.cbo_Genero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_Genero.FormattingEnabled = true;
+            this.cbo_Genero.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino"});
             this.cbo_Genero.Location = new System.Drawing.Point(9, 139);
             this.cbo_Genero.Name = "cbo_Genero";
             this.cbo_Genero.Size = new System.Drawing.Size(227, 21);
             this.cbo_Genero.TabIndex = 19;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 123);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Genero";
             // 
             // txt_nombre
             // 
@@ -154,6 +151,15 @@
             this.txt_cedula.Size = new System.Drawing.Size(100, 20);
             this.txt_cedula.TabIndex = 0;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 123);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Genero";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -163,33 +169,33 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Cédula";
             // 
-            // groupBox2
+            // GrpOtros
             // 
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(275, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(458, 388);
-            this.groupBox2.TabIndex = 16;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Otros datos";
+            this.GrpOtros.Controls.Add(this.TxtTelefono);
+            this.GrpOtros.Controls.Add(this.TxtNumeroExpediente);
+            this.GrpOtros.Controls.Add(this.label11);
+            this.GrpOtros.Controls.Add(this.TxtMedicamentos);
+            this.GrpOtros.Controls.Add(this.label10);
+            this.GrpOtros.Controls.Add(this.TxtPadecimientos);
+            this.GrpOtros.Controls.Add(this.label9);
+            this.GrpOtros.Controls.Add(this.TxtLugar);
+            this.GrpOtros.Controls.Add(this.label8);
+            this.GrpOtros.Controls.Add(this.label7);
+            this.GrpOtros.Controls.Add(this.TxtFamiliar);
+            this.GrpOtros.Controls.Add(this.label6);
+            this.GrpOtros.Location = new System.Drawing.Point(275, 12);
+            this.GrpOtros.Name = "GrpOtros";
+            this.GrpOtros.Size = new System.Drawing.Size(458, 388);
+            this.GrpOtros.TabIndex = 16;
+            this.GrpOtros.TabStop = false;
+            this.GrpOtros.Text = "Otros datos";
             // 
-            // textBox6
+            // TxtNumeroExpediente
             // 
-            this.textBox6.Location = new System.Drawing.Point(9, 42);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(104, 20);
-            this.textBox6.TabIndex = 32;
+            this.TxtNumeroExpediente.Location = new System.Drawing.Point(9, 42);
+            this.TxtNumeroExpediente.Name = "TxtNumeroExpediente";
+            this.TxtNumeroExpediente.Size = new System.Drawing.Size(104, 20);
+            this.TxtNumeroExpediente.TabIndex = 32;
             // 
             // label11
             // 
@@ -200,13 +206,13 @@
             this.label11.TabIndex = 33;
             this.label11.Text = "Numero de expediente";
             // 
-            // textBox5
+            // TxtMedicamentos
             // 
-            this.textBox5.Location = new System.Drawing.Point(9, 247);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(409, 122);
-            this.textBox5.TabIndex = 30;
+            this.TxtMedicamentos.Location = new System.Drawing.Point(9, 247);
+            this.TxtMedicamentos.Multiline = true;
+            this.TxtMedicamentos.Name = "TxtMedicamentos";
+            this.TxtMedicamentos.Size = new System.Drawing.Size(409, 122);
+            this.TxtMedicamentos.TabIndex = 30;
             // 
             // label10
             // 
@@ -217,13 +223,13 @@
             this.label10.TabIndex = 31;
             this.label10.Text = "Medicamentos";
             // 
-            // textBox4
+            // TxtPadecimientos
             // 
-            this.textBox4.Location = new System.Drawing.Point(9, 103);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(187, 110);
-            this.textBox4.TabIndex = 28;
+            this.TxtPadecimientos.Location = new System.Drawing.Point(9, 103);
+            this.TxtPadecimientos.Multiline = true;
+            this.TxtPadecimientos.Name = "TxtPadecimientos";
+            this.TxtPadecimientos.Size = new System.Drawing.Size(187, 110);
+            this.TxtPadecimientos.TabIndex = 28;
             // 
             // label9
             // 
@@ -232,15 +238,15 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(190, 13);
             this.label9.TabIndex = 29;
-            this.label9.Text = "Descripcion de posibles medicamentos";
+            this.label9.Text = "Descripcion de posibles padecimientos";
             // 
-            // textBox3
+            // TxtLugar
             // 
-            this.textBox3.Location = new System.Drawing.Point(216, 103);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(202, 110);
-            this.textBox3.TabIndex = 26;
+            this.TxtLugar.Location = new System.Drawing.Point(216, 103);
+            this.TxtLugar.Multiline = true;
+            this.TxtLugar.Name = "TxtLugar";
+            this.TxtLugar.Size = new System.Drawing.Size(202, 110);
+            this.TxtLugar.TabIndex = 26;
             // 
             // label8
             // 
@@ -251,13 +257,6 @@
             this.label8.TabIndex = 27;
             this.label8.Text = "Lugar de vivienda";
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(314, 42);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(104, 20);
-            this.textBox2.TabIndex = 24;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -267,12 +266,12 @@
             this.label7.TabIndex = 25;
             this.label7.Text = "Telefono";
             // 
-            // textBox1
+            // TxtFamiliar
             // 
-            this.textBox1.Location = new System.Drawing.Point(129, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 20);
-            this.textBox1.TabIndex = 22;
+            this.TxtFamiliar.Location = new System.Drawing.Point(129, 42);
+            this.TxtFamiliar.Name = "TxtFamiliar";
+            this.TxtFamiliar.Size = new System.Drawing.Size(163, 20);
+            this.TxtFamiliar.TabIndex = 22;
             // 
             // label6
             // 
@@ -319,6 +318,18 @@
             this.pictureBox1.TabIndex = 89;
             this.pictureBox1.TabStop = false;
             // 
+            // TxtTelefono
+            // 
+            this.TxtTelefono.Location = new System.Drawing.Point(314, 42);
+            this.TxtTelefono.Mask = "00000000";
+            this.TxtTelefono.Name = "TxtTelefono";
+            this.TxtTelefono.Size = new System.Drawing.Size(100, 20);
+            this.TxtTelefono.TabIndex = 34;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // MantenimientoCentroDiurno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,22 +338,23 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.GrpOtros);
+            this.Controls.Add(this.grpdatos);
             this.Name = "MantenimientoCentroDiurno";
             this.Text = "MantenimientoCentroDiurno";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.grpdatos.ResumeLayout(false);
+            this.grpdatos.PerformLayout();
+            this.GrpOtros.ResumeLayout(false);
+            this.GrpOtros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpdatos;
         private System.Windows.Forms.TextBox txt_apellido2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_apellido1;
@@ -353,21 +365,22 @@
         private System.Windows.Forms.Label Nombre;
         private System.Windows.Forms.MaskedTextBox txt_cedula;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.GroupBox GrpOtros;
+        private System.Windows.Forms.TextBox TxtNumeroExpediente;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox TxtMedicamentos;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TxtPadecimientos;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TxtLugar;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtFamiliar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.MaskedTextBox TxtTelefono;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

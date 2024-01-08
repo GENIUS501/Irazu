@@ -22,7 +22,7 @@ namespace Lienzos
         int valorcelda = -1;
         public int Usuario { get; set; }
         public int Id_Rol { get; set; }
-        private void ListaProductos_Load(object sender, EventArgs e)
+        private void ListaMedicamentos_Load(object sender, EventArgs e)
         {
             try
             {
@@ -39,7 +39,7 @@ namespace Lienzos
                 this.dat_principal.ReadOnly = true;
                 NRoles NegociosRoles = new NRoles();
                 List<EPermisos> perm = new List<EPermisos>();
-                perm = NegociosRoles.llenar_Permisos(Id_Rol, "Productos");
+                perm = NegociosRoles.llenar_Permisos(Id_Rol, "Medicamentos");
                 if (perm.Where(x => x.Accion == "Agregar").FirstOrDefault() != null)
                 {
                     this.btn_agregar.Enabled = true;
@@ -92,7 +92,7 @@ namespace Lienzos
             {
                 if (valorcelda != -1)
                 {
-                    DialogResult dr = MessageBox.Show("Realmente desea eliminar el Producto?", "Eliminar el Producto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult dr = MessageBox.Show("Realmente desea eliminar el Medicamento?", "Eliminar el Medicamento", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (dr == DialogResult.Yes)
                     {
                         Int32 FilasAfectadas = 0;
@@ -100,27 +100,27 @@ namespace Lienzos
                         FilasAfectadas = Negocios.Eliminar(valorcelda, Usuario);
                         if (FilasAfectadas > 0)
                         {
-                            MessageBox.Show("Producto eliminado satisfactoriamente", "Excelente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Medicamento eliminado satisfactoriamente", "Excelente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
                             if (FilasAfectadas == -1)
                             {
-                                MessageBox.Show("Producto eliminado satisfactoriamente", "Excelente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Medicamento eliminado satisfactoriamente", "Excelente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 MessageBox.Show("Error al registrar la transaccion.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             else
                             {
-                                MessageBox.Show("Error al eliminar el Producto!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Error al eliminar el Medicamento!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                         valorcelda = -1;
-                        ListaProductos_Load(null, null);
+                        ListaMedicamentos_Load(null, null);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Debe seleccionar un Producto!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Debe seleccionar un Medicamento!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
@@ -147,7 +147,7 @@ namespace Lienzos
             {
                 if (this.dat_principal.Rows[e.RowIndex].Cells[0].Value.ToString() == "")
                 {
-                    ListaProductos_Load(null, null);
+                    ListaMedicamentos_Load(null, null);
                 }
                 else
                 {
@@ -166,14 +166,14 @@ namespace Lienzos
 
                 if (Accion != "A" && Accion == "M" && valorcelda != -1 || Accion != "A" && Accion == "E" && valorcelda != -1 || Accion != "A" && Accion == "C" && valorcelda != -1)
                 {
-                    //valorcelda = dat_Productos.CurrentRow.Index;
+                    //valorcelda = dat_Medicamentos.CurrentRow.Index;
                     MantenimientoMedicamentos frm = new MantenimientoMedicamentos();
                     frm.Accion = Accion;
                     frm.Id = valorcelda;
                     frm.Usuario = Usuario;
                     frm.ShowDialog();
                     valorcelda = -1;
-                    ListaProductos_Load(null, null);
+                    ListaMedicamentos_Load(null, null);
                 }
                 else
                 {
@@ -185,7 +185,7 @@ namespace Lienzos
                         frm.Usuario = Usuario;
                         frm.ShowDialog();
                         valorcelda = -1;
-                        ListaProductos_Load(null, null);
+                        ListaMedicamentos_Load(null, null);
                     }
                     else
                     {

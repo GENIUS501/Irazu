@@ -29,7 +29,6 @@ namespace AccesoDatos
                     Objbd.Genero = obj.Genero;
                     Objbd.Estado = obj.Estado;
                     Objbd.Telefono = obj.Telefono;
-                    Objbd.Correo = obj.Correo;
                     Objbd.Direccion = obj.Direccion;
                     db.Personal.Add(Objbd);
 
@@ -76,7 +75,6 @@ namespace AccesoDatos
                     ID = x.ID,
                     Estado = x.Estado,
                     Telefono = x.Telefono,
-                    Correo = x.Correo,
                     Direccion = x.Direccion,
                 }).ToList();
                 return Lista;
@@ -104,7 +102,6 @@ namespace AccesoDatos
                     Objbd.Genero = obj.Genero;
                     Objbd.Estado = obj.Estado;
                     Objbd.Telefono = obj.Telefono;
-                    Objbd.Correo = obj.Correo;
                     Objbd.Direccion = obj.Direccion;
                     db.Entry(Objbd).State = EntityState.Modified;
                     int Resultado = db.SaveChanges();

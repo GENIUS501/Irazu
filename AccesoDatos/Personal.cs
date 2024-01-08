@@ -23,7 +23,6 @@ namespace AccesoDatos
         public int Genero { get; set; }
         public int Estado { get; set; }
         public Nullable<int> Telefono { get; set; }
-        public string Correo { get; set; }
         public string Direccion { get; set; }
     }
 }
