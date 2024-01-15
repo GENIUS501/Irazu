@@ -204,6 +204,7 @@
     <EmbeddedResource Include="BitacoraMovimientos.resx">
       <DependentUpon>BitacoraMovimientos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BitacoraSesiones.rdlc" />
     <EmbeddedResource Include="BitacoraSesiones.resx">
       <DependentUpon>BitacoraSesiones.cs</DependentUpon>
     </EmbeddedResource>
