@@ -260,6 +260,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReporteMedicamento.rdlc" />
     <EmbeddedResource Include="ReporteMedicamentos.resx">
       <DependentUpon>ReporteMedicamentos.cs</DependentUpon>
     </EmbeddedResource>

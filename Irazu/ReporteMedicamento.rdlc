@@ -7,7 +7,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>b39aea62-cbd5-4593-ad1f-645ce8e00d0b</rd:DataSourceID>
+      <rd:DataSourceID>3cffff87-7235-4360-a769-6bc68738de9e</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -17,30 +17,38 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="codigo_ingreso_salida">
-          <DataField>codigo_ingreso_salida</DataField>
+        <Field Name="ID_Medicamento">
+          <DataField>ID_Medicamento</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Nombre">
+          <DataField>Nombre</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="fecha_hora_ingreso">
-          <DataField>fecha_hora_ingreso</DataField>
+        <Field Name="Presentacion">
+          <DataField>Presentacion</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="fecha_hora_salida">
-          <DataField>fecha_hora_salida</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="ID_Tipo_Medicamento">
+          <DataField>ID_Tipo_Medicamento</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="Usuario">
-          <DataField>Usuario</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="Concentracion">
+          <DataField>Concentracion</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Cantidad">
+          <DataField>Cantidad</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>IrazuDataSet</rd:DataSetName>
         <rd:SchemaPath>C:\Users\Dell\source\repos\Irazu-Git\Irazu\Irazu\IrazuDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>BitacoraIngresos</rd:TableName>
-        <rd:TableAdapterFillMethod />
-        <rd:TableAdapterGetDataMethod />
-        <rd:TableAdapterName />
+        <rd:TableName>Medicamentos</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>MedicamentosTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -52,9 +60,6 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>5.49167cm</Width>
-                </TablixColumn>
-                <TablixColumn>
                   <Width>2.5cm</Width>
                 </TablixColumn>
                 <TablixColumn>
@@ -65,11 +70,17 @@
                 </TablixColumn>
                 <TablixColumn>
                   <Width>2.5cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>3.09036cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>3.82292cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>1.39375cm</Height>
+                  <Height>0.6cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -80,25 +91,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Codigo del </Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>movimiento </Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>del usuario</Value>
+                                  <Value>Nombre</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -121,21 +114,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox23">
+                        <Textbox Name="Textbox13">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Usuario</Value>
+                                  <Value>Presentacion</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox23</rd:DefaultName>
+                          <rd:DefaultName>Textbox13</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -158,7 +151,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Tipo de movimiento</Value>
+                                  <Value>Concentracion</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -188,7 +181,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Modulo</Value>
+                                  <Value>Cantidad</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -211,6 +204,36 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
+                        <Textbox Name="Textbox23">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>ID Medicamento</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox23</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
                         <Textbox Name="Textbox25">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -218,7 +241,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Fecha y hora  del movimiento</Value>
+                                  <Value>ID Tipo Medicamento</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -246,21 +269,21 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="codigo_movimiento_usuario">
+                        <Textbox Name="Nombre">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!codigo_movimiento_usuario.Value</Value>
+                                  <Value>=Fields!Nombre.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>codigo_movimiento_usuario</rd:DefaultName>
+                          <rd:DefaultName>Nombre</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -276,21 +299,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Usuario">
+                        <Textbox Name="Presentacion">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Usuario.Value</Value>
+                                  <Value>=Fields!Presentacion.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Usuario</rd:DefaultName>
+                          <rd:DefaultName>Presentacion</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -306,21 +329,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="tipo_movimiento">
+                        <Textbox Name="Concentracion">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!tipo_movimiento.Value</Value>
+                                  <Value>=Fields!Concentracion.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>tipo_movimiento</rd:DefaultName>
+                          <rd:DefaultName>Concentracion</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -336,21 +359,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="modulo">
+                        <Textbox Name="Cantidad">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!modulo.Value</Value>
+                                  <Value>=Fields!Cantidad.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>modulo</rd:DefaultName>
+                          <rd:DefaultName>Cantidad</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -366,21 +389,51 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="fecha_hora_movimiento">
+                        <Textbox Name="ID_Medicamento">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!fecha_hora_movimiento.Value</Value>
+                                  <Value>=Fields!ID_Medicamento.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>fecha_hora_movimiento</rd:DefaultName>
+                          <rd:DefaultName>ID_Medicamento</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="ID_Tipo_Medicamento">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!ID_Tipo_Medicamento.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>ID_Tipo_Medicamento</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -405,6 +458,7 @@
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -418,10 +472,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>1.54312cm</Top>
-            <Left>0.50916cm</Left>
-            <Height>1.99375cm</Height>
-            <Width>15.49167cm</Width>
+            <Top>1.93353cm</Top>
+            <Left>0.26141cm</Left>
+            <Height>1.2cm</Height>
+            <Width>16.91328cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -432,10 +486,10 @@
         <Height>2in</Height>
         <Style />
       </Body>
-      <Width>6.5in</Width>
+      <Width>7in</Width>
       <Page>
         <PageHeader>
-          <Height>2.79934cm</Height>
+          <Height>2.81091cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -446,7 +500,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Bitacora de sesiones</Value>
+                      <Value>Reporte de medicamentos</Value>
                       <Style>
                         <FontSize>12pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -459,7 +513,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>1.39651cm</Top>
+              <Top>1.40808cm</Top>
               <Left>4.8651cm</Left>
               <Height>0.83812cm</Height>
               <Width>6.78625cm</Width>
@@ -493,7 +547,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>0.04685cm</Top>
+              <Top>0.05842cm</Top>
               <Left>4.49469cm</Left>
               <Height>1.31438cm</Height>
               <Width>7.42125cm</Width>
@@ -525,7 +579,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox3</rd:DefaultName>
-              <Top>2.30519cm</Top>
+              <Top>2.31676cm</Top>
               <Left>6.79655cm</Left>
               <Height>0.49415cm</Height>
               <Width>2.5cm</Width>
@@ -544,7 +598,7 @@
               <Source>Embedded</Source>
               <Value>ImagendeWhatsApp20231122alas193010_be162142</Value>
               <Sizing>FitProportional</Sizing>
-              <Left>13.69031cm</Left>
+              <Left>14.95708cm</Left>
               <Height>2.70508cm</Height>
               <Width>2.77cm</Width>
               <ZIndex>3</ZIndex>
@@ -640,7 +694,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox14</rd:DefaultName>
               <Top>1.9225cm</Top>
-              <Left>14.17647cm</Left>
+              <Left>15.44647cm</Left>
               <Height>0.6cm</Height>
               <Width>1.3152cm</Width>
               <ZIndex>2</ZIndex>
@@ -670,7 +724,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox16</rd:DefaultName>
               <Top>1.9225cm</Top>
-              <Left>15.49167cm</Left>
+              <Left>16.76167cm</Left>
               <Height>0.6cm</Height>
               <Width>1.01833cm</Width>
               <ZIndex>3</ZIndex>
@@ -754,5 +808,5 @@ Y8Rw1idc6N6QHdj2kLhZshV7srHRmeNLYCK4JnvLPh1S2ehgHmtfgIt4u98sRttP71/N4686j5bmf4YK
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>48999576-4c9c-43a9-86bf-1f66dc12d6b0</rd:ReportID>
+  <rd:ReportID>b17f0fb3-00ea-4f58-8cfe-52c6d8cb518c</rd:ReportID>
 </Report>
