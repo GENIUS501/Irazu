@@ -90,6 +90,11 @@
       <DependentUpon>BitacoraSesiones.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper.cs" />
+    <Compile Include="IrazuDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IrazuDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ListaCentroDiurno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +200,7 @@
       <DependentUpon>ReporteUsuarioCentroDiurno.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="BitacoraMovimientos.rdlc" />
     <EmbeddedResource Include="BitacoraMovimientos.resx">
       <DependentUpon>BitacoraMovimientos.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,6 +268,17 @@
     <EmbeddedResource Include="ReporteUsuarioCentroDiurno.resx">
       <DependentUpon>ReporteUsuarioCentroDiurno.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="IrazuDataSet.xsc">
+      <DependentUpon>IrazuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IrazuDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IrazuDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IrazuDataSet.xss">
+      <DependentUpon>IrazuDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
