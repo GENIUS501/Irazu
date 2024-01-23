@@ -265,6 +265,7 @@
     <EmbeddedResource Include="ReporteMedicamentos.resx">
       <DependentUpon>ReporteMedicamentos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportePersonal.rdlc" />
     <EmbeddedResource Include="ReportePersonal.resx">
       <DependentUpon>ReportePersonal.cs</DependentUpon>
     </EmbeddedResource>
