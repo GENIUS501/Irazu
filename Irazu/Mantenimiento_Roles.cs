@@ -358,46 +358,46 @@ namespace Irazu
 
                 }
                 #endregion
-                #region TipoMedicamento 5
+                #region TipoTipoMedicamento 5
                 ////////Productos//5////////////////////////////////////
-                if (Permisos.Where(x => x.Modulo == "Medicamentos").FirstOrDefault() != null)
+                if (Permisos.Where(x => x.Modulo == "TipoTipoMedicamento").FirstOrDefault() != null)
                 {
-                    this.grp_medicamentos.Enabled = true;
-                    this.chb_medicamentos.Checked = true;
-                    if (Permisos.Where(x => x.Modulo == "Medicamentos" && x.Accion == "Agregar").FirstOrDefault() != null)
+                    this.grp_TipoMedicamento.Enabled = true;
+                    this.chb_Tipo_Mediacamento.Checked = true;
+                    if (Permisos.Where(x => x.Modulo == "TipoMedicamento" && x.Accion == "Agregar").FirstOrDefault() != null)
                     {
-                        this.chk_medicamentos_agregar.Checked = true;
+                        this.chk_Tipo_Mediacamento_Agregar.Checked = true;
                     }
                     else
                     {
-                        this.chk_medicamentos_agregar.Checked = false;
+                        this.chk_Tipo_Mediacamento_Agregar.Checked = false;
                     }
                     ///
-                    if (Permisos.Where(x => x.Modulo == "Medicamentos" && x.Accion == "Consultar").FirstOrDefault() != null)
+                    if (Permisos.Where(x => x.Modulo == "TipoMedicamento" && x.Accion == "Consultar").FirstOrDefault() != null)
                     {
-                        this.chk_medicamentos_consultar.Checked = true;
+                        this.chk_Tipo_Mediacamento_Consultar.Checked = true;
                     }
                     else
                     {
-                        this.chk_medicamentos_consultar.Checked = false;
+                        this.chk_Tipo_Mediacamento_Consultar.Checked = false;
                     }
                     /////
-                    if (Permisos.Where(x => x.Modulo == "Medicamentos" && x.Accion == "Eliminar").FirstOrDefault() != null)
+                    if (Permisos.Where(x => x.Modulo == "TipoMedicamento" && x.Accion == "Eliminar").FirstOrDefault() != null)
                     {
-                        this.chk_medicamentos_eliminar.Checked = true;
+                        this.chk_Tipo_Mediacamento_eliminar.Checked = true;
                     }
                     else
                     {
-                        this.chk_medicamentos_eliminar.Checked = false;
+                        this.chk_Tipo_Mediacamento_eliminar.Checked = false;
                     }
                     /////
-                    if (Permisos.Where(x => x.Modulo == "Medicamentos" && x.Accion == "Modificar").FirstOrDefault() != null)
+                    if (Permisos.Where(x => x.Modulo == "TipoMedicamento" && x.Accion == "Modificar").FirstOrDefault() != null)
                     {
-                        this.chk_medicamentos_modificar.Checked = true;
+                        this.chk_Tipo_Mediacamento_Modificar.Checked = true;
                     }
                     else
                     {
-                        this.chk_medicamentos_modificar.Checked = false;
+                        this.chk_Tipo_Mediacamento_Modificar.Checked = false;
                     }
                 }
                 else

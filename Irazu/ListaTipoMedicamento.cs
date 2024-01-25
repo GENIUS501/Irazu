@@ -32,7 +32,7 @@ namespace Lienzos
                 this.dat_principal.ReadOnly = true;
                 NRoles NegociosRoles = new NRoles();
                 List<EPermisos> perm = new List<EPermisos>();
-                perm = NegociosRoles.llenar_Permisos(Id_Rol, "Tipo_Medicamentos");
+                perm = NegociosRoles.llenar_Permisos(Id_Rol, "TipoMedicamento");
                 if (perm.Where(x => x.Accion == "Agregar").FirstOrDefault() != null)
                 {
                     this.btn_agregar.Enabled = true;
