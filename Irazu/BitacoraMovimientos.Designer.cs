@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BitacoraMovimientos));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_buscar_accion = new System.Windows.Forms.Button();
+            this.btn_fecha = new System.Windows.Forms.Button();
+            this.btn_nombre = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.cbo_Accion = new System.Windows.Forms.ComboBox();
             this.txt_usuario = new System.Windows.Forms.TextBox();
@@ -39,9 +42,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_buscar_accion = new System.Windows.Forms.Button();
-            this.btn_fecha = new System.Windows.Forms.Button();
-            this.btn_nombre = new System.Windows.Forms.Button();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,6 +66,39 @@
             this.groupBox1.TabIndex = 101;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Busqueda";
+            // 
+            // btn_buscar_accion
+            // 
+            this.btn_buscar_accion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar_accion.BackgroundImage")));
+            this.btn_buscar_accion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscar_accion.Location = new System.Drawing.Point(342, 45);
+            this.btn_buscar_accion.Name = "btn_buscar_accion";
+            this.btn_buscar_accion.Size = new System.Drawing.Size(25, 20);
+            this.btn_buscar_accion.TabIndex = 58;
+            this.btn_buscar_accion.UseVisualStyleBackColor = true;
+            this.btn_buscar_accion.Click += new System.EventHandler(this.btn_buscar_accion_Click);
+            // 
+            // btn_fecha
+            // 
+            this.btn_fecha.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_fecha.BackgroundImage")));
+            this.btn_fecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_fecha.Location = new System.Drawing.Point(342, 101);
+            this.btn_fecha.Name = "btn_fecha";
+            this.btn_fecha.Size = new System.Drawing.Size(25, 20);
+            this.btn_fecha.TabIndex = 56;
+            this.btn_fecha.UseVisualStyleBackColor = true;
+            this.btn_fecha.Click += new System.EventHandler(this.btn_fecha_Click);
+            // 
+            // btn_nombre
+            // 
+            this.btn_nombre.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_nombre.BackgroundImage")));
+            this.btn_nombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_nombre.Location = new System.Drawing.Point(115, 44);
+            this.btn_nombre.Name = "btn_nombre";
+            this.btn_nombre.Size = new System.Drawing.Size(25, 20);
+            this.btn_nombre.TabIndex = 55;
+            this.btn_nombre.UseVisualStyleBackColor = true;
+            this.btn_nombre.Click += new System.EventHandler(this.btn_nombre_Click);
             // 
             // label4
             // 
@@ -150,44 +183,14 @@
             this.pictureBox1.TabIndex = 102;
             this.pictureBox1.TabStop = false;
             // 
-            // btn_buscar_accion
-            // 
-            this.btn_buscar_accion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar_accion.BackgroundImage")));
-            this.btn_buscar_accion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar_accion.Location = new System.Drawing.Point(342, 45);
-            this.btn_buscar_accion.Name = "btn_buscar_accion";
-            this.btn_buscar_accion.Size = new System.Drawing.Size(25, 20);
-            this.btn_buscar_accion.TabIndex = 58;
-            this.btn_buscar_accion.UseVisualStyleBackColor = true;
-            // 
-            // btn_fecha
-            // 
-            this.btn_fecha.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_fecha.BackgroundImage")));
-            this.btn_fecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_fecha.Location = new System.Drawing.Point(342, 101);
-            this.btn_fecha.Name = "btn_fecha";
-            this.btn_fecha.Size = new System.Drawing.Size(25, 20);
-            this.btn_fecha.TabIndex = 56;
-            this.btn_fecha.UseVisualStyleBackColor = true;
-            // 
-            // btn_nombre
-            // 
-            this.btn_nombre.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_nombre.BackgroundImage")));
-            this.btn_nombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_nombre.Location = new System.Drawing.Point(115, 44);
-            this.btn_nombre.Name = "btn_nombre";
-            this.btn_nombre.Size = new System.Drawing.Size(25, 20);
-            this.btn_nombre.TabIndex = 55;
-            this.btn_nombre.UseVisualStyleBackColor = true;
-            // 
             // reportViewer1
             // 
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "AmorPropio.ReporteCliente.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(2, 174);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Lienzos.BitacoraMovimientos.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(12, 174);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(796, 291);
-            this.reportViewer1.TabIndex = 110;
+            this.reportViewer1.Size = new System.Drawing.Size(776, 285);
+            this.reportViewer1.TabIndex = 103;
             // 
             // BitacoraMovimientos
             // 
@@ -199,6 +202,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "BitacoraMovimientos";
             this.Text = "BitacoraMovimientos";
+            this.Load += new System.EventHandler(this.BitacoraMovimientos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
