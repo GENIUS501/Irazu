@@ -72,11 +72,11 @@ namespace Irazu
                     Mantenimientos.Visible = true;
                     Tipo_Medicamentos.Visible = true;
                 }
-                if (perm.Where(x => x.Modulo == "ReporteMedicamentos" || x.Modulo == "ReportePersonal" || x.Modulo == "ReporteCentroDiurno").FirstOrDefault() != null)
+                if (perm.Where(x => x.Modulo == "ReporteMedicamento" || x.Modulo == "ReportePersonal" || x.Modulo == "ReporteCentroDiurno").FirstOrDefault() != null)
                 {
                     Reportes.Visible = true;
                 }
-                if (perm.Where(x => x.Modulo == "ReporteMedicamentos").FirstOrDefault() != null)
+                if (perm.Where(x => x.Modulo == "ReporteMedicamento").FirstOrDefault() != null)
                 {
                     Reporte_Medicamentos.Visible = true;
                 }

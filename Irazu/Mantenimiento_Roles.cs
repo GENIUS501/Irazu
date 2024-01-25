@@ -360,7 +360,7 @@ namespace Irazu
                 #endregion
                 #region TipoTipoMedicamento 5
                 ////////Productos//5////////////////////////////////////
-                if (Permisos.Where(x => x.Modulo == "TipoTipoMedicamento").FirstOrDefault() != null)
+                if (Permisos.Where(x => x.Modulo == "TipoMedicamento").FirstOrDefault() != null)
                 {
                     this.grp_TipoMedicamento.Enabled = true;
                     this.chb_Tipo_Mediacamento.Checked = true;
@@ -406,7 +406,7 @@ namespace Irazu
                 }
                 #endregion
                 #region Reporte de medicamentos
-                if (Permisos.Where(x => x.Modulo == "ReporteMedicamentos").FirstOrDefault() != null)
+                if (Permisos.Where(x => x.Modulo == "ReporteMedicamento").FirstOrDefault() != null)
                 {
                     this.chb_Medicamentos_reporte.Checked = true;
                 }
@@ -418,7 +418,7 @@ namespace Irazu
                 #region Reporte de personal
                 if (Permisos.Where(x => x.Modulo == "ReportePersonal").FirstOrDefault() != null)
                 {
-                    this.chb_Medicamentos_reporte.Checked = true;
+                    this.chb_reporte_personal.Checked = true;
                 }
                 else
                 {
@@ -428,7 +428,7 @@ namespace Irazu
                 #region Reporte de usuario centro diurno
                 if (Permisos.Where(x => x.Modulo == "ReporteCentroDiurno").FirstOrDefault() != null)
                 {
-                    this.chb_Centro_Diurno.Checked = true;
+                    this.chb_reporte_centro_diurno.Checked = true;
                 }
                 else
                 {
