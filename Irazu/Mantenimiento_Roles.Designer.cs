@@ -36,8 +36,9 @@
             this.txt_id_perfil = new System.Windows.Forms.TextBox();
             this.Lbl_Perfil = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.chb_Clientes_reporte = new System.Windows.Forms.CheckBox();
+            this.chb_Medicamentos_reporte = new System.Windows.Forms.CheckBox();
             this.chb_bit_sesiones = new System.Windows.Forms.CheckBox();
             this.chb_bit_movimientos = new System.Windows.Forms.CheckBox();
             this.grp_usuarios = new System.Windows.Forms.GroupBox();
@@ -73,9 +74,11 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.chb_reporte_personal = new System.Windows.Forms.CheckBox();
+            this.chb_reporte_centro_diurno = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.grp_usuarios.SuspendLayout();
             this.grp_Centro_Diurno.SuspendLayout();
@@ -83,7 +86,6 @@
             this.grp_personal.SuspendLayout();
             this.grp_roles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -147,37 +149,49 @@
             this.groupBox2.Controls.Add(this.grp_roles);
             this.groupBox2.Location = new System.Drawing.Point(12, 155);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(580, 342);
+            this.groupBox2.Size = new System.Drawing.Size(642, 342);
             this.groupBox2.TabIndex = 20;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos de permisos";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Lienzos.Properties.Resources.Imagen_de_WhatsApp_2023_11_22_a_las_19_30_10_be162142;
+            this.pictureBox1.Location = new System.Drawing.Point(448, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(188, 166);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 89;
+            this.pictureBox1.TabStop = false;
+            // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.chb_Clientes_reporte);
+            this.groupBox5.Controls.Add(this.chb_reporte_centro_diurno);
+            this.groupBox5.Controls.Add(this.chb_reporte_personal);
+            this.groupBox5.Controls.Add(this.chb_Medicamentos_reporte);
             this.groupBox5.Controls.Add(this.chb_bit_sesiones);
             this.groupBox5.Controls.Add(this.chb_bit_movimientos);
             this.groupBox5.Location = new System.Drawing.Point(242, 203);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(199, 134);
+            this.groupBox5.Size = new System.Drawing.Size(394, 134);
             this.groupBox5.TabIndex = 29;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Reportes y Bitácoras";
             // 
-            // chb_Clientes_reporte
+            // chb_Medicamentos_reporte
             // 
-            this.chb_Clientes_reporte.AutoSize = true;
-            this.chb_Clientes_reporte.Location = new System.Drawing.Point(21, 32);
-            this.chb_Clientes_reporte.Name = "chb_Clientes_reporte";
-            this.chb_Clientes_reporte.Size = new System.Drawing.Size(109, 17);
-            this.chb_Clientes_reporte.TabIndex = 35;
-            this.chb_Clientes_reporte.Text = "Reporte dinamico";
-            this.chb_Clientes_reporte.UseVisualStyleBackColor = true;
+            this.chb_Medicamentos_reporte.AutoSize = true;
+            this.chb_Medicamentos_reporte.Location = new System.Drawing.Point(21, 42);
+            this.chb_Medicamentos_reporte.Name = "chb_Medicamentos_reporte";
+            this.chb_Medicamentos_reporte.Size = new System.Drawing.Size(150, 17);
+            this.chb_Medicamentos_reporte.TabIndex = 35;
+            this.chb_Medicamentos_reporte.Text = "Reporte de medicamentos";
+            this.chb_Medicamentos_reporte.UseVisualStyleBackColor = true;
             // 
             // chb_bit_sesiones
             // 
             this.chb_bit_sesiones.AutoSize = true;
-            this.chb_bit_sesiones.Location = new System.Drawing.Point(21, 55);
+            this.chb_bit_sesiones.Location = new System.Drawing.Point(206, 42);
             this.chb_bit_sesiones.Name = "chb_bit_sesiones";
             this.chb_bit_sesiones.Size = new System.Drawing.Size(165, 17);
             this.chb_bit_sesiones.TabIndex = 40;
@@ -187,7 +201,7 @@
             // chb_bit_movimientos
             // 
             this.chb_bit_movimientos.AutoSize = true;
-            this.chb_bit_movimientos.Location = new System.Drawing.Point(21, 78);
+            this.chb_bit_movimientos.Location = new System.Drawing.Point(206, 65);
             this.chb_bit_movimientos.Name = "chb_bit_movimientos";
             this.chb_bit_movimientos.Size = new System.Drawing.Size(141, 17);
             this.chb_bit_movimientos.TabIndex = 39;
@@ -257,7 +271,7 @@
             this.chb_Centro_Diurno.TabIndex = 6;
             this.chb_Centro_Diurno.Text = "Centro Diurno";
             this.chb_Centro_Diurno.UseVisualStyleBackColor = true;
-            this.chb_Centro_Diurno.CheckedChanged += new System.EventHandler(this.chb_Tipo_Producto_CheckedChanged);
+            this.chb_Centro_Diurno.CheckedChanged += new System.EventHandler(this.chb_CentroDiurno_CheckedChanged);
             // 
             // chb_medicamentos
             // 
@@ -279,7 +293,7 @@
             this.chb_Personal.TabIndex = 4;
             this.chb_Personal.Text = "Personal";
             this.chb_Personal.UseVisualStyleBackColor = true;
-            this.chb_Personal.CheckedChanged += new System.EventHandler(this.chb_Clientes_CheckedChanged);
+            this.chb_Personal.CheckedChanged += new System.EventHandler(this.chb_Personal_CheckedChanged);
             // 
             // chb_usuarios
             // 
@@ -551,22 +565,32 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // pictureBox1
+            // chb_reporte_personal
             // 
-            this.pictureBox1.Image = global::Lienzos.Properties.Resources.Imagen_de_WhatsApp_2023_11_22_a_las_19_30_10_be162142;
-            this.pictureBox1.Location = new System.Drawing.Point(386, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(188, 166);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 89;
-            this.pictureBox1.TabStop = false;
+            this.chb_reporte_personal.AutoSize = true;
+            this.chb_reporte_personal.Location = new System.Drawing.Point(21, 66);
+            this.chb_reporte_personal.Name = "chb_reporte_personal";
+            this.chb_reporte_personal.Size = new System.Drawing.Size(122, 17);
+            this.chb_reporte_personal.TabIndex = 41;
+            this.chb_reporte_personal.Text = "Reporte de personal";
+            this.chb_reporte_personal.UseVisualStyleBackColor = true;
+            // 
+            // chb_reporte_centro_diurno
+            // 
+            this.chb_reporte_centro_diurno.AutoSize = true;
+            this.chb_reporte_centro_diurno.Location = new System.Drawing.Point(21, 90);
+            this.chb_reporte_centro_diurno.Name = "chb_reporte_centro_diurno";
+            this.chb_reporte_centro_diurno.Size = new System.Drawing.Size(181, 17);
+            this.chb_reporte_centro_diurno.TabIndex = 42;
+            this.chb_reporte_centro_diurno.Text = "Reporte de usuario centro diurno";
+            this.chb_reporte_centro_diurno.UseVisualStyleBackColor = true;
             // 
             // Mantenimiento_Roles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(600, 504);
+            this.ClientSize = new System.Drawing.Size(666, 504);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.groupBox2);
@@ -579,6 +603,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.grp_usuarios.ResumeLayout(false);
@@ -592,7 +617,6 @@
             this.grp_roles.ResumeLayout(false);
             this.grp_roles.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -606,7 +630,7 @@
         private System.Windows.Forms.Label Lbl_Perfil;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.CheckBox chb_Clientes_reporte;
+        private System.Windows.Forms.CheckBox chb_Medicamentos_reporte;
         private System.Windows.Forms.CheckBox chb_bit_sesiones;
         private System.Windows.Forms.CheckBox chb_bit_movimientos;
         private System.Windows.Forms.GroupBox grp_usuarios;
@@ -643,5 +667,7 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox chb_reporte_centro_diurno;
+        private System.Windows.Forms.CheckBox chb_reporte_personal;
     }
 }

@@ -217,13 +217,13 @@ namespace Irazu
 
                 }
                 #endregion
-                #region Tipo_Producto 3
-                ////////Tipo_Producto//3////////////////////////////////////
-                if (Permisos.Where(x => x.Modulo == "Tipo_Producto").FirstOrDefault() != null)
+                #region Tipo_Medicamento 3
+                ////////CentroDiurno//3////////////////////////////////////
+                if (Permisos.Where(x => x.Modulo == "CentroDiurno").FirstOrDefault() != null)
                 {
                     this.grp_Centro_Diurno.Enabled = true;
                     this.chb_Centro_Diurno.Checked = true;
-                    if (Permisos.Where(x => x.Modulo == "Tipo_Producto" && x.Accion == "Agregar").FirstOrDefault() != null)
+                    if (Permisos.Where(x => x.Modulo == "CentroDiurno" && x.Accion == "Agregar").FirstOrDefault() != null)
                     {
                         this.chk_Centro_Diurno_agregar.Checked = true;
                     }
@@ -232,7 +232,7 @@ namespace Irazu
                         this.chk_Centro_Diurno_agregar.Checked = false;
                     }
                     ///
-                    if (Permisos.Where(x => x.Modulo == "Tipo_Producto" && x.Accion == "Consultar").FirstOrDefault() != null)
+                    if (Permisos.Where(x => x.Modulo == "CentroDiurno" && x.Accion == "Consultar").FirstOrDefault() != null)
                     {
                         this.chk_Centro_Diurno_consultar.Checked = true;
                     }
@@ -241,7 +241,7 @@ namespace Irazu
                         this.chk_Centro_Diurno_consultar.Checked = false;
                     }
                     /////
-                    if (Permisos.Where(x => x.Modulo == "Tipo_Producto" && x.Accion == "Eliminar").FirstOrDefault() != null)
+                    if (Permisos.Where(x => x.Modulo == "CentroDiurno" && x.Accion == "Eliminar").FirstOrDefault() != null)
                     {
                         this.chk_Centro_Diurno_eliminar.Checked = true;
                     }
@@ -250,7 +250,7 @@ namespace Irazu
                         this.chk_Centro_Diurno_eliminar.Checked = false;
                     }
                     /////
-                    if (Permisos.Where(x => x.Modulo == "Tipo_Producto" && x.Accion == "Modificar").FirstOrDefault() != null)
+                    if (Permisos.Where(x => x.Modulo == "CentroDiurno" && x.Accion == "Modificar").FirstOrDefault() != null)
                     {
                         this.chk_Centro_Diurno_modificar.Checked = true;
                     }
@@ -264,13 +264,13 @@ namespace Irazu
 
                 }
                 #endregion
-                #region Clientes
-                ////////Clientes//////////////////////////////////////
-                if (Permisos.Where(x => x.Modulo == "Clientes").FirstOrDefault() != null)
+                #region Personal
+                ////////Personal//////////////////////////////////////
+                if (Permisos.Where(x => x.Modulo == "Personal").FirstOrDefault() != null)
                 {
                     this.grp_personal.Enabled = true;
                     this.chb_Personal.Checked = true;
-                    if (Permisos.Where(x => x.Modulo == "Clientes" && x.Accion == "Agregar").FirstOrDefault() != null)
+                    if (Permisos.Where(x => x.Modulo == "Personal" && x.Accion == "Agregar").FirstOrDefault() != null)
                     {
                         this.chk_personal_agregar.Checked = true;
                     }
@@ -279,7 +279,7 @@ namespace Irazu
                         this.chk_personal_agregar.Checked = false;
                     }
                     ///
-                    if (Permisos.Where(x => x.Modulo == "Clientes" && x.Accion == "Consultar").FirstOrDefault() != null)
+                    if (Permisos.Where(x => x.Modulo == "Personal" && x.Accion == "Consultar").FirstOrDefault() != null)
                     {
                         this.chk_personal_consultar.Checked = true;
                     }
@@ -288,7 +288,7 @@ namespace Irazu
                         this.chk_personal_consultar.Checked = false;
                     }
                     /////
-                    if (Permisos.Where(x => x.Modulo == "Clientes" && x.Accion == "Eliminar").FirstOrDefault() != null)
+                    if (Permisos.Where(x => x.Modulo == "Personal" && x.Accion == "Eliminar").FirstOrDefault() != null)
                     {
                         this.chk_personal_eliminar.Checked = true;
                     }
@@ -297,7 +297,7 @@ namespace Irazu
                         this.chk_personal_eliminar.Checked = false;
                     }
                     /////
-                    if (Permisos.Where(x => x.Modulo == "Clientes" && x.Accion == "Modificar").FirstOrDefault() != null)
+                    if (Permisos.Where(x => x.Modulo == "Personal" && x.Accion == "Modificar").FirstOrDefault() != null)
                     {
                         this.chk_personal_modificar.Checked = true;
                     }
@@ -311,7 +311,7 @@ namespace Irazu
 
                 }
                 #endregion
-                #region Productos 5
+                #region Medicamentos 5
                 ////////Productos//5////////////////////////////////////
                 if (Permisos.Where(x => x.Modulo == "Medicamentos").FirstOrDefault() != null)
                 {
@@ -358,30 +358,30 @@ namespace Irazu
 
                 }
                 #endregion
-                #region Reporte de Producto
-                if (Permisos.Where(x => x.Modulo == "ReporteProducto").FirstOrDefault() != null)
+                #region Reporte de medicamentos
+                if (Permisos.Where(x => x.Modulo == "ReporteMedicamentos").FirstOrDefault() != null)
                 {
-                    this.chb_productos_reporte.Checked = true;
+                    this.chb_Medicamentos_reporte.Checked = true;
                 }
                 else
                 {
 
                 }
                 #endregion
-                #region Reporte de Clientes
-                if (Permisos.Where(x => x.Modulo == "ReporteClientes").FirstOrDefault() != null)
+                #region Reporte de personal
+                if (Permisos.Where(x => x.Modulo == "ReportePersonal").FirstOrDefault() != null)
                 {
-                    this.chb_Clientes_reporte.Checked = true;
+                    this.chb_Medicamentos_reporte.Checked = true;
                 }
                 else
                 {
 
                 }
                 #endregion
-                #region Reporte de ventas
-                if (Permisos.Where(x => x.Modulo == "ReporteVentas").FirstOrDefault() != null)
+                #region Reporte de usuario centro diurno
+                if (Permisos.Where(x => x.Modulo == "ReporteCentroDiurno").FirstOrDefault() != null)
                 {
-                    this.chb_venta_reporte.Checked = true;
+                    this.chb_Centro_Diurno.Checked = true;
                 }
                 else
                 {
@@ -513,12 +513,12 @@ namespace Irazu
                         }
                     }
                 }
-                /////////Clientes//////3///////////////////////////////////////////////////////////////////////
+                /////////Personal//////3///////////////////////////////////////////////////////////////////////
                 if (this.chb_Personal.Checked == true)
                 {
                     Permisos.Id_Rol = Id_Rol;
-                    Permisos.Modulo = "Clientes";
-                    Permisos.Accion = "Clientes";
+                    Permisos.Modulo = "Personal";
+                    Permisos.Accion = "Personal";
                     Lista_Permisos.Add(Permisos);
                     Permisos = new EPermisos();
                     if (this.grp_personal.Enabled == true)
@@ -526,7 +526,7 @@ namespace Irazu
                         if (chk_personal_agregar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
-                            Permisos.Modulo = "Clientes";
+                            Permisos.Modulo = "Personal";
                             Permisos.Accion = "Agregar";
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
@@ -534,7 +534,7 @@ namespace Irazu
                         if (chk_personal_modificar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
-                            Permisos.Modulo = "Clientes";
+                            Permisos.Modulo = "Personal";
                             Permisos.Accion = "Modificar";
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
@@ -542,7 +542,7 @@ namespace Irazu
                         if (chk_personal_eliminar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
-                            Permisos.Modulo = "Clientes";
+                            Permisos.Modulo = "Personal";
                             Permisos.Accion = "Eliminar";
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
@@ -550,7 +550,7 @@ namespace Irazu
                         if (chk_personal_consultar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
-                            Permisos.Modulo = "Clientes";
+                            Permisos.Modulo = "Personal";
                             Permisos.Accion = "Consultar";
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
@@ -601,12 +601,12 @@ namespace Irazu
                         }
                     }
                 }
-                /////////Tipo_Producto//////5///////////////////////////////////////////////////////////////////////
+                /////////CentroDiurno//////5///////////////////////////////////////////////////////////////////////
                 if (this.chb_Centro_Diurno.Checked == true)
                 {
                     Permisos.Id_Rol = Id_Rol;
-                    Permisos.Modulo = "Tipo_Producto";
-                    Permisos.Accion = "Tipo_Producto";
+                    Permisos.Modulo = "CentroDiurno";
+                    Permisos.Accion = "CentroDiurno";
                     Lista_Permisos.Add(Permisos);
                     Permisos = new EPermisos();
                     if (this.grp_Centro_Diurno.Enabled == true)
@@ -614,7 +614,7 @@ namespace Irazu
                         if (chk_Centro_Diurno_agregar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
-                            Permisos.Modulo = "Tipo_Producto";
+                            Permisos.Modulo = "CentroDiurno";
                             Permisos.Accion = "Agregar";
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
@@ -622,7 +622,7 @@ namespace Irazu
                         if (chk_Centro_Diurno_modificar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
-                            Permisos.Modulo = "Tipo_Producto";
+                            Permisos.Modulo = "CentroDiurno";
                             Permisos.Accion = "Modificar";
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
@@ -630,7 +630,7 @@ namespace Irazu
                         if (chk_Centro_Diurno_eliminar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
-                            Permisos.Modulo = "Tipo_Producto";
+                            Permisos.Modulo = "CentroDiurno";
                             Permisos.Accion = "Eliminar";
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
@@ -638,14 +638,58 @@ namespace Irazu
                         if (chk_Centro_Diurno_consultar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
-                            Permisos.Modulo = "Tipo_Producto";
+                            Permisos.Modulo = "CentroDiurno";
                             Permisos.Accion = "Consultar";
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
                         }
                     }
                 }
-                if (this.chb_productos_reporte.Checked == true)
+                /////////TipoMedicamento//////6///////////////////////////////////////////////////////////////////////
+                if (this.chb_Centro_Diurno.Checked == true)
+                {
+                    Permisos.Id_Rol = Id_Rol;
+                    Permisos.Modulo = "TipoMedicamento";
+                    Permisos.Accion = "TipoMedicamento";
+                    Lista_Permisos.Add(Permisos);
+                    Permisos = new EPermisos();
+                    if (this.grp_Centro_Diurno.Enabled == true)
+                    {
+                        if (chk_Centro_Diurno_agregar.Checked == true)
+                        {
+                            Permisos.Id_Rol = Id_Rol;
+                            Permisos.Modulo = "TipoMedicamento";
+                            Permisos.Accion = "Agregar";
+                            Lista_Permisos.Add(Permisos);
+                            Permisos = new EPermisos();
+                        }
+                        if (chk_Centro_Diurno_modificar.Checked == true)
+                        {
+                            Permisos.Id_Rol = Id_Rol;
+                            Permisos.Modulo = "TipoMedicamento";
+                            Permisos.Accion = "Modificar";
+                            Lista_Permisos.Add(Permisos);
+                            Permisos = new EPermisos();
+                        }
+                        if (chk_Centro_Diurno_eliminar.Checked == true)
+                        {
+                            Permisos.Id_Rol = Id_Rol;
+                            Permisos.Modulo = "TipoMedicamento";
+                            Permisos.Accion = "Eliminar";
+                            Lista_Permisos.Add(Permisos);
+                            Permisos = new EPermisos();
+                        }
+                        if (chk_Centro_Diurno_consultar.Checked == true)
+                        {
+                            Permisos.Id_Rol = Id_Rol;
+                            Permisos.Modulo = "TipoMedicamento";
+                            Permisos.Accion = "Consultar";
+                            Lista_Permisos.Add(Permisos);
+                            Permisos = new EPermisos();
+                        }
+                    }
+                }
+                if (this.chb_Medicamentos_reporte.Checked == true)
                 {
                     Permisos.Id_Rol = Id_Rol;
                     Permisos.Modulo = "ReporteProducto";
@@ -653,17 +697,17 @@ namespace Irazu
                     Lista_Permisos.Add(Permisos);
                     Permisos = new EPermisos();
                 }
-                ////////Reportes_Clientes////10//////////////////////////////////////////////////////////////////////////////////
-                if (this.chb_Clientes_reporte.Checked == true)
+                ////////Reportes_Personal////10//////////////////////////////////////////////////////////////////////////////////
+                if (this.chb_reporte_personal.Checked == true)
                 {
                     Permisos.Id_Rol = Id_Rol;
-                    Permisos.Modulo = "ReporteClientes";
-                    Permisos.Accion = "ReporteClientes";
+                    Permisos.Modulo = "ReportePersonal";
+                    Permisos.Accion = "ReportePersonal";
                     Lista_Permisos.Add(Permisos);
                     Permisos = new EPermisos();
                 }
                 ////////Reporte_Ventas//////////////////////////////////////////////////////////////////////////////////////
-                if (this.chb_venta_reporte.Checked == true)
+                if (this.chb_reporte_centro_diurno.Checked == true)
                 {
                     Permisos.Id_Rol = Id_Rol;
                     Permisos.Modulo = "ReporteVentas";
@@ -771,7 +815,7 @@ namespace Irazu
             }
         }
 
-        private void chb_Clientes_CheckedChanged(object sender, EventArgs e)
+        private void chb_Personal_CheckedChanged(object sender, EventArgs e)
         {
             try
             {
@@ -809,7 +853,7 @@ namespace Irazu
             }
         }
 
-        private void chb_Tipo_Producto_CheckedChanged(object sender, EventArgs e)
+        private void chb_CentroDiurno_CheckedChanged(object sender, EventArgs e)
         {
             try
             {

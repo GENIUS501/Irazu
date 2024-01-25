@@ -32,16 +32,13 @@
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reingresarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Mantenimientos = new System.Windows.Forms.ToolStripMenuItem();
-            this.Clientes = new System.Windows.Forms.ToolStripMenuItem();
-            this.Productos = new System.Windows.Forms.ToolStripMenuItem();
-            this.Tipo_Productos = new System.Windows.Forms.ToolStripMenuItem();
-            this.Procesos = new System.Windows.Forms.ToolStripMenuItem();
-            this.Venta = new System.Windows.Forms.ToolStripMenuItem();
-            this.Devolucion = new System.Windows.Forms.ToolStripMenuItem();
+            this.Personal = new System.Windows.Forms.ToolStripMenuItem();
+            this.Medicamentos = new System.Windows.Forms.ToolStripMenuItem();
+            this.Tipo_Medicamentos = new System.Windows.Forms.ToolStripMenuItem();
             this.Reportes = new System.Windows.Forms.ToolStripMenuItem();
-            this.Reporte_Venta = new System.Windows.Forms.ToolStripMenuItem();
-            this.Reporte_Cliente = new System.Windows.Forms.ToolStripMenuItem();
-            this.Reporte_Producto = new System.Windows.Forms.ToolStripMenuItem();
+            this.Reporte_Medicamentos = new System.Windows.Forms.ToolStripMenuItem();
+            this.Reporte_Personal = new System.Windows.Forms.ToolStripMenuItem();
+            this.Reporte_centro_diurno = new System.Windows.Forms.ToolStripMenuItem();
             this.Seguridad = new System.Windows.Forms.ToolStripMenuItem();
             this.Usuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.Roles = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +47,7 @@
             this.Salir = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.Txt_Usuario = new System.Windows.Forms.ToolStripStatusLabel();
+            this.usuariosDeCentroDiurnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +57,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.inicioToolStripMenuItem,
             this.Mantenimientos,
-            this.Procesos,
             this.Reportes,
             this.Seguridad,
             this.Salir});
@@ -87,79 +84,59 @@
             // Mantenimientos
             // 
             this.Mantenimientos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Clientes,
-            this.Productos,
-            this.Tipo_Productos});
+            this.Personal,
+            this.Medicamentos,
+            this.Tipo_Medicamentos,
+            this.usuariosDeCentroDiurnoToolStripMenuItem});
             this.Mantenimientos.Name = "Mantenimientos";
             this.Mantenimientos.Size = new System.Drawing.Size(106, 20);
             this.Mantenimientos.Text = "Mantenimientos";
             // 
-            // Clientes
+            // Personal
             // 
-            this.Clientes.Name = "Clientes";
-            this.Clientes.Size = new System.Drawing.Size(175, 22);
-            this.Clientes.Text = "Clientes";
+            this.Personal.Name = "Personal";
+            this.Personal.Size = new System.Drawing.Size(210, 22);
+            this.Personal.Text = "Personal";
             // 
-            // Productos
+            // Medicamentos
             // 
-            this.Productos.Name = "Productos";
-            this.Productos.Size = new System.Drawing.Size(175, 22);
-            this.Productos.Text = "Productos";
+            this.Medicamentos.Name = "Medicamentos";
+            this.Medicamentos.Size = new System.Drawing.Size(210, 22);
+            this.Medicamentos.Text = "Medicamentos";
             // 
-            // Tipo_Productos
+            // Tipo_Medicamentos
             // 
-            this.Tipo_Productos.Name = "Tipo_Productos";
-            this.Tipo_Productos.Size = new System.Drawing.Size(175, 22);
-            this.Tipo_Productos.Text = "Tipos de Productos";
-            // 
-            // Procesos
-            // 
-            this.Procesos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Venta,
-            this.Devolucion});
-            this.Procesos.Name = "Procesos";
-            this.Procesos.Size = new System.Drawing.Size(66, 20);
-            this.Procesos.Text = "Procesos";
-            // 
-            // Venta
-            // 
-            this.Venta.Name = "Venta";
-            this.Venta.Size = new System.Drawing.Size(194, 22);
-            this.Venta.Text = "Proceso de venta";
-            // 
-            // Devolucion
-            // 
-            this.Devolucion.Name = "Devolucion";
-            this.Devolucion.Size = new System.Drawing.Size(194, 22);
-            this.Devolucion.Text = "Proceso de devolucion";
+            this.Tipo_Medicamentos.Name = "Tipo_Medicamentos";
+            this.Tipo_Medicamentos.Size = new System.Drawing.Size(210, 22);
+            this.Tipo_Medicamentos.Text = "Tipos de medicamentos";
             // 
             // Reportes
             // 
             this.Reportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Reporte_Venta,
-            this.Reporte_Cliente,
-            this.Reporte_Producto});
+            this.Reporte_Medicamentos,
+            this.Reporte_Personal,
+            this.Reporte_centro_diurno});
             this.Reportes.Name = "Reportes";
             this.Reportes.Size = new System.Drawing.Size(65, 20);
             this.Reportes.Text = "Reportes";
             // 
-            // Reporte_Venta
+            // Reporte_Medicamentos
             // 
-            this.Reporte_Venta.Name = "Reporte_Venta";
-            this.Reporte_Venta.Size = new System.Drawing.Size(188, 22);
-            this.Reporte_Venta.Text = "Reporte de venta";
+            this.Reporte_Medicamentos.Name = "Reporte_Medicamentos";
+            this.Reporte_Medicamentos.Size = new System.Drawing.Size(248, 22);
+            this.Reporte_Medicamentos.Text = "Reporte de Medicamentos";
             // 
-            // Reporte_Cliente
+            // Reporte_Personal
             // 
-            this.Reporte_Cliente.Name = "Reporte_Cliente";
-            this.Reporte_Cliente.Size = new System.Drawing.Size(188, 22);
-            this.Reporte_Cliente.Text = "Reporte de clientes";
+            this.Reporte_Personal.Name = "Reporte_Personal";
+            this.Reporte_Personal.Size = new System.Drawing.Size(248, 22);
+            this.Reporte_Personal.Text = "Reporte de Personal";
             // 
-            // Reporte_Producto
+            // Reporte_centro_diurno
             // 
-            this.Reporte_Producto.Name = "Reporte_Producto";
-            this.Reporte_Producto.Size = new System.Drawing.Size(188, 22);
-            this.Reporte_Producto.Text = "Reporte de productos";
+            this.Reporte_centro_diurno.Name = "Reporte_centro_diurno";
+            this.Reporte_centro_diurno.Size = new System.Drawing.Size(248, 22);
+            this.Reporte_centro_diurno.Text = "Reporte de usuario centro diurno";
             // 
             // Seguridad
             // 
@@ -220,6 +197,12 @@
             this.Txt_Usuario.Name = "Txt_Usuario";
             this.Txt_Usuario.Size = new System.Drawing.Size(0, 17);
             // 
+            // usuariosDeCentroDiurnoToolStripMenuItem
+            // 
+            this.usuariosDeCentroDiurnoToolStripMenuItem.Name = "usuariosDeCentroDiurnoToolStripMenuItem";
+            this.usuariosDeCentroDiurnoToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.usuariosDeCentroDiurnoToolStripMenuItem.Text = "Usuarios de centro diurno";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,22 +236,20 @@
         private System.Windows.Forms.ToolStripStatusLabel Txt_Usuario;
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Mantenimientos;
-        private System.Windows.Forms.ToolStripMenuItem Clientes;
-        private System.Windows.Forms.ToolStripMenuItem Productos;
-        private System.Windows.Forms.ToolStripMenuItem Tipo_Productos;
-        private System.Windows.Forms.ToolStripMenuItem Procesos;
-        private System.Windows.Forms.ToolStripMenuItem Venta;
-        private System.Windows.Forms.ToolStripMenuItem Devolucion;
+        private System.Windows.Forms.ToolStripMenuItem Personal;
+        private System.Windows.Forms.ToolStripMenuItem Medicamentos;
+        private System.Windows.Forms.ToolStripMenuItem Tipo_Medicamentos;
         private System.Windows.Forms.ToolStripMenuItem Reportes;
         private System.Windows.Forms.ToolStripMenuItem Seguridad;
         private System.Windows.Forms.ToolStripMenuItem Salir;
-        private System.Windows.Forms.ToolStripMenuItem Reporte_Venta;
-        private System.Windows.Forms.ToolStripMenuItem Reporte_Cliente;
-        private System.Windows.Forms.ToolStripMenuItem Reporte_Producto;
+        private System.Windows.Forms.ToolStripMenuItem Reporte_Medicamentos;
+        private System.Windows.Forms.ToolStripMenuItem Reporte_Personal;
+        private System.Windows.Forms.ToolStripMenuItem Reporte_centro_diurno;
         private System.Windows.Forms.ToolStripMenuItem Usuarios;
         private System.Windows.Forms.ToolStripMenuItem Roles;
         private System.Windows.Forms.ToolStripMenuItem Bitacora_Ingresos;
         private System.Windows.Forms.ToolStripMenuItem Bitacora_Movimientos;
         private System.Windows.Forms.ToolStripMenuItem reingresarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosDeCentroDiurnoToolStripMenuItem;
     }
 }

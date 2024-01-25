@@ -33,18 +33,18 @@ namespace Irazu
                 NRoles Negocios = new NRoles();
                 Usuarios.Visible = false;
                 Roles.Visible = false;
-                Clientes.Visible = false;
-                Productos.Visible = false;
-                Tipo_Productos.Visible = false;
+                Personal.Visible = false;
+                Medicamentos.Visible = false;
+                Tipo_Medicamentos.Visible = false;
                 Venta.Visible = false;
                 Devolucion.Visible = false;
                 Reportes.Visible = false;
                 Mantenimientos.Visible = false;
                 Seguridad.Visible = false;
                 Procesos.Visible = false;
-                Reporte_Cliente.Visible = false;
-                Reporte_Producto.Visible = false;
-                Reporte_Venta.Visible = false;
+                Reporte_Personal.Visible = false;
+                Reporte_centro_diurno.Visible = false;
+                Reporte_Medicamentos.Visible = false;
                 Bitacora_Ingresos.Visible = false;
                 Bitacora_Movimientos.Visible = false;
                 perm = Negocios.llenar_Permisos(UsuarioLogueado.Id_Rol);
@@ -61,17 +61,17 @@ namespace Irazu
                 if (perm.Where(x => x.Modulo == "Clientes").FirstOrDefault() != null)
                 {
                     Mantenimientos.Visible = true;
-                    Clientes.Visible = true;
+                    Personal.Visible = true;
                 }
                 if (perm.Where(x => x.Modulo == "Productos").FirstOrDefault() != null)
                 {
                     Mantenimientos.Visible = true;
-                    Productos.Visible = true;
+                    Medicamentos.Visible = true;
                 }
                 if (perm.Where(x => x.Modulo == "Tipo_Producto").FirstOrDefault() != null)
                 {
                     Mantenimientos.Visible = true;
-                    Tipo_Productos.Visible = true;
+                    Tipo_Medicamentos.Visible = true;
                 }
                 if (perm.Where(x => x.Modulo == "ReporteVentas" || x.Modulo == "ReporteMaquinas" || x.Modulo == "ReporteLoterias" || x.Modulo == "BitacoraSesiones").FirstOrDefault() != null)
                 {
@@ -79,15 +79,15 @@ namespace Irazu
                 }
                 if (perm.Where(x => x.Modulo == "ReporteVentas").FirstOrDefault() != null)
                 {
-                    Reporte_Venta.Visible = true;
+                    Reporte_Medicamentos.Visible = true;
                 }
                 if (perm.Where(x => x.Modulo == "ReporteClientes").FirstOrDefault() != null)
                 {
-                    Reporte_Cliente.Visible = true;
+                    Reporte_Personal.Visible = true;
                 }
                 if (perm.Where(x => x.Modulo == "ReporteProducto").FirstOrDefault() != null)
                 {
-                    Reporte_Producto.Visible = true;
+                    Reporte_centro_diurno.Visible = true;
                 }
                 if (perm.Where(x => x.Modulo == "BitacoraSesiones").FirstOrDefault() != null)
                 {
