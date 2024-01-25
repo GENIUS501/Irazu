@@ -38,6 +38,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.chb_reporte_centro_diurno = new System.Windows.Forms.CheckBox();
+            this.chb_reporte_personal = new System.Windows.Forms.CheckBox();
             this.chb_Medicamentos_reporte = new System.Windows.Forms.CheckBox();
             this.chb_bit_sesiones = new System.Windows.Forms.CheckBox();
             this.chb_bit_movimientos = new System.Windows.Forms.CheckBox();
@@ -74,8 +76,12 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.chb_reporte_personal = new System.Windows.Forms.CheckBox();
-            this.chb_reporte_centro_diurno = new System.Windows.Forms.CheckBox();
+            this.chb_Tipo_Mediacamento = new System.Windows.Forms.CheckBox();
+            this.grp_TipoMedicamento = new System.Windows.Forms.GroupBox();
+            this.chk_Tipo_Mediacamento_Consultar = new System.Windows.Forms.CheckBox();
+            this.chk_Tipo_Mediacamento_eliminar = new System.Windows.Forms.CheckBox();
+            this.chk_Tipo_Mediacamento_Modificar = new System.Windows.Forms.CheckBox();
+            this.chk_Tipo_Mediacamento_Agregar = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -86,6 +92,7 @@
             this.grp_personal.SuspendLayout();
             this.grp_roles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.grp_TipoMedicamento.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -135,6 +142,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.chb_Tipo_Mediacamento);
+            this.groupBox2.Controls.Add(this.grp_TipoMedicamento);
             this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Controls.Add(this.groupBox5);
             this.groupBox2.Controls.Add(this.grp_usuarios);
@@ -149,7 +158,7 @@
             this.groupBox2.Controls.Add(this.grp_roles);
             this.groupBox2.Location = new System.Drawing.Point(12, 155);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(642, 342);
+            this.groupBox2.Size = new System.Drawing.Size(670, 342);
             this.groupBox2.TabIndex = 20;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos de permisos";
@@ -157,9 +166,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Lienzos.Properties.Resources.Imagen_de_WhatsApp_2023_11_22_a_las_19_30_10_be162142;
-            this.pictureBox1.Location = new System.Drawing.Point(448, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(502, 19);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(188, 166);
+            this.pictureBox1.Size = new System.Drawing.Size(162, 166);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 89;
             this.pictureBox1.TabStop = false;
@@ -173,10 +182,30 @@
             this.groupBox5.Controls.Add(this.chb_bit_movimientos);
             this.groupBox5.Location = new System.Drawing.Point(242, 203);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(394, 134);
+            this.groupBox5.Size = new System.Drawing.Size(422, 134);
             this.groupBox5.TabIndex = 29;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Reportes y Bitácoras";
+            // 
+            // chb_reporte_centro_diurno
+            // 
+            this.chb_reporte_centro_diurno.AutoSize = true;
+            this.chb_reporte_centro_diurno.Location = new System.Drawing.Point(21, 90);
+            this.chb_reporte_centro_diurno.Name = "chb_reporte_centro_diurno";
+            this.chb_reporte_centro_diurno.Size = new System.Drawing.Size(181, 17);
+            this.chb_reporte_centro_diurno.TabIndex = 42;
+            this.chb_reporte_centro_diurno.Text = "Reporte de usuario centro diurno";
+            this.chb_reporte_centro_diurno.UseVisualStyleBackColor = true;
+            // 
+            // chb_reporte_personal
+            // 
+            this.chb_reporte_personal.AutoSize = true;
+            this.chb_reporte_personal.Location = new System.Drawing.Point(21, 66);
+            this.chb_reporte_personal.Name = "chb_reporte_personal";
+            this.chb_reporte_personal.Size = new System.Drawing.Size(122, 17);
+            this.chb_reporte_personal.TabIndex = 41;
+            this.chb_reporte_personal.Text = "Reporte de personal";
+            this.chb_reporte_personal.UseVisualStyleBackColor = true;
             // 
             // chb_Medicamentos_reporte
             // 
@@ -191,7 +220,7 @@
             // chb_bit_sesiones
             // 
             this.chb_bit_sesiones.AutoSize = true;
-            this.chb_bit_sesiones.Location = new System.Drawing.Point(206, 42);
+            this.chb_bit_sesiones.Location = new System.Drawing.Point(234, 42);
             this.chb_bit_sesiones.Name = "chb_bit_sesiones";
             this.chb_bit_sesiones.Size = new System.Drawing.Size(165, 17);
             this.chb_bit_sesiones.TabIndex = 40;
@@ -201,7 +230,7 @@
             // chb_bit_movimientos
             // 
             this.chb_bit_movimientos.AutoSize = true;
-            this.chb_bit_movimientos.Location = new System.Drawing.Point(206, 65);
+            this.chb_bit_movimientos.Location = new System.Drawing.Point(234, 65);
             this.chb_bit_movimientos.Name = "chb_bit_movimientos";
             this.chb_bit_movimientos.Size = new System.Drawing.Size(141, 17);
             this.chb_bit_movimientos.TabIndex = 39;
@@ -565,32 +594,77 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // chb_reporte_personal
+            // chb_Tipo_Mediacamento
             // 
-            this.chb_reporte_personal.AutoSize = true;
-            this.chb_reporte_personal.Location = new System.Drawing.Point(21, 66);
-            this.chb_reporte_personal.Name = "chb_reporte_personal";
-            this.chb_reporte_personal.Size = new System.Drawing.Size(122, 17);
-            this.chb_reporte_personal.TabIndex = 41;
-            this.chb_reporte_personal.Text = "Reporte de personal";
-            this.chb_reporte_personal.UseVisualStyleBackColor = true;
+            this.chb_Tipo_Mediacamento.AutoSize = true;
+            this.chb_Tipo_Mediacamento.Location = new System.Drawing.Point(363, 36);
+            this.chb_Tipo_Mediacamento.Name = "chb_Tipo_Mediacamento";
+            this.chb_Tipo_Mediacamento.Size = new System.Drawing.Size(133, 17);
+            this.chb_Tipo_Mediacamento.TabIndex = 90;
+            this.chb_Tipo_Mediacamento.Text = "Tipos de medicamento";
+            this.chb_Tipo_Mediacamento.UseVisualStyleBackColor = true;
+            this.chb_Tipo_Mediacamento.CheckedChanged += new System.EventHandler(this.chb_Tipo_Mediacamento_CheckedChanged);
             // 
-            // chb_reporte_centro_diurno
+            // grp_TipoMedicamento
             // 
-            this.chb_reporte_centro_diurno.AutoSize = true;
-            this.chb_reporte_centro_diurno.Location = new System.Drawing.Point(21, 90);
-            this.chb_reporte_centro_diurno.Name = "chb_reporte_centro_diurno";
-            this.chb_reporte_centro_diurno.Size = new System.Drawing.Size(181, 17);
-            this.chb_reporte_centro_diurno.TabIndex = 42;
-            this.chb_reporte_centro_diurno.Text = "Reporte de usuario centro diurno";
-            this.chb_reporte_centro_diurno.UseVisualStyleBackColor = true;
+            this.grp_TipoMedicamento.Controls.Add(this.chk_Tipo_Mediacamento_Consultar);
+            this.grp_TipoMedicamento.Controls.Add(this.chk_Tipo_Mediacamento_eliminar);
+            this.grp_TipoMedicamento.Controls.Add(this.chk_Tipo_Mediacamento_Modificar);
+            this.grp_TipoMedicamento.Controls.Add(this.chk_Tipo_Mediacamento_Agregar);
+            this.grp_TipoMedicamento.Enabled = false;
+            this.grp_TipoMedicamento.Location = new System.Drawing.Point(363, 59);
+            this.grp_TipoMedicamento.Name = "grp_TipoMedicamento";
+            this.grp_TipoMedicamento.Size = new System.Drawing.Size(97, 110);
+            this.grp_TipoMedicamento.TabIndex = 91;
+            this.grp_TipoMedicamento.TabStop = false;
+            this.grp_TipoMedicamento.Text = "Permisos";
+            // 
+            // chk_Tipo_Mediacamento_Consultar
+            // 
+            this.chk_Tipo_Mediacamento_Consultar.AutoSize = true;
+            this.chk_Tipo_Mediacamento_Consultar.Location = new System.Drawing.Point(6, 90);
+            this.chk_Tipo_Mediacamento_Consultar.Name = "chk_Tipo_Mediacamento_Consultar";
+            this.chk_Tipo_Mediacamento_Consultar.Size = new System.Drawing.Size(70, 17);
+            this.chk_Tipo_Mediacamento_Consultar.TabIndex = 21;
+            this.chk_Tipo_Mediacamento_Consultar.Text = "Consultar";
+            this.chk_Tipo_Mediacamento_Consultar.UseVisualStyleBackColor = true;
+            // 
+            // chk_Tipo_Mediacamento_eliminar
+            // 
+            this.chk_Tipo_Mediacamento_eliminar.AutoSize = true;
+            this.chk_Tipo_Mediacamento_eliminar.Location = new System.Drawing.Point(7, 67);
+            this.chk_Tipo_Mediacamento_eliminar.Name = "chk_Tipo_Mediacamento_eliminar";
+            this.chk_Tipo_Mediacamento_eliminar.Size = new System.Drawing.Size(62, 17);
+            this.chk_Tipo_Mediacamento_eliminar.TabIndex = 20;
+            this.chk_Tipo_Mediacamento_eliminar.Text = "Eliminar";
+            this.chk_Tipo_Mediacamento_eliminar.UseVisualStyleBackColor = true;
+            // 
+            // chk_Tipo_Mediacamento_Modificar
+            // 
+            this.chk_Tipo_Mediacamento_Modificar.AutoSize = true;
+            this.chk_Tipo_Mediacamento_Modificar.Location = new System.Drawing.Point(7, 43);
+            this.chk_Tipo_Mediacamento_Modificar.Name = "chk_Tipo_Mediacamento_Modificar";
+            this.chk_Tipo_Mediacamento_Modificar.Size = new System.Drawing.Size(69, 17);
+            this.chk_Tipo_Mediacamento_Modificar.TabIndex = 19;
+            this.chk_Tipo_Mediacamento_Modificar.Text = "Modificar";
+            this.chk_Tipo_Mediacamento_Modificar.UseVisualStyleBackColor = true;
+            // 
+            // chk_Tipo_Mediacamento_Agregar
+            // 
+            this.chk_Tipo_Mediacamento_Agregar.AutoSize = true;
+            this.chk_Tipo_Mediacamento_Agregar.Location = new System.Drawing.Point(6, 19);
+            this.chk_Tipo_Mediacamento_Agregar.Name = "chk_Tipo_Mediacamento_Agregar";
+            this.chk_Tipo_Mediacamento_Agregar.Size = new System.Drawing.Size(63, 17);
+            this.chk_Tipo_Mediacamento_Agregar.TabIndex = 18;
+            this.chk_Tipo_Mediacamento_Agregar.Text = "Agregar";
+            this.chk_Tipo_Mediacamento_Agregar.UseVisualStyleBackColor = true;
             // 
             // Mantenimiento_Roles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(666, 504);
+            this.ClientSize = new System.Drawing.Size(694, 504);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.groupBox2);
@@ -617,6 +691,8 @@
             this.grp_roles.ResumeLayout(false);
             this.grp_roles.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.grp_TipoMedicamento.ResumeLayout(false);
+            this.grp_TipoMedicamento.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -669,5 +745,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckBox chb_reporte_centro_diurno;
         private System.Windows.Forms.CheckBox chb_reporte_personal;
+        private System.Windows.Forms.CheckBox chb_Tipo_Mediacamento;
+        private System.Windows.Forms.GroupBox grp_TipoMedicamento;
+        private System.Windows.Forms.CheckBox chk_Tipo_Mediacamento_Consultar;
+        private System.Windows.Forms.CheckBox chk_Tipo_Mediacamento_eliminar;
+        private System.Windows.Forms.CheckBox chk_Tipo_Mediacamento_Modificar;
+        private System.Windows.Forms.CheckBox chk_Tipo_Mediacamento_Agregar;
     }
 }

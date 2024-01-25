@@ -217,7 +217,7 @@ namespace Irazu
 
                 }
                 #endregion
-                #region Tipo_Medicamento 3
+                #region CentroDiurno 3
                 ////////CentroDiurno//3////////////////////////////////////
                 if (Permisos.Where(x => x.Modulo == "CentroDiurno").FirstOrDefault() != null)
                 {
@@ -312,6 +312,53 @@ namespace Irazu
                 }
                 #endregion
                 #region Medicamentos 5
+                ////////Productos//5////////////////////////////////////
+                if (Permisos.Where(x => x.Modulo == "Medicamentos").FirstOrDefault() != null)
+                {
+                    this.grp_medicamentos.Enabled = true;
+                    this.chb_medicamentos.Checked = true;
+                    if (Permisos.Where(x => x.Modulo == "Medicamentos" && x.Accion == "Agregar").FirstOrDefault() != null)
+                    {
+                        this.chk_medicamentos_agregar.Checked = true;
+                    }
+                    else
+                    {
+                        this.chk_medicamentos_agregar.Checked = false;
+                    }
+                    ///
+                    if (Permisos.Where(x => x.Modulo == "Medicamentos" && x.Accion == "Consultar").FirstOrDefault() != null)
+                    {
+                        this.chk_medicamentos_consultar.Checked = true;
+                    }
+                    else
+                    {
+                        this.chk_medicamentos_consultar.Checked = false;
+                    }
+                    /////
+                    if (Permisos.Where(x => x.Modulo == "Medicamentos" && x.Accion == "Eliminar").FirstOrDefault() != null)
+                    {
+                        this.chk_medicamentos_eliminar.Checked = true;
+                    }
+                    else
+                    {
+                        this.chk_medicamentos_eliminar.Checked = false;
+                    }
+                    /////
+                    if (Permisos.Where(x => x.Modulo == "Medicamentos" && x.Accion == "Modificar").FirstOrDefault() != null)
+                    {
+                        this.chk_medicamentos_modificar.Checked = true;
+                    }
+                    else
+                    {
+                        this.chk_medicamentos_modificar.Checked = false;
+                    }
+                }
+                else
+                {
+
+                }
+                #endregion
+                #region TipoMedicamento 5
                 ////////Productos//5////////////////////////////////////
                 if (Permisos.Where(x => x.Modulo == "Medicamentos").FirstOrDefault() != null)
                 {
@@ -646,7 +693,7 @@ namespace Irazu
                     }
                 }
                 /////////TipoMedicamento//////6///////////////////////////////////////////////////////////////////////
-                if (this.chb_Centro_Diurno.Checked == true)
+                if (this.chb_Tipo_Mediacamento.Checked == true)
                 {
                     Permisos.Id_Rol = Id_Rol;
                     Permisos.Modulo = "TipoMedicamento";
@@ -655,7 +702,7 @@ namespace Irazu
                     Permisos = new EPermisos();
                     if (this.grp_Centro_Diurno.Enabled == true)
                     {
-                        if (chk_Centro_Diurno_agregar.Checked == true)
+                        if (chk_Tipo_Mediacamento_Agregar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
                             Permisos.Modulo = "TipoMedicamento";
@@ -663,7 +710,7 @@ namespace Irazu
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
                         }
-                        if (chk_Centro_Diurno_modificar.Checked == true)
+                        if (chk_Tipo_Mediacamento_Modificar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
                             Permisos.Modulo = "TipoMedicamento";
@@ -671,7 +718,7 @@ namespace Irazu
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
                         }
-                        if (chk_Centro_Diurno_eliminar.Checked == true)
+                        if (chk_Tipo_Mediacamento_eliminar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
                             Permisos.Modulo = "TipoMedicamento";
@@ -679,7 +726,7 @@ namespace Irazu
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
                         }
-                        if (chk_Centro_Diurno_consultar.Checked == true)
+                        if (chk_Tipo_Mediacamento_Consultar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
                             Permisos.Modulo = "TipoMedicamento";
@@ -692,8 +739,8 @@ namespace Irazu
                 if (this.chb_Medicamentos_reporte.Checked == true)
                 {
                     Permisos.Id_Rol = Id_Rol;
-                    Permisos.Modulo = "ReporteProducto";
-                    Permisos.Accion = "ReporteProducto";
+                    Permisos.Modulo = "ReporteMedicamento";
+                    Permisos.Accion = "ReporteMedicamento";
                     Lista_Permisos.Add(Permisos);
                     Permisos = new EPermisos();
                 }
@@ -710,8 +757,8 @@ namespace Irazu
                 if (this.chb_reporte_centro_diurno.Checked == true)
                 {
                     Permisos.Id_Rol = Id_Rol;
-                    Permisos.Modulo = "ReporteVentas";
-                    Permisos.Accion = "ReporteVentas";
+                    Permisos.Modulo = "ReporteCentroDiurno";
+                    Permisos.Accion = "ReporteCentroDiurno";
                     Lista_Permisos.Add(Permisos);
                     Permisos = new EPermisos();
                 }
@@ -864,6 +911,25 @@ namespace Irazu
                 else
                 {
                     grp_Centro_Diurno.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void chb_Tipo_Mediacamento_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.chb_Tipo_Mediacamento.Checked == true)
+                {
+                    grp_TipoMedicamento.Enabled = true;
+                }
+                else
+                {
+                    grp_TipoMedicamento.Enabled = false;
                 }
             }
             catch (Exception ex)

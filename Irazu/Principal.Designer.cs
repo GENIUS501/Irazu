@@ -47,7 +47,7 @@
             this.Salir = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.Txt_Usuario = new System.Windows.Forms.ToolStripStatusLabel();
-            this.usuariosDeCentroDiurnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CentroDiurno = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -87,7 +87,7 @@
             this.Personal,
             this.Medicamentos,
             this.Tipo_Medicamentos,
-            this.usuariosDeCentroDiurnoToolStripMenuItem});
+            this.CentroDiurno});
             this.Mantenimientos.Name = "Mantenimientos";
             this.Mantenimientos.Size = new System.Drawing.Size(106, 20);
             this.Mantenimientos.Text = "Mantenimientos";
@@ -197,11 +197,11 @@
             this.Txt_Usuario.Name = "Txt_Usuario";
             this.Txt_Usuario.Size = new System.Drawing.Size(0, 17);
             // 
-            // usuariosDeCentroDiurnoToolStripMenuItem
+            // CentroDiurno
             // 
-            this.usuariosDeCentroDiurnoToolStripMenuItem.Name = "usuariosDeCentroDiurnoToolStripMenuItem";
-            this.usuariosDeCentroDiurnoToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
-            this.usuariosDeCentroDiurnoToolStripMenuItem.Text = "Usuarios de centro diurno";
+            this.CentroDiurno.Name = "CentroDiurno";
+            this.CentroDiurno.Size = new System.Drawing.Size(210, 22);
+            this.CentroDiurno.Text = "Usuarios de centro diurno";
             // 
             // Principal
             // 
@@ -250,6 +250,6 @@
         private System.Windows.Forms.ToolStripMenuItem Bitacora_Ingresos;
         private System.Windows.Forms.ToolStripMenuItem Bitacora_Movimientos;
         private System.Windows.Forms.ToolStripMenuItem reingresarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuariosDeCentroDiurnoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem CentroDiurno;
     }
 }

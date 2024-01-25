@@ -36,12 +36,10 @@ namespace Irazu
                 Personal.Visible = false;
                 Medicamentos.Visible = false;
                 Tipo_Medicamentos.Visible = false;
-                Venta.Visible = false;
-                Devolucion.Visible = false;
+                CentroDiurno.Visible = false;
                 Reportes.Visible = false;
                 Mantenimientos.Visible = false;
                 Seguridad.Visible = false;
-                Procesos.Visible = false;
                 Reporte_Personal.Visible = false;
                 Reporte_centro_diurno.Visible = false;
                 Reporte_Medicamentos.Visible = false;
@@ -58,34 +56,34 @@ namespace Irazu
                     Seguridad.Visible = true;
                     Roles.Visible = true;
                 }
-                if (perm.Where(x => x.Modulo == "Clientes").FirstOrDefault() != null)
+                if (perm.Where(x => x.Modulo == "Medicamentos").FirstOrDefault() != null)
                 {
                     Mantenimientos.Visible = true;
                     Personal.Visible = true;
                 }
-                if (perm.Where(x => x.Modulo == "Productos").FirstOrDefault() != null)
+                if (perm.Where(x => x.Modulo == "CentroDiurno").FirstOrDefault() != null)
                 {
                     Mantenimientos.Visible = true;
                     Medicamentos.Visible = true;
                 }
-                if (perm.Where(x => x.Modulo == "Tipo_Producto").FirstOrDefault() != null)
+                if (perm.Where(x => x.Modulo == "TipoMedicamento").FirstOrDefault() != null)
                 {
                     Mantenimientos.Visible = true;
                     Tipo_Medicamentos.Visible = true;
                 }
-                if (perm.Where(x => x.Modulo == "ReporteVentas" || x.Modulo == "ReporteMaquinas" || x.Modulo == "ReporteLoterias" || x.Modulo == "BitacoraSesiones").FirstOrDefault() != null)
+                if (perm.Where(x => x.Modulo == "ReporteMedicamentos" || x.Modulo == "ReportePersonal" || x.Modulo == "ReporteCentroDiurno").FirstOrDefault() != null)
                 {
                     Reportes.Visible = true;
                 }
-                if (perm.Where(x => x.Modulo == "ReporteVentas").FirstOrDefault() != null)
+                if (perm.Where(x => x.Modulo == "ReporteMedicamentos").FirstOrDefault() != null)
                 {
                     Reporte_Medicamentos.Visible = true;
                 }
-                if (perm.Where(x => x.Modulo == "ReporteClientes").FirstOrDefault() != null)
+                if (perm.Where(x => x.Modulo == "ReportePersonal").FirstOrDefault() != null)
                 {
                     Reporte_Personal.Visible = true;
                 }
-                if (perm.Where(x => x.Modulo == "ReporteProducto").FirstOrDefault() != null)
+                if (perm.Where(x => x.Modulo == "ReporteCentroDiurno").FirstOrDefault() != null)
                 {
                     Reporte_centro_diurno.Visible = true;
                 }
@@ -96,16 +94,6 @@ namespace Irazu
                 if (perm.Where(x => x.Modulo == "BitacoraMovimientos").FirstOrDefault() != null)
                 {
                     Bitacora_Movimientos.Visible = true;
-                }
-                if (perm.Where(x => x.Modulo == "ProcesoVentas").FirstOrDefault() != null)
-                {
-                    Procesos.Visible = true;
-                    Venta.Visible = true;
-                }
-                if (perm.Where(x => x.Modulo == "ProcesoDevoluciones").FirstOrDefault() != null)
-                {
-                    Procesos.Visible = true;
-                    Devolucion.Visible = true;
                 }
             }
             catch (Exception ex)
