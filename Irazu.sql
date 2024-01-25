@@ -88,3 +88,30 @@ CREATE TABLE Bitacora_Movimientos(
    Id_Usuario INT,
    CONSTRAINT Fk_MOVIMIENTOS_USUARIOS FOREIGN KEY(Id_Usuario) REFERENCES Usuarios(Id_Usuario)
 );
+
+INSERT INTO Roles(Nombre_Rol,Descripcion)VALUES('Administrador','Administrador')
+
+INSERT INTO Permisos (Modulo, Accion, Id_Rol) VALUES
+('Roles', 'Roles', 1),
+('Roles', 'Agregar', 1),
+('Roles', 'Modificar', 1),
+('Roles', 'Eliminar', 1),
+('Roles', 'Consultar', 1),
+('Usuarios', 'Usuarios', 1),
+('Usuarios', 'Agregar', 1),
+('Usuarios', 'Modificar', 1),
+('Usuarios', 'Eliminar', 1),
+('Usuarios', 'Consultar', 1),
+('Clientes', 'Clientes', 1),
+('Clientes', 'Agregar', 1),
+('Clientes', 'Modificar', 1),
+('Clientes', 'Eliminar', 1),
+('Clientes', 'Consultar', 1),
+('Productos', 'Estudiantes', 1),
+('Productos', 'Agregar', 1),
+('Productos', 'Modificar', 1),
+('Productos', 'Eliminar', 1),
+('Productos', 'Consultar', 1)
+
+INSERT INTO Usuarios (Cedula,Nombre,Primer_Apellido,Segundo_Apellido, Nombre_Usuario, Contrasena,Telefono,Correo,Genero,Id_Rol, Estado)
+VALUES ('123456789', 'Usuario','Usuario','Usuario', 'Administrador1', 'HVEvEz0I1wRgOshEmHhas82xZwI=',12345678,'1@1.com', 1,1,1)
