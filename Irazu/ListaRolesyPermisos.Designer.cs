@@ -124,7 +124,7 @@
             // 
             this.btn_buscar_nombre.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar_nombre.BackgroundImage")));
             this.btn_buscar_nombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar_nombre.Location = new System.Drawing.Point(238, 119);
+            this.btn_buscar_nombre.Location = new System.Drawing.Point(115, 102);
             this.btn_buscar_nombre.Name = "btn_buscar_nombre";
             this.btn_buscar_nombre.Size = new System.Drawing.Size(25, 20);
             this.btn_buscar_nombre.TabIndex = 3;
