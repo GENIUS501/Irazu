@@ -42,6 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.GrpOtros = new System.Windows.Forms.GroupBox();
+            this.TxtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.TxtNumeroExpediente = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.TxtMedicamentos = new System.Windows.Forms.TextBox();
@@ -56,7 +57,6 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.TxtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.grpdatos.SuspendLayout();
             this.GrpOtros.SuspendLayout();
@@ -190,6 +190,14 @@
             this.GrpOtros.TabStop = false;
             this.GrpOtros.Text = "Otros datos";
             // 
+            // TxtTelefono
+            // 
+            this.TxtTelefono.Location = new System.Drawing.Point(314, 42);
+            this.TxtTelefono.Mask = "00000000";
+            this.TxtTelefono.Name = "TxtTelefono";
+            this.TxtTelefono.Size = new System.Drawing.Size(100, 20);
+            this.TxtTelefono.TabIndex = 34;
+            // 
             // TxtNumeroExpediente
             // 
             this.TxtNumeroExpediente.Location = new System.Drawing.Point(9, 42);
@@ -320,14 +328,6 @@
             this.pictureBox1.TabIndex = 89;
             this.pictureBox1.TabStop = false;
             // 
-            // TxtTelefono
-            // 
-            this.TxtTelefono.Location = new System.Drawing.Point(314, 42);
-            this.TxtTelefono.Mask = "00000000";
-            this.TxtTelefono.Name = "TxtTelefono";
-            this.TxtTelefono.Size = new System.Drawing.Size(100, 20);
-            this.TxtTelefono.TabIndex = 34;
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -336,12 +336,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(742, 442);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.GrpOtros);
             this.Controls.Add(this.grpdatos);
+            this.MaximizeBox = false;
             this.Name = "MantenimientoCentroDiurno";
             this.Text = "MantenimientoCentroDiurno";
             this.Load += new System.EventHandler(this.MantenimientoCentroDiurno_Load);

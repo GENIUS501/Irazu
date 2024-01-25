@@ -97,18 +97,21 @@
             this.Personal.Name = "Personal";
             this.Personal.Size = new System.Drawing.Size(210, 22);
             this.Personal.Text = "Personal";
+            this.Personal.Click += new System.EventHandler(this.Personal_Click);
             // 
             // Medicamentos
             // 
             this.Medicamentos.Name = "Medicamentos";
             this.Medicamentos.Size = new System.Drawing.Size(210, 22);
             this.Medicamentos.Text = "Medicamentos";
+            this.Medicamentos.Click += new System.EventHandler(this.Medicamentos_Click);
             // 
             // Tipo_Medicamentos
             // 
             this.Tipo_Medicamentos.Name = "Tipo_Medicamentos";
             this.Tipo_Medicamentos.Size = new System.Drawing.Size(210, 22);
             this.Tipo_Medicamentos.Text = "Tipos de medicamentos";
+            this.Tipo_Medicamentos.Click += new System.EventHandler(this.Tipo_Medicamentos_Click);
             // 
             // Reportes
             // 
@@ -125,18 +128,21 @@
             this.Reporte_Medicamentos.Name = "Reporte_Medicamentos";
             this.Reporte_Medicamentos.Size = new System.Drawing.Size(248, 22);
             this.Reporte_Medicamentos.Text = "Reporte de Medicamentos";
+            this.Reporte_Medicamentos.Click += new System.EventHandler(this.Reporte_Medicamentos_Click);
             // 
             // Reporte_Personal
             // 
             this.Reporte_Personal.Name = "Reporte_Personal";
             this.Reporte_Personal.Size = new System.Drawing.Size(248, 22);
             this.Reporte_Personal.Text = "Reporte de Personal";
+            this.Reporte_Personal.Click += new System.EventHandler(this.Reporte_Personal_Click);
             // 
             // Reporte_centro_diurno
             // 
             this.Reporte_centro_diurno.Name = "Reporte_centro_diurno";
             this.Reporte_centro_diurno.Size = new System.Drawing.Size(248, 22);
             this.Reporte_centro_diurno.Text = "Reporte de usuario centro diurno";
+            this.Reporte_centro_diurno.Click += new System.EventHandler(this.Reporte_centro_diurno_Click);
             // 
             // Seguridad
             // 
@@ -168,12 +174,14 @@
             this.Bitacora_Ingresos.Name = "Bitacora_Ingresos";
             this.Bitacora_Ingresos.Size = new System.Drawing.Size(227, 22);
             this.Bitacora_Ingresos.Text = "Bitacora de ingresos y salidas";
+            this.Bitacora_Ingresos.Click += new System.EventHandler(this.Bitacora_Ingresos_Click);
             // 
             // Bitacora_Movimientos
             // 
             this.Bitacora_Movimientos.Name = "Bitacora_Movimientos";
             this.Bitacora_Movimientos.Size = new System.Drawing.Size(227, 22);
             this.Bitacora_Movimientos.Text = "Bitacora de movimientos";
+            this.Bitacora_Movimientos.Click += new System.EventHandler(this.Bitacora_Movimientos_Click);
             // 
             // Salir
             // 
@@ -202,6 +210,7 @@
             this.CentroDiurno.Name = "CentroDiurno";
             this.CentroDiurno.Size = new System.Drawing.Size(210, 22);
             this.CentroDiurno.Text = "Usuarios de centro diurno";
+            this.CentroDiurno.Click += new System.EventHandler(this.CentroDiurno_Click);
             // 
             // Principal
             // 

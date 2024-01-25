@@ -1,4 +1,5 @@
 ﻿using Entidades;
+using Lienzos;
 using Negocios;
 using System;
 using System.Collections.Generic;
@@ -174,6 +175,8 @@ namespace Irazu
                 ListaRolesyPermisos showRols = new ListaRolesyPermisos();
                 showRols.Usuario = UsuarioLogueado.ID_Usuario;
                 showRols.Id_Rol = UsuarioLogueado.Id_Rol;
+                showRols.MaximizeBox = false;
+                showRols.AutoSizeMode = AutoSizeMode.GrowAndShrink;
                 showRols.MdiParent = this;
                 showRols.Show();
             }
@@ -190,6 +193,8 @@ namespace Irazu
                 ListarUsuarios frm = new ListarUsuarios();
                 frm.Usuario = UsuarioLogueado.ID_Usuario;
                 frm.Id_Rol = UsuarioLogueado.Id_Rol;
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
                 frm.MdiParent = this;
                 frm.Show();
             }
@@ -204,6 +209,163 @@ namespace Irazu
             try
             {
                 Cerrar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Personal_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ListaPersonal frm = new ListaPersonal();
+                frm.Usuario = UsuarioLogueado.ID_Usuario;
+                frm.Id_Rol = UsuarioLogueado.Id_Rol;
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Medicamentos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ListaMedicamentos frm = new ListaMedicamentos();
+                frm.Usuario = UsuarioLogueado.ID_Usuario;
+                frm.Id_Rol = UsuarioLogueado.Id_Rol;
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Tipo_Medicamentos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ListaTipoMedicamento frm = new ListaTipoMedicamento();
+                frm.Usuario = UsuarioLogueado.ID_Usuario;
+                frm.Id_Rol = UsuarioLogueado.Id_Rol;
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void CentroDiurno_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ListaCentroDiurno frm = new ListaCentroDiurno();
+                frm.Usuario = UsuarioLogueado.ID_Usuario;
+                frm.Id_Rol = UsuarioLogueado.Id_Rol;
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Reporte_Medicamentos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ReporteMedicamentos frm = new ReporteMedicamentos();
+                frm.Usuario = this.UsuarioLogueado.Nombre_Usuario;
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Reporte_Personal_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ReportePersonal frm = new ReportePersonal();
+                frm.Usuario = this.UsuarioLogueado.Nombre_Usuario;
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Reporte_centro_diurno_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ReporteUsuarioCentroDiurno frm = new ReporteUsuarioCentroDiurno();
+                frm.Usuario = this.UsuarioLogueado.Nombre_Usuario;
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Bitacora_Ingresos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                BitacoraSesiones frm = new BitacoraSesiones();
+                frm.Usuariologueado = this.UsuarioLogueado.Nombre_Usuario;
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Bitacora_Movimientos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                BitacoraMovimientos frm = new BitacoraMovimientos();
+                frm.Usuario = this.UsuarioLogueado.Nombre_Usuario;
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                frm.MdiParent = this;
+                frm.Show();
             }
             catch (Exception ex)
             {

@@ -33,6 +33,12 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_apellido2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt_apellido1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbo_Genero = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lbl_cclave = new System.Windows.Forms.Label();
             this.cbo_rol = new System.Windows.Forms.ComboBox();
@@ -46,12 +52,6 @@
             this.txt_cedula = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbo_Genero = new System.Windows.Forms.ComboBox();
-            this.txt_apellido1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txt_apellido2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -110,6 +110,56 @@
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Usuario";
+            // 
+            // txt_apellido2
+            // 
+            this.txt_apellido2.Location = new System.Drawing.Point(132, 154);
+            this.txt_apellido2.Name = "txt_apellido2";
+            this.txt_apellido2.Size = new System.Drawing.Size(104, 20);
+            this.txt_apellido2.TabIndex = 22;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(129, 138);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 13);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Segundo Apellido";
+            // 
+            // txt_apellido1
+            // 
+            this.txt_apellido1.Location = new System.Drawing.Point(9, 154);
+            this.txt_apellido1.Name = "txt_apellido1";
+            this.txt_apellido1.Size = new System.Drawing.Size(104, 20);
+            this.txt_apellido1.TabIndex = 20;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 138);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Primer Apellido";
+            // 
+            // cbo_Genero
+            // 
+            this.cbo_Genero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_Genero.FormattingEnabled = true;
+            this.cbo_Genero.Location = new System.Drawing.Point(132, 103);
+            this.cbo_Genero.Name = "cbo_Genero";
+            this.cbo_Genero.Size = new System.Drawing.Size(110, 21);
+            this.cbo_Genero.TabIndex = 19;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(129, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Genero";
             // 
             // label7
             // 
@@ -216,64 +266,16 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(129, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Genero";
-            // 
-            // cbo_Genero
-            // 
-            this.cbo_Genero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_Genero.FormattingEnabled = true;
-            this.cbo_Genero.Location = new System.Drawing.Point(132, 103);
-            this.cbo_Genero.Name = "cbo_Genero";
-            this.cbo_Genero.Size = new System.Drawing.Size(110, 21);
-            this.cbo_Genero.TabIndex = 19;
-            // 
-            // txt_apellido1
-            // 
-            this.txt_apellido1.Location = new System.Drawing.Point(9, 154);
-            this.txt_apellido1.Name = "txt_apellido1";
-            this.txt_apellido1.Size = new System.Drawing.Size(104, 20);
-            this.txt_apellido1.TabIndex = 20;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 138);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Primer Apellido";
-            // 
-            // txt_apellido2
-            // 
-            this.txt_apellido2.Location = new System.Drawing.Point(132, 154);
-            this.txt_apellido2.Name = "txt_apellido2";
-            this.txt_apellido2.Size = new System.Drawing.Size(104, 20);
-            this.txt_apellido2.TabIndex = 22;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(129, 138);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 13);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Segundo Apellido";
-            // 
             // Mantenimiento_Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(279, 350);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "Mantenimiento_Usuarios";
             this.Text = "Mantenimiento_Usuarios";
             this.Load += new System.EventHandler(this.Mantenimiento_Usuarios_Load);
