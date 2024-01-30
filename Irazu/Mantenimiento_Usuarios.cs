@@ -156,7 +156,7 @@ namespace Irazu
             this.txt_nombre.Text = Obj.Nombre;
             this.txt_apellido1.Text = Obj.Primer_Apellido;
             this.txt_apellido2.Text = Obj.Segundo_Apellido;
-            this.cbo_Genero.SelectedValue= Obj.Genero;
+            this.cbo_Genero.SelectedValue = Obj.Genero;
             //this.txt_correo.Text = Obj.c;
             this.txt_clave.Text = "********";
             this.txt_user.Text = Obj.Nombre_Usuario;

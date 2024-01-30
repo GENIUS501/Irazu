@@ -107,7 +107,6 @@
           <Property Name="Contrasena" Type="varchar(max)" Nullable="false" />
           <Property Name="Estado" Type="int" Nullable="false" />
           <Property Name="Telefono" Type="int" />
-          <Property Name="Correo" Type="varchar" MaxLength="30" Nullable="false" />
         </EntityType>
         <Association Name="Fk_MOVIMIENTOS_USUARIOS">
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
@@ -314,7 +313,6 @@
           <Property Name="Contrasena" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Estado" Type="Int32" Nullable="false" />
           <Property Name="Telefono" Type="Int32" />
-          <Property Name="Correo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Bitacora_Movimientos" Relationship="Self.Fk_MOVIMIENTOS_USUARIOS" FromRole="Usuarios" ToRole="Bitacora_Movimientos" />
           <NavigationProperty Name="Bitacora_Sesiones" Relationship="Self.Fk_SESIONES_USUARIOS" FromRole="Usuarios" ToRole="Bitacora_Sesiones" />
           <NavigationProperty Name="Roles" Relationship="Self.Fk_USUARIOS_ROLES" FromRole="Usuarios" ToRole="Roles" />
@@ -525,7 +523,6 @@
                 <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
                 <ScalarProperty Name="Estado" ColumnName="Estado" />
                 <ScalarProperty Name="Telefono" ColumnName="Telefono" />
-                <ScalarProperty Name="Correo" ColumnName="Correo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

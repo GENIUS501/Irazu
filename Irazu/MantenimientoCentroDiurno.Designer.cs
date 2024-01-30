@@ -119,9 +119,6 @@
             // 
             this.cbo_Genero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_Genero.FormattingEnabled = true;
-            this.cbo_Genero.Items.AddRange(new object[] {
-            "Masculino",
-            "Femenino"});
             this.cbo_Genero.Location = new System.Drawing.Point(9, 139);
             this.cbo_Genero.Name = "cbo_Genero";
             this.cbo_Genero.Size = new System.Drawing.Size(227, 21);

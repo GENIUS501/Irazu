@@ -27,6 +27,14 @@ namespace Lienzos
         {
             try
             {
+                this.cbo_Genero.DisplayMember = "Text";
+                this.cbo_Genero.ValueMember = "Value";
+                List<dynamic> Generos = new List<dynamic> {
+                new { Text = "Femenino", Value = 0 },
+                new { Text = "Masculino", Value = 1 }
+            };
+                var GenerosArray = Generos.Select(x => new { x.Text, x.Value }).ToArray();
+                this.cbo_Genero.DataSource = GenerosArray;
                 if (Accion == "A")
                 {
 
