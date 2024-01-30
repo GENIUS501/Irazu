@@ -35,6 +35,7 @@
             this.Personal = new System.Windows.Forms.ToolStripMenuItem();
             this.Medicamentos = new System.Windows.Forms.ToolStripMenuItem();
             this.Tipo_Medicamentos = new System.Windows.Forms.ToolStripMenuItem();
+            this.CentroDiurno = new System.Windows.Forms.ToolStripMenuItem();
             this.Reportes = new System.Windows.Forms.ToolStripMenuItem();
             this.Reporte_Medicamentos = new System.Windows.Forms.ToolStripMenuItem();
             this.Reporte_Personal = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,7 +48,6 @@
             this.Salir = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.Txt_Usuario = new System.Windows.Forms.ToolStripStatusLabel();
-            this.CentroDiurno = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -95,23 +95,30 @@
             // Personal
             // 
             this.Personal.Name = "Personal";
-            this.Personal.Size = new System.Drawing.Size(210, 22);
+            this.Personal.Size = new System.Drawing.Size(200, 22);
             this.Personal.Text = "Personal";
             this.Personal.Click += new System.EventHandler(this.Personal_Click);
             // 
             // Medicamentos
             // 
             this.Medicamentos.Name = "Medicamentos";
-            this.Medicamentos.Size = new System.Drawing.Size(210, 22);
+            this.Medicamentos.Size = new System.Drawing.Size(200, 22);
             this.Medicamentos.Text = "Medicamentos";
             this.Medicamentos.Click += new System.EventHandler(this.Medicamentos_Click);
             // 
             // Tipo_Medicamentos
             // 
             this.Tipo_Medicamentos.Name = "Tipo_Medicamentos";
-            this.Tipo_Medicamentos.Size = new System.Drawing.Size(210, 22);
+            this.Tipo_Medicamentos.Size = new System.Drawing.Size(200, 22);
             this.Tipo_Medicamentos.Text = "Tipos de medicamentos";
             this.Tipo_Medicamentos.Click += new System.EventHandler(this.Tipo_Medicamentos_Click);
+            // 
+            // CentroDiurno
+            // 
+            this.CentroDiurno.Name = "CentroDiurno";
+            this.CentroDiurno.Size = new System.Drawing.Size(200, 22);
+            this.CentroDiurno.Text = "Clientes";
+            this.CentroDiurno.Click += new System.EventHandler(this.CentroDiurno_Click);
             // 
             // Reportes
             // 
@@ -126,22 +133,22 @@
             // Reporte_Medicamentos
             // 
             this.Reporte_Medicamentos.Name = "Reporte_Medicamentos";
-            this.Reporte_Medicamentos.Size = new System.Drawing.Size(248, 22);
+            this.Reporte_Medicamentos.Size = new System.Drawing.Size(213, 22);
             this.Reporte_Medicamentos.Text = "Reporte de Medicamentos";
             this.Reporte_Medicamentos.Click += new System.EventHandler(this.Reporte_Medicamentos_Click);
             // 
             // Reporte_Personal
             // 
             this.Reporte_Personal.Name = "Reporte_Personal";
-            this.Reporte_Personal.Size = new System.Drawing.Size(248, 22);
+            this.Reporte_Personal.Size = new System.Drawing.Size(213, 22);
             this.Reporte_Personal.Text = "Reporte de Personal";
             this.Reporte_Personal.Click += new System.EventHandler(this.Reporte_Personal_Click);
             // 
             // Reporte_centro_diurno
             // 
             this.Reporte_centro_diurno.Name = "Reporte_centro_diurno";
-            this.Reporte_centro_diurno.Size = new System.Drawing.Size(248, 22);
-            this.Reporte_centro_diurno.Text = "Reporte de usuario centro diurno";
+            this.Reporte_centro_diurno.Size = new System.Drawing.Size(213, 22);
+            this.Reporte_centro_diurno.Text = "Reporte de clientes";
             this.Reporte_centro_diurno.Click += new System.EventHandler(this.Reporte_centro_diurno_Click);
             // 
             // Seguridad
@@ -204,13 +211,6 @@
             // 
             this.Txt_Usuario.Name = "Txt_Usuario";
             this.Txt_Usuario.Size = new System.Drawing.Size(0, 17);
-            // 
-            // CentroDiurno
-            // 
-            this.CentroDiurno.Name = "CentroDiurno";
-            this.CentroDiurno.Size = new System.Drawing.Size(210, 22);
-            this.CentroDiurno.Text = "Usuarios de centro diurno";
-            this.CentroDiurno.Click += new System.EventHandler(this.CentroDiurno_Click);
             // 
             // Principal
             // 

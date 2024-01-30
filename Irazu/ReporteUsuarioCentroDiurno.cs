@@ -24,7 +24,7 @@ namespace Lienzos
         {
             try
             {
-                NMedicamentos Negocios = new NMedicamentos();
+                NUsuarioCentroDiurno Negocios = new NUsuarioCentroDiurno();
                 var datasource = Negocios.Mostrar();
                 ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                 this.reportViewer1.LocalReport.DataSources.Clear();

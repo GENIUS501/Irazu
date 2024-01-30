@@ -198,7 +198,7 @@
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.groupBox1);
             this.Name = "ListaCentroDiurno";
-            this.Text = "Lista de Usuario CentroDiurno";
+            this.Text = "Lista de clientes";
             this.Load += new System.EventHandler(this.ListaCentroDiurno_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dat_principal)).EndInit();

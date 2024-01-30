@@ -60,6 +60,11 @@ namespace Irazu
                 if (perm.Where(x => x.Modulo == "Medicamentos").FirstOrDefault() != null)
                 {
                     Mantenimientos.Visible = true;
+                    Medicamentos.Visible = true;
+                }
+                if (perm.Where(x => x.Modulo == "Personal").FirstOrDefault() != null)
+                {
+                    Mantenimientos.Visible = true;
                     Personal.Visible = true;
                 }
                 if (perm.Where(x => x.Modulo == "CentroDiurno").FirstOrDefault() != null)

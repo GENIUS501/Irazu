@@ -174,7 +174,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Name = "ReporteUsuarioCentroDiurno";
-            this.Text = "Reporte de Usuario Centro Diurno";
+            this.Text = "Reporte de clientes";
             this.Load += new System.EventHandler(this.ReporteUsuarioCentroDiurno_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
