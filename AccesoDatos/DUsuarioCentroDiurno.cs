@@ -82,6 +82,7 @@ namespace AccesoDatos
                     Padecimientos = x.Padecimientos,
                     Medicamentos = x.Medicamentos,
                     Lugarvivienda = x.Lugarvivienda,
+                    ID = x.ID
                 }).ToList();
                 return Lista;
             }
