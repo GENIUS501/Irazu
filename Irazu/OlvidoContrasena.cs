@@ -1,4 +1,5 @@
 ﻿using Entidades;
+using Irazu;
 using Negocios;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,8 @@ using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -41,6 +44,41 @@ namespace Lienzos
                         int smtpPort = int.Parse(ConfigurationManager.AppSettings["SmtpPort"]);
                         string smtpUsername = ConfigurationManager.AppSettings["SmtpUsername"];
                         string smtpPassword = ConfigurationManager.AppSettings["SmtpPassword"];
+                        string fromEmail = smtpUsername;
+
+                        // Dirección de correo electrónico del destinatario
+                        string toEmail = Obj.Correo;
+
+                        // Configurar el cliente SMTP
+                        using (SmtpClient smtpClient = new SmtpClient(smtpServer, smtpPort))
+                        {
+                            smtpClient.UseDefaultCredentials = false;
+                            smtpClient.Credentials = new NetworkCredential(smtpUsername, smtpPassword);
+                            smtpClient.EnableSsl = true; // Usar SSL para conexiones seguras
+
+                            // Crear el mensaje de correo electrónico
+                            using (MailMessage mailMessage = new MailMessage(fromEmail, toEmail))
+                            {
+                                mailMessage.Subject = "Recuperacion de contraseña Irazu";
+                                string Token = Helper.EncodePassword(string.Concat(Obj.Nombre_Usuario,Obj.Correo, DateTime.Now.ToString()));
+                                mailMessage.Body = "Token para recuperar la contraseña: "+Token;
+
+                                // Puedes adjuntar archivos si es necesario
+                                // mailMessage.Attachments.Add(new Attachment("ruta_del_archivo"));
+
+                                try
+                                {
+                                    // Enviar el correo electrónico
+                                    smtpClient.Send(mailMessage);
+
+                                    Console.WriteLine("Correo electrónico enviado con éxito.");
+                                }
+                                catch (Exception ex)
+                                {
+                                    Console.WriteLine("Error al enviar el correo electrónico: " + ex.Message);
+                                }
+                            }
+                        }
                     }
                     else
                     {

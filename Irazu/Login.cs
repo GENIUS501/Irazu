@@ -1,4 +1,5 @@
 ﻿using Entidades;
+using Lienzos;
 using Negocios;
 using System;
 using System.Collections.Generic;
@@ -70,6 +71,13 @@ namespace Irazu
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            OlvidoContrasena form = new OlvidoContrasena();
+            form.Show();
         }
     }
 }
