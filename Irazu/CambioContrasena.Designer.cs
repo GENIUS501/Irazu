@@ -90,7 +90,6 @@ namespace Lienzos
             // 
             this.txt_token.Location = new System.Drawing.Point(12, 26);
             this.txt_token.Name = "txt_token";
-            this.txt_token.PasswordChar = '*';
             this.txt_token.Size = new System.Drawing.Size(100, 20);
             this.txt_token.TabIndex = 14;
             // 
