@@ -77,6 +77,8 @@ namespace Irazu
         {
             this.Hide();
             OlvidoContrasena form = new OlvidoContrasena();
+            form.MaximizeBox = false;
+            form.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             form.Show();
         }
     }

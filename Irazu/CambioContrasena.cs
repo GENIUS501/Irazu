@@ -65,7 +65,11 @@ namespace Lienzos
                         Obj = Negocios.Mostrar().Where(x => x.Nombre_Usuario == Usuario).FirstOrDefault();
                         Obj.Contrasena = Helper.EncodePassword(string.Concat(Obj.Nombre_Usuario, this.txt_clave.ToString()));
                         int FilasAfectadas = Negocios.Modificar(Obj);
-                        MessageBox.Show("Contraseña recuperada con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (FilasAfectadas > 0)
+                        {
+                            MessageBox.Show("Contraseña recuperada con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Application.Restart();
+                        }
                     }
                 }
             }

@@ -71,6 +71,13 @@ namespace Lienzos
                                     // Enviar el correo electrónico
                                     smtpClient.Send(mailMessage);
                                     MessageBox.Show("Correo electrónico enviado con éxito.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    CambioContrasena frm = new CambioContrasena();
+                                    frm.Usuario = Obj.Nombre_Usuario;
+                                    frm.Token = Token;
+                                    frm.MaximizeBox = false;
+                                    frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                                    frm.Show();
+                                    this.Hide();
                                 }
                                 catch (Exception ex)
                                 {
