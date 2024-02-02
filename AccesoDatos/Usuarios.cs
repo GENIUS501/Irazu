@@ -32,6 +32,7 @@ namespace AccesoDatos
         public string Contrasena { get; set; }
         public int Estado { get; set; }
         public Nullable<int> Telefono { get; set; }
+        public string Correo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Bitacora_Movimientos> Bitacora_Movimientos { get; set; }

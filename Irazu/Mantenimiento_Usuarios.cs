@@ -46,7 +46,7 @@ namespace Irazu
                         Obj.Segundo_Apellido = this.txt_apellido2.Text;
                         Obj.Genero = int.Parse(this.cbo_Genero.SelectedValue.ToString());
                         Obj.Id_Rol = int.Parse(this.cbo_rol.SelectedValue.ToString());
-                        //Obj.Correo = this.txt_correo.Text;
+                        Obj.Correo = this.txt_correo.Text;
                         Obj.Nombre = this.txt_nombre.Text;
                         Int32 FilasAfectadas = 0;
                         #region Agregar
@@ -157,7 +157,7 @@ namespace Irazu
             this.txt_apellido1.Text = Obj.Primer_Apellido;
             this.txt_apellido2.Text = Obj.Segundo_Apellido;
             this.cbo_Genero.SelectedValue = Obj.Genero;
-            //this.txt_correo.Text = Obj.c;
+            this.txt_correo.Text = Obj.Correo;
             this.txt_clave.Text = "********";
             this.txt_user.Text = Obj.Nombre_Usuario;
             this.cbo_rol.SelectedValue = Obj.Id_Rol;
@@ -183,11 +183,11 @@ namespace Irazu
                     errorProvider1.SetError(this.txt_nombre, "Debe ingresar el nombre");
                     ok = true;
                 }
-                //if (this.txt_correo.Text == "")
-                //{
-                //    errorProvider1.SetError(this.txt_correo, "Debe ingresar el correo");
-                //    ok = true;
-                //}
+                if (this.txt_correo.Text == "")
+                {
+                    errorProvider1.SetError(this.txt_correo, "Debe ingresar el correo");
+                    ok = true;
+                }
                 if (this.txt_clave.Text != this.txt_cclave.Text && Accion == "A")
                 {
                     errorProvider1.SetError(this.txt_cclave, "Las contraseñas no coinciden.");
@@ -208,25 +208,25 @@ namespace Irazu
                     "\n No debe tener caracteres especiales ni espacios");
                     ok = true;
                 }
-                //String expresion;
-                //expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
-                //if (Regex.IsMatch(this.txt_correo.Text, expresion))
-                //{
-                //    if (Regex.Replace(this.txt_correo.Text, expresion, String.Empty).Length == 0)
-                //    {
+                String expresion;
+                expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+                if (Regex.IsMatch(this.txt_correo.Text, expresion))
+                {
+                    if (Regex.Replace(this.txt_correo.Text, expresion, String.Empty).Length == 0)
+                    {
 
-                //    }
-                //    else
-                //    {
-                //        errorProvider1.SetError(this.txt_correo, "Formato de correo invalido");
-                //        ok = true;
-                //    }
-                //}
-                //else
-                //{
-                //    errorProvider1.SetError(this.txt_correo, "Formato de correo invalido");
-                //    ok = true;
-                //}
+                    }
+                    else
+                    {
+                        errorProvider1.SetError(this.txt_correo, "Formato de correo invalido");
+                        ok = true;
+                    }
+                }
+                else
+                {
+                    errorProvider1.SetError(this.txt_correo, "Formato de correo invalido");
+                    ok = true;
+                }
                 if (this.cbo_rol.SelectedValue == null)
                 {
                     errorProvider1.SetError(this.cbo_rol, "Debe seleccionar un rol");
@@ -254,7 +254,7 @@ namespace Irazu
                 errorProvider1.SetError(txt_nombre, "");
                 errorProvider1.SetError(txt_clave, "");
                 errorProvider1.SetError(txt_cclave, "");
-                //errorProvider1.SetError(txt_correo, "");
+                errorProvider1.SetError(txt_correo, "");
                 errorProvider1.SetError(txt_user, "");
                 errorProvider1.SetError(cbo_rol, "");
             }

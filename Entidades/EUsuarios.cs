@@ -19,5 +19,6 @@ namespace Entidades
         public string Contrasena { get; set; }
         public int Estado { get; set; }
         public Nullable<int> Telefono { get; set; }
+        public string Correo { get; set; }
     }
 }

@@ -31,6 +31,7 @@ namespace AccesoDatos
                     Objbd.Id_Rol = obj.Id_Rol;
                     Objbd.Estado = 1;
                     Objbd.Contrasena = obj.Contrasena;
+                    Objbd.Correo = obj.Correo;
                     db.Entry(Objbd).State = EntityState.Added;
                     int Resultado = db.SaveChanges();
                     if (Resultado > 0)
