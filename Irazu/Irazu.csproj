@@ -173,6 +173,12 @@
     <Compile Include="Mantenimiento_Usuarios.Designer.cs">
       <DependentUpon>Mantenimiento_Usuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="OlvidoContrasena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OlvidoContrasena.Designer.cs">
+      <DependentUpon>OlvidoContrasena.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento_Usuarios.resx">
       <DependentUpon>Mantenimiento_Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OlvidoContrasena.resx">
+      <DependentUpon>OlvidoContrasena.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
