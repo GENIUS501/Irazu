@@ -30,32 +30,16 @@ namespace Lienzos
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txt_correo = new System.Windows.Forms.TextBox();
             this.btn_generar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_user = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 15);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 13);
-            this.label8.TabIndex = 29;
-            this.label8.Text = "Correo electronico";
-            // 
-            // txt_correo
-            // 
-            this.txt_correo.Location = new System.Drawing.Point(12, 31);
-            this.txt_correo.Name = "txt_correo";
-            this.txt_correo.Size = new System.Drawing.Size(204, 20);
-            this.txt_correo.TabIndex = 28;
-            // 
             // btn_generar
             // 
-            this.btn_generar.Location = new System.Drawing.Point(71, 57);
+            this.btn_generar.Location = new System.Drawing.Point(68, 64);
             this.btn_generar.Name = "btn_generar";
             this.btn_generar.Size = new System.Drawing.Size(93, 23);
             this.btn_generar.TabIndex = 30;
@@ -67,14 +51,30 @@ namespace Lienzos
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(96, 13);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "Nombre de usuario";
+            // 
+            // txt_user
+            // 
+            this.txt_user.Location = new System.Drawing.Point(12, 38);
+            this.txt_user.Name = "txt_user";
+            this.txt_user.Size = new System.Drawing.Size(204, 20);
+            this.txt_user.TabIndex = 31;
+            // 
             // OlvidoContrasena
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(232, 92);
+            this.ClientSize = new System.Drawing.Size(232, 97);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txt_user);
             this.Controls.Add(this.btn_generar);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.txt_correo);
             this.Name = "OlvidoContrasena";
             this.Text = "OlvidoContrasena";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -84,10 +84,9 @@ namespace Lienzos
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_correo;
         private System.Windows.Forms.Button btn_generar;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txt_user;
     }
 }

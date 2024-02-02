@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Entidades;
+using Negocios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -20,34 +23,34 @@ namespace Lienzos
 
         private void btn_generar_Click(object sender, EventArgs e)
         {
-            bool ok = false;
-            if (this.txt_correo.Text == "")
+            try
             {
-                errorProvider1.SetError(this.txt_correo, "Debe ingresar el correo");
-                ok = true;
-            }
-            String expresion;
-            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
-            if (Regex.IsMatch(this.txt_correo.Text, expresion))
-            {
-                if (Regex.Replace(this.txt_correo.Text, expresion, String.Empty).Length == 0)
+                if (this.txt_user.Text == "")
                 {
-
+                    errorProvider1.SetError(this.txt_user, "Debe ingresar el nombre de usuario");
                 }
                 else
                 {
-                    errorProvider1.SetError(this.txt_correo, "Formato de correo invalido");
-                    ok = true;
+                    errorProvider1.SetError(this.txt_user, "");
+                    NUsuarios Negocios = new NUsuarios();
+                    EUsuario Obj = new EUsuario();
+                    Obj = Negocios.Mostrar().Where(x => x.Nombre_Usuario == this.txt_user.Text).FirstOrDefault();
+                    if (Obj != null)
+                    {
+                        string smtpServer = ConfigurationManager.AppSettings["SmtpServer"];
+                        int smtpPort = int.Parse(ConfigurationManager.AppSettings["SmtpPort"]);
+                        string smtpUsername = ConfigurationManager.AppSettings["SmtpUsername"];
+                        string smtpPassword = ConfigurationManager.AppSettings["SmtpPassword"];
+                    }
+                    else
+                    {
+
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                errorProvider1.SetError(this.txt_correo, "Formato de correo invalido");
-                ok = true;
-            }
-            if (!ok)
-            {
-
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
