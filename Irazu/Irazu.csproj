@@ -93,6 +93,12 @@
     <Compile Include="BitacoraSesiones.Designer.cs">
       <DependentUpon>BitacoraSesiones.cs</DependentUpon>
     </Compile>
+    <Compile Include="CambioContrasena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambioContrasena.Designer.cs">
+      <DependentUpon>CambioContrasena.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helper.cs" />
     <Compile Include="IrazuDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -217,6 +223,9 @@
     <EmbeddedResource Include="BitacoraSesiones.rdlc" />
     <EmbeddedResource Include="BitacoraSesiones.resx">
       <DependentUpon>BitacoraSesiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CambioContrasena.resx">
+      <DependentUpon>CambioContrasena.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListaCentroDiurno.resx">
       <DependentUpon>ListaCentroDiurno.cs</DependentUpon>

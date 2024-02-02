@@ -38,6 +38,18 @@ namespace Negocios
                 throw ex;
             }
         }
+        public int Modificar(EUsuario obj)
+        {
+            try
+            {
+                DUsuarios db = new DUsuarios();
+                return db.Modificar(obj);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         #endregion
 
         #region Eliminar

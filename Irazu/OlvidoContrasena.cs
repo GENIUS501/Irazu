@@ -70,12 +70,11 @@ namespace Lienzos
                                 {
                                     // Enviar el correo electrónico
                                     smtpClient.Send(mailMessage);
-
-                                    Console.WriteLine("Correo electrónico enviado con éxito.");
+                                    MessageBox.Show("Correo electrónico enviado con éxito.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                                 catch (Exception ex)
                                 {
-                                    Console.WriteLine("Error al enviar el correo electrónico: " + ex.Message);
+                                    MessageBox.Show("Error al enviar el correo electrónico: ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                             }
                         }

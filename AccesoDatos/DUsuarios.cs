@@ -32,6 +32,7 @@ namespace AccesoDatos
                     Objbd.Estado = 1;
                     Objbd.Contrasena = obj.Contrasena;
                     Objbd.Correo = obj.Correo;
+                    //        Objbd.Telefono = obj.Telefono;
                     db.Entry(Objbd).State = EntityState.Added;
                     int Resultado = db.SaveChanges();
                     if (Resultado > 0)
@@ -73,7 +74,9 @@ namespace AccesoDatos
                     Objbd.Primer_Apellido = obj.Primer_Apellido;
                     Objbd.Segundo_Apellido = obj.Segundo_Apellido;
                     Objbd.Genero = obj.Genero;
+                    Objbd.Correo = obj.Correo;
                     Objbd.Id_Rol = obj.Id_Rol;
+                    //      Objbd.Telefono = obj.Telefono;
                     Objbd.Estado = 1;
                     if (obj.Contrasena == "********")
                     {
@@ -93,6 +96,31 @@ namespace AccesoDatos
                         Entidad_Movimientos.tipo_movimiento = "Modificar";
                         Entidad_Movimientos.fecha_hora_movimiento = DateTime.Now;
                         Movimientos.Agregar(Entidad_Movimientos);
+                        return Resultado;
+                    }
+                    Ts.Dispose();
+                    return Resultado;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public int Modificar(EUsuario obj)
+        {
+            try
+            {
+                using (TransactionScope Ts = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+                {
+                    var Objbd = db.Usuarios.Where(x => x.ID_Usuario == obj.ID_Usuario).FirstOrDefault();
+                    Objbd.Contrasena = obj.Contrasena;
+                    db.Entry(Objbd).State = EntityState.Modified;
+                    int Resultado = db.SaveChanges();
+                    if (Resultado > 0)
+                    {
+                        Ts.Complete();
                         return Resultado;
                     }
                     Ts.Dispose();
@@ -148,7 +176,7 @@ namespace AccesoDatos
                 .Select(x => new EUsuario
                 {
                     ID_Usuario = x.ID_Usuario,
-                    Cedula=x.Cedula,
+                    Cedula = x.Cedula,
                     Nombre = x.Nombre,
                     Nombre_Usuario = x.Nombre_Usuario,
                     Primer_Apellido = x.Primer_Apellido,
@@ -156,7 +184,9 @@ namespace AccesoDatos
                     Genero = x.Genero,
                     Id_Rol = x.Id_Rol,
                     Estado = x.Estado,
-                    Contrasena = x.Contrasena
+                    Contrasena = x.Contrasena,
+                    Correo = x.Correo,
+                    //    Telefono=x.Telefono
                 }).ToList();
                 return Lista;
             }
@@ -178,7 +208,7 @@ namespace AccesoDatos
                 .Select(x => new EUsuario
                 {
                     ID_Usuario = x.ID_Usuario,
-                    Cedula=x.Cedula,
+                    Cedula = x.Cedula,
                     Nombre = x.Nombre,
                     Nombre_Usuario = x.Nombre_Usuario,
                     Primer_Apellido = x.Primer_Apellido,
@@ -186,7 +216,8 @@ namespace AccesoDatos
                     Genero = x.Genero,
                     Id_Rol = x.Id_Rol,
                     Estado = x.Estado,
-                    Contrasena = x.Contrasena
+                    Contrasena = x.Contrasena,
+                    Correo = x.Correo
                 }).Where(x => x.Nombre_Usuario == User && x.Contrasena == Pass).FirstOrDefault();
                 return Obj;
             }
