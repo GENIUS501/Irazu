@@ -30,6 +30,7 @@ namespace AccesoDatos
                     Objbd.Estado = obj.Estado;
                     Objbd.Telefono = obj.Telefono;
                     Objbd.Direccion = obj.Direccion;
+                    Objbd.Id_Puesto = obj.Id_Puesto;
                     db.Personal.Add(Objbd);
 
                     int Resultado = db.SaveChanges();
@@ -76,6 +77,7 @@ namespace AccesoDatos
                     Estado = x.Estado,
                     Telefono = x.Telefono,
                     Direccion = x.Direccion,
+                    Id_Puesto = x.Id_Puesto
                 }).ToList();
                 return Lista;
             }
@@ -103,6 +105,7 @@ namespace AccesoDatos
                     Objbd.Estado = obj.Estado;
                     Objbd.Telefono = obj.Telefono;
                     Objbd.Direccion = obj.Direccion;
+                    Objbd.Id_Puesto = obj.Id_Puesto;
                     db.Entry(Objbd).State = EntityState.Modified;
                     int Resultado = db.SaveChanges();
                     if (Resultado > 0)

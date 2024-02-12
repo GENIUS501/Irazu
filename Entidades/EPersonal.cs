@@ -17,5 +17,6 @@ namespace Entidades
         public int Estado { get; set; }
         public Nullable<int> Telefono { get; set; }
         public string Direccion { get; set; }
+        public int Id_Puesto { get; set; }
     }
 }
