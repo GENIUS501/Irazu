@@ -739,44 +739,44 @@ namespace Irazu
                         }
                     }
                 }
-                /////////TipoMedicamento//////6///////////////////////////////////////////////////////////////////////
-                if (this.chb_Tipo_Mediacamento.Checked == true)
+                /////////Puestos//////6///////////////////////////////////////////////////////////////////////
+                if (this.chb_Puestos.Checked == true)
                 {
                     Permisos.Id_Rol = Id_Rol;
-                    Permisos.Modulo = "TipoMedicamento";
-                    Permisos.Accion = "TipoMedicamento";
+                    Permisos.Modulo = "Puestos";
+                    Permisos.Accion = "Puestos";
                     Lista_Permisos.Add(Permisos);
                     Permisos = new EPermisos();
-                    if (this.grp_Centro_Diurno.Enabled == true)
+                    if (this.grp_Puestos.Enabled == true)
                     {
-                        if (chk_Tipo_Mediacamento_Agregar.Checked == true)
+                        if (chk_Puestos_Agregar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
-                            Permisos.Modulo = "TipoMedicamento";
+                            Permisos.Modulo = "Puestos";
                             Permisos.Accion = "Agregar";
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
                         }
-                        if (chk_Tipo_Mediacamento_Modificar.Checked == true)
+                        if (chk_Puestos_Modificar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
-                            Permisos.Modulo = "TipoMedicamento";
+                            Permisos.Modulo = "Puestos";
                             Permisos.Accion = "Modificar";
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
                         }
-                        if (chk_Tipo_Mediacamento_eliminar.Checked == true)
+                        if (chk_Puestos_Eliminar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
-                            Permisos.Modulo = "TipoMedicamento";
+                            Permisos.Modulo = "Puestos";
                             Permisos.Accion = "Eliminar";
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
                         }
-                        if (chk_Tipo_Mediacamento_Consultar.Checked == true)
+                        if (chk_Puestos_Consultar.Checked == true)
                         {
                             Permisos.Id_Rol = Id_Rol;
-                            Permisos.Modulo = "TipoMedicamento";
+                            Permisos.Modulo = "Puestos";
                             Permisos.Accion = "Consultar";
                             Lista_Permisos.Add(Permisos);
                             Permisos = new EPermisos();
