@@ -36,6 +36,12 @@
             this.txt_id_perfil = new System.Windows.Forms.TextBox();
             this.Lbl_Perfil = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.chb_Tipo_Mediacamento = new System.Windows.Forms.CheckBox();
+            this.grp_TipoMedicamento = new System.Windows.Forms.GroupBox();
+            this.chk_Tipo_Mediacamento_Consultar = new System.Windows.Forms.CheckBox();
+            this.chk_Tipo_Mediacamento_eliminar = new System.Windows.Forms.CheckBox();
+            this.chk_Tipo_Mediacamento_Modificar = new System.Windows.Forms.CheckBox();
+            this.chk_Tipo_Mediacamento_Agregar = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.chb_reporte_centro_diurno = new System.Windows.Forms.CheckBox();
@@ -76,14 +82,15 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.chb_Tipo_Mediacamento = new System.Windows.Forms.CheckBox();
-            this.grp_TipoMedicamento = new System.Windows.Forms.GroupBox();
-            this.chk_Tipo_Mediacamento_Consultar = new System.Windows.Forms.CheckBox();
-            this.chk_Tipo_Mediacamento_eliminar = new System.Windows.Forms.CheckBox();
-            this.chk_Tipo_Mediacamento_Modificar = new System.Windows.Forms.CheckBox();
-            this.chk_Tipo_Mediacamento_Agregar = new System.Windows.Forms.CheckBox();
+            this.chb_Puestos = new System.Windows.Forms.CheckBox();
+            this.grp_Puestos = new System.Windows.Forms.GroupBox();
+            this.chk_Puestos_Consultar = new System.Windows.Forms.CheckBox();
+            this.chk_Puestos_Eliminar = new System.Windows.Forms.CheckBox();
+            this.chk_Puestos_Modificar = new System.Windows.Forms.CheckBox();
+            this.chk_Puestos_Agregar = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.grp_TipoMedicamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.grp_usuarios.SuspendLayout();
@@ -92,7 +99,7 @@
             this.grp_personal.SuspendLayout();
             this.grp_roles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.grp_TipoMedicamento.SuspendLayout();
+            this.grp_Puestos.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -142,9 +149,10 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.chb_Puestos);
+            this.groupBox2.Controls.Add(this.grp_Puestos);
             this.groupBox2.Controls.Add(this.chb_Tipo_Mediacamento);
             this.groupBox2.Controls.Add(this.grp_TipoMedicamento);
-            this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Controls.Add(this.groupBox5);
             this.groupBox2.Controls.Add(this.grp_usuarios);
             this.groupBox2.Controls.Add(this.chb_Centro_Diurno);
@@ -163,12 +171,77 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos de permisos";
             // 
+            // chb_Tipo_Mediacamento
+            // 
+            this.chb_Tipo_Mediacamento.AutoSize = true;
+            this.chb_Tipo_Mediacamento.Location = new System.Drawing.Point(363, 36);
+            this.chb_Tipo_Mediacamento.Name = "chb_Tipo_Mediacamento";
+            this.chb_Tipo_Mediacamento.Size = new System.Drawing.Size(133, 17);
+            this.chb_Tipo_Mediacamento.TabIndex = 90;
+            this.chb_Tipo_Mediacamento.Text = "Tipos de medicamento";
+            this.chb_Tipo_Mediacamento.UseVisualStyleBackColor = true;
+            this.chb_Tipo_Mediacamento.CheckedChanged += new System.EventHandler(this.chb_Tipo_Mediacamento_CheckedChanged);
+            // 
+            // grp_TipoMedicamento
+            // 
+            this.grp_TipoMedicamento.Controls.Add(this.chk_Tipo_Mediacamento_Consultar);
+            this.grp_TipoMedicamento.Controls.Add(this.chk_Tipo_Mediacamento_eliminar);
+            this.grp_TipoMedicamento.Controls.Add(this.chk_Tipo_Mediacamento_Modificar);
+            this.grp_TipoMedicamento.Controls.Add(this.chk_Tipo_Mediacamento_Agregar);
+            this.grp_TipoMedicamento.Enabled = false;
+            this.grp_TipoMedicamento.Location = new System.Drawing.Point(363, 59);
+            this.grp_TipoMedicamento.Name = "grp_TipoMedicamento";
+            this.grp_TipoMedicamento.Size = new System.Drawing.Size(97, 110);
+            this.grp_TipoMedicamento.TabIndex = 91;
+            this.grp_TipoMedicamento.TabStop = false;
+            this.grp_TipoMedicamento.Text = "Permisos";
+            // 
+            // chk_Tipo_Mediacamento_Consultar
+            // 
+            this.chk_Tipo_Mediacamento_Consultar.AutoSize = true;
+            this.chk_Tipo_Mediacamento_Consultar.Location = new System.Drawing.Point(6, 90);
+            this.chk_Tipo_Mediacamento_Consultar.Name = "chk_Tipo_Mediacamento_Consultar";
+            this.chk_Tipo_Mediacamento_Consultar.Size = new System.Drawing.Size(70, 17);
+            this.chk_Tipo_Mediacamento_Consultar.TabIndex = 21;
+            this.chk_Tipo_Mediacamento_Consultar.Text = "Consultar";
+            this.chk_Tipo_Mediacamento_Consultar.UseVisualStyleBackColor = true;
+            // 
+            // chk_Tipo_Mediacamento_eliminar
+            // 
+            this.chk_Tipo_Mediacamento_eliminar.AutoSize = true;
+            this.chk_Tipo_Mediacamento_eliminar.Location = new System.Drawing.Point(7, 67);
+            this.chk_Tipo_Mediacamento_eliminar.Name = "chk_Tipo_Mediacamento_eliminar";
+            this.chk_Tipo_Mediacamento_eliminar.Size = new System.Drawing.Size(62, 17);
+            this.chk_Tipo_Mediacamento_eliminar.TabIndex = 20;
+            this.chk_Tipo_Mediacamento_eliminar.Text = "Eliminar";
+            this.chk_Tipo_Mediacamento_eliminar.UseVisualStyleBackColor = true;
+            // 
+            // chk_Tipo_Mediacamento_Modificar
+            // 
+            this.chk_Tipo_Mediacamento_Modificar.AutoSize = true;
+            this.chk_Tipo_Mediacamento_Modificar.Location = new System.Drawing.Point(7, 43);
+            this.chk_Tipo_Mediacamento_Modificar.Name = "chk_Tipo_Mediacamento_Modificar";
+            this.chk_Tipo_Mediacamento_Modificar.Size = new System.Drawing.Size(69, 17);
+            this.chk_Tipo_Mediacamento_Modificar.TabIndex = 19;
+            this.chk_Tipo_Mediacamento_Modificar.Text = "Modificar";
+            this.chk_Tipo_Mediacamento_Modificar.UseVisualStyleBackColor = true;
+            // 
+            // chk_Tipo_Mediacamento_Agregar
+            // 
+            this.chk_Tipo_Mediacamento_Agregar.AutoSize = true;
+            this.chk_Tipo_Mediacamento_Agregar.Location = new System.Drawing.Point(6, 19);
+            this.chk_Tipo_Mediacamento_Agregar.Name = "chk_Tipo_Mediacamento_Agregar";
+            this.chk_Tipo_Mediacamento_Agregar.Size = new System.Drawing.Size(63, 17);
+            this.chk_Tipo_Mediacamento_Agregar.TabIndex = 18;
+            this.chk_Tipo_Mediacamento_Agregar.Text = "Agregar";
+            this.chk_Tipo_Mediacamento_Agregar.UseVisualStyleBackColor = true;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Lienzos.Properties.Resources.Imagen_de_WhatsApp_2023_11_22_a_las_19_30_10_be162142;
-            this.pictureBox1.Location = new System.Drawing.Point(502, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(531, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(162, 166);
+            this.pictureBox1.Size = new System.Drawing.Size(151, 137);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 89;
             this.pictureBox1.TabStop = false;
@@ -567,7 +640,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Arial", 9.75F);
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(507, 117);
+            this.btnCancelar.Location = new System.Drawing.Point(421, 117);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(83, 23);
             this.btnCancelar.TabIndex = 48;
@@ -581,7 +654,7 @@
             this.btnAceptar.Font = new System.Drawing.Font("Arial", 9.75F);
             this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAceptar.Location = new System.Drawing.Point(404, 117);
+            this.btnAceptar.Location = new System.Drawing.Point(318, 117);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(79, 23);
             this.btnAceptar.TabIndex = 47;
@@ -594,70 +667,69 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // chb_Tipo_Mediacamento
+            // chb_Puestos
             // 
-            this.chb_Tipo_Mediacamento.AutoSize = true;
-            this.chb_Tipo_Mediacamento.Location = new System.Drawing.Point(363, 36);
-            this.chb_Tipo_Mediacamento.Name = "chb_Tipo_Mediacamento";
-            this.chb_Tipo_Mediacamento.Size = new System.Drawing.Size(133, 17);
-            this.chb_Tipo_Mediacamento.TabIndex = 90;
-            this.chb_Tipo_Mediacamento.Text = "Tipos de medicamento";
-            this.chb_Tipo_Mediacamento.UseVisualStyleBackColor = true;
-            this.chb_Tipo_Mediacamento.CheckedChanged += new System.EventHandler(this.chb_Tipo_Mediacamento_CheckedChanged);
+            this.chb_Puestos.AutoSize = true;
+            this.chb_Puestos.Location = new System.Drawing.Point(515, 36);
+            this.chb_Puestos.Name = "chb_Puestos";
+            this.chb_Puestos.Size = new System.Drawing.Size(64, 17);
+            this.chb_Puestos.TabIndex = 92;
+            this.chb_Puestos.Text = "Puestos";
+            this.chb_Puestos.UseVisualStyleBackColor = true;
             // 
-            // grp_TipoMedicamento
+            // grp_Puestos
             // 
-            this.grp_TipoMedicamento.Controls.Add(this.chk_Tipo_Mediacamento_Consultar);
-            this.grp_TipoMedicamento.Controls.Add(this.chk_Tipo_Mediacamento_eliminar);
-            this.grp_TipoMedicamento.Controls.Add(this.chk_Tipo_Mediacamento_Modificar);
-            this.grp_TipoMedicamento.Controls.Add(this.chk_Tipo_Mediacamento_Agregar);
-            this.grp_TipoMedicamento.Enabled = false;
-            this.grp_TipoMedicamento.Location = new System.Drawing.Point(363, 59);
-            this.grp_TipoMedicamento.Name = "grp_TipoMedicamento";
-            this.grp_TipoMedicamento.Size = new System.Drawing.Size(97, 110);
-            this.grp_TipoMedicamento.TabIndex = 91;
-            this.grp_TipoMedicamento.TabStop = false;
-            this.grp_TipoMedicamento.Text = "Permisos";
+            this.grp_Puestos.Controls.Add(this.chk_Puestos_Consultar);
+            this.grp_Puestos.Controls.Add(this.chk_Puestos_Eliminar);
+            this.grp_Puestos.Controls.Add(this.chk_Puestos_Modificar);
+            this.grp_Puestos.Controls.Add(this.chk_Puestos_Agregar);
+            this.grp_Puestos.Enabled = false;
+            this.grp_Puestos.Location = new System.Drawing.Point(515, 59);
+            this.grp_Puestos.Name = "grp_Puestos";
+            this.grp_Puestos.Size = new System.Drawing.Size(97, 110);
+            this.grp_Puestos.TabIndex = 93;
+            this.grp_Puestos.TabStop = false;
+            this.grp_Puestos.Text = "Permisos";
             // 
-            // chk_Tipo_Mediacamento_Consultar
+            // chk_Puestos_Consultar
             // 
-            this.chk_Tipo_Mediacamento_Consultar.AutoSize = true;
-            this.chk_Tipo_Mediacamento_Consultar.Location = new System.Drawing.Point(6, 90);
-            this.chk_Tipo_Mediacamento_Consultar.Name = "chk_Tipo_Mediacamento_Consultar";
-            this.chk_Tipo_Mediacamento_Consultar.Size = new System.Drawing.Size(70, 17);
-            this.chk_Tipo_Mediacamento_Consultar.TabIndex = 21;
-            this.chk_Tipo_Mediacamento_Consultar.Text = "Consultar";
-            this.chk_Tipo_Mediacamento_Consultar.UseVisualStyleBackColor = true;
+            this.chk_Puestos_Consultar.AutoSize = true;
+            this.chk_Puestos_Consultar.Location = new System.Drawing.Point(6, 90);
+            this.chk_Puestos_Consultar.Name = "chk_Puestos_Consultar";
+            this.chk_Puestos_Consultar.Size = new System.Drawing.Size(70, 17);
+            this.chk_Puestos_Consultar.TabIndex = 21;
+            this.chk_Puestos_Consultar.Text = "Consultar";
+            this.chk_Puestos_Consultar.UseVisualStyleBackColor = true;
             // 
-            // chk_Tipo_Mediacamento_eliminar
+            // chk_Puestos_Eliminar
             // 
-            this.chk_Tipo_Mediacamento_eliminar.AutoSize = true;
-            this.chk_Tipo_Mediacamento_eliminar.Location = new System.Drawing.Point(7, 67);
-            this.chk_Tipo_Mediacamento_eliminar.Name = "chk_Tipo_Mediacamento_eliminar";
-            this.chk_Tipo_Mediacamento_eliminar.Size = new System.Drawing.Size(62, 17);
-            this.chk_Tipo_Mediacamento_eliminar.TabIndex = 20;
-            this.chk_Tipo_Mediacamento_eliminar.Text = "Eliminar";
-            this.chk_Tipo_Mediacamento_eliminar.UseVisualStyleBackColor = true;
+            this.chk_Puestos_Eliminar.AutoSize = true;
+            this.chk_Puestos_Eliminar.Location = new System.Drawing.Point(7, 67);
+            this.chk_Puestos_Eliminar.Name = "chk_Puestos_Eliminar";
+            this.chk_Puestos_Eliminar.Size = new System.Drawing.Size(62, 17);
+            this.chk_Puestos_Eliminar.TabIndex = 20;
+            this.chk_Puestos_Eliminar.Text = "Eliminar";
+            this.chk_Puestos_Eliminar.UseVisualStyleBackColor = true;
             // 
-            // chk_Tipo_Mediacamento_Modificar
+            // chk_Puestos_Modificar
             // 
-            this.chk_Tipo_Mediacamento_Modificar.AutoSize = true;
-            this.chk_Tipo_Mediacamento_Modificar.Location = new System.Drawing.Point(7, 43);
-            this.chk_Tipo_Mediacamento_Modificar.Name = "chk_Tipo_Mediacamento_Modificar";
-            this.chk_Tipo_Mediacamento_Modificar.Size = new System.Drawing.Size(69, 17);
-            this.chk_Tipo_Mediacamento_Modificar.TabIndex = 19;
-            this.chk_Tipo_Mediacamento_Modificar.Text = "Modificar";
-            this.chk_Tipo_Mediacamento_Modificar.UseVisualStyleBackColor = true;
+            this.chk_Puestos_Modificar.AutoSize = true;
+            this.chk_Puestos_Modificar.Location = new System.Drawing.Point(7, 43);
+            this.chk_Puestos_Modificar.Name = "chk_Puestos_Modificar";
+            this.chk_Puestos_Modificar.Size = new System.Drawing.Size(69, 17);
+            this.chk_Puestos_Modificar.TabIndex = 19;
+            this.chk_Puestos_Modificar.Text = "Modificar";
+            this.chk_Puestos_Modificar.UseVisualStyleBackColor = true;
             // 
-            // chk_Tipo_Mediacamento_Agregar
+            // chk_Puestos_Agregar
             // 
-            this.chk_Tipo_Mediacamento_Agregar.AutoSize = true;
-            this.chk_Tipo_Mediacamento_Agregar.Location = new System.Drawing.Point(6, 19);
-            this.chk_Tipo_Mediacamento_Agregar.Name = "chk_Tipo_Mediacamento_Agregar";
-            this.chk_Tipo_Mediacamento_Agregar.Size = new System.Drawing.Size(63, 17);
-            this.chk_Tipo_Mediacamento_Agregar.TabIndex = 18;
-            this.chk_Tipo_Mediacamento_Agregar.Text = "Agregar";
-            this.chk_Tipo_Mediacamento_Agregar.UseVisualStyleBackColor = true;
+            this.chk_Puestos_Agregar.AutoSize = true;
+            this.chk_Puestos_Agregar.Location = new System.Drawing.Point(6, 19);
+            this.chk_Puestos_Agregar.Name = "chk_Puestos_Agregar";
+            this.chk_Puestos_Agregar.Size = new System.Drawing.Size(63, 17);
+            this.chk_Puestos_Agregar.TabIndex = 18;
+            this.chk_Puestos_Agregar.Text = "Agregar";
+            this.chk_Puestos_Agregar.UseVisualStyleBackColor = true;
             // 
             // Mantenimiento_Roles
             // 
@@ -667,6 +739,7 @@
             this.ClientSize = new System.Drawing.Size(694, 504);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
@@ -677,6 +750,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.grp_TipoMedicamento.ResumeLayout(false);
+            this.grp_TipoMedicamento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
@@ -691,8 +766,8 @@
             this.grp_roles.ResumeLayout(false);
             this.grp_roles.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.grp_TipoMedicamento.ResumeLayout(false);
-            this.grp_TipoMedicamento.PerformLayout();
+            this.grp_Puestos.ResumeLayout(false);
+            this.grp_Puestos.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -751,5 +826,11 @@
         private System.Windows.Forms.CheckBox chk_Tipo_Mediacamento_eliminar;
         private System.Windows.Forms.CheckBox chk_Tipo_Mediacamento_Modificar;
         private System.Windows.Forms.CheckBox chk_Tipo_Mediacamento_Agregar;
+        private System.Windows.Forms.CheckBox chb_Puestos;
+        private System.Windows.Forms.GroupBox grp_Puestos;
+        private System.Windows.Forms.CheckBox chk_Puestos_Consultar;
+        private System.Windows.Forms.CheckBox chk_Puestos_Eliminar;
+        private System.Windows.Forms.CheckBox chk_Puestos_Modificar;
+        private System.Windows.Forms.CheckBox chk_Puestos_Agregar;
     }
 }

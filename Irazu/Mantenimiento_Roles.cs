@@ -405,6 +405,53 @@ namespace Irazu
 
                 }
                 #endregion
+                #region Puestos
+                ////////Productos//////////////////////////////////////
+                if (Permisos.Where(x => x.Modulo == "Puestos").FirstOrDefault() != null)
+                {
+                    this.grp_Puestos.Enabled = true;
+                    this.chb_Puestos.Checked = true;
+                    if (Permisos.Where(x => x.Modulo == "Puestos" && x.Accion == "Agregar").FirstOrDefault() != null)
+                    {
+                        this.chk_Puestos_Agregar.Checked = true;
+                    }
+                    else
+                    {
+                        this.chk_Puestos_Agregar.Checked = false;
+                    }
+                    ///
+                    if (Permisos.Where(x => x.Modulo == "Puestos" && x.Accion == "Consultar").FirstOrDefault() != null)
+                    {
+                        this.chk_Puestos_Consultar.Checked = true;
+                    }
+                    else
+                    {
+                        this.chk_Puestos_Consultar.Checked = false;
+                    }
+                    /////
+                    if (Permisos.Where(x => x.Modulo == "Puestos" && x.Accion == "Eliminar").FirstOrDefault() != null)
+                    {
+                        this.chk_Puestos_Eliminar.Checked = true;
+                    }
+                    else
+                    {
+                        this.chk_Puestos_Eliminar.Checked = false;
+                    }
+                    /////
+                    if (Permisos.Where(x => x.Modulo == "TipoMedicamento" && x.Accion == "Modificar").FirstOrDefault() != null)
+                    {
+                        this.chk_Puestos_Modificar.Checked = true;
+                    }
+                    else
+                    {
+                        this.chk_Puestos_Modificar.Checked = false;
+                    }
+                }
+                else
+                {
+
+                }
+                #endregion
                 #region Reporte de medicamentos
                 if (Permisos.Where(x => x.Modulo == "ReporteMedicamento").FirstOrDefault() != null)
                 {
