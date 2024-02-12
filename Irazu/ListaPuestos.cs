@@ -82,7 +82,7 @@ namespace Lienzos
                 if (Accion != "A" && Accion == "M" && valorcelda != -1 || Accion != "A" && Accion == "E" && valorcelda != -1 || Accion != "A" && Accion == "C" && valorcelda != -1)
                 {
                     //valorcelda = dat_usuarios.CurrentRow.Index;
-                    MantenimientoTipoMedicamento frm = new MantenimientoTipoMedicamento();
+                    MantenimientoPuestos frm = new MantenimientoPuestos();
                     frm.Accion = Accion;
                     frm.Id = valorcelda;
                     frm.Usuario = Usuario;
@@ -94,7 +94,7 @@ namespace Lienzos
                 {
                     if (Accion == "A")
                     {
-                        MantenimientoTipoMedicamento frm = new MantenimientoTipoMedicamento();
+                        MantenimientoPuestos frm = new MantenimientoPuestos();
                         frm.Accion = Accion;
                         frm.Id = valorcelda;
                         frm.Usuario = Usuario;
