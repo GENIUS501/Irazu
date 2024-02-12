@@ -27,6 +27,19 @@ namespace Lienzos
         {
             try
             {
+                #region Puestos
+                NPuestos NegociosPuestos = new NPuestos();
+                this.cbo_puestos.DisplayMember = "Text";
+                this.cbo_puestos.ValueMember = "Value";
+                var PuestosDataSource = NegociosPuestos.Mostrar().Select(x => new
+                {
+                    Text = x.Nombre,
+                    Value = x.Id_Puesto
+                }
+                );
+                this.cbo_puestos.DataSource = PuestosDataSource.ToArray();
+                #endregion
+                #region Genero
                 this.cbo_Genero.DisplayMember = "Text";
                 this.cbo_Genero.ValueMember = "Value";
                 List<dynamic> Generos = new List<dynamic> {
@@ -35,6 +48,7 @@ namespace Lienzos
             };
                 var GenerosArray = Generos.Select(x => new { x.Text, x.Value }).ToArray();
                 this.cbo_Genero.DataSource = GenerosArray;
+                #endregion
                 if (Accion == "A")
                 {
 
@@ -65,6 +79,7 @@ namespace Lienzos
             this.txt_apellido2.Text = Obj.Segundo_Apellido.ToString();
             this.TxtDireccion.Text = Obj.Direccion.ToString();
             this.TxtTelefono.Text = Obj.Telefono.ToString();
+            this.cbo_puestos.SelectedValue = Obj.Id_Puesto;
         }
 
         private bool validar()

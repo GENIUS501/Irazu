@@ -49,6 +49,8 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cbo_puestos = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.grpdatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -56,6 +58,8 @@
             // 
             // grpdatos
             // 
+            this.grpdatos.Controls.Add(this.cbo_puestos);
+            this.grpdatos.Controls.Add(this.label5);
             this.grpdatos.Controls.Add(this.pictureBox1);
             this.grpdatos.Controls.Add(this.TxtDireccion);
             this.grpdatos.Controls.Add(this.label10);
@@ -73,7 +77,7 @@
             this.grpdatos.Controls.Add(this.label1);
             this.grpdatos.Location = new System.Drawing.Point(12, 12);
             this.grpdatos.Name = "grpdatos";
-            this.grpdatos.Size = new System.Drawing.Size(427, 308);
+            this.grpdatos.Size = new System.Drawing.Size(427, 352);
             this.grpdatos.TabIndex = 0;
             this.grpdatos.TabStop = false;
             this.grpdatos.Text = "Datos del personal";
@@ -90,7 +94,7 @@
             // 
             // TxtDireccion
             // 
-            this.TxtDireccion.Location = new System.Drawing.Point(9, 178);
+            this.TxtDireccion.Location = new System.Drawing.Point(9, 210);
             this.TxtDireccion.Multiline = true;
             this.TxtDireccion.Name = "TxtDireccion";
             this.TxtDireccion.Size = new System.Drawing.Size(409, 122);
@@ -99,7 +103,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 162);
+            this.label10.Location = new System.Drawing.Point(6, 189);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(52, 13);
             this.label10.TabIndex = 37;
@@ -209,7 +213,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Arial", 9.75F);
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(245, 326);
+            this.btnCancelar.Location = new System.Drawing.Point(245, 370);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(83, 23);
             this.btnCancelar.TabIndex = 20;
@@ -223,7 +227,7 @@
             this.btnAceptar.Font = new System.Drawing.Font("Arial", 9.75F);
             this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAceptar.Location = new System.Drawing.Point(129, 326);
+            this.btnAceptar.Location = new System.Drawing.Point(129, 370);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(79, 23);
             this.btnAceptar.TabIndex = 19;
@@ -236,12 +240,30 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // cbo_puestos
+            // 
+            this.cbo_puestos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_puestos.FormattingEnabled = true;
+            this.cbo_puestos.Location = new System.Drawing.Point(10, 161);
+            this.cbo_puestos.Name = "cbo_puestos";
+            this.cbo_puestos.Size = new System.Drawing.Size(227, 21);
+            this.cbo_puestos.TabIndex = 92;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 145);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.TabIndex = 91;
+            this.label5.Text = "Puestos";
+            // 
             // MantenimientoPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(456, 359);
+            this.ClientSize = new System.Drawing.Size(456, 399);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.grpdatos);
@@ -278,5 +300,7 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ComboBox cbo_puestos;
+        private System.Windows.Forms.Label label5;
     }
 }
