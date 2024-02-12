@@ -12,19 +12,20 @@ namespace AccesoDatos
     using System;
     using System.Collections.Generic;
     
-    public partial class Personal
+    public partial class Puestos
     {
-        public int ID { get; set; }
-        public string Cedula { get; set; }
-        public string Nombre { get; set; }
-        public string Primer_Apellido { get; set; }
-        public string Segundo_Apellido { get; set; }
-        public int Genero { get; set; }
-        public int Estado { get; set; }
-        public Nullable<int> Telefono { get; set; }
-        public string Direccion { get; set; }
-        public int Id_Puesto { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Puestos()
+        {
+            this.Personal = new HashSet<Personal>();
+        }
     
-        public virtual Puestos Puestos { get; set; }
+        public int Id_Puesto { get; set; }
+        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
+        public decimal Salario { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Personal> Personal { get; set; }
     }
 }

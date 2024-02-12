@@ -30,6 +30,7 @@ namespace AccesoDatos
         public virtual DbSet<Medicamentos> Medicamentos { get; set; }
         public virtual DbSet<Permisos> Permisos { get; set; }
         public virtual DbSet<Personal> Personal { get; set; }
+        public virtual DbSet<Puestos> Puestos { get; set; }
         public virtual DbSet<Roles> Roles { get; set; }
         public virtual DbSet<Tipo_Medicamentos> Tipo_Medicamentos { get; set; }
         public virtual DbSet<UsuarioCentroDiurno> UsuarioCentroDiurno { get; set; }

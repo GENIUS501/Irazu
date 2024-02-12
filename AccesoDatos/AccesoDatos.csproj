@@ -65,6 +65,7 @@
     <Compile Include="DPersonal.cs" />
     <Compile Include="DPermisos.cs" />
     <Compile Include="DMedicamentos.cs" />
+    <Compile Include="DPuestos.cs" />
     <Compile Include="DRoles.cs" />
     <Compile Include="DTipo_Medicamentos.cs" />
     <Compile Include="DUsuarioCentroDiurno.cs" />
@@ -94,6 +95,9 @@
       <DependentUpon>Irazu.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Puestos.cs">
+      <DependentUpon>Irazu.tt</DependentUpon>
+    </Compile>
     <Compile Include="Roles.cs">
       <DependentUpon>Irazu.tt</DependentUpon>
     </Compile>

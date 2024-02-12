@@ -57,6 +57,16 @@
           <Property Name="Estado" Type="int" Nullable="false" />
           <Property Name="Telefono" Type="int" />
           <Property Name="Direccion" Type="varchar(max)" Nullable="false" />
+          <Property Name="Id_Puesto" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Puestos">
+          <Key>
+            <PropertyRef Name="Id_Puesto" />
+          </Key>
+          <Property Name="Id_Puesto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+          <Property Name="Salario" Type="decimal" Precision="18" Scale="0" Nullable="false" />
         </EntityType>
         <EntityType Name="Roles">
           <Key>
@@ -133,6 +143,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="Fk_PERSONAL_PUESTOS">
+          <End Role="Puestos" Type="Self.Puestos" Multiplicity="1" />
+          <End Role="Personal" Type="Self.Personal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Puestos">
+              <PropertyRef Name="Id_Puesto" />
+            </Principal>
+            <Dependent Role="Personal">
+              <PropertyRef Name="Id_Puesto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="Fk_PRODUCTOS_TIPO">
           <End Role="Tipo_Medicamentos" Type="Self.Tipo_Medicamentos" Multiplicity="1" />
           <End Role="Medicamentos" Type="Self.Medicamentos" Multiplicity="*" />
@@ -175,6 +197,7 @@
           <EntitySet Name="Medicamentos" EntityType="Self.Medicamentos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Permisos" EntityType="Self.Permisos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Personal" EntityType="Self.Personal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Puestos" EntityType="Self.Puestos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tipo_Medicamentos" EntityType="Self.Tipo_Medicamentos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UsuarioCentroDiurno" EntityType="Self.UsuarioCentroDiurno" Schema="dbo" store:Type="Tables" />
@@ -186,6 +209,10 @@
           <AssociationSet Name="Fk_PERMISOS_ROLES" Association="Self.Fk_PERMISOS_ROLES">
             <End Role="Roles" EntitySet="Roles" />
             <End Role="Permisos" EntitySet="Permisos" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_PERSONAL_PUESTOS" Association="Self.Fk_PERSONAL_PUESTOS">
+            <End Role="Puestos" EntitySet="Puestos" />
+            <End Role="Personal" EntitySet="Personal" />
           </AssociationSet>
           <AssociationSet Name="Fk_PRODUCTOS_TIPO" Association="Self.Fk_PRODUCTOS_TIPO">
             <End Role="Tipo_Medicamentos" EntitySet="Tipo_Medicamentos" />
@@ -261,6 +288,18 @@
           <Property Name="Estado" Type="Int32" Nullable="false" />
           <Property Name="Telefono" Type="Int32" />
           <Property Name="Direccion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Id_Puesto" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Puestos" Relationship="Self.Fk_PERSONAL_PUESTOS" FromRole="Personal" ToRole="Puestos" />
+        </EntityType>
+        <EntityType Name="Puestos">
+          <Key>
+            <PropertyRef Name="Id_Puesto" />
+          </Key>
+          <Property Name="Id_Puesto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Salario" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <NavigationProperty Name="Personal" Relationship="Self.Fk_PERSONAL_PUESTOS" FromRole="Puestos" ToRole="Personal" />
         </EntityType>
         <EntityType Name="Roles">
           <Key>
@@ -367,6 +406,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="Fk_PERSONAL_PUESTOS">
+          <End Role="Puestos" Type="Self.Puestos" Multiplicity="1" />
+          <End Role="Personal" Type="Self.Personal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Puestos">
+              <PropertyRef Name="Id_Puesto" />
+            </Principal>
+            <Dependent Role="Personal">
+              <PropertyRef Name="Id_Puesto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="Fk_USUARIOS_ROLES">
           <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
@@ -379,12 +430,13 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="IrazuEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="IrazuEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Bitacora_Movimientos" EntityType="Self.Bitacora_Movimientos" />
           <EntitySet Name="Bitacora_Sesiones" EntityType="Self.Bitacora_Sesiones" />
           <EntitySet Name="Medicamentos" EntityType="Self.Medicamentos" />
           <EntitySet Name="Permisos" EntityType="Self.Permisos" />
           <EntitySet Name="Personal" EntityType="Self.Personal" />
+          <EntitySet Name="Puestos" EntityType="Self.Puestos" />
           <EntitySet Name="Roles" EntityType="Self.Roles" />
           <EntitySet Name="Tipo_Medicamentos" EntityType="Self.Tipo_Medicamentos" />
           <EntitySet Name="UsuarioCentroDiurno" EntityType="Self.UsuarioCentroDiurno" />
@@ -405,6 +457,10 @@
             <End Role="Roles" EntitySet="Roles" />
             <End Role="Permisos" EntitySet="Permisos" />
           </AssociationSet>
+          <AssociationSet Name="Fk_PERSONAL_PUESTOS" Association="Self.Fk_PERSONAL_PUESTOS">
+            <End Role="Puestos" EntitySet="Puestos" />
+            <End Role="Personal" EntitySet="Personal" />
+          </AssociationSet>
           <AssociationSet Name="Fk_USUARIOS_ROLES" Association="Self.Fk_USUARIOS_ROLES">
             <End Role="Roles" EntitySet="Roles" />
             <End Role="Usuarios" EntitySet="Usuarios" />
@@ -415,7 +471,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="IrazuModelStoreContainer" CdmEntityContainer="IrazuEntities1">
+        <EntityContainerMapping StorageEntityContainer="IrazuModelStoreContainer" CdmEntityContainer="IrazuEntities">
           <EntitySetMapping Name="Bitacora_Movimientos">
             <EntityTypeMapping TypeName="IrazuModel.Bitacora_Movimientos">
               <MappingFragment StoreEntitySet="Bitacora_Movimientos">
@@ -471,6 +527,17 @@
                 <ScalarProperty Name="Estado" ColumnName="Estado" />
                 <ScalarProperty Name="Telefono" ColumnName="Telefono" />
                 <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Id_Puesto" ColumnName="Id_Puesto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Puestos">
+            <EntityTypeMapping TypeName="IrazuModel.Puestos">
+              <MappingFragment StoreEntitySet="Puestos">
+                <ScalarProperty Name="Id_Puesto" ColumnName="Id_Puesto" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Salario" ColumnName="Salario" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
