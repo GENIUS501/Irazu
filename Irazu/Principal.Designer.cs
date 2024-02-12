@@ -48,6 +48,7 @@
             this.Salir = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.Txt_Usuario = new System.Windows.Forms.ToolStripStatusLabel();
+            this.Puestos = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -87,7 +88,8 @@
             this.Personal,
             this.Medicamentos,
             this.Tipo_Medicamentos,
-            this.CentroDiurno});
+            this.CentroDiurno,
+            this.Puestos});
             this.Mantenimientos.Name = "Mantenimientos";
             this.Mantenimientos.Size = new System.Drawing.Size(106, 20);
             this.Mantenimientos.Text = "Mantenimientos";
@@ -212,6 +214,13 @@
             this.Txt_Usuario.Name = "Txt_Usuario";
             this.Txt_Usuario.Size = new System.Drawing.Size(0, 17);
             // 
+            // Puestos
+            // 
+            this.Puestos.Name = "Puestos";
+            this.Puestos.Size = new System.Drawing.Size(200, 22);
+            this.Puestos.Text = "Puestos";
+            this.Puestos.Click += new System.EventHandler(this.Puestos_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,5 +269,6 @@
         private System.Windows.Forms.ToolStripMenuItem Bitacora_Movimientos;
         private System.Windows.Forms.ToolStripMenuItem reingresarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem CentroDiurno;
+        private System.Windows.Forms.ToolStripMenuItem Puestos;
     }
 }

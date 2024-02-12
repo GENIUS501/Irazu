@@ -46,6 +46,7 @@ namespace Irazu
                 Reporte_Medicamentos.Visible = false;
                 Bitacora_Ingresos.Visible = false;
                 Bitacora_Movimientos.Visible = false;
+                Puestos.Visible = false;
                 perm = Negocios.llenar_Permisos(UsuarioLogueado.Id_Rol);
                 if (perm.Where(x => x.Modulo == "Usuarios").FirstOrDefault() != null)
                 {
@@ -76,6 +77,11 @@ namespace Irazu
                 {
                     Mantenimientos.Visible = true;
                     Tipo_Medicamentos.Visible = true;
+                }
+                if (perm.Where(x => x.Modulo == "Puestos").FirstOrDefault() != null)
+                {
+                    Mantenimientos.Visible = true;
+                    Puestos.Visible = true;
                 }
                 if (perm.Where(x => x.Modulo == "ReporteMedicamento" || x.Modulo == "ReportePersonal" || x.Modulo == "ReporteCentroDiurno").FirstOrDefault() != null)
                 {
@@ -376,6 +382,11 @@ namespace Irazu
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Puestos_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
