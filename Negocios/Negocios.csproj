@@ -45,6 +45,7 @@
     <Compile Include="NBitacora_Sesiones.cs" />
     <Compile Include="NPersonal.cs" />
     <Compile Include="NMedicamentos.cs" />
+    <Compile Include="NPuestos.cs" />
     <Compile Include="NRoles.cs" />
     <Compile Include="NTipo_Medicamentos.cs" />
     <Compile Include="NUsuarioCentroDiurno.cs" />
