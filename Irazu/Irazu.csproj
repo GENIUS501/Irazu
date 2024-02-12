@@ -125,6 +125,12 @@
     <Compile Include="ListaPersonal.Designer.cs">
       <DependentUpon>ListaPersonal.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListaPuestos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaPuestos.Designer.cs">
+      <DependentUpon>ListaPuestos.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListaRolesyPermisos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,12 @@
     </Compile>
     <Compile Include="MantenimientoPersonal.Designer.cs">
       <DependentUpon>MantenimientoPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoPuestos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoPuestos.Designer.cs">
+      <DependentUpon>MantenimientoPuestos.cs</DependentUpon>
     </Compile>
     <Compile Include="MantenimientoTipoMedicamento.cs">
       <SubType>Form</SubType>
@@ -238,6 +250,9 @@
     <EmbeddedResource Include="ListaPersonal.resx">
       <DependentUpon>ListaPersonal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListaPuestos.resx">
+      <DependentUpon>ListaPuestos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListaRolesyPermisos.resx">
       <DependentUpon>ListaRolesyPermisos.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoPersonal.resx">
       <DependentUpon>MantenimientoPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoPuestos.resx">
+      <DependentUpon>MantenimientoPuestos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoTipoMedicamento.resx">
       <DependentUpon>MantenimientoTipoMedicamento.cs</DependentUpon>
