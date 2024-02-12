@@ -386,7 +386,20 @@ namespace Irazu
 
         private void Puestos_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                ListaPuestos frm = new ListaPuestos();
+                frm.Usuario = UsuarioLogueado.ID_Usuario;
+                frm.Id_Rol = UsuarioLogueado.Id_Rol;
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
