@@ -24,6 +24,7 @@ namespace AccesoDatos
                     Puestos Objbd = new Puestos();
                     Objbd.Nombre = obj.Nombre;
                     Objbd.Descripcion = obj.Descripcion;
+                    Objbd.Salario = obj.Salario;
                     db.Puestos.Add(Objbd);
 
                     int Resultado = db.SaveChanges();
@@ -64,6 +65,7 @@ namespace AccesoDatos
                     Id_Puesto = x.Id_Puesto,
                     Nombre = x.Nombre,
                     Descripcion = x.Descripcion,
+                    Salario=x.Salario
                 }).ToList();
                 return Lista;
             }
@@ -85,6 +87,7 @@ namespace AccesoDatos
                     var Objbd = db.Puestos.Where(x => x.Id_Puesto == obj.Id_Puesto).FirstOrDefault();
                     Objbd.Nombre = obj.Nombre;
                     Objbd.Descripcion = obj.Descripcion;
+                    Objbd.Salario = obj.Salario;
                     db.Entry(Objbd).State = EntityState.Modified;
                     int Resultado = db.SaveChanges();
                     if (Resultado > 0)
