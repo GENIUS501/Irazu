@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using Negocios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace Lienzos
 {
     public partial class ReportePlanillas : Form
     {
+        public string Usuario { get; set; }
         public ReportePlanillas()
         {
             InitializeComponent();
@@ -38,8 +41,7 @@ namespace Lienzos
             //}
             try
             {
-                NBitacora_Sesiones Negocios = new NBitacora_Sesiones();
-                NUsuarios NegociosUsuarios = new NUsuarios();
+                NPersonal Negocios = new NPersonal();
                 var datasource = Negocios.Mostrar().Select(x => new
                 {
                     x.fecha_hora_salida,
@@ -51,7 +53,7 @@ namespace Lienzos
                 this.reportViewer1.LocalReport.DataSources.Clear();
                 this.reportViewer1.LocalReport.DataSources.Add(Rds);
                 ReportParameter[] parameters = new ReportParameter[2];
-                parameters[0] = new ReportParameter("Usuario", Usuariologueado);
+                parameters[0] = new ReportParameter("Usuario", Usuario);
                 parameters[1] = new ReportParameter("Fecha", DateTime.Now.ToString());
                 reportViewer1.LocalReport.SetParameters(parameters);
                 this.reportViewer1.RefreshReport();
