@@ -42,7 +42,6 @@
             this.chk_Tipo_Mediacamento_eliminar = new System.Windows.Forms.CheckBox();
             this.chk_Tipo_Mediacamento_Modificar = new System.Windows.Forms.CheckBox();
             this.chk_Tipo_Mediacamento_Agregar = new System.Windows.Forms.CheckBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.chb_reporte_centro_diurno = new System.Windows.Forms.CheckBox();
             this.chb_reporte_personal = new System.Windows.Forms.CheckBox();
@@ -79,8 +78,6 @@
             this.chk_rol_eliminar = new System.Windows.Forms.CheckBox();
             this.chk_rol_modificar = new System.Windows.Forms.CheckBox();
             this.chk_rol_agregar = new System.Windows.Forms.CheckBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.chb_Puestos = new System.Windows.Forms.CheckBox();
             this.grp_Puestos = new System.Windows.Forms.GroupBox();
@@ -88,10 +85,13 @@
             this.chk_Puestos_Eliminar = new System.Windows.Forms.CheckBox();
             this.chk_Puestos_Modificar = new System.Windows.Forms.CheckBox();
             this.chk_Puestos_Agregar = new System.Windows.Forms.CheckBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.chb_reporte_planillas = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.grp_TipoMedicamento.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.grp_usuarios.SuspendLayout();
             this.grp_Centro_Diurno.SuspendLayout();
@@ -100,6 +100,7 @@
             this.grp_roles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.grp_Puestos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -236,18 +237,9 @@
             this.chk_Tipo_Mediacamento_Agregar.Text = "Agregar";
             this.chk_Tipo_Mediacamento_Agregar.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Lienzos.Properties.Resources.Imagen_de_WhatsApp_2023_11_22_a_las_19_30_10_be162142;
-            this.pictureBox1.Location = new System.Drawing.Point(531, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(151, 137);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 89;
-            this.pictureBox1.TabStop = false;
-            // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.chb_reporte_planillas);
             this.groupBox5.Controls.Add(this.chb_reporte_centro_diurno);
             this.groupBox5.Controls.Add(this.chb_reporte_personal);
             this.groupBox5.Controls.Add(this.chb_Medicamentos_reporte);
@@ -635,34 +627,6 @@
             this.chk_rol_agregar.Text = "Agregar";
             this.chk_rol_agregar.UseVisualStyleBackColor = true;
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(421, 117);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(83, 23);
-            this.btnCancelar.TabIndex = 48;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
-            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAceptar.Location = new System.Drawing.Point(318, 117);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(79, 23);
-            this.btnAceptar.TabIndex = 47;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -676,6 +640,7 @@
             this.chb_Puestos.TabIndex = 92;
             this.chb_Puestos.Text = "Puestos";
             this.chb_Puestos.UseVisualStyleBackColor = true;
+            this.chb_Puestos.CheckedChanged += new System.EventHandler(this.chb_Puestos_CheckedChanged);
             // 
             // grp_Puestos
             // 
@@ -731,6 +696,54 @@
             this.chk_Puestos_Agregar.Text = "Agregar";
             this.chk_Puestos_Agregar.UseVisualStyleBackColor = true;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.Location = new System.Drawing.Point(421, 117);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(83, 23);
+            this.btnCancelar.TabIndex = 48;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
+            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAceptar.Location = new System.Drawing.Point(318, 117);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(79, 23);
+            this.btnAceptar.TabIndex = 47;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Lienzos.Properties.Resources.Imagen_de_WhatsApp_2023_11_22_a_las_19_30_10_be162142;
+            this.pictureBox1.Location = new System.Drawing.Point(531, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(151, 137);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 89;
+            this.pictureBox1.TabStop = false;
+            // 
+            // chb_reporte_planillas
+            // 
+            this.chb_reporte_planillas.AutoSize = true;
+            this.chb_reporte_planillas.Location = new System.Drawing.Point(234, 90);
+            this.chb_reporte_planillas.Name = "chb_reporte_planillas";
+            this.chb_reporte_planillas.Size = new System.Drawing.Size(119, 17);
+            this.chb_reporte_planillas.TabIndex = 43;
+            this.chb_reporte_planillas.Text = "Reporte de planillas";
+            this.chb_reporte_planillas.UseVisualStyleBackColor = true;
+            // 
             // Mantenimiento_Roles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -752,7 +765,6 @@
             this.groupBox2.PerformLayout();
             this.grp_TipoMedicamento.ResumeLayout(false);
             this.grp_TipoMedicamento.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.grp_usuarios.ResumeLayout(false);
@@ -768,6 +780,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.grp_Puestos.ResumeLayout(false);
             this.grp_Puestos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -832,5 +845,6 @@
         private System.Windows.Forms.CheckBox chk_Puestos_Eliminar;
         private System.Windows.Forms.CheckBox chk_Puestos_Modificar;
         private System.Windows.Forms.CheckBox chk_Puestos_Agregar;
+        private System.Windows.Forms.CheckBox chb_reporte_planillas;
     }
 }

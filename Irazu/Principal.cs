@@ -47,6 +47,7 @@ namespace Irazu
                 Bitacora_Ingresos.Visible = false;
                 Bitacora_Movimientos.Visible = false;
                 Puestos.Visible = false;
+                ReportePlanillas.Visible = false;
                 perm = Negocios.llenar_Permisos(UsuarioLogueado.Id_Rol);
                 if (perm.Where(x => x.Modulo == "Usuarios").FirstOrDefault() != null)
                 {
@@ -98,6 +99,10 @@ namespace Irazu
                 if (perm.Where(x => x.Modulo == "ReporteCentroDiurno").FirstOrDefault() != null)
                 {
                     Reporte_centro_diurno.Visible = true;
+                }
+                if (perm.Where(x => x.Modulo == "ReportePlanilla").FirstOrDefault() != null)
+                {
+                    ReportePlanillas.Visible = true;
                 }
                 if (perm.Where(x => x.Modulo == "BitacoraSesiones").FirstOrDefault() != null)
                 {
@@ -391,6 +396,23 @@ namespace Irazu
                 ListaPuestos frm = new ListaPuestos();
                 frm.Usuario = UsuarioLogueado.ID_Usuario;
                 frm.Id_Rol = UsuarioLogueado.Id_Rol;
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ReportePlanillas_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ReportePlanillas frm = new ReportePlanillas();
+                frm.Usuario = this.UsuarioLogueado.Nombre_Usuario;
                 frm.MaximizeBox = false;
                 frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
                 frm.MdiParent = this;

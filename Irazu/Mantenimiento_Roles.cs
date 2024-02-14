@@ -482,6 +482,16 @@ namespace Irazu
 
                 }
                 #endregion
+                #region Reporte de planillas
+                if (Permisos.Where(x => x.Modulo == "ReportePlanilla").FirstOrDefault() != null)
+                {
+                    this.chb_reporte_planillas.Checked = true;
+                }
+                else
+                {
+
+                }
+                #endregion
                 #region Bitacora de sesiones
                 if (Permisos.Where(x => x.Modulo == "BitacoraSesiones").FirstOrDefault() != null)
                 {
@@ -851,6 +861,15 @@ namespace Irazu
                     Permisos.Id_Rol = Id_Rol;
                     Permisos.Modulo = "ReporteCentroDiurno";
                     Permisos.Accion = "ReporteCentroDiurno";
+                    Lista_Permisos.Add(Permisos);
+                    Permisos = new EPermisos();
+                }
+                ////////Reporte_Planillas//////////////////////////////////////////////////////////////////////////////////////
+                if (this.chb_reporte_planillas.Checked == true)
+                {
+                    Permisos.Id_Rol = Id_Rol;
+                    Permisos.Modulo = "ReportePlanilla";
+                    Permisos.Accion = "ReportePlanilla";
                     Lista_Permisos.Add(Permisos);
                     Permisos = new EPermisos();
                 }
