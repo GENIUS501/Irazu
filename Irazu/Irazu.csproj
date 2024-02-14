@@ -102,6 +102,9 @@
       <DependentUpon>CambioContrasena.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper.cs" />
+    <Compile Include="IrazuDataSet.cs">
+      <DependentUpon>IrazuDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="IrazuDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -223,6 +226,12 @@
     <Compile Include="ReportePersonal.Designer.cs">
       <DependentUpon>ReportePersonal.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportePlanillas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportePlanillas.Designer.cs">
+      <DependentUpon>ReportePlanillas.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReporteUsuarioCentroDiurno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,6 +319,10 @@
     <EmbeddedResource Include="ReportePersonal.rdlc" />
     <EmbeddedResource Include="ReportePersonal.resx">
       <DependentUpon>ReportePersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportePlanillas.rdlc" />
+    <EmbeddedResource Include="ReportePlanillas.resx">
+      <DependentUpon>ReportePlanillas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteUsuarioCentroDiurno.resx">
       <DependentUpon>ReporteUsuarioCentroDiurno.cs</DependentUpon>
