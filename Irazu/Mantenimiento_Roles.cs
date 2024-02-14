@@ -739,6 +739,50 @@ namespace Irazu
                         }
                     }
                 }
+                /////////Tipo_Mediacamento//////6///////////////////////////////////////////////////////////////////////
+                if (this.chb_Tipo_Mediacamento.Checked == true)
+                {
+                    Permisos.Id_Rol = Id_Rol;
+                    Permisos.Modulo = "TipoMedicamento";
+                    Permisos.Accion = "TipoMedicamento";
+                    Lista_Permisos.Add(Permisos);
+                    Permisos = new EPermisos();
+                    if (this.grp_Centro_Diurno.Enabled == true)
+                    {
+                        if (chk_Tipo_Mediacamento_Agregar.Checked == true)
+                        {
+                            Permisos.Id_Rol = Id_Rol;
+                            Permisos.Modulo = "TipoMedicamento";
+                            Permisos.Accion = "Agregar";
+                            Lista_Permisos.Add(Permisos);
+                            Permisos = new EPermisos();
+                        }
+                        if (chk_Tipo_Mediacamento_Modificar.Checked == true)
+                        {
+                            Permisos.Id_Rol = Id_Rol;
+                            Permisos.Modulo = "TipoMedicamento";
+                            Permisos.Accion = "Modificar";
+                            Lista_Permisos.Add(Permisos);
+                            Permisos = new EPermisos();
+                        }
+                        if (chk_Tipo_Mediacamento_eliminar.Checked == true)
+                        {
+                            Permisos.Id_Rol = Id_Rol;
+                            Permisos.Modulo = "TipoMedicamento";
+                            Permisos.Accion = "Eliminar";
+                            Lista_Permisos.Add(Permisos);
+                            Permisos = new EPermisos();
+                        }
+                        if (chk_Tipo_Mediacamento_Consultar.Checked == true)
+                        {
+                            Permisos.Id_Rol = Id_Rol;
+                            Permisos.Modulo = "TipoMedicamento";
+                            Permisos.Accion = "Consultar";
+                            Lista_Permisos.Add(Permisos);
+                            Permisos = new EPermisos();
+                        }
+                    }
+                }
                 /////////Puestos//////6///////////////////////////////////////////////////////////////////////
                 if (this.chb_Puestos.Checked == true)
                 {
@@ -783,6 +827,7 @@ namespace Irazu
                         }
                     }
                 }
+                ////////Reportes_Medicamentos////10///////////////////////
                 if (this.chb_Medicamentos_reporte.Checked == true)
                 {
                     Permisos.Id_Rol = Id_Rol;

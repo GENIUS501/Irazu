@@ -17,7 +17,7 @@
     <Shape ID="DesignTable:Usuarios" ZOrder="9" X="70" Y="70" Height="305" Width="194" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
     <Shape ID="DesignTable:BitacoraIngresos" ZOrder="3" X="640" Y="289" Height="105" Width="163" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="101" />
     <Shape ID="DesignTable:BitacoraMovimientos" ZOrder="2" X="810" Y="394" Height="124" Width="196" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="86" />
-    <Shape ID="DesignTable:Planillas" ZOrder="1" X="1179" Y="588" Height="124" Width="150" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="120" />
+    <Shape ID="DesignTable:Planillas" ZOrder="1" X="1179" Y="588" Height="143" Width="150" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="139" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:Fk_MOVIMIENTOS_USUARIOS" ZOrder="8" LineWidth="11">

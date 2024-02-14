@@ -4444,6 +4444,8 @@ namespace Lienzos {
             
             private global::System.Data.DataColumn columnSalario;
             
+            private global::System.Data.DataColumn columnCedula;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public PlanillasDataTable() {
@@ -4519,6 +4521,14 @@ namespace Lienzos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CedulaColumn {
+                get {
+                    return this.columnCedula;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4554,14 +4564,15 @@ namespace Lienzos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PlanillasRow AddPlanillasRow(string Nombre, string Apellido1, string Apellido2, string Puesto, string Salario) {
+            public PlanillasRow AddPlanillasRow(string Nombre, string Apellido1, string Apellido2, string Puesto, string Salario, string Cedula) {
                 PlanillasRow rowPlanillasRow = ((PlanillasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Nombre,
                         Apellido1,
                         Apellido2,
                         Puesto,
-                        Salario};
+                        Salario,
+                        Cedula};
                 rowPlanillasRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPlanillasRow);
                 return rowPlanillasRow;
@@ -4589,6 +4600,7 @@ namespace Lienzos {
                 this.columnApellido2 = base.Columns["Apellido2"];
                 this.columnPuesto = base.Columns["Puesto"];
                 this.columnSalario = base.Columns["Salario"];
+                this.columnCedula = base.Columns["Cedula"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4604,6 +4616,8 @@ namespace Lienzos {
                 base.Columns.Add(this.columnPuesto);
                 this.columnSalario = new global::System.Data.DataColumn("Salario", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSalario);
+                this.columnCedula = new global::System.Data.DataColumn("Cedula", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCedula);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6232,6 +6246,22 @@ namespace Lienzos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Cedula {
+                get {
+                    try {
+                        return ((string)(this[this.tablePlanillas.CedulaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Cedula\' de la tabla \'Planillas\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePlanillas.CedulaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsNombreNull() {
                 return this.IsNull(this.tablePlanillas.NombreColumn);
             }
@@ -6288,6 +6318,18 @@ namespace Lienzos {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetSalarioNull() {
                 this[this.tablePlanillas.SalarioColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCedulaNull() {
+                return this.IsNull(this.tablePlanillas.CedulaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCedulaNull() {
+                this[this.tablePlanillas.CedulaColumn] = global::System.Convert.DBNull;
             }
         }
         
