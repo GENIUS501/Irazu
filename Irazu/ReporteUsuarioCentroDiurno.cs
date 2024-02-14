@@ -47,7 +47,7 @@ namespace Lienzos
             {
                 if (this.txt_expediente.Text != "")
                 {
-                    NPersonal Negocios = new NPersonal();
+                    NUsuarioCentroDiurno Negocios = new NUsuarioCentroDiurno();
                     var datasource = Negocios.Mostrar().Where(x => x.Cedula.Contains(this.txt_expediente.Text)).ToList();
                     ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                     this.reportViewer1.LocalReport.DataSources.Clear();
@@ -71,7 +71,7 @@ namespace Lienzos
             {
                 if (this.txt_cedula.Text != "")
                 {
-                    NPersonal Negocios = new NPersonal();
+                    NUsuarioCentroDiurno Negocios = new NUsuarioCentroDiurno();
                     var datasource = Negocios.Mostrar().Where(x => x.Cedula.Contains(this.txt_cedula.Text)).ToList();
                     ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                     this.reportViewer1.LocalReport.DataSources.Clear();

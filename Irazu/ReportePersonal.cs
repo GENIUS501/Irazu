@@ -25,7 +25,19 @@ namespace Lienzos
             try
             {
                 NPersonal Negocios = new NPersonal();
-                var datasource = Negocios.Mostrar();
+                var datasource = Negocios.Mostrar().Select(x => new
+                {
+                    Cedula = x.Cedula,
+                    Nombre = x.Nombre,
+                    Primer_Apellido = x.Primer_Apellido,
+                    Segundo_Apellido = x.Segundo_Apellido,
+                    Genero = (x.Genero==1)?"Masculino":"Femenino",
+                    ID = x.ID,
+                    Estado = x.Estado,
+                    Telefono = x.Telefono,
+                    Direccion = x.Direccion,
+                    Id_Puesto = x.Id_Puesto
+                }).ToList();
                 ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                 this.reportViewer1.LocalReport.DataSources.Clear();
                 this.reportViewer1.LocalReport.DataSources.Add(Rds);
@@ -49,7 +61,19 @@ namespace Lienzos
                 if (this.txt_cedula.Text != "")
                 {
                     NPersonal Negocios = new NPersonal();
-                    var datasource = Negocios.Mostrar().Where(x => x.Cedula.Contains(this.txt_cedula.Text)).ToList();
+                    var datasource = Negocios.Mostrar().Select(x => new
+                    {
+                        Cedula = x.Cedula,
+                        Nombre = x.Nombre,
+                        Primer_Apellido = x.Primer_Apellido,
+                        Segundo_Apellido = x.Segundo_Apellido,
+                        Genero = (x.Genero == 1) ? "Masculino" : "Femenino",
+                        ID = x.ID,
+                        Estado = x.Estado,
+                        Telefono = x.Telefono,
+                        Direccion = x.Direccion,
+                        Id_Puesto = x.Id_Puesto
+                    }).Where(x => x.Cedula.Contains(this.txt_cedula.Text)).ToList();
                     ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                     this.reportViewer1.LocalReport.DataSources.Clear();
                     this.reportViewer1.LocalReport.DataSources.Add(Rds);
@@ -73,7 +97,19 @@ namespace Lienzos
                 if (this.txt_nombre.Text != "")
                 {
                     NPersonal Negocios = new NPersonal();
-                    var datasource = Negocios.Mostrar().Where(x => x.Nombre.Contains(this.txt_nombre.Text)).ToList();
+                    var datasource = Negocios.Mostrar().Select(x => new
+                    {
+                        Cedula = x.Cedula,
+                        Nombre = x.Nombre,
+                        Primer_Apellido = x.Primer_Apellido,
+                        Segundo_Apellido = x.Segundo_Apellido,
+                        Genero = (x.Genero == 1) ? "Masculino" : "Femenino",
+                        ID = x.ID,
+                        Estado = x.Estado,
+                        Telefono = x.Telefono,
+                        Direccion = x.Direccion,
+                        Id_Puesto = x.Id_Puesto
+                    }).Where(x => x.Nombre.Contains(this.txt_nombre.Text)).ToList();
                     ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                     this.reportViewer1.LocalReport.DataSources.Clear();
                     this.reportViewer1.LocalReport.DataSources.Add(Rds);
