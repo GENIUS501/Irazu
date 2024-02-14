@@ -182,19 +182,19 @@ namespace Lienzos
 
                             if (FilasAfectadas > 0)
                             {
-                                MessageBox.Show("Usuario de centro diurno Agregado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Personal Agregado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
                             {
                                 if (FilasAfectadas == -1)
                                 {
-                                    MessageBox.Show("El Usuario de centro diurno se ha agregado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    MessageBox.Show("Personal se ha agregado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                     this.Close();
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Error al agregar el Usuario de centro diurno!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    MessageBox.Show("Error al agregar el PersonalUsuario de centro diurno!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                             }
                         }
@@ -207,19 +207,19 @@ namespace Lienzos
                             FilasAfectadas = Negocios.Modificar(Obj, Usuario);
                             if (FilasAfectadas > 0)
                             {
-                                MessageBox.Show("Usuario de centro diurno modificado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Personal modificado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
                             {
                                 if (FilasAfectadas == -1)
                                 {
-                                    MessageBox.Show("EL Usuario de centro diurno se ha modificado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    MessageBox.Show("Personal se ha modificado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                     this.Close();
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Error al modificar la Usuario de centro diurno!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    MessageBox.Show("Error al modificar Personal!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                             }
                         }

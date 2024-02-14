@@ -48,7 +48,7 @@ namespace Lienzos
             // 
             // reportViewer1
             // 
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Lienzos.ReportePersonal.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Lienzos.ReportePlanillas.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 171);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
@@ -82,6 +82,7 @@ namespace Lienzos
             this.btn_nombre.Size = new System.Drawing.Size(25, 20);
             this.btn_nombre.TabIndex = 41;
             this.btn_nombre.UseVisualStyleBackColor = true;
+            this.btn_nombre.Click += new System.EventHandler(this.btn_nombre_Click);
             // 
             // txt_nombre
             // 
@@ -117,6 +118,7 @@ namespace Lienzos
             this.btn_cedula.Size = new System.Drawing.Size(25, 20);
             this.btn_cedula.TabIndex = 37;
             this.btn_cedula.UseVisualStyleBackColor = true;
+            this.btn_cedula.Click += new System.EventHandler(this.btn_cedula_Click);
             // 
             // txt_cedula
             // 
@@ -163,6 +165,7 @@ namespace Lienzos
             this.btn_puestos.Size = new System.Drawing.Size(25, 20);
             this.btn_puestos.TabIndex = 95;
             this.btn_puestos.UseVisualStyleBackColor = true;
+            this.btn_puestos.Click += new System.EventHandler(this.btn_puestos_Click);
             // 
             // ReportePlanillas
             // 
