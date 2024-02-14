@@ -185,7 +185,7 @@ namespace Lienzos
                     }
                     else
                     {
-                        MessageBox.Show("Debe seleccionar un usuario centro diurno!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Debe seleccionar el personal!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
