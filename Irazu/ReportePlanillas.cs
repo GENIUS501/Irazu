@@ -42,12 +42,15 @@ namespace Lienzos
             try
             {
                 NPersonal Negocios = new NPersonal();
+                NPuestos NegociosPuestos = new NPuestos();
                 var datasource = Negocios.Mostrar().Select(x => new
                 {
-                    x.fecha_hora_salida,
-                    x.fecha_hora_ingreso,
-                    x.codigo_ingreso_salida,
-                    Usuario = NegociosUsuarios.Mostrar().Where(c => c.ID_Usuario == x.Id_Usuario).FirstOrDefault().Nombre_Usuario
+                    x.Cedula,
+                    x.Nombre,
+                    Apellido1=x.Primer_Apellido,
+                    Apellido2=x.Segundo_Apellido,
+                    Puesto = NegociosPuestos.Mostrar().Where(c => c.Id_Puesto == x.Id_Puesto).FirstOrDefault().Nombre,
+                    Salario = NegociosPuestos.Mostrar().Where(c => c.Id_Puesto == x.Id_Puesto).FirstOrDefault().Salario
                 }).ToList();
                 ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                 this.reportViewer1.LocalReport.DataSources.Clear();

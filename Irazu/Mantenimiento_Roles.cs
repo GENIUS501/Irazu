@@ -973,6 +973,25 @@ namespace Irazu
             }
         }
 
+        private void chb_Puestos_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.chb_Puestos.Checked == true)
+                {
+                    grp_Puestos.Enabled = true;
+                }
+                else
+                {
+                    grp_Puestos.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void chb_Productos_CheckedChanged(object sender, EventArgs e)
         {
             try
