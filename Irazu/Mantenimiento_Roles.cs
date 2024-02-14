@@ -438,7 +438,7 @@ namespace Irazu
                         this.chk_Puestos_Eliminar.Checked = false;
                     }
                     /////
-                    if (Permisos.Where(x => x.Modulo == "TipoMedicamento" && x.Accion == "Modificar").FirstOrDefault() != null)
+                    if (Permisos.Where(x => x.Modulo == "Puestos" && x.Accion == "Modificar").FirstOrDefault() != null)
                     {
                         this.chk_Puestos_Modificar.Checked = true;
                     }
