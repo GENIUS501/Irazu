@@ -31,10 +31,7 @@ namespace Lienzos
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MantenimientoPuestos));
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
             this.Grp_Tipo_Productos = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_id = new System.Windows.Forms.Label();
             this.txt_descripcion = new System.Windows.Forms.TextBox();
             this.txt_id = new System.Windows.Forms.MaskedTextBox();
@@ -42,44 +39,19 @@ namespace Lienzos
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txt_salario = new System.Windows.Forms.MaskedTextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Grp_Tipo_Productos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(194, 296);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(83, 23);
-            this.btnCancelar.TabIndex = 35;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
-            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAceptar.Location = new System.Drawing.Point(78, 296);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(79, 23);
-            this.btnAceptar.TabIndex = 34;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // Grp_Tipo_Productos
             // 
-            this.Grp_Tipo_Productos.Controls.Add(this.maskedTextBox1);
+            this.Grp_Tipo_Productos.Controls.Add(this.txt_salario);
             this.Grp_Tipo_Productos.Controls.Add(this.label1);
             this.Grp_Tipo_Productos.Controls.Add(this.pictureBox1);
             this.Grp_Tipo_Productos.Controls.Add(this.lbl_id);
@@ -94,16 +66,6 @@ namespace Lienzos
             this.Grp_Tipo_Productos.TabIndex = 33;
             this.Grp_Tipo_Productos.TabStop = false;
             this.Grp_Tipo_Productos.Text = "Datos";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Lienzos.Properties.Resources.Imagen_de_WhatsApp_2023_11_22_a_las_19_30_10_be162142;
-            this.pictureBox1.Location = new System.Drawing.Point(195, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 110);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 73;
-            this.pictureBox1.TabStop = false;
             // 
             // lbl_id
             // 
@@ -164,17 +126,55 @@ namespace Lienzos
             this.label1.TabIndex = 75;
             this.label1.Text = "Salario Mensual";
             // 
-            // maskedTextBox1
+            // txt_salario
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(9, 128);
-            this.maskedTextBox1.Mask = "00000000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(166, 20);
-            this.maskedTextBox1.TabIndex = 76;
+            this.txt_salario.Location = new System.Drawing.Point(9, 128);
+            this.txt_salario.Mask = "00000000";
+            this.txt_salario.Name = "txt_salario";
+            this.txt_salario.Size = new System.Drawing.Size(166, 20);
+            this.txt_salario.TabIndex = 76;
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.Location = new System.Drawing.Point(194, 296);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(83, 23);
+            this.btnCancelar.TabIndex = 35;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
+            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAceptar.Location = new System.Drawing.Point(78, 296);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(79, 23);
+            this.btnAceptar.TabIndex = 34;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Lienzos.Properties.Resources.Imagen_de_WhatsApp_2023_11_22_a_las_19_30_10_be162142;
+            this.pictureBox1.Location = new System.Drawing.Point(195, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 110);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 73;
+            this.pictureBox1.TabStop = false;
             // 
             // MantenimientoPuestos
             // 
@@ -189,8 +189,8 @@ namespace Lienzos
             this.Load += new System.EventHandler(this.MantenimientoPuestos_Load);
             this.Grp_Tipo_Productos.ResumeLayout(false);
             this.Grp_Tipo_Productos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -207,7 +207,7 @@ namespace Lienzos
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_nombre;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox txt_salario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
     }

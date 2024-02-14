@@ -86,6 +86,7 @@ namespace Lienzos
                         EPuestos Obj = new EPuestos();
                         Obj.Nombre = this.txt_nombre.Text;
                         Obj.Descripcion = this.txt_descripcion.Text;
+                        Obj.Salario = int.Parse(this.txt_salario.Text);
                         Int32 FilasAfectadas = 0;
                         #region Agregar
                         if (Accion == "A")
@@ -94,19 +95,19 @@ namespace Lienzos
 
                             if (FilasAfectadas > 0)
                             {
-                                MessageBox.Show("Tipo de producto Agregada exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Puesto Agregada exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
                             {
                                 if (FilasAfectadas == -1)
                                 {
-                                    MessageBox.Show("La Tipo de producto se ha agregado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    MessageBox.Show("El Puesto se ha agregado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                     this.Close();
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Error al agregar el Tipo de producto!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    MessageBox.Show("Error al agregar el Puesto!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                             }
                         }
@@ -119,19 +120,19 @@ namespace Lienzos
                             FilasAfectadas = Negocios.Modificar(Obj, Usuario);
                             if (FilasAfectadas > 0)
                             {
-                                MessageBox.Show("Tipo de producto modificada exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Puesto modificada exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
                             {
                                 if (FilasAfectadas == -1)
                                 {
-                                    MessageBox.Show("La Tipo de producto se ha modificado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    MessageBox.Show("Puesto se ha modificado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                     this.Close();
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Error al modificar la Tipo de producto!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    MessageBox.Show("Error al modificar Puesto!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                             }
                         }
