@@ -173,6 +173,7 @@ namespace Lienzos
                         Obj.Segundo_Apellido = this.txt_apellido2.Text;
                         Obj.Direccion = this.TxtDireccion.Text;
                         Obj.Telefono = int.Parse(this.TxtTelefono.Text);
+                        Obj.Id_Puesto = int.Parse(this.cbo_puestos.SelectedValue.ToString());
                         Int32 FilasAfectadas = 0;
                         #region Agregar
                         if (Accion == "A")
