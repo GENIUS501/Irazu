@@ -69,7 +69,7 @@ namespace Lienzos
             this.TxtPadecimientos.Text = Obj.Padecimientos.ToString();
             this.TxtLugar.Text = Obj.Lugarvivienda.ToString();
             this.TxtMedicamentos.Text = Obj.Medicamentos.ToString();
-            this.cbo_Genero.SelectedValue = Obj.Genero;
+            this.cbo_Genero.SelectedValue = int.Parse(Obj.Genero);
         }
 
         private bool validar()
