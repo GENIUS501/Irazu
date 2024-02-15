@@ -41,6 +41,7 @@
             this.Reporte_Medicamentos = new System.Windows.Forms.ToolStripMenuItem();
             this.Reporte_Personal = new System.Windows.Forms.ToolStripMenuItem();
             this.Reporte_centro_diurno = new System.Windows.Forms.ToolStripMenuItem();
+            this.ReportePlanillas = new System.Windows.Forms.ToolStripMenuItem();
             this.Seguridad = new System.Windows.Forms.ToolStripMenuItem();
             this.Usuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.Roles = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,7 +50,7 @@
             this.Salir = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.Txt_Usuario = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ReportePlanillas = new System.Windows.Forms.ToolStripMenuItem();
+            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -61,7 +62,8 @@
             this.Mantenimientos,
             this.Reportes,
             this.Seguridad,
-            this.Salir});
+            this.Salir,
+            this.acercaDeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -162,6 +164,13 @@
             this.Reporte_centro_diurno.Text = "Reporte de clientes";
             this.Reporte_centro_diurno.Click += new System.EventHandler(this.Reporte_centro_diurno_Click);
             // 
+            // ReportePlanillas
+            // 
+            this.ReportePlanillas.Name = "ReportePlanillas";
+            this.ReportePlanillas.Size = new System.Drawing.Size(213, 22);
+            this.ReportePlanillas.Text = "Reporte de Planillas";
+            this.ReportePlanillas.Click += new System.EventHandler(this.ReportePlanillas_Click);
+            // 
             // Seguridad
             // 
             this.Seguridad.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -223,12 +232,12 @@
             this.Txt_Usuario.Name = "Txt_Usuario";
             this.Txt_Usuario.Size = new System.Drawing.Size(0, 17);
             // 
-            // ReportePlanillas
+            // acercaDeToolStripMenuItem
             // 
-            this.ReportePlanillas.Name = "ReportePlanillas";
-            this.ReportePlanillas.Size = new System.Drawing.Size(213, 22);
-            this.ReportePlanillas.Text = "Reporte de Planillas";
-            this.ReportePlanillas.Click += new System.EventHandler(this.ReportePlanillas_Click);
+            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.acercaDeToolStripMenuItem.Text = "Acerca de";
+            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -280,5 +289,6 @@
         private System.Windows.Forms.ToolStripMenuItem CentroDiurno;
         private System.Windows.Forms.ToolStripMenuItem Puestos;
         private System.Windows.Forms.ToolStripMenuItem ReportePlanillas;
+        private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
     }
 }
