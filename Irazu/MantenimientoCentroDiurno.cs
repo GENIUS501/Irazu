@@ -62,7 +62,6 @@ namespace Lienzos
             this.txt_cedula.Text = Obj.Cedula.ToString();
             this.txt_nombre.Text = Obj.Nombre;
             this.txt_apellido1.Text = Obj.PrimerApellido.ToString();
-            this.cbo_Genero.SelectedValue = Obj.Genero;
             this.txt_apellido2.Text = Obj.SegundoApellido.ToString();
             this.TxtNumeroExpediente.Text = Obj.Expediente.ToString();
             this.TxtFamiliar.Text = Obj.Familiardirecto.ToString();
@@ -70,6 +69,7 @@ namespace Lienzos
             this.TxtPadecimientos.Text = Obj.Padecimientos.ToString();
             this.TxtLugar.Text = Obj.Lugarvivienda.ToString();
             this.TxtMedicamentos.Text = Obj.Medicamentos.ToString();
+            this.cbo_Genero.SelectedValue = Obj.Genero;
         }
 
         private bool validar()
