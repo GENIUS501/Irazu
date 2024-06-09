@@ -364,12 +364,19 @@
   <ItemGroup>
     <None Include="Resources\Imagen de WhatsApp 2023-11-22 a las 19.30.10_be162142.jpg" />
     <None Include="Resources\Imagen de WhatsApp 2023-11-22 a las 19.30.37_f8edc27e.jpg" />
+    <None Include="Img\Mantenimientos\Img_Mantenimientos.jpeg" />
     <Content Include="Img\Mantenimientos\WhatsApp Image 2024-03-06 at 9.04.49 PM.jpeg" />
+    <None Include="Img\Principal\Img_p1.jpeg" />
+    <None Include="Img\Principal\Img_p2.jpeg" />
+    <None Include="Img\Principal\Img_p3.jpeg" />
+    <None Include="Img\Principal\Img_p4.jpeg" />
     <Content Include="Img\Principal\WhatsApp Image 2024-03-06 at 9.03.16 PM.jpeg" />
     <Content Include="Img\Principal\WhatsApp Image 2024-03-06 at 9.03.17 PM %281%29.jpeg" />
     <Content Include="Img\Principal\WhatsApp Image 2024-03-06 at 9.03.17 PM.jpeg" />
     <Content Include="Img\Principal\WhatsApp Image 2024-03-06 at 9.03.18 PM.jpeg" />
+    <None Include="Img\Reportes\Img_Reportes.jpeg" />
     <Content Include="Img\Reportes\WhatsApp Image 2024-03-06 at 9.05.10 PM.jpeg" />
+    <None Include="Img\Seguridad\Img_Seguridad.jpeg" />
     <Content Include="Img\Seguridad\WhatsApp Image 2024-03-06 at 9.05.23 PM.jpeg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

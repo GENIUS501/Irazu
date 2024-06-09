@@ -124,4 +124,25 @@
   <data name="Imagen de WhatsApp 2023-11-22 a las 19.30.37_f8edc27e" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Imagen de WhatsApp 2023-11-22 a las 19.30.37_f8edc27e.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Img_Seguridad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Seguridad\Img_Seguridad.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Img_Reportes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Reportes\Img_Reportes.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Img_Mantenimientos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Mantenimientos\Img_Mantenimientos.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Img_p1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Principal\Img_p1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Img_p2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Principal\Img_p2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Img_p3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Principal\Img_p3.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Img_p4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Principal\Img_p4.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
