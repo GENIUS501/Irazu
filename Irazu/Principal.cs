@@ -18,6 +18,9 @@ namespace Irazu
         #region Variables
         public int Idsession { get; set; }
         public EUsuario UsuarioLogueado { get; set; }
+        private Timer timer;
+        private int currentIndex = 0;
+        private Image[] images = { Lienzos.Properties.Resources.Img_p1, Lienzos.Properties.Resources.Img_p2, Lienzos.Properties.Resources.Img_p3, Lienzos.Properties.Resources.Img_p4 };
         #endregion
 
         public Principal()
@@ -29,6 +32,7 @@ namespace Irazu
         {
             try
             {
+                #region validacion de roles
                 this.Txt_Usuario.Text = UsuarioLogueado.Nombre_Usuario;
                 List<EPermisos> perm = new List<EPermisos>();
                 NRoles Negocios = new NRoles();
@@ -112,11 +116,42 @@ namespace Irazu
                 {
                     Bitacora_Movimientos.Visible = true;
                 }
+                #endregion
+
+                #region Cambio de imagenes
+                // Inicializa y configura el temporizador
+                timer = new Timer();
+                timer.Interval = 2 * 60 * 1000; // 2 minutos en milisegundos
+                timer.Tick += Timer_Tick;
+
+                // Inicia el temporizador
+                timer.Start();
+
+                // Muestra la primera imagen
+                MostrarImagen();
+                #endregion
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            // Incrementa el índice de la imagen actual
+            currentIndex++;
+            if (currentIndex >= images.Length)
+                currentIndex = 0;
+
+            // Muestra la siguiente imagen
+            MostrarImagen();
+        }
+
+        private void MostrarImagen()
+        {
+            // Muestra la imagen en el fondo del formulario
+            this.BackgroundImage = images[currentIndex];
         }
 
         private void Cerrar()
@@ -438,6 +473,21 @@ namespace Irazu
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Reportes_Click(object sender, EventArgs e)
+        {
+            this.BackgroundImage = Lienzos.Properties.Resources.Img_Reportes;
+        }
+
+        private void Seguridad_Click(object sender, EventArgs e)
+        {
+            this.BackgroundImage = Lienzos.Properties.Resources.Img_Seguridad;
+        }
+
+        private void Mantenimientos_Click(object sender, EventArgs e)
+        {
+            this.BackgroundImage = Lienzos.Properties.Resources.Img_Mantenimientos;
         }
     }
 }

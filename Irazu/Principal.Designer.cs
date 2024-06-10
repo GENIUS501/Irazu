@@ -48,9 +48,9 @@
             this.Bitacora_Ingresos = new System.Windows.Forms.ToolStripMenuItem();
             this.Bitacora_Movimientos = new System.Windows.Forms.ToolStripMenuItem();
             this.Salir = new System.Windows.Forms.ToolStripMenuItem();
+            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.Txt_Usuario = new System.Windows.Forms.ToolStripStatusLabel();
-            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -96,6 +96,7 @@
             this.Mantenimientos.Name = "Mantenimientos";
             this.Mantenimientos.Size = new System.Drawing.Size(106, 20);
             this.Mantenimientos.Text = "Mantenimientos";
+            this.Mantenimientos.Click += new System.EventHandler(this.Mantenimientos_Click);
             // 
             // Personal
             // 
@@ -142,6 +143,7 @@
             this.Reportes.Name = "Reportes";
             this.Reportes.Size = new System.Drawing.Size(65, 20);
             this.Reportes.Text = "Reportes";
+            this.Reportes.Click += new System.EventHandler(this.Reportes_Click);
             // 
             // Reporte_Medicamentos
             // 
@@ -181,6 +183,7 @@
             this.Seguridad.Name = "Seguridad";
             this.Seguridad.Size = new System.Drawing.Size(72, 20);
             this.Seguridad.Text = "Seguridad";
+            this.Seguridad.Click += new System.EventHandler(this.Seguridad_Click);
             // 
             // Usuarios
             // 
@@ -217,6 +220,13 @@
             this.Salir.Text = "Salir";
             this.Salir.Click += new System.EventHandler(this.Salir_Click);
             // 
+            // acercaDeToolStripMenuItem
+            // 
+            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.acercaDeToolStripMenuItem.Text = "Acerca de";
+            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -231,13 +241,6 @@
             // 
             this.Txt_Usuario.Name = "Txt_Usuario";
             this.Txt_Usuario.Size = new System.Drawing.Size(0, 17);
-            // 
-            // acercaDeToolStripMenuItem
-            // 
-            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.acercaDeToolStripMenuItem.Text = "Acerca de";
-            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
             // Principal
             // 
