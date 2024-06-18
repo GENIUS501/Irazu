@@ -79,6 +79,27 @@ CREATE TABLE Medicamentos(
 	CONSTRAINT Fk_PRODUCTOS_TIPO FOREIGN KEY(ID_Tipo_Medicamento) REFERENCES Tipo_Medicamentos(ID_Tipo_Medicamento),
 );
 
+CREATE TABLE Tab_Venta(
+	ID_Usuario INT NOT NULL,
+	ID_Cliente INT NOT NULL,
+	Tipo_pago VARCHAR(8) NOT NULL,
+	Numero_factura INT IDENTITY (1,1) PRIMARY KEY NOT NULL,
+	CantidadProducto FLOAT NOT NULL,
+	Fecha_venta DATETIME NOT NULL,
+	Total FLOAT NOT NULL,
+	CONSTRAINT Fk_VENTAS_USUARIOS FOREIGN KEY(Id_Usuario) REFERENCES Usuarios(Id_Usuario),
+	CONSTRAINT Fk_VENTAS_CLIENTES FOREIGN KEY(ID_Cliente) REFERENCES UsuarioCentroDiurno(ID)
+);
+
+CREATE TABLE Tab_Venta_detallada(
+	Numero_factura INT NOT NULL,
+	ID_Medicamento INT NOT NULL,
+	Linea INT NOT NULL,
+	PRIMARY KEY(Numero_factura,Id_Medicamento,Linea),
+	CONSTRAINT Fk_DETALLE_VENTAS FOREIGN KEY(Numero_factura) REFERENCES Tab_Venta(Numero_factura),
+	CONSTRAINT Fk_DETALLE_MEDICAMENTOS FOREIGN KEY(ID_Medicamento) REFERENCES Medicamentos(ID_Medicamento),
+);
+
 CREATE TABLE Bitacora_Sesiones(
     codigo_ingreso_salida int IDENTITY(1,1) primary key, 
     fecha_hora_ingreso DATETIME NOT NULL,

@@ -62,6 +62,7 @@
     </Compile>
     <Compile Include="DBitacora_movimientos.cs" />
     <Compile Include="DBitacora_Sesiones.cs" />
+    <Compile Include="DDevoluciones.cs" />
     <Compile Include="DPersonal.cs" />
     <Compile Include="DPermisos.cs" />
     <Compile Include="DMedicamentos.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="DTipo_Medicamentos.cs" />
     <Compile Include="DUsuarioCentroDiurno.cs" />
     <Compile Include="DUsuarios.cs" />
+    <Compile Include="DVentas.cs" />
     <Compile Include="Irazu.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
