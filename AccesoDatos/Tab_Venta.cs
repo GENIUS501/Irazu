@@ -12,32 +12,28 @@ namespace AccesoDatos
     using System;
     using System.Collections.Generic;
     
-    public partial class UsuarioCentroDiurno
+    public partial class Tab_Venta
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public UsuarioCentroDiurno()
+        public Tab_Venta()
         {
             this.Tab_Devoluciones = new HashSet<Tab_Devoluciones>();
-            this.Tab_Venta = new HashSet<Tab_Venta>();
+            this.Tab_Venta_detallada = new HashSet<Tab_Venta_detallada>();
         }
     
-        public int ID { get; set; }
-        public string Expediente { get; set; }
-        public string Cedula { get; set; }
-        public string Nombre { get; set; }
-        public string PrimerApellido { get; set; }
-        public string SegundoApellido { get; set; }
-        public string Genero { get; set; }
-        public string Familiardirecto { get; set; }
-        public string Lugarvivienda { get; set; }
-        public string Padecimientos { get; set; }
-        public string Medicamentos { get; set; }
-        public Nullable<bool> Estado { get; set; }
-        public string Telefono { get; set; }
+        public int ID_Usuario { get; set; }
+        public int ID_Cliente { get; set; }
+        public string Tipo_pago { get; set; }
+        public int Numero_factura { get; set; }
+        public double CantidadProducto { get; set; }
+        public System.DateTime Fecha_venta { get; set; }
+        public double Total { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tab_Devoluciones> Tab_Devoluciones { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Tab_Venta> Tab_Venta { get; set; }
+        public virtual ICollection<Tab_Venta_detallada> Tab_Venta_detallada { get; set; }
+        public virtual UsuarioCentroDiurno UsuarioCentroDiurno { get; set; }
+        public virtual Usuarios Usuarios { get; set; }
     }
 }

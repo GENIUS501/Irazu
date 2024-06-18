@@ -14,6 +14,12 @@ namespace AccesoDatos
     
     public partial class Medicamentos
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Medicamentos()
+        {
+            this.Tab_Venta_detallada = new HashSet<Tab_Venta_detallada>();
+        }
+    
         public int ID_Medicamento { get; set; }
         public string Nombre { get; set; }
         public string Presentacion { get; set; }
@@ -21,6 +27,8 @@ namespace AccesoDatos
         public decimal Concentracion { get; set; }
         public int Cantidad { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Tab_Venta_detallada> Tab_Venta_detallada { get; set; }
         public virtual Tipo_Medicamentos Tipo_Medicamentos { get; set; }
     }
 }

@@ -76,6 +76,39 @@
           <Property Name="Nombre_Rol" Type="varchar" MaxLength="25" />
           <Property Name="Descripcion" Type="varchar" MaxLength="100" />
         </EntityType>
+        <EntityType Name="Tab_Devoluciones">
+          <Key>
+            <PropertyRef Name="IdDevolucion" />
+          </Key>
+          <Property Name="IdDevolucion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdVenta" Type="int" Nullable="false" />
+          <Property Name="IDCliente" Type="int" Nullable="false" />
+          <Property Name="FechaDevolucion" Type="datetime" Nullable="false" />
+          <Property Name="CantidadProducto" Type="float" Nullable="false" />
+          <Property Name="IdUsuario" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tab_Venta">
+          <Key>
+            <PropertyRef Name="Numero_factura" />
+          </Key>
+          <Property Name="ID_Usuario" Type="int" Nullable="false" />
+          <Property Name="ID_Cliente" Type="int" Nullable="false" />
+          <Property Name="Tipo_pago" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="Numero_factura" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CantidadProducto" Type="float" Nullable="false" />
+          <Property Name="Fecha_venta" Type="datetime" Nullable="false" />
+          <Property Name="Total" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tab_Venta_detallada">
+          <Key>
+            <PropertyRef Name="Numero_factura" />
+            <PropertyRef Name="ID_Medicamento" />
+            <PropertyRef Name="Linea" />
+          </Key>
+          <Property Name="Numero_factura" Type="int" Nullable="false" />
+          <Property Name="ID_Medicamento" Type="int" Nullable="false" />
+          <Property Name="Linea" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="Tipo_Medicamentos">
           <Key>
             <PropertyRef Name="ID_Tipo_Medicamento" />
@@ -119,6 +152,66 @@
           <Property Name="Telefono" Type="int" />
           <Property Name="Correo" Type="varchar" MaxLength="30" Nullable="false" />
         </EntityType>
+        <Association Name="Fk_DETALLE_MEDICAMENTOS">
+          <End Role="Medicamentos" Type="Self.Medicamentos" Multiplicity="1" />
+          <End Role="Tab_Venta_detallada" Type="Self.Tab_Venta_detallada" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medicamentos">
+              <PropertyRef Name="ID_Medicamento" />
+            </Principal>
+            <Dependent Role="Tab_Venta_detallada">
+              <PropertyRef Name="ID_Medicamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_DETALLE_VENTAS">
+          <End Role="Tab_Venta" Type="Self.Tab_Venta" Multiplicity="1" />
+          <End Role="Tab_Venta_detallada" Type="Self.Tab_Venta_detallada" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tab_Venta">
+              <PropertyRef Name="Numero_factura" />
+            </Principal>
+            <Dependent Role="Tab_Venta_detallada">
+              <PropertyRef Name="Numero_factura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Devoluciones_Cliente">
+          <End Role="UsuarioCentroDiurno" Type="Self.UsuarioCentroDiurno" Multiplicity="1" />
+          <End Role="Tab_Devoluciones" Type="Self.Tab_Devoluciones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UsuarioCentroDiurno">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tab_Devoluciones">
+              <PropertyRef Name="IDCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Devoluciones_Usuario">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+          <End Role="Tab_Devoluciones" Type="Self.Tab_Devoluciones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="ID_Usuario" />
+            </Principal>
+            <Dependent Role="Tab_Devoluciones">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Devoluciones_Venta">
+          <End Role="Tab_Venta" Type="Self.Tab_Venta" Multiplicity="1" />
+          <End Role="Tab_Devoluciones" Type="Self.Tab_Devoluciones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tab_Venta">
+              <PropertyRef Name="Numero_factura" />
+            </Principal>
+            <Dependent Role="Tab_Devoluciones">
+              <PropertyRef Name="IdVenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="Fk_MOVIMIENTOS_USUARIOS">
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
           <End Role="Bitacora_Movimientos" Type="Self.Bitacora_Movimientos" Multiplicity="*" />
@@ -191,6 +284,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="Fk_VENTAS_CLIENTES">
+          <End Role="UsuarioCentroDiurno" Type="Self.UsuarioCentroDiurno" Multiplicity="1" />
+          <End Role="Tab_Venta" Type="Self.Tab_Venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UsuarioCentroDiurno">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tab_Venta">
+              <PropertyRef Name="ID_Cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_VENTAS_USUARIOS">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+          <End Role="Tab_Venta" Type="Self.Tab_Venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="ID_Usuario" />
+            </Principal>
+            <Dependent Role="Tab_Venta">
+              <PropertyRef Name="ID_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="IrazuModelStoreContainer">
           <EntitySet Name="Bitacora_Movimientos" EntityType="Self.Bitacora_Movimientos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Bitacora_Sesiones" EntityType="Self.Bitacora_Sesiones" Schema="dbo" store:Type="Tables" />
@@ -199,9 +316,32 @@
           <EntitySet Name="Personal" EntityType="Self.Personal" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Puestos" EntityType="Self.Puestos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tab_Devoluciones" EntityType="Self.Tab_Devoluciones" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tab_Venta" EntityType="Self.Tab_Venta" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tab_Venta_detallada" EntityType="Self.Tab_Venta_detallada" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tipo_Medicamentos" EntityType="Self.Tipo_Medicamentos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UsuarioCentroDiurno" EntityType="Self.UsuarioCentroDiurno" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="Fk_DETALLE_MEDICAMENTOS" Association="Self.Fk_DETALLE_MEDICAMENTOS">
+            <End Role="Medicamentos" EntitySet="Medicamentos" />
+            <End Role="Tab_Venta_detallada" EntitySet="Tab_Venta_detallada" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_DETALLE_VENTAS" Association="Self.Fk_DETALLE_VENTAS">
+            <End Role="Tab_Venta" EntitySet="Tab_Venta" />
+            <End Role="Tab_Venta_detallada" EntitySet="Tab_Venta_detallada" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Devoluciones_Cliente" Association="Self.Fk_Devoluciones_Cliente">
+            <End Role="UsuarioCentroDiurno" EntitySet="UsuarioCentroDiurno" />
+            <End Role="Tab_Devoluciones" EntitySet="Tab_Devoluciones" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Devoluciones_Usuario" Association="Self.Fk_Devoluciones_Usuario">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Tab_Devoluciones" EntitySet="Tab_Devoluciones" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Devoluciones_Venta" Association="Self.Fk_Devoluciones_Venta">
+            <End Role="Tab_Venta" EntitySet="Tab_Venta" />
+            <End Role="Tab_Devoluciones" EntitySet="Tab_Devoluciones" />
+          </AssociationSet>
           <AssociationSet Name="Fk_MOVIMIENTOS_USUARIOS" Association="Self.Fk_MOVIMIENTOS_USUARIOS">
             <End Role="Usuarios" EntitySet="Usuarios" />
             <End Role="Bitacora_Movimientos" EntitySet="Bitacora_Movimientos" />
@@ -225,6 +365,14 @@
           <AssociationSet Name="Fk_USUARIOS_ROLES" Association="Self.Fk_USUARIOS_ROLES">
             <End Role="Roles" EntitySet="Roles" />
             <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_VENTAS_CLIENTES" Association="Self.Fk_VENTAS_CLIENTES">
+            <End Role="UsuarioCentroDiurno" EntitySet="UsuarioCentroDiurno" />
+            <End Role="Tab_Venta" EntitySet="Tab_Venta" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_VENTAS_USUARIOS" Association="Self.Fk_VENTAS_USUARIOS">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Tab_Venta" EntitySet="Tab_Venta" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -263,6 +411,7 @@
           <Property Name="ID_Tipo_Medicamento" Type="Int32" Nullable="false" />
           <Property Name="Concentracion" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="Cantidad" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Tab_Venta_detallada" Relationship="Self.Fk_DETALLE_MEDICAMENTOS" FromRole="Medicamentos" ToRole="Tab_Venta_detallada" />
           <NavigationProperty Name="Tipo_Medicamentos" Relationship="Self.Fk_PRODUCTOS_TIPO" FromRole="Medicamentos" ToRole="Tipo_Medicamentos" />
         </EntityType>
         <EntityType Name="Permisos">
@@ -311,6 +460,48 @@
           <NavigationProperty Name="Permisos" Relationship="Self.Fk_PERMISOS_ROLES" FromRole="Roles" ToRole="Permisos" />
           <NavigationProperty Name="Usuarios" Relationship="Self.Fk_USUARIOS_ROLES" FromRole="Roles" ToRole="Usuarios" />
         </EntityType>
+        <EntityType Name="Tab_Devoluciones">
+          <Key>
+            <PropertyRef Name="IdDevolucion" />
+          </Key>
+          <Property Name="IdDevolucion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdVenta" Type="Int32" Nullable="false" />
+          <Property Name="IDCliente" Type="Int32" Nullable="false" />
+          <Property Name="FechaDevolucion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CantidadProducto" Type="Double" Nullable="false" />
+          <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="UsuarioCentroDiurno" Relationship="Self.Fk_Devoluciones_Cliente" FromRole="Tab_Devoluciones" ToRole="UsuarioCentroDiurno" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.Fk_Devoluciones_Usuario" FromRole="Tab_Devoluciones" ToRole="Usuarios" />
+          <NavigationProperty Name="Tab_Venta" Relationship="Self.Fk_Devoluciones_Venta" FromRole="Tab_Devoluciones" ToRole="Tab_Venta" />
+        </EntityType>
+        <EntityType Name="Tab_Venta">
+          <Key>
+            <PropertyRef Name="Numero_factura" />
+          </Key>
+          <Property Name="ID_Usuario" Type="Int32" Nullable="false" />
+          <Property Name="ID_Cliente" Type="Int32" Nullable="false" />
+          <Property Name="Tipo_pago" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Numero_factura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CantidadProducto" Type="Double" Nullable="false" />
+          <Property Name="Fecha_venta" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Total" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Tab_Devoluciones" Relationship="Self.Fk_Devoluciones_Venta" FromRole="Tab_Venta" ToRole="Tab_Devoluciones" />
+          <NavigationProperty Name="Tab_Venta_detallada" Relationship="Self.Fk_DETALLE_VENTAS" FromRole="Tab_Venta" ToRole="Tab_Venta_detallada" />
+          <NavigationProperty Name="UsuarioCentroDiurno" Relationship="Self.Fk_VENTAS_CLIENTES" FromRole="Tab_Venta" ToRole="UsuarioCentroDiurno" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.Fk_VENTAS_USUARIOS" FromRole="Tab_Venta" ToRole="Usuarios" />
+        </EntityType>
+        <EntityType Name="Tab_Venta_detallada">
+          <Key>
+            <PropertyRef Name="Numero_factura" />
+            <PropertyRef Name="ID_Medicamento" />
+            <PropertyRef Name="Linea" />
+          </Key>
+          <Property Name="Numero_factura" Type="Int32" Nullable="false" />
+          <Property Name="ID_Medicamento" Type="Int32" Nullable="false" />
+          <Property Name="Linea" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Medicamentos" Relationship="Self.Fk_DETALLE_MEDICAMENTOS" FromRole="Tab_Venta_detallada" ToRole="Medicamentos" />
+          <NavigationProperty Name="Tab_Venta" Relationship="Self.Fk_DETALLE_VENTAS" FromRole="Tab_Venta_detallada" ToRole="Tab_Venta" />
+        </EntityType>
         <EntityType Name="Tipo_Medicamentos">
           <Key>
             <PropertyRef Name="ID_Tipo_Medicamento" />
@@ -337,6 +528,8 @@
           <Property Name="Medicamentos" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Estado" Type="Boolean" />
           <Property Name="Telefono" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Tab_Devoluciones" Relationship="Self.Fk_Devoluciones_Cliente" FromRole="UsuarioCentroDiurno" ToRole="Tab_Devoluciones" />
+          <NavigationProperty Name="Tab_Venta" Relationship="Self.Fk_VENTAS_CLIENTES" FromRole="UsuarioCentroDiurno" ToRole="Tab_Venta" />
         </EntityType>
         <EntityType Name="Usuarios">
           <Key>
@@ -357,6 +550,8 @@
           <NavigationProperty Name="Bitacora_Movimientos" Relationship="Self.Fk_MOVIMIENTOS_USUARIOS" FromRole="Usuarios" ToRole="Bitacora_Movimientos" />
           <NavigationProperty Name="Bitacora_Sesiones" Relationship="Self.Fk_SESIONES_USUARIOS" FromRole="Usuarios" ToRole="Bitacora_Sesiones" />
           <NavigationProperty Name="Roles" Relationship="Self.Fk_USUARIOS_ROLES" FromRole="Usuarios" ToRole="Roles" />
+          <NavigationProperty Name="Tab_Devoluciones" Relationship="Self.Fk_Devoluciones_Usuario" FromRole="Usuarios" ToRole="Tab_Devoluciones" />
+          <NavigationProperty Name="Tab_Venta" Relationship="Self.Fk_VENTAS_USUARIOS" FromRole="Usuarios" ToRole="Tab_Venta" />
         </EntityType>
         <Association Name="Fk_MOVIMIENTOS_USUARIOS">
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
@@ -379,6 +574,18 @@
             </Principal>
             <Dependent Role="Bitacora_Sesiones">
               <PropertyRef Name="Id_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_DETALLE_MEDICAMENTOS">
+          <End Role="Medicamentos" Type="Self.Medicamentos" Multiplicity="1" />
+          <End Role="Tab_Venta_detallada" Type="Self.Tab_Venta_detallada" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medicamentos">
+              <PropertyRef Name="ID_Medicamento" />
+            </Principal>
+            <Dependent Role="Tab_Venta_detallada">
+              <PropertyRef Name="ID_Medicamento" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -430,7 +637,79 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="IrazuEntities" annotation:LazyLoadingEnabled="true">
+        <Association Name="Fk_Devoluciones_Cliente">
+          <End Role="UsuarioCentroDiurno" Type="Self.UsuarioCentroDiurno" Multiplicity="1" />
+          <End Role="Tab_Devoluciones" Type="Self.Tab_Devoluciones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UsuarioCentroDiurno">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tab_Devoluciones">
+              <PropertyRef Name="IDCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Devoluciones_Usuario">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+          <End Role="Tab_Devoluciones" Type="Self.Tab_Devoluciones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="ID_Usuario" />
+            </Principal>
+            <Dependent Role="Tab_Devoluciones">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Devoluciones_Venta">
+          <End Role="Tab_Venta" Type="Self.Tab_Venta" Multiplicity="1" />
+          <End Role="Tab_Devoluciones" Type="Self.Tab_Devoluciones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tab_Venta">
+              <PropertyRef Name="Numero_factura" />
+            </Principal>
+            <Dependent Role="Tab_Devoluciones">
+              <PropertyRef Name="IdVenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_DETALLE_VENTAS">
+          <End Role="Tab_Venta" Type="Self.Tab_Venta" Multiplicity="1" />
+          <End Role="Tab_Venta_detallada" Type="Self.Tab_Venta_detallada" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tab_Venta">
+              <PropertyRef Name="Numero_factura" />
+            </Principal>
+            <Dependent Role="Tab_Venta_detallada">
+              <PropertyRef Name="Numero_factura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_VENTAS_CLIENTES">
+          <End Role="UsuarioCentroDiurno" Type="Self.UsuarioCentroDiurno" Multiplicity="1" />
+          <End Role="Tab_Venta" Type="Self.Tab_Venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UsuarioCentroDiurno">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tab_Venta">
+              <PropertyRef Name="ID_Cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_VENTAS_USUARIOS">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+          <End Role="Tab_Venta" Type="Self.Tab_Venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="ID_Usuario" />
+            </Principal>
+            <Dependent Role="Tab_Venta">
+              <PropertyRef Name="ID_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="IrazuEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Bitacora_Movimientos" EntityType="Self.Bitacora_Movimientos" />
           <EntitySet Name="Bitacora_Sesiones" EntityType="Self.Bitacora_Sesiones" />
           <EntitySet Name="Medicamentos" EntityType="Self.Medicamentos" />
@@ -438,6 +717,9 @@
           <EntitySet Name="Personal" EntityType="Self.Personal" />
           <EntitySet Name="Puestos" EntityType="Self.Puestos" />
           <EntitySet Name="Roles" EntityType="Self.Roles" />
+          <EntitySet Name="Tab_Devoluciones" EntityType="Self.Tab_Devoluciones" />
+          <EntitySet Name="Tab_Venta" EntityType="Self.Tab_Venta" />
+          <EntitySet Name="Tab_Venta_detallada" EntityType="Self.Tab_Venta_detallada" />
           <EntitySet Name="Tipo_Medicamentos" EntityType="Self.Tipo_Medicamentos" />
           <EntitySet Name="UsuarioCentroDiurno" EntityType="Self.UsuarioCentroDiurno" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
@@ -448,6 +730,10 @@
           <AssociationSet Name="Fk_SESIONES_USUARIOS" Association="Self.Fk_SESIONES_USUARIOS">
             <End Role="Usuarios" EntitySet="Usuarios" />
             <End Role="Bitacora_Sesiones" EntitySet="Bitacora_Sesiones" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_DETALLE_MEDICAMENTOS" Association="Self.Fk_DETALLE_MEDICAMENTOS">
+            <End Role="Medicamentos" EntitySet="Medicamentos" />
+            <End Role="Tab_Venta_detallada" EntitySet="Tab_Venta_detallada" />
           </AssociationSet>
           <AssociationSet Name="Fk_PRODUCTOS_TIPO" Association="Self.Fk_PRODUCTOS_TIPO">
             <End Role="Tipo_Medicamentos" EntitySet="Tipo_Medicamentos" />
@@ -465,13 +751,37 @@
             <End Role="Roles" EntitySet="Roles" />
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
+          <AssociationSet Name="Fk_Devoluciones_Cliente" Association="Self.Fk_Devoluciones_Cliente">
+            <End Role="UsuarioCentroDiurno" EntitySet="UsuarioCentroDiurno" />
+            <End Role="Tab_Devoluciones" EntitySet="Tab_Devoluciones" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Devoluciones_Usuario" Association="Self.Fk_Devoluciones_Usuario">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Tab_Devoluciones" EntitySet="Tab_Devoluciones" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Devoluciones_Venta" Association="Self.Fk_Devoluciones_Venta">
+            <End Role="Tab_Venta" EntitySet="Tab_Venta" />
+            <End Role="Tab_Devoluciones" EntitySet="Tab_Devoluciones" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_DETALLE_VENTAS" Association="Self.Fk_DETALLE_VENTAS">
+            <End Role="Tab_Venta" EntitySet="Tab_Venta" />
+            <End Role="Tab_Venta_detallada" EntitySet="Tab_Venta_detallada" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_VENTAS_CLIENTES" Association="Self.Fk_VENTAS_CLIENTES">
+            <End Role="UsuarioCentroDiurno" EntitySet="UsuarioCentroDiurno" />
+            <End Role="Tab_Venta" EntitySet="Tab_Venta" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_VENTAS_USUARIOS" Association="Self.Fk_VENTAS_USUARIOS">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Tab_Venta" EntitySet="Tab_Venta" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="IrazuModelStoreContainer" CdmEntityContainer="IrazuEntities">
+        <EntityContainerMapping StorageEntityContainer="IrazuModelStoreContainer" CdmEntityContainer="IrazuEntities2">
           <EntitySetMapping Name="Bitacora_Movimientos">
             <EntityTypeMapping TypeName="IrazuModel.Bitacora_Movimientos">
               <MappingFragment StoreEntitySet="Bitacora_Movimientos">
@@ -547,6 +857,40 @@
                 <ScalarProperty Name="Id_Rol" ColumnName="Id_Rol" />
                 <ScalarProperty Name="Nombre_Rol" ColumnName="Nombre_Rol" />
                 <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tab_Devoluciones">
+            <EntityTypeMapping TypeName="IrazuModel.Tab_Devoluciones">
+              <MappingFragment StoreEntitySet="Tab_Devoluciones">
+                <ScalarProperty Name="IdDevolucion" ColumnName="IdDevolucion" />
+                <ScalarProperty Name="IdVenta" ColumnName="IdVenta" />
+                <ScalarProperty Name="IDCliente" ColumnName="IDCliente" />
+                <ScalarProperty Name="FechaDevolucion" ColumnName="FechaDevolucion" />
+                <ScalarProperty Name="CantidadProducto" ColumnName="CantidadProducto" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tab_Venta">
+            <EntityTypeMapping TypeName="IrazuModel.Tab_Venta">
+              <MappingFragment StoreEntitySet="Tab_Venta">
+                <ScalarProperty Name="ID_Usuario" ColumnName="ID_Usuario" />
+                <ScalarProperty Name="ID_Cliente" ColumnName="ID_Cliente" />
+                <ScalarProperty Name="Tipo_pago" ColumnName="Tipo_pago" />
+                <ScalarProperty Name="Numero_factura" ColumnName="Numero_factura" />
+                <ScalarProperty Name="CantidadProducto" ColumnName="CantidadProducto" />
+                <ScalarProperty Name="Fecha_venta" ColumnName="Fecha_venta" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tab_Venta_detallada">
+            <EntityTypeMapping TypeName="IrazuModel.Tab_Venta_detallada">
+              <MappingFragment StoreEntitySet="Tab_Venta_detallada">
+                <ScalarProperty Name="Numero_factura" ColumnName="Numero_factura" />
+                <ScalarProperty Name="ID_Medicamento" ColumnName="ID_Medicamento" />
+                <ScalarProperty Name="Linea" ColumnName="Linea" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

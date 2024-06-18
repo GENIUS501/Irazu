@@ -4,23 +4,33 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="dd6ecfd116fb4a5ebcdad5714da94a19" Name="Diagram1">
-        <EntityTypeShape EntityType="IrazuModel.Bitacora_Movimientos" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="IrazuModel.Bitacora_Sesiones" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="IrazuModel.Medicamentos" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="IrazuModel.Permisos" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="IrazuModel.Personal" Width="1.5" PointX="10" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="IrazuModel.Puestos" Width="1.5" PointX="7.75" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="IrazuModel.Roles" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="IrazuModel.Tipo_Medicamentos" Width="1.5" PointX="7.75" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="IrazuModel.UsuarioCentroDiurno" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="IrazuModel.Usuarios" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+      <Diagram DiagramId="e317c799423545ac90a14e5c9ada2eee" Name="Diagram1">
+        <EntityTypeShape EntityType="IrazuModel.Bitacora_Movimientos" Width="1.5" PointX="5.25" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IrazuModel.Bitacora_Sesiones" Width="1.5" PointX="5.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IrazuModel.Medicamentos" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IrazuModel.Permisos" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IrazuModel.Personal" Width="1.5" PointX="13" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IrazuModel.Puestos" Width="1.5" PointX="10.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IrazuModel.Roles" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IrazuModel.Tab_Devoluciones" Width="1.5" PointX="8.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IrazuModel.Tab_Venta" Width="1.5" PointX="8.25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IrazuModel.Tab_Venta_detallada" Width="1.5" PointX="10.5" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="IrazuModel.Tipo_Medicamentos" Width="1.5" PointX="6" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IrazuModel.UsuarioCentroDiurno" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IrazuModel.Usuarios" Width="1.5" PointX="3" PointY="9.875" IsExpanded="true" />
         <AssociationConnector Association="IrazuModel.Fk_MOVIMIENTOS_USUARIOS" ManuallyRouted="false" />
         <AssociationConnector Association="IrazuModel.Fk_SESIONES_USUARIOS" ManuallyRouted="false" />
+        <AssociationConnector Association="IrazuModel.Fk_DETALLE_MEDICAMENTOS" ManuallyRouted="false" />
         <AssociationConnector Association="IrazuModel.Fk_PRODUCTOS_TIPO" ManuallyRouted="false" />
         <AssociationConnector Association="IrazuModel.Fk_PERMISOS_ROLES" ManuallyRouted="false" />
         <AssociationConnector Association="IrazuModel.Fk_PERSONAL_PUESTOS" ManuallyRouted="false" />
         <AssociationConnector Association="IrazuModel.Fk_USUARIOS_ROLES" ManuallyRouted="false" />
+        <AssociationConnector Association="IrazuModel.Fk_Devoluciones_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="IrazuModel.Fk_Devoluciones_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="IrazuModel.Fk_Devoluciones_Venta" ManuallyRouted="false" />
+        <AssociationConnector Association="IrazuModel.Fk_DETALLE_VENTAS" ManuallyRouted="false" />
+        <AssociationConnector Association="IrazuModel.Fk_VENTAS_CLIENTES" ManuallyRouted="false" />
+        <AssociationConnector Association="IrazuModel.Fk_VENTAS_USUARIOS" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

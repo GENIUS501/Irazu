@@ -103,6 +103,15 @@
     <Compile Include="Roles.cs">
       <DependentUpon>Irazu.tt</DependentUpon>
     </Compile>
+    <Compile Include="Tab_Devoluciones.cs">
+      <DependentUpon>Irazu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tab_Venta.cs">
+      <DependentUpon>Irazu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tab_Venta_detallada.cs">
+      <DependentUpon>Irazu.tt</DependentUpon>
+    </Compile>
     <Compile Include="Tipo_Medicamentos.cs">
       <DependentUpon>Irazu.tt</DependentUpon>
     </Compile>
