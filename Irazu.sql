@@ -100,6 +100,18 @@ CREATE TABLE Tab_Venta_detallada(
 	CONSTRAINT Fk_DETALLE_MEDICAMENTOS FOREIGN KEY(ID_Medicamento) REFERENCES Medicamentos(ID_Medicamento),
 );
 
+CREATE TABLE Tab_Devoluciones(
+	IdDevolucion	INT PRIMARY KEY IDENTITY(1,1)NOT NULL,
+	IdVenta	INT NOT NULL,
+	IDCliente	INT NOT NULL,
+	FechaDevolucion	DATETIME NOT NULL,
+	CantidadProducto	FLOAT NOT NULL,
+	IdUsuario	INT NOT NULL,
+	CONSTRAINT Fk_Devoluciones_Venta FOREIGN KEY(IdVenta) REFERENCES Tab_Venta(Numero_Factura),
+	CONSTRAINT Fk_Devoluciones_Cliente FOREIGN KEY(IdCliente) REFERENCES UsuarioCentroDiurno(ID),
+	CONSTRAINT Fk_Devoluciones_Usuario FOREIGN KEY(IdUsuario) REFERENCES Usuarios(ID_Usuario)
+);
+
 CREATE TABLE Bitacora_Sesiones(
     codigo_ingreso_salida int IDENTITY(1,1) primary key, 
     fecha_hora_ingreso DATETIME NOT NULL,
