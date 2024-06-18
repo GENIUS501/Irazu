@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="EBitacora_Movimientos.cs" />
     <Compile Include="EBitacora_Sesiones.cs" />
+    <Compile Include="EDevoluciones.cs" />
     <Compile Include="EPersonal.cs" />
     <Compile Include="EPermisos.cs" />
     <Compile Include="EMedicamentos.cs" />
@@ -50,6 +51,10 @@
     <Compile Include="ETipo_Medicamentos.cs" />
     <Compile Include="EUsuarioCentroDiurno.cs" />
     <Compile Include="EUsuarios.cs" />
+    <Compile Include="EVenta.cs" />
+    <Compile Include="EVentas.cs" />
+    <Compile Include="EVentas_Detalles.cs" />
+    <Compile Include="EVenta_detalla.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EPuestos.cs" />
   </ItemGroup>
