@@ -72,6 +72,7 @@
       <HintPath>..\packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -218,6 +219,18 @@
     <Compile Include="Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProcesoDevolucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcesoDevolucion.Designer.cs">
+      <DependentUpon>ProcesoDevolucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProcesoVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcesoVentas.Designer.cs">
+      <DependentUpon>ProcesoVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReporteMedicamentos.cs">
@@ -309,6 +322,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcesoDevolucion.resx">
+      <DependentUpon>ProcesoDevolucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcesoVentas.resx">
+      <DependentUpon>ProcesoVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

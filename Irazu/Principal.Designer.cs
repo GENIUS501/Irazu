@@ -51,6 +51,9 @@
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.Txt_Usuario = new System.Windows.Forms.ToolStripStatusLabel();
+            this.Procesos = new System.Windows.Forms.ToolStripMenuItem();
+            this.Venta = new System.Windows.Forms.ToolStripMenuItem();
+            this.Devolucion = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +63,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.inicioToolStripMenuItem,
             this.Mantenimientos,
+            this.Procesos,
             this.Reportes,
             this.Seguridad,
             this.Salir,
@@ -242,6 +246,29 @@
             this.Txt_Usuario.Name = "Txt_Usuario";
             this.Txt_Usuario.Size = new System.Drawing.Size(0, 17);
             // 
+            // Procesos
+            // 
+            this.Procesos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Venta,
+            this.Devolucion});
+            this.Procesos.Name = "Procesos";
+            this.Procesos.Size = new System.Drawing.Size(66, 20);
+            this.Procesos.Text = "Procesos";
+            // 
+            // Venta
+            // 
+            this.Venta.Name = "Venta";
+            this.Venta.Size = new System.Drawing.Size(182, 22);
+            this.Venta.Text = "Salida medicamento";
+            this.Venta.Click += new System.EventHandler(this.Venta_Click);
+            // 
+            // Devolucion
+            // 
+            this.Devolucion.Name = "Devolucion";
+            this.Devolucion.Size = new System.Drawing.Size(182, 22);
+            this.Devolucion.Text = "Devoluciones";
+            this.Devolucion.Click += new System.EventHandler(this.Devolucion_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,5 +320,8 @@
         private System.Windows.Forms.ToolStripMenuItem Puestos;
         private System.Windows.Forms.ToolStripMenuItem ReportePlanillas;
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Procesos;
+        private System.Windows.Forms.ToolStripMenuItem Venta;
+        private System.Windows.Forms.ToolStripMenuItem Devolucion;
     }
 }

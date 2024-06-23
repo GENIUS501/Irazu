@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -115,6 +116,16 @@ namespace Irazu
                 if (perm.Where(x => x.Modulo == "BitacoraMovimientos").FirstOrDefault() != null)
                 {
                     Bitacora_Movimientos.Visible = true;
+                }
+                if (perm.Where(x => x.Modulo == "ProcesoVentas").FirstOrDefault() != null)
+                {
+                    Procesos.Visible = true;
+                    Venta.Visible = true;
+                }
+                if (perm.Where(x => x.Modulo == "ProcesoDevoluciones").FirstOrDefault() != null)
+                {
+                    Procesos.Visible = true;
+                    Devolucion.Visible = true;
                 }
                 #endregion
 
@@ -488,6 +499,42 @@ namespace Irazu
         private void Mantenimientos_Click(object sender, EventArgs e)
         {
             this.BackgroundImage = Lienzos.Properties.Resources.Img_Mantenimientos;
+        }
+
+        private void Venta_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ProcesoVentas frm = new ProcesoVentas();
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                frm.Usuario = UsuarioLogueado.ID_Usuario;
+                frm.Nombre_Usuario = UsuarioLogueado.Nombre_Usuario;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Devolucion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ProcesoDevolucion frm = new ProcesoDevolucion();
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                frm.Usuario = UsuarioLogueado.ID_Usuario;
+                // frm.Id_Rol = UsuarioLogueado.Id_Rol;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

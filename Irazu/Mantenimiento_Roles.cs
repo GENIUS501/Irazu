@@ -512,6 +512,24 @@ namespace Irazu
 
                 }
                 #endregion
+                #region Procesos
+                if (Permisos.Where(x => x.Modulo == "ProcesoVentas").FirstOrDefault() != null)
+                {
+                    this.chb_ventas.Checked = true;
+                }
+                else
+                {
+
+                }
+                if (Permisos.Where(x => x.Modulo == "ProcesoDevoluciones").FirstOrDefault() != null)
+                {
+                    this.chb_devoluciones.Checked = true;
+                }
+                else
+                {
+
+                }
+                #endregion
 
             }
             catch (Exception ex)
@@ -892,6 +910,23 @@ namespace Irazu
                     Permisos = new EPermisos();
                 }
                 ///////////////////////////////////////////////
+                if (this.chb_ventas.Checked == true)
+                {
+                    Permisos.Id_Rol = Id_Rol;
+                    Permisos.Modulo = "ProcesoVentas";
+                    Permisos.Accion = "ProcesoVentas";
+                    Lista_Permisos.Add(Permisos);
+                    Permisos = new EPermisos();
+                }
+                ///////////////////////////////////////////////
+                if (this.chb_devoluciones.Checked == true)
+                {
+                    Permisos.Id_Rol = Id_Rol;
+                    Permisos.Modulo = "ProcesoDevoluciones";
+                    Permisos.Accion = "ProcesoDevoluciones";
+                    Lista_Permisos.Add(Permisos);
+                    Permisos = new EPermisos();
+                }
                 return Lista_Permisos;
             }
             catch (Exception)

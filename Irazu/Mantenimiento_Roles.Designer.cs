@@ -36,6 +36,12 @@
             this.txt_id_perfil = new System.Windows.Forms.TextBox();
             this.Lbl_Perfil = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.chb_Puestos = new System.Windows.Forms.CheckBox();
+            this.grp_Puestos = new System.Windows.Forms.GroupBox();
+            this.chk_Puestos_Consultar = new System.Windows.Forms.CheckBox();
+            this.chk_Puestos_Eliminar = new System.Windows.Forms.CheckBox();
+            this.chk_Puestos_Modificar = new System.Windows.Forms.CheckBox();
+            this.chk_Puestos_Agregar = new System.Windows.Forms.CheckBox();
             this.chb_Tipo_Mediacamento = new System.Windows.Forms.CheckBox();
             this.grp_TipoMedicamento = new System.Windows.Forms.GroupBox();
             this.chk_Tipo_Mediacamento_Consultar = new System.Windows.Forms.CheckBox();
@@ -43,6 +49,7 @@
             this.chk_Tipo_Mediacamento_Modificar = new System.Windows.Forms.CheckBox();
             this.chk_Tipo_Mediacamento_Agregar = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.chb_reporte_planillas = new System.Windows.Forms.CheckBox();
             this.chb_reporte_centro_diurno = new System.Windows.Forms.CheckBox();
             this.chb_reporte_personal = new System.Windows.Forms.CheckBox();
             this.chb_Medicamentos_reporte = new System.Windows.Forms.CheckBox();
@@ -79,18 +86,15 @@
             this.chk_rol_modificar = new System.Windows.Forms.CheckBox();
             this.chk_rol_agregar = new System.Windows.Forms.CheckBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.chb_Puestos = new System.Windows.Forms.CheckBox();
-            this.grp_Puestos = new System.Windows.Forms.GroupBox();
-            this.chk_Puestos_Consultar = new System.Windows.Forms.CheckBox();
-            this.chk_Puestos_Eliminar = new System.Windows.Forms.CheckBox();
-            this.chk_Puestos_Modificar = new System.Windows.Forms.CheckBox();
-            this.chk_Puestos_Agregar = new System.Windows.Forms.CheckBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.chb_reporte_planillas = new System.Windows.Forms.CheckBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.chb_devoluciones = new System.Windows.Forms.CheckBox();
+            this.chb_ventas = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.grp_Puestos.SuspendLayout();
             this.grp_TipoMedicamento.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.grp_usuarios.SuspendLayout();
@@ -99,8 +103,8 @@
             this.grp_personal.SuspendLayout();
             this.grp_roles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.grp_Puestos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -150,6 +154,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.chb_Puestos);
             this.groupBox2.Controls.Add(this.grp_Puestos);
             this.groupBox2.Controls.Add(this.chb_Tipo_Mediacamento);
@@ -167,10 +172,75 @@
             this.groupBox2.Controls.Add(this.grp_roles);
             this.groupBox2.Location = new System.Drawing.Point(12, 155);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(670, 342);
+            this.groupBox2.Size = new System.Drawing.Size(735, 441);
             this.groupBox2.TabIndex = 20;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos de permisos";
+            // 
+            // chb_Puestos
+            // 
+            this.chb_Puestos.AutoSize = true;
+            this.chb_Puestos.Location = new System.Drawing.Point(515, 36);
+            this.chb_Puestos.Name = "chb_Puestos";
+            this.chb_Puestos.Size = new System.Drawing.Size(64, 17);
+            this.chb_Puestos.TabIndex = 92;
+            this.chb_Puestos.Text = "Puestos";
+            this.chb_Puestos.UseVisualStyleBackColor = true;
+            this.chb_Puestos.CheckedChanged += new System.EventHandler(this.chb_Puestos_CheckedChanged);
+            // 
+            // grp_Puestos
+            // 
+            this.grp_Puestos.Controls.Add(this.chk_Puestos_Consultar);
+            this.grp_Puestos.Controls.Add(this.chk_Puestos_Eliminar);
+            this.grp_Puestos.Controls.Add(this.chk_Puestos_Modificar);
+            this.grp_Puestos.Controls.Add(this.chk_Puestos_Agregar);
+            this.grp_Puestos.Enabled = false;
+            this.grp_Puestos.Location = new System.Drawing.Point(515, 59);
+            this.grp_Puestos.Name = "grp_Puestos";
+            this.grp_Puestos.Size = new System.Drawing.Size(97, 110);
+            this.grp_Puestos.TabIndex = 93;
+            this.grp_Puestos.TabStop = false;
+            this.grp_Puestos.Text = "Permisos";
+            // 
+            // chk_Puestos_Consultar
+            // 
+            this.chk_Puestos_Consultar.AutoSize = true;
+            this.chk_Puestos_Consultar.Location = new System.Drawing.Point(6, 90);
+            this.chk_Puestos_Consultar.Name = "chk_Puestos_Consultar";
+            this.chk_Puestos_Consultar.Size = new System.Drawing.Size(70, 17);
+            this.chk_Puestos_Consultar.TabIndex = 21;
+            this.chk_Puestos_Consultar.Text = "Consultar";
+            this.chk_Puestos_Consultar.UseVisualStyleBackColor = true;
+            // 
+            // chk_Puestos_Eliminar
+            // 
+            this.chk_Puestos_Eliminar.AutoSize = true;
+            this.chk_Puestos_Eliminar.Location = new System.Drawing.Point(7, 67);
+            this.chk_Puestos_Eliminar.Name = "chk_Puestos_Eliminar";
+            this.chk_Puestos_Eliminar.Size = new System.Drawing.Size(62, 17);
+            this.chk_Puestos_Eliminar.TabIndex = 20;
+            this.chk_Puestos_Eliminar.Text = "Eliminar";
+            this.chk_Puestos_Eliminar.UseVisualStyleBackColor = true;
+            // 
+            // chk_Puestos_Modificar
+            // 
+            this.chk_Puestos_Modificar.AutoSize = true;
+            this.chk_Puestos_Modificar.Location = new System.Drawing.Point(7, 43);
+            this.chk_Puestos_Modificar.Name = "chk_Puestos_Modificar";
+            this.chk_Puestos_Modificar.Size = new System.Drawing.Size(69, 17);
+            this.chk_Puestos_Modificar.TabIndex = 19;
+            this.chk_Puestos_Modificar.Text = "Modificar";
+            this.chk_Puestos_Modificar.UseVisualStyleBackColor = true;
+            // 
+            // chk_Puestos_Agregar
+            // 
+            this.chk_Puestos_Agregar.AutoSize = true;
+            this.chk_Puestos_Agregar.Location = new System.Drawing.Point(6, 19);
+            this.chk_Puestos_Agregar.Name = "chk_Puestos_Agregar";
+            this.chk_Puestos_Agregar.Size = new System.Drawing.Size(63, 17);
+            this.chk_Puestos_Agregar.TabIndex = 18;
+            this.chk_Puestos_Agregar.Text = "Agregar";
+            this.chk_Puestos_Agregar.UseVisualStyleBackColor = true;
             // 
             // chb_Tipo_Mediacamento
             // 
@@ -251,6 +321,16 @@
             this.groupBox5.TabIndex = 29;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Reportes y Bitácoras";
+            // 
+            // chb_reporte_planillas
+            // 
+            this.chb_reporte_planillas.AutoSize = true;
+            this.chb_reporte_planillas.Location = new System.Drawing.Point(234, 90);
+            this.chb_reporte_planillas.Name = "chb_reporte_planillas";
+            this.chb_reporte_planillas.Size = new System.Drawing.Size(119, 17);
+            this.chb_reporte_planillas.TabIndex = 43;
+            this.chb_reporte_planillas.Text = "Reporte de planillas";
+            this.chb_reporte_planillas.UseVisualStyleBackColor = true;
             // 
             // chb_reporte_centro_diurno
             // 
@@ -631,71 +711,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // chb_Puestos
-            // 
-            this.chb_Puestos.AutoSize = true;
-            this.chb_Puestos.Location = new System.Drawing.Point(515, 36);
-            this.chb_Puestos.Name = "chb_Puestos";
-            this.chb_Puestos.Size = new System.Drawing.Size(64, 17);
-            this.chb_Puestos.TabIndex = 92;
-            this.chb_Puestos.Text = "Puestos";
-            this.chb_Puestos.UseVisualStyleBackColor = true;
-            this.chb_Puestos.CheckedChanged += new System.EventHandler(this.chb_Puestos_CheckedChanged);
-            // 
-            // grp_Puestos
-            // 
-            this.grp_Puestos.Controls.Add(this.chk_Puestos_Consultar);
-            this.grp_Puestos.Controls.Add(this.chk_Puestos_Eliminar);
-            this.grp_Puestos.Controls.Add(this.chk_Puestos_Modificar);
-            this.grp_Puestos.Controls.Add(this.chk_Puestos_Agregar);
-            this.grp_Puestos.Enabled = false;
-            this.grp_Puestos.Location = new System.Drawing.Point(515, 59);
-            this.grp_Puestos.Name = "grp_Puestos";
-            this.grp_Puestos.Size = new System.Drawing.Size(97, 110);
-            this.grp_Puestos.TabIndex = 93;
-            this.grp_Puestos.TabStop = false;
-            this.grp_Puestos.Text = "Permisos";
-            // 
-            // chk_Puestos_Consultar
-            // 
-            this.chk_Puestos_Consultar.AutoSize = true;
-            this.chk_Puestos_Consultar.Location = new System.Drawing.Point(6, 90);
-            this.chk_Puestos_Consultar.Name = "chk_Puestos_Consultar";
-            this.chk_Puestos_Consultar.Size = new System.Drawing.Size(70, 17);
-            this.chk_Puestos_Consultar.TabIndex = 21;
-            this.chk_Puestos_Consultar.Text = "Consultar";
-            this.chk_Puestos_Consultar.UseVisualStyleBackColor = true;
-            // 
-            // chk_Puestos_Eliminar
-            // 
-            this.chk_Puestos_Eliminar.AutoSize = true;
-            this.chk_Puestos_Eliminar.Location = new System.Drawing.Point(7, 67);
-            this.chk_Puestos_Eliminar.Name = "chk_Puestos_Eliminar";
-            this.chk_Puestos_Eliminar.Size = new System.Drawing.Size(62, 17);
-            this.chk_Puestos_Eliminar.TabIndex = 20;
-            this.chk_Puestos_Eliminar.Text = "Eliminar";
-            this.chk_Puestos_Eliminar.UseVisualStyleBackColor = true;
-            // 
-            // chk_Puestos_Modificar
-            // 
-            this.chk_Puestos_Modificar.AutoSize = true;
-            this.chk_Puestos_Modificar.Location = new System.Drawing.Point(7, 43);
-            this.chk_Puestos_Modificar.Name = "chk_Puestos_Modificar";
-            this.chk_Puestos_Modificar.Size = new System.Drawing.Size(69, 17);
-            this.chk_Puestos_Modificar.TabIndex = 19;
-            this.chk_Puestos_Modificar.Text = "Modificar";
-            this.chk_Puestos_Modificar.UseVisualStyleBackColor = true;
-            // 
-            // chk_Puestos_Agregar
-            // 
-            this.chk_Puestos_Agregar.AutoSize = true;
-            this.chk_Puestos_Agregar.Location = new System.Drawing.Point(6, 19);
-            this.chk_Puestos_Agregar.Name = "chk_Puestos_Agregar";
-            this.chk_Puestos_Agregar.Size = new System.Drawing.Size(63, 17);
-            this.chk_Puestos_Agregar.TabIndex = 18;
-            this.chk_Puestos_Agregar.Text = "Agregar";
-            this.chk_Puestos_Agregar.UseVisualStyleBackColor = true;
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Arial", 9.75F);
@@ -734,22 +749,44 @@
             this.pictureBox1.TabIndex = 89;
             this.pictureBox1.TabStop = false;
             // 
-            // chb_reporte_planillas
+            // groupBox3
             // 
-            this.chb_reporte_planillas.AutoSize = true;
-            this.chb_reporte_planillas.Location = new System.Drawing.Point(234, 90);
-            this.chb_reporte_planillas.Name = "chb_reporte_planillas";
-            this.chb_reporte_planillas.Size = new System.Drawing.Size(119, 17);
-            this.chb_reporte_planillas.TabIndex = 43;
-            this.chb_reporte_planillas.Text = "Reporte de planillas";
-            this.chb_reporte_planillas.UseVisualStyleBackColor = true;
+            this.groupBox3.Controls.Add(this.chb_devoluciones);
+            this.groupBox3.Controls.Add(this.chb_ventas);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(6, 363);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(278, 51);
+            this.groupBox3.TabIndex = 94;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Procesos";
+            // 
+            // chb_devoluciones
+            // 
+            this.chb_devoluciones.AutoSize = true;
+            this.chb_devoluciones.Location = new System.Drawing.Point(94, 19);
+            this.chb_devoluciones.Name = "chb_devoluciones";
+            this.chb_devoluciones.Size = new System.Drawing.Size(109, 20);
+            this.chb_devoluciones.TabIndex = 37;
+            this.chb_devoluciones.Text = "Devoluciones";
+            this.chb_devoluciones.UseVisualStyleBackColor = true;
+            // 
+            // chb_ventas
+            // 
+            this.chb_ventas.AutoSize = true;
+            this.chb_ventas.Location = new System.Drawing.Point(7, 19);
+            this.chb_ventas.Name = "chb_ventas";
+            this.chb_ventas.Size = new System.Drawing.Size(68, 20);
+            this.chb_ventas.TabIndex = 36;
+            this.chb_ventas.Text = "Ventas";
+            this.chb_ventas.UseVisualStyleBackColor = true;
             // 
             // Mantenimiento_Roles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(694, 504);
+            this.ClientSize = new System.Drawing.Size(759, 608);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.pictureBox1);
@@ -763,6 +800,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.grp_Puestos.ResumeLayout(false);
+            this.grp_Puestos.PerformLayout();
             this.grp_TipoMedicamento.ResumeLayout(false);
             this.grp_TipoMedicamento.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -778,9 +817,9 @@
             this.grp_roles.ResumeLayout(false);
             this.grp_roles.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.grp_Puestos.ResumeLayout(false);
-            this.grp_Puestos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -846,5 +885,8 @@
         private System.Windows.Forms.CheckBox chk_Puestos_Modificar;
         private System.Windows.Forms.CheckBox chk_Puestos_Agregar;
         private System.Windows.Forms.CheckBox chb_reporte_planillas;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.CheckBox chb_devoluciones;
+        private System.Windows.Forms.CheckBox chb_ventas;
     }
 }
