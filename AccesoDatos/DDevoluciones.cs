@@ -38,7 +38,7 @@ namespace AccesoDatos
                         var VentasLista = db.Tab_Venta_detallada.Where(x => x.Numero_factura == obj.IdVenta).ToList();
                         foreach (var Item in VentasLista)
                         {
-                            Afectar_Inventario(Item.ID_Producto);
+                            Afectar_Inventario(Item.ID_Medicamento);
                         }
                         Ts.Complete();
                         Entidad_Movimientos.Id_Usuario = IdUsuario;
@@ -67,7 +67,7 @@ namespace AccesoDatos
         {
             try
             {
-                var Objbd = db.Tab_Productos.Where(x => x.ID_Producto == Id_Producto).FirstOrDefault();
+                var Objbd = db.Medicamentos.Where(x => x.ID_Medicamento == Id_Producto).FirstOrDefault();
                 Objbd.Cantidad = Objbd.Cantidad + 1;
                 db.Entry(Objbd).State = EntityState.Modified;
                 db.SaveChanges();
@@ -196,7 +196,7 @@ namespace AccesoDatos
             try
             {
                 List<EVentas> Lista = new List<EVentas>();
-                var Objbd = db.Tab_Venta.Where(x => x.Tab_Clientes.Cedula == Identificacion).ToList();
+                var Objbd = db.Tab_Venta.Where(x => x.UsuarioCentroDiurno.Cedula == Identificacion).ToList();
                 var Devoluciones = db.Tab_Devoluciones.ToList();
                 foreach (var Item in Objbd)
                 {

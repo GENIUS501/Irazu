@@ -9,7 +9,7 @@ namespace Entidades
     public class EVentas_Detalles
     {
         public int Numero_factura { get; set; }
-        public int ID_Producto { get; set; }
+        public int ID_Medicamento { get; set; }
         public int Linea { get; set; }
     }
 }

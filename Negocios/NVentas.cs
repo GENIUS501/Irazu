@@ -38,18 +38,18 @@ namespace Negocios
                 throw ex;
             }
         }
-        public List<EReporte_Ventas_Detalles> MostrarDetalle()
-        {
-            try
-            {
-                DVentas db = new DVentas();
-                return db.MostrarDetalle();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+        //public List<EReporte_Ventas_Detalles> MostrarDetalle()
+        //{
+        //    try
+        //    {
+        //        DVentas db = new DVentas();
+        //        return db.MostrarDetalle();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
         #endregion
 
         #region Eliminar

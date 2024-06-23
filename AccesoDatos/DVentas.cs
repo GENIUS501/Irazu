@@ -11,7 +11,7 @@ namespace AccesoDatos
 {
     public class DVentas
     {
-        DiamondEntities db = new DiamondEntities();
+        IrazuEntities db = new IrazuEntities();
         EBitacora_Movimientos Entidad_Movimientos = new EBitacora_Movimientos();
         DBitacora_movimientos Movimientos = new DBitacora_movimientos();
 
@@ -45,7 +45,7 @@ namespace AccesoDatos
                     {
                         var ObjGuardar = objlista.Select(x => new Tab_Venta_detallada
                         {
-                            ID_Producto = x.ID_Producto,
+                            ID_Medicamento = x.ID_Medicamento,
                             Numero_factura = IdVenta,
                             Linea = x.Linea
                         }).ToList();
@@ -83,7 +83,7 @@ namespace AccesoDatos
             {
                 //using (TransactionScope Ts = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
                 //{
-                    var Objbd = db.Tab_Productos.Where(x => x.ID_Producto == Id_Producto).FirstOrDefault();
+                    var Objbd = db.Medicamentos.Where(x => x.ID_Medicamento== Id_Producto).FirstOrDefault();
                     var Comprobacion = Objbd.Cantidad;
                     if (Comprobacion <= 0)
                     {
@@ -167,30 +167,30 @@ namespace AccesoDatos
                 throw ex;
             }
         }
-        public List<EReporte_Ventas_Detalles> MostrarDetalle()
-        {
-            try
-            {
-                List<EReporte_Ventas_Detalles> Lista = new List<EReporte_Ventas_Detalles>();
-                DProductos DatosProductos = new DProductos();
-                var Objbd = db.Tab_Venta_detallada.ToList();
-                Lista = Objbd.Select(s => new EReporte_Ventas_Detalles
-                {
-                    CodigoProducto = DatosProductos.Mostrar().Where(x => x.ID_Producto == s.ID_Producto).FirstOrDefault().ID_Producto.ToString(),
-                    NombreProducto = DatosProductos.Mostrar().Where(x => x.ID_Producto == s.ID_Producto).FirstOrDefault().Nombre,
-                    Costo = double.Parse(DatosProductos.Mostrar().Where(x => x.ID_Producto == s.ID_Producto).FirstOrDefault().Precio.ToString()),
-                    ID = s.ID_Producto,
-                    IdVenta = s.Numero_factura,
-                    // ProductoExento = NegProductos.Mostrar().Where(x => x.ID_Producto == Item.ID_Producto).FirstOrDefault().ProductoExento,
-                }).ToList();
-                return Lista;
-            }
-            catch (Exception ex)
-            {
+        //public List<EReporte_Ventas_Detalles> MostrarDetalle()
+        //{
+        //    try
+        //    {
+        //        List<EReporte_Ventas_Detalles> Lista = new List<EReporte_Ventas_Detalles>();
+        //        DProductos DatosProductos = new DProductos();
+        //        var Objbd = db.Tab_Venta_detallada.ToList();
+        //        Lista = Objbd.Select(s => new EReporte_Ventas_Detalles
+        //        {
+        //            CodigoProducto = DatosProductos.Mostrar().Where(x => x.ID_Producto == s.ID_Producto).FirstOrDefault().ID_Producto.ToString(),
+        //            NombreProducto = DatosProductos.Mostrar().Where(x => x.ID_Producto == s.ID_Producto).FirstOrDefault().Nombre,
+        //            Costo = double.Parse(DatosProductos.Mostrar().Where(x => x.ID_Producto == s.ID_Producto).FirstOrDefault().Precio.ToString()),
+        //            ID = s.ID_Producto,
+        //            IdVenta = s.Numero_factura,
+        //            // ProductoExento = NegProductos.Mostrar().Where(x => x.ID_Producto == Item.ID_Producto).FirstOrDefault().ProductoExento,
+        //        }).ToList();
+        //        return Lista;
+        //    }
+        //    catch (Exception ex)
+        //    {
 
-                throw ex;
-            }
-        }
+        //        throw ex;
+        //    }
+        //}
         #endregion
     }
 }
