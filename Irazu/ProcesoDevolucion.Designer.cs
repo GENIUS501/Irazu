@@ -159,6 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(761, 392);
             this.Controls.Add(this.btn_reimprimir);
@@ -166,9 +167,10 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dat_principal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "ProcesoDevolucion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Proceso Devolucion";
+            this.Text = "Proceso de reimpresiones";
             this.Load += new System.EventHandler(this.ProcesoDevolucion_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

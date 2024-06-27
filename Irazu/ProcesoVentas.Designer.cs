@@ -28,19 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProcesoVentas));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.grp_venta = new System.Windows.Forms.GroupBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnAceptar = new System.Windows.Forms.Button();
             this.txt_codigo = new System.Windows.Forms.MaskedTextBox();
             this.txt_cedula = new System.Windows.Forms.MaskedTextBox();
-            this.btn_add_cliente = new System.Windows.Forms.Button();
             this.lbl_cliente = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_buscar_nombre = new System.Windows.Forms.Button();
-            this.btn_buscar_codigo = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lst_productos = new System.Windows.Forms.ListView();
@@ -60,9 +54,15 @@
             this.label9 = new System.Windows.Forms.Label();
             this.cbo_tipo_pago = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btn_add_cliente = new System.Windows.Forms.Button();
+            this.btn_buscar_nombre = new System.Windows.Forms.Button();
+            this.btn_buscar_codigo = new System.Windows.Forms.Button();
             this.grp_venta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dat_resultado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // grp_venta
@@ -101,47 +101,6 @@
             this.grp_venta.TabStop = false;
             this.grp_venta.Text = "Venta";
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Beige;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(572, 417);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(83, 23);
-            this.btnCancelar.TabIndex = 47;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox1.Image = global::Lienzos.Properties.Resources.Img_p1;
-            this.pictureBox1.Location = new System.Drawing.Point(561, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(88, 59);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 49;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.BackColor = System.Drawing.Color.Beige;
-            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
-            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAceptar.Location = new System.Drawing.Point(478, 417);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(79, 23);
-            this.btnAceptar.TabIndex = 46;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.UseVisualStyleBackColor = false;
-            this.btnAceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
-            // 
             // txt_codigo
             // 
             this.txt_codigo.Location = new System.Drawing.Point(9, 37);
@@ -157,17 +116,6 @@
             this.txt_cedula.Name = "txt_cedula";
             this.txt_cedula.Size = new System.Drawing.Size(124, 22);
             this.txt_cedula.TabIndex = 4;
-            // 
-            // btn_add_cliente
-            // 
-            this.btn_add_cliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_add_cliente.BackgroundImage")));
-            this.btn_add_cliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_add_cliente.Location = new System.Drawing.Point(515, 37);
-            this.btn_add_cliente.Name = "btn_add_cliente";
-            this.btn_add_cliente.Size = new System.Drawing.Size(28, 21);
-            this.btn_add_cliente.TabIndex = 5;
-            this.btn_add_cliente.UseVisualStyleBackColor = true;
-            this.btn_add_cliente.Click += new System.EventHandler(this.btn_add_cliente_Click);
             // 
             // lbl_cliente
             // 
@@ -186,28 +134,6 @@
             this.label2.Size = new System.Drawing.Size(114, 16);
             this.label2.TabIndex = 57;
             this.label2.Text = "Cedula del cliente";
-            // 
-            // btn_buscar_nombre
-            // 
-            this.btn_buscar_nombre.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar_nombre.BackgroundImage")));
-            this.btn_buscar_nombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar_nombre.Location = new System.Drawing.Point(306, 37);
-            this.btn_buscar_nombre.Name = "btn_buscar_nombre";
-            this.btn_buscar_nombre.Size = new System.Drawing.Size(25, 20);
-            this.btn_buscar_nombre.TabIndex = 3;
-            this.btn_buscar_nombre.UseVisualStyleBackColor = true;
-            this.btn_buscar_nombre.Click += new System.EventHandler(this.btn_buscar_nombre_Click);
-            // 
-            // btn_buscar_codigo
-            // 
-            this.btn_buscar_codigo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar_codigo.BackgroundImage")));
-            this.btn_buscar_codigo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar_codigo.Location = new System.Drawing.Point(139, 37);
-            this.btn_buscar_codigo.Name = "btn_buscar_codigo";
-            this.btn_buscar_codigo.Size = new System.Drawing.Size(25, 20);
-            this.btn_buscar_codigo.TabIndex = 1;
-            this.btn_buscar_codigo.UseVisualStyleBackColor = true;
-            this.btn_buscar_codigo.Click += new System.EventHandler(this.btn_buscar_codigo_Click);
             // 
             // label5
             // 
@@ -240,9 +166,9 @@
             this.lst_productos.FullRowSelect = true;
             this.lst_productos.GridLines = true;
             this.lst_productos.HideSelection = false;
-            listViewItem1.StateImageIndex = 0;
+            listViewItem2.StateImageIndex = 0;
             this.lst_productos.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.lst_productos.Location = new System.Drawing.Point(6, 250);
             this.lst_productos.Name = "lst_productos";
             this.lst_productos.Size = new System.Drawing.Size(581, 136);
@@ -272,7 +198,7 @@
             // columnHeader8
             // 
             this.columnHeader8.DisplayIndex = 2;
-            this.columnHeader8.Text = "Presentacion";
+            this.columnHeader8.Text = "Concentracion";
             this.columnHeader8.Width = 220;
             // 
             // dat_resultado
@@ -399,21 +325,97 @@
             this.label3.Text = "Impuesto";
             this.label3.Visible = false;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Beige;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.Location = new System.Drawing.Point(572, 417);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(83, 23);
+            this.btnCancelar.TabIndex = 47;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox1.Image = global::Lienzos.Properties.Resources.Img_p1;
+            this.pictureBox1.Location = new System.Drawing.Point(561, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(88, 59);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 49;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.BackColor = System.Drawing.Color.Beige;
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
+            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAceptar.Location = new System.Drawing.Point(478, 417);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(79, 23);
+            this.btnAceptar.TabIndex = 46;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
+            // 
+            // btn_add_cliente
+            // 
+            this.btn_add_cliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_add_cliente.BackgroundImage")));
+            this.btn_add_cliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_add_cliente.Location = new System.Drawing.Point(515, 37);
+            this.btn_add_cliente.Name = "btn_add_cliente";
+            this.btn_add_cliente.Size = new System.Drawing.Size(28, 21);
+            this.btn_add_cliente.TabIndex = 5;
+            this.btn_add_cliente.UseVisualStyleBackColor = true;
+            this.btn_add_cliente.Click += new System.EventHandler(this.btn_add_cliente_Click);
+            // 
+            // btn_buscar_nombre
+            // 
+            this.btn_buscar_nombre.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar_nombre.BackgroundImage")));
+            this.btn_buscar_nombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscar_nombre.Location = new System.Drawing.Point(306, 37);
+            this.btn_buscar_nombre.Name = "btn_buscar_nombre";
+            this.btn_buscar_nombre.Size = new System.Drawing.Size(25, 20);
+            this.btn_buscar_nombre.TabIndex = 3;
+            this.btn_buscar_nombre.UseVisualStyleBackColor = true;
+            this.btn_buscar_nombre.Click += new System.EventHandler(this.btn_buscar_nombre_Click);
+            // 
+            // btn_buscar_codigo
+            // 
+            this.btn_buscar_codigo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar_codigo.BackgroundImage")));
+            this.btn_buscar_codigo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscar_codigo.Location = new System.Drawing.Point(139, 37);
+            this.btn_buscar_codigo.Name = "btn_buscar_codigo";
+            this.btn_buscar_codigo.Size = new System.Drawing.Size(25, 20);
+            this.btn_buscar_codigo.TabIndex = 1;
+            this.btn_buscar_codigo.UseVisualStyleBackColor = true;
+            this.btn_buscar_codigo.Click += new System.EventHandler(this.btn_buscar_codigo_Click);
+            // 
             // ProcesoVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(695, 514);
             this.Controls.Add(this.grp_venta);
+            this.MaximizeBox = false;
             this.Name = "ProcesoVentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proceso de entregas";
             this.Load += new System.EventHandler(this.ProcesoVentas_Load);
             this.grp_venta.ResumeLayout(false);
             this.grp_venta.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dat_resultado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -178,7 +178,7 @@ namespace AccesoDatos
                 {
                     CodigoProducto = DatosProductos.Mostrar().Where(x => x.ID_Medicamento == s.ID_Medicamento).FirstOrDefault().ID_Medicamento.ToString(),
                     NombreProducto = DatosProductos.Mostrar().Where(x => x.ID_Medicamento == s.ID_Medicamento).FirstOrDefault().Nombre,
-                    Costo = DatosProductos.Mostrar().Where(x => x.ID_Medicamento == s.ID_Medicamento).FirstOrDefault().Presentacion,
+                    Costo = ((double)DatosProductos.Mostrar().Where(x => x.ID_Medicamento == s.ID_Medicamento).FirstOrDefault().Concentracion),
                     ID = s.ID_Medicamento,
                     IdVenta = s.Numero_factura,
                     // ProductoExento = NegProductos.Mostrar().Where(x => x.ID_Producto == Item.ID_Producto).FirstOrDefault().ProductoExento,

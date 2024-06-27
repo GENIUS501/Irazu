@@ -37,6 +37,9 @@
             this.Tipo_Medicamentos = new System.Windows.Forms.ToolStripMenuItem();
             this.CentroDiurno = new System.Windows.Forms.ToolStripMenuItem();
             this.Puestos = new System.Windows.Forms.ToolStripMenuItem();
+            this.Procesos = new System.Windows.Forms.ToolStripMenuItem();
+            this.Venta = new System.Windows.Forms.ToolStripMenuItem();
+            this.Devolucion = new System.Windows.Forms.ToolStripMenuItem();
             this.Reportes = new System.Windows.Forms.ToolStripMenuItem();
             this.Reporte_Medicamentos = new System.Windows.Forms.ToolStripMenuItem();
             this.Reporte_Personal = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,9 +54,6 @@
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.Txt_Usuario = new System.Windows.Forms.ToolStripStatusLabel();
-            this.Procesos = new System.Windows.Forms.ToolStripMenuItem();
-            this.Venta = new System.Windows.Forms.ToolStripMenuItem();
-            this.Devolucion = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -136,6 +136,29 @@
             this.Puestos.Size = new System.Drawing.Size(200, 22);
             this.Puestos.Text = "Puestos";
             this.Puestos.Click += new System.EventHandler(this.Puestos_Click);
+            // 
+            // Procesos
+            // 
+            this.Procesos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Venta,
+            this.Devolucion});
+            this.Procesos.Name = "Procesos";
+            this.Procesos.Size = new System.Drawing.Size(66, 20);
+            this.Procesos.Text = "Procesos";
+            // 
+            // Venta
+            // 
+            this.Venta.Name = "Venta";
+            this.Venta.Size = new System.Drawing.Size(182, 22);
+            this.Venta.Text = "Salida medicamento";
+            this.Venta.Click += new System.EventHandler(this.Venta_Click);
+            // 
+            // Devolucion
+            // 
+            this.Devolucion.Name = "Devolucion";
+            this.Devolucion.Size = new System.Drawing.Size(182, 22);
+            this.Devolucion.Text = "Reimpresiones";
+            this.Devolucion.Click += new System.EventHandler(this.Devolucion_Click);
             // 
             // Reportes
             // 
@@ -245,29 +268,6 @@
             // 
             this.Txt_Usuario.Name = "Txt_Usuario";
             this.Txt_Usuario.Size = new System.Drawing.Size(0, 17);
-            // 
-            // Procesos
-            // 
-            this.Procesos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Venta,
-            this.Devolucion});
-            this.Procesos.Name = "Procesos";
-            this.Procesos.Size = new System.Drawing.Size(66, 20);
-            this.Procesos.Text = "Procesos";
-            // 
-            // Venta
-            // 
-            this.Venta.Name = "Venta";
-            this.Venta.Size = new System.Drawing.Size(182, 22);
-            this.Venta.Text = "Salida medicamento";
-            this.Venta.Click += new System.EventHandler(this.Venta_Click);
-            // 
-            // Devolucion
-            // 
-            this.Devolucion.Name = "Devolucion";
-            this.Devolucion.Size = new System.Drawing.Size(182, 22);
-            this.Devolucion.Text = "Devoluciones";
-            this.Devolucion.Click += new System.EventHandler(this.Devolucion_Click);
             // 
             // Principal
             // 

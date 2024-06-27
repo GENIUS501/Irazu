@@ -1,4 +1,5 @@
-﻿using Entidades;
+﻿using Diamond;
+using Entidades;
 using Negocios;
 using System;
 using System.Collections.Generic;
@@ -119,7 +120,7 @@ namespace Irazu
                     ListViewItem lista = new ListViewItem("");
                     lista.SubItems.Add(this.dat_resultado.Rows[e.RowIndex].Cells[0].Value.ToString());
                     lista.SubItems.Add(this.dat_resultado.Rows[e.RowIndex].Cells[1].Value.ToString());
-                    lista.SubItems.Add(this.dat_resultado.Rows[e.RowIndex].Cells[4].Value.ToString());
+                    lista.SubItems.Add(this.dat_resultado.Rows[e.RowIndex].Cells[4].Value.ToString()+" mg");
 
                     double Impuesto = double.Parse(this.txt_impuesto.Text) / 100;
                     double Impuestodeltotal = Convert.ToDouble(this.dat_resultado.Rows[e.RowIndex].Cells[4].Value.ToString()) * Impuesto;
@@ -246,32 +247,32 @@ namespace Irazu
                     if (FilasAfectadas > 0)
                     {
                         MessageBox.Show("Venta realizada exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //Visor_Factura frm = new Visor_Factura();
-                        //NProductos NegProductos = new NProductos();
-                        //List<EReporte_Ventas_Detalles> Reporte = new List<EReporte_Ventas_Detalles>();
-                        //foreach (var Item in Detalle)
-                        //{
-                        //    Reporte.Add(new EReporte_Ventas_Detalles
-                        //    {
-                        //        CodigoProducto = NegProductos.Mostrar().Where(x => x.ID_Producto == Item.ID_Producto).FirstOrDefault().ID_Producto.ToString(),
-                        //        NombreProducto = NegProductos.Mostrar().Where(x => x.ID_Producto == Item.ID_Producto).FirstOrDefault().Nombre,
-                        //        Costo = double.Parse(NegProductos.Mostrar().Where(x => x.ID_Producto == Item.ID_Producto).FirstOrDefault().Precio.ToString()),
-                        //        ID = Item.ID_Producto,
-                        //        IdVenta = FilasAfectadas,
-                        //        // ProductoExento = NegProductos.Mostrar().Where(x => x.ID_Producto == Item.ID_Producto).FirstOrDefault().ProductoExento,
-                        //    });
-                        //}
-                        //frm.Num_Fact = FilasAfectadas.ToString();
-                        //frm.Usuario = Nombre_Usuario;
-                        //frm.ListaFina = Reporte;
-                        //frm.Total = Total.ToString();
-                        //frm.Cliente = this.lbl_cliente.Text;
-                        //frm.Cantidad_Lineas = linea.ToString();
-                        //frm.TipoPago = Entidad_Ventas.Tipo_pago;
-                        //frm.MdiParent = this.MdiParent;
-                        //frm.Show();
-                        //ProcesoVentas_Load(null, null);
-                        //this.Close();
+                        Visor_Factura frm = new Visor_Factura();
+                        NMedicamentos NegProductos = new NMedicamentos();
+                        List<EReporte_Ventas_Detalles> Reporte = new List<EReporte_Ventas_Detalles>();
+                        foreach (var Item in Detalle)
+                        {
+                            Reporte.Add(new EReporte_Ventas_Detalles
+                            {
+                                CodigoProducto = NegProductos.Mostrar().Where(x => x.ID_Medicamento == Item.ID_Medicamento).FirstOrDefault().ID_Medicamento.ToString(),
+                                NombreProducto = NegProductos.Mostrar().Where(x => x.ID_Medicamento == Item.ID_Medicamento).FirstOrDefault().Nombre,
+                                Costo = (double)NegProductos.Mostrar().Where(x => x.ID_Medicamento == Item.ID_Medicamento).FirstOrDefault().Concentracion,
+                                ID = Item.ID_Medicamento,
+                                IdVenta = FilasAfectadas,
+                                // ProductoExento = NegProductos.Mostrar().Where(x => x.ID_Producto == Item.ID_Producto).FirstOrDefault().ProductoExento,
+                            });
+                        }
+                        frm.Num_Fact = FilasAfectadas.ToString();
+                        frm.Usuario = Nombre_Usuario;
+                        frm.ListaFina = Reporte;
+                        frm.Total = Total.ToString();
+                        frm.Cliente = this.lbl_cliente.Text;
+                        frm.Cantidad_Lineas = linea.ToString();
+                        frm.TipoPago = Entidad_Ventas.Tipo_pago;
+                        frm.MdiParent = this.MdiParent;
+                        frm.Show();
+                        ProcesoVentas_Load(null, null);
+                        this.Close();
                     }
                     else
                     {
