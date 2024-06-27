@@ -222,7 +222,7 @@ namespace Irazu
                     var FechaIni = Convert.ToDateTime(this.txt_fecha_ini.Text);
                     var FechaFin = Convert.ToDateTime(this.txt_fecha_fin.Text).AddHours(23).AddMinutes(59).AddSeconds(59);
                     NDevoluciones Negocios = new NDevoluciones();
-                    var Data = Negocios.MostrarId(int.Parse(this.txt_id.Text)).Select(Item => new
+                    var Data = Negocios.Mostrar().Select(Item => new
                     {
                         CantidadMedicamento = Item.CantidadProducto,
                         ID_Cliente = Item.ID_Cliente,
