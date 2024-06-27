@@ -202,5 +202,22 @@ namespace Lienzos
         {
             this.Close();
         }
+
+        private void txt_concentracion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                // Permite solo números, el punto decimal, y la tecla de retroceso (backspace)
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                    (e.KeyChar != '.') && (e.KeyChar != ','))
+                {
+                    e.Handled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

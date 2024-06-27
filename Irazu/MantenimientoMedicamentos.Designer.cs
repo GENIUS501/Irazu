@@ -153,6 +153,7 @@
             this.txt_concentracion.Name = "txt_concentracion";
             this.txt_concentracion.Size = new System.Drawing.Size(104, 20);
             this.txt_concentracion.TabIndex = 28;
+            this.txt_concentracion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_concentracion_KeyPress);
             // 
             // label3
             // 

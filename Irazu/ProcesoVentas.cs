@@ -81,10 +81,18 @@ namespace Irazu
                 {
                     NUsuarioCentroDiurno Negocios = new NUsuarioCentroDiurno();
                     var Cliente = Negocios.Mostrar().Where(x => x.Cedula == this.txt_cedula.Text).FirstOrDefault();
-                    if (Cliente.Nombre != "")
+                    if (Cliente != null)
                     {
-                        IDCliente = Cliente.ID;
-                        this.lbl_cliente.Text = "Nombre del cliente: " + Cliente.Nombre + " " + Cliente.PrimerApellido + " " + Cliente.SegundoApellido;
+                        if (Cliente.Nombre != "")
+                        {
+                            IDCliente = Cliente.ID;
+                            this.lbl_cliente.Text = "Nombre del cliente: " + Cliente.Nombre + " " + Cliente.PrimerApellido + " " + Cliente.SegundoApellido;
+                            this.lbl_cliente.Refresh();
+                        }
+                    }
+                    else
+                    {
+                        this.lbl_cliente.Text = "Cliente no existe!";
                         this.lbl_cliente.Refresh();
                     }
                 }

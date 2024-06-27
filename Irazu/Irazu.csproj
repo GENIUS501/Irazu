@@ -258,6 +258,12 @@
       <DependentUpon>ReporteUsuarioCentroDiurno.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Visor_Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visor_Factura.Designer.cs">
+      <DependentUpon>Visor_Factura.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
@@ -272,6 +278,7 @@
     <EmbeddedResource Include="CambioContrasena.resx">
       <DependentUpon>CambioContrasena.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Factura.rdlc" />
     <EmbeddedResource Include="ListaCentroDiurno.resx">
       <DependentUpon>ListaCentroDiurno.cs</DependentUpon>
     </EmbeddedResource>
@@ -354,6 +361,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteUsuarioCentroDiurno.resx">
       <DependentUpon>ReporteUsuarioCentroDiurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visor_Factura.resx">
+      <DependentUpon>Visor_Factura.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="IrazuDataSet.xsc">
       <DependentUpon>IrazuDataSet.xsd</DependentUpon>

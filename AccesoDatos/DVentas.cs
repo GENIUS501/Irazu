@@ -83,22 +83,22 @@ namespace AccesoDatos
             {
                 //using (TransactionScope Ts = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
                 //{
-                    var Objbd = db.Medicamentos.Where(x => x.ID_Medicamento== Id_Producto).FirstOrDefault();
-                    var Comprobacion = Objbd.Cantidad;
-                    if (Comprobacion <= 0)
-                    {
-                        throw new Exception("No hay suficientes existencias del producto: "+Objbd.Nombre);
-                    }
-                    Objbd.Cantidad = Objbd.Cantidad - 1;
-                    db.Entry(Objbd).State = EntityState.Modified;
-                    int Resultado = db.SaveChanges();
+                var Objbd = db.Medicamentos.Where(x => x.ID_Medicamento == Id_Producto).FirstOrDefault();
+                var Comprobacion = Objbd.Cantidad;
+                if (Comprobacion <= 0)
+                {
+                    throw new Exception("No hay suficientes existencias del producto: " + Objbd.Nombre);
+                }
+                Objbd.Cantidad = Objbd.Cantidad - 1;
+                db.Entry(Objbd).State = EntityState.Modified;
+                int Resultado = db.SaveChanges();
                 //    if (Resultado > 0)
                 //    {
                 //        Ts.Complete();
                 //        return Resultado;
                 //    }
                 //    Ts.Dispose();
-                    return Resultado;
+                return Resultado;
                 //}
             }
             catch (Exception ex)
@@ -167,30 +167,30 @@ namespace AccesoDatos
                 throw ex;
             }
         }
-        //public List<EReporte_Ventas_Detalles> MostrarDetalle()
-        //{
-        //    try
-        //    {
-        //        List<EReporte_Ventas_Detalles> Lista = new List<EReporte_Ventas_Detalles>();
-        //        DProductos DatosProductos = new DProductos();
-        //        var Objbd = db.Tab_Venta_detallada.ToList();
-        //        Lista = Objbd.Select(s => new EReporte_Ventas_Detalles
-        //        {
-        //            CodigoProducto = DatosProductos.Mostrar().Where(x => x.ID_Producto == s.ID_Producto).FirstOrDefault().ID_Producto.ToString(),
-        //            NombreProducto = DatosProductos.Mostrar().Where(x => x.ID_Producto == s.ID_Producto).FirstOrDefault().Nombre,
-        //            Costo = double.Parse(DatosProductos.Mostrar().Where(x => x.ID_Producto == s.ID_Producto).FirstOrDefault().Precio.ToString()),
-        //            ID = s.ID_Producto,
-        //            IdVenta = s.Numero_factura,
-        //            // ProductoExento = NegProductos.Mostrar().Where(x => x.ID_Producto == Item.ID_Producto).FirstOrDefault().ProductoExento,
-        //        }).ToList();
-        //        return Lista;
-        //    }
-        //    catch (Exception ex)
-        //    {
+        public List<EReporte_Ventas_Detalles> MostrarDetalle()
+        {
+            try
+            {
+                List<EReporte_Ventas_Detalles> Lista = new List<EReporte_Ventas_Detalles>();
+                DMedicamentos DatosProductos = new DMedicamentos();
+                var Objbd = db.Tab_Venta_detallada.ToList();
+                Lista = Objbd.Select(s => new EReporte_Ventas_Detalles
+                {
+                    CodigoProducto = DatosProductos.Mostrar().Where(x => x.ID_Medicamento == s.ID_Medicamento).FirstOrDefault().ID_Medicamento.ToString(),
+                    NombreProducto = DatosProductos.Mostrar().Where(x => x.ID_Medicamento == s.ID_Medicamento).FirstOrDefault().Nombre,
+                    Costo = DatosProductos.Mostrar().Where(x => x.ID_Medicamento == s.ID_Medicamento).FirstOrDefault().Presentacion,
+                    ID = s.ID_Medicamento,
+                    IdVenta = s.Numero_factura,
+                    // ProductoExento = NegProductos.Mostrar().Where(x => x.ID_Producto == Item.ID_Producto).FirstOrDefault().ProductoExento,
+                }).ToList();
+                return Lista;
+            }
+            catch (Exception ex)
+            {
 
-        //        throw ex;
-        //    }
-        //}
+                throw ex;
+            }
+        }
         #endregion
     }
 }

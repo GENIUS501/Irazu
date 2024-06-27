@@ -34,11 +34,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cbo_tipo_pago = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.txt_codigo = new System.Windows.Forms.MaskedTextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.txt_cedula = new System.Windows.Forms.MaskedTextBox();
             this.btn_add_cliente = new System.Windows.Forms.Button();
             this.lbl_cliente = new System.Windows.Forms.Label();
@@ -56,10 +52,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txt_nombre_producto = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txt_total = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.txt_impuesto = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txt_total = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cbo_tipo_pago = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.grp_venta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dat_resultado)).BeginInit();
@@ -142,39 +142,6 @@
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(269, 421);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(16, 16);
-            this.label10.TabIndex = 65;
-            this.label10.Text = "₡";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
-            // 
-            // cbo_tipo_pago
-            // 
-            this.cbo_tipo_pago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_tipo_pago.FormattingEnabled = true;
-            this.cbo_tipo_pago.Items.AddRange(new object[] {
-            "Efectivo",
-            "Tarjeta",
-            "Sinpe"});
-            this.cbo_tipo_pago.Location = new System.Drawing.Point(111, 421);
-            this.cbo_tipo_pago.Name = "cbo_tipo_pago";
-            this.cbo_tipo_pago.Size = new System.Drawing.Size(121, 24);
-            this.cbo_tipo_pago.TabIndex = 9;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(108, 395);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 16);
-            this.label9.TabIndex = 64;
-            this.label9.Text = "Tipo de pago";
-            // 
             // txt_codigo
             // 
             this.txt_codigo.Location = new System.Drawing.Point(9, 37);
@@ -182,16 +149,6 @@
             this.txt_codigo.Name = "txt_codigo";
             this.txt_codigo.Size = new System.Drawing.Size(124, 22);
             this.txt_codigo.TabIndex = 0;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(74, 395);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(19, 16);
-            this.label8.TabIndex = 62;
-            this.label8.Text = "%";
             // 
             // txt_cedula
             // 
@@ -315,7 +272,7 @@
             // columnHeader8
             // 
             this.columnHeader8.DisplayIndex = 2;
-            this.columnHeader8.Text = "Precio";
+            this.columnHeader8.Text = "Presentacion";
             this.columnHeader8.Width = 220;
             // 
             // dat_resultado
@@ -334,9 +291,9 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Location = new System.Drawing.Point(176, 16);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(134, 16);
+            this.label6.Size = new System.Drawing.Size(163, 16);
             this.label6.TabIndex = 51;
-            this.label6.Text = "Nombre del producto";
+            this.label6.Text = "Nombre del medicamento";
             // 
             // txt_nombre_producto
             // 
@@ -351,9 +308,38 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Location = new System.Drawing.Point(6, 18);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 16);
+            this.label7.Size = new System.Drawing.Size(127, 16);
             this.label7.TabIndex = 50;
-            this.label7.Text = "ID del producto";
+            this.label7.Text = "ID del medicamento";
+            // 
+            // txt_impuesto
+            // 
+            this.txt_impuesto.Location = new System.Drawing.Point(9, 423);
+            this.txt_impuesto.Name = "txt_impuesto";
+            this.txt_impuesto.Size = new System.Drawing.Size(47, 22);
+            this.txt_impuesto.TabIndex = 8;
+            this.txt_impuesto.Visible = false;
+            this.txt_impuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_impuesto_KeyPress);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(269, 421);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(16, 16);
+            this.label10.TabIndex = 65;
+            this.label10.Text = "₡";
+            this.label10.Visible = false;
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // txt_total
+            // 
+            this.txt_total.Enabled = false;
+            this.txt_total.Location = new System.Drawing.Point(294, 418);
+            this.txt_total.Name = "txt_total";
+            this.txt_total.Size = new System.Drawing.Size(100, 22);
+            this.txt_total.TabIndex = 10;
+            this.txt_total.Visible = false;
             // 
             // label4
             // 
@@ -364,14 +350,43 @@
             this.label4.Size = new System.Drawing.Size(41, 16);
             this.label4.TabIndex = 43;
             this.label4.Text = "Total:";
+            this.label4.Visible = false;
             // 
-            // txt_total
+            // label8
             // 
-            this.txt_total.Enabled = false;
-            this.txt_total.Location = new System.Drawing.Point(294, 418);
-            this.txt_total.Name = "txt_total";
-            this.txt_total.Size = new System.Drawing.Size(100, 22);
-            this.txt_total.TabIndex = 10;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Location = new System.Drawing.Point(74, 395);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(19, 16);
+            this.label8.TabIndex = 62;
+            this.label8.Text = "%";
+            this.label8.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Location = new System.Drawing.Point(108, 395);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(89, 16);
+            this.label9.TabIndex = 64;
+            this.label9.Text = "Tipo de pago";
+            this.label9.Visible = false;
+            // 
+            // cbo_tipo_pago
+            // 
+            this.cbo_tipo_pago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_tipo_pago.FormattingEnabled = true;
+            this.cbo_tipo_pago.Items.AddRange(new object[] {
+            "Efectivo",
+            "Tarjeta",
+            "Sinpe"});
+            this.cbo_tipo_pago.Location = new System.Drawing.Point(111, 421);
+            this.cbo_tipo_pago.Name = "cbo_tipo_pago";
+            this.cbo_tipo_pago.Size = new System.Drawing.Size(121, 24);
+            this.cbo_tipo_pago.TabIndex = 9;
+            this.cbo_tipo_pago.Visible = false;
             // 
             // label3
             // 
@@ -382,14 +397,7 @@
             this.label3.Size = new System.Drawing.Size(62, 16);
             this.label3.TabIndex = 41;
             this.label3.Text = "Impuesto";
-            // 
-            // txt_impuesto
-            // 
-            this.txt_impuesto.Location = new System.Drawing.Point(9, 423);
-            this.txt_impuesto.Name = "txt_impuesto";
-            this.txt_impuesto.Size = new System.Drawing.Size(47, 22);
-            this.txt_impuesto.TabIndex = 8;
-            this.txt_impuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_impuesto_KeyPress);
+            this.label3.Visible = false;
             // 
             // ProcesoVentas
             // 
@@ -398,10 +406,9 @@
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(695, 514);
             this.Controls.Add(this.grp_venta);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ProcesoVentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Proceso Ventas";
+            this.Text = "Proceso de entregas";
             this.Load += new System.EventHandler(this.ProcesoVentas_Load);
             this.grp_venta.ResumeLayout(false);
             this.grp_venta.PerformLayout();
@@ -416,11 +423,7 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.GroupBox grp_venta;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cbo_tipo_pago;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.MaskedTextBox txt_codigo;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.MaskedTextBox txt_cedula;
         private System.Windows.Forms.Button btn_add_cliente;
         private System.Windows.Forms.Label lbl_cliente;
@@ -438,10 +441,14 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_nombre_producto;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox cbo_tipo_pago;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_total;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_impuesto;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
