@@ -28,13 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProcesoVentas));
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.grp_venta = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cbo_tipo_pago = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.txt_codigo = new System.Windows.Forms.MaskedTextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.txt_cedula = new System.Windows.Forms.MaskedTextBox();
+            this.btn_add_cliente = new System.Windows.Forms.Button();
             this.lbl_cliente = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_buscar_nombre = new System.Windows.Forms.Button();
+            this.btn_buscar_codigo = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lst_productos = new System.Windows.Forms.ListView();
@@ -46,23 +56,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txt_nombre_producto = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txt_impuesto = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txt_total = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cbo_tipo_pago = new System.Windows.Forms.ComboBox();
+            this.txt_total = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.btn_add_cliente = new System.Windows.Forms.Button();
-            this.btn_buscar_nombre = new System.Windows.Forms.Button();
-            this.btn_buscar_codigo = new System.Windows.Forms.Button();
+            this.txt_impuesto = new System.Windows.Forms.TextBox();
             this.grp_venta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dat_resultado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dat_resultado)).BeginInit();
             this.SuspendLayout();
             // 
             // grp_venta
@@ -101,6 +101,83 @@
             this.grp_venta.TabStop = false;
             this.grp_venta.Text = "Venta";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Beige;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.Location = new System.Drawing.Point(572, 417);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(83, 23);
+            this.btnCancelar.TabIndex = 47;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox1.Image = global::Lienzos.Properties.Resources.Img_p1;
+            this.pictureBox1.Location = new System.Drawing.Point(561, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(88, 59);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 49;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.BackColor = System.Drawing.Color.Beige;
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
+            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAceptar.Location = new System.Drawing.Point(478, 417);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(79, 23);
+            this.btnAceptar.TabIndex = 46;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(269, 421);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(16, 16);
+            this.label10.TabIndex = 65;
+            this.label10.Text = "₡";
+            this.label10.Visible = false;
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // cbo_tipo_pago
+            // 
+            this.cbo_tipo_pago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_tipo_pago.FormattingEnabled = true;
+            this.cbo_tipo_pago.Items.AddRange(new object[] {
+            "Efectivo",
+            "Tarjeta",
+            "Sinpe"});
+            this.cbo_tipo_pago.Location = new System.Drawing.Point(111, 421);
+            this.cbo_tipo_pago.Name = "cbo_tipo_pago";
+            this.cbo_tipo_pago.Size = new System.Drawing.Size(121, 24);
+            this.cbo_tipo_pago.TabIndex = 9;
+            this.cbo_tipo_pago.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Location = new System.Drawing.Point(108, 395);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(89, 16);
+            this.label9.TabIndex = 64;
+            this.label9.Text = "Tipo de pago";
+            this.label9.Visible = false;
+            // 
             // txt_codigo
             // 
             this.txt_codigo.Location = new System.Drawing.Point(9, 37);
@@ -109,6 +186,17 @@
             this.txt_codigo.Size = new System.Drawing.Size(124, 22);
             this.txt_codigo.TabIndex = 0;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Location = new System.Drawing.Point(74, 395);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(19, 16);
+            this.label8.TabIndex = 62;
+            this.label8.Text = "%";
+            this.label8.Visible = false;
+            // 
             // txt_cedula
             // 
             this.txt_cedula.Location = new System.Drawing.Point(385, 35);
@@ -116,6 +204,17 @@
             this.txt_cedula.Name = "txt_cedula";
             this.txt_cedula.Size = new System.Drawing.Size(124, 22);
             this.txt_cedula.TabIndex = 4;
+            // 
+            // btn_add_cliente
+            // 
+            this.btn_add_cliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_add_cliente.BackgroundImage")));
+            this.btn_add_cliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_add_cliente.Location = new System.Drawing.Point(515, 37);
+            this.btn_add_cliente.Name = "btn_add_cliente";
+            this.btn_add_cliente.Size = new System.Drawing.Size(28, 21);
+            this.btn_add_cliente.TabIndex = 5;
+            this.btn_add_cliente.UseVisualStyleBackColor = true;
+            this.btn_add_cliente.Click += new System.EventHandler(this.btn_add_cliente_Click);
             // 
             // lbl_cliente
             // 
@@ -131,9 +230,31 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(382, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 16);
+            this.label2.Size = new System.Drawing.Size(127, 16);
             this.label2.TabIndex = 57;
-            this.label2.Text = "Cedula del cliente";
+            this.label2.Text = "Cedula del paciente";
+            // 
+            // btn_buscar_nombre
+            // 
+            this.btn_buscar_nombre.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar_nombre.BackgroundImage")));
+            this.btn_buscar_nombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscar_nombre.Location = new System.Drawing.Point(306, 37);
+            this.btn_buscar_nombre.Name = "btn_buscar_nombre";
+            this.btn_buscar_nombre.Size = new System.Drawing.Size(25, 20);
+            this.btn_buscar_nombre.TabIndex = 3;
+            this.btn_buscar_nombre.UseVisualStyleBackColor = true;
+            this.btn_buscar_nombre.Click += new System.EventHandler(this.btn_buscar_nombre_Click);
+            // 
+            // btn_buscar_codigo
+            // 
+            this.btn_buscar_codigo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar_codigo.BackgroundImage")));
+            this.btn_buscar_codigo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscar_codigo.Location = new System.Drawing.Point(139, 37);
+            this.btn_buscar_codigo.Name = "btn_buscar_codigo";
+            this.btn_buscar_codigo.Size = new System.Drawing.Size(25, 20);
+            this.btn_buscar_codigo.TabIndex = 1;
+            this.btn_buscar_codigo.UseVisualStyleBackColor = true;
+            this.btn_buscar_codigo.Click += new System.EventHandler(this.btn_buscar_codigo_Click);
             // 
             // label5
             // 
@@ -166,9 +287,9 @@
             this.lst_productos.FullRowSelect = true;
             this.lst_productos.GridLines = true;
             this.lst_productos.HideSelection = false;
-            listViewItem2.StateImageIndex = 0;
+            listViewItem1.StateImageIndex = 0;
             this.lst_productos.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.lst_productos.Location = new System.Drawing.Point(6, 250);
             this.lst_productos.Name = "lst_productos";
             this.lst_productos.Size = new System.Drawing.Size(581, 136);
@@ -238,35 +359,6 @@
             this.label7.TabIndex = 50;
             this.label7.Text = "ID del medicamento";
             // 
-            // txt_impuesto
-            // 
-            this.txt_impuesto.Location = new System.Drawing.Point(9, 423);
-            this.txt_impuesto.Name = "txt_impuesto";
-            this.txt_impuesto.Size = new System.Drawing.Size(47, 22);
-            this.txt_impuesto.TabIndex = 8;
-            this.txt_impuesto.Visible = false;
-            this.txt_impuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_impuesto_KeyPress);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(269, 421);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(16, 16);
-            this.label10.TabIndex = 65;
-            this.label10.Text = "₡";
-            this.label10.Visible = false;
-            this.label10.Click += new System.EventHandler(this.label10_Click);
-            // 
-            // txt_total
-            // 
-            this.txt_total.Enabled = false;
-            this.txt_total.Location = new System.Drawing.Point(294, 418);
-            this.txt_total.Name = "txt_total";
-            this.txt_total.Size = new System.Drawing.Size(100, 22);
-            this.txt_total.TabIndex = 10;
-            this.txt_total.Visible = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -278,41 +370,14 @@
             this.label4.Text = "Total:";
             this.label4.Visible = false;
             // 
-            // label8
+            // txt_total
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(74, 395);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(19, 16);
-            this.label8.TabIndex = 62;
-            this.label8.Text = "%";
-            this.label8.Visible = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(108, 395);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 16);
-            this.label9.TabIndex = 64;
-            this.label9.Text = "Tipo de pago";
-            this.label9.Visible = false;
-            // 
-            // cbo_tipo_pago
-            // 
-            this.cbo_tipo_pago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_tipo_pago.FormattingEnabled = true;
-            this.cbo_tipo_pago.Items.AddRange(new object[] {
-            "Efectivo",
-            "Tarjeta",
-            "Sinpe"});
-            this.cbo_tipo_pago.Location = new System.Drawing.Point(111, 421);
-            this.cbo_tipo_pago.Name = "cbo_tipo_pago";
-            this.cbo_tipo_pago.Size = new System.Drawing.Size(121, 24);
-            this.cbo_tipo_pago.TabIndex = 9;
-            this.cbo_tipo_pago.Visible = false;
+            this.txt_total.Enabled = false;
+            this.txt_total.Location = new System.Drawing.Point(294, 418);
+            this.txt_total.Name = "txt_total";
+            this.txt_total.Size = new System.Drawing.Size(100, 22);
+            this.txt_total.TabIndex = 10;
+            this.txt_total.Visible = false;
             // 
             // label3
             // 
@@ -325,79 +390,14 @@
             this.label3.Text = "Impuesto";
             this.label3.Visible = false;
             // 
-            // btnCancelar
+            // txt_impuesto
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Beige;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(572, 417);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(83, 23);
-            this.btnCancelar.TabIndex = 47;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox1.Image = global::Lienzos.Properties.Resources.Img_p1;
-            this.pictureBox1.Location = new System.Drawing.Point(561, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(88, 59);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 49;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.BackColor = System.Drawing.Color.Beige;
-            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
-            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAceptar.Location = new System.Drawing.Point(478, 417);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(79, 23);
-            this.btnAceptar.TabIndex = 46;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.UseVisualStyleBackColor = false;
-            this.btnAceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
-            // 
-            // btn_add_cliente
-            // 
-            this.btn_add_cliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_add_cliente.BackgroundImage")));
-            this.btn_add_cliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_add_cliente.Location = new System.Drawing.Point(515, 37);
-            this.btn_add_cliente.Name = "btn_add_cliente";
-            this.btn_add_cliente.Size = new System.Drawing.Size(28, 21);
-            this.btn_add_cliente.TabIndex = 5;
-            this.btn_add_cliente.UseVisualStyleBackColor = true;
-            this.btn_add_cliente.Click += new System.EventHandler(this.btn_add_cliente_Click);
-            // 
-            // btn_buscar_nombre
-            // 
-            this.btn_buscar_nombre.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar_nombre.BackgroundImage")));
-            this.btn_buscar_nombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar_nombre.Location = new System.Drawing.Point(306, 37);
-            this.btn_buscar_nombre.Name = "btn_buscar_nombre";
-            this.btn_buscar_nombre.Size = new System.Drawing.Size(25, 20);
-            this.btn_buscar_nombre.TabIndex = 3;
-            this.btn_buscar_nombre.UseVisualStyleBackColor = true;
-            this.btn_buscar_nombre.Click += new System.EventHandler(this.btn_buscar_nombre_Click);
-            // 
-            // btn_buscar_codigo
-            // 
-            this.btn_buscar_codigo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar_codigo.BackgroundImage")));
-            this.btn_buscar_codigo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar_codigo.Location = new System.Drawing.Point(139, 37);
-            this.btn_buscar_codigo.Name = "btn_buscar_codigo";
-            this.btn_buscar_codigo.Size = new System.Drawing.Size(25, 20);
-            this.btn_buscar_codigo.TabIndex = 1;
-            this.btn_buscar_codigo.UseVisualStyleBackColor = true;
-            this.btn_buscar_codigo.Click += new System.EventHandler(this.btn_buscar_codigo_Click);
+            this.txt_impuesto.Location = new System.Drawing.Point(9, 423);
+            this.txt_impuesto.Name = "txt_impuesto";
+            this.txt_impuesto.Size = new System.Drawing.Size(47, 22);
+            this.txt_impuesto.TabIndex = 8;
+            this.txt_impuesto.Visible = false;
+            this.txt_impuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_impuesto_KeyPress);
             // 
             // ProcesoVentas
             // 
@@ -414,8 +414,8 @@
             this.Load += new System.EventHandler(this.ProcesoVentas_Load);
             this.grp_venta.ResumeLayout(false);
             this.grp_venta.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dat_resultado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dat_resultado)).EndInit();
             this.ResumeLayout(false);
 
         }

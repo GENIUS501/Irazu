@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProcesoDevolucion));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_fecha = new System.Windows.Forms.Button();
+            this.txt_fecha_fin = new System.Windows.Forms.DateTimePicker();
+            this.txt_fecha_ini = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.btn_buscar_id = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,11 +44,6 @@
             this.dat_principal = new System.Windows.Forms.DataGridView();
             this.btn_reimprimir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_fecha = new System.Windows.Forms.Button();
-            this.txt_fecha_fin = new System.Windows.Forms.DateTimePicker();
-            this.txt_fecha_ini = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dat_principal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,6 +69,51 @@
             this.groupBox1.TabIndex = 78;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros de Búsqueda";
+            // 
+            // btn_fecha
+            // 
+            this.btn_fecha.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_fecha.BackgroundImage")));
+            this.btn_fecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_fecha.Location = new System.Drawing.Point(324, 89);
+            this.btn_fecha.Name = "btn_fecha";
+            this.btn_fecha.Size = new System.Drawing.Size(25, 20);
+            this.btn_fecha.TabIndex = 61;
+            this.btn_fecha.UseVisualStyleBackColor = true;
+            this.btn_fecha.Click += new System.EventHandler(this.btn_fecha_Click);
+            // 
+            // txt_fecha_fin
+            // 
+            this.txt_fecha_fin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txt_fecha_fin.Location = new System.Drawing.Point(197, 89);
+            this.txt_fecha_fin.Name = "txt_fecha_fin";
+            this.txt_fecha_fin.Size = new System.Drawing.Size(121, 22);
+            this.txt_fecha_fin.TabIndex = 58;
+            // 
+            // txt_fecha_ini
+            // 
+            this.txt_fecha_ini.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txt_fecha_ini.Location = new System.Drawing.Point(6, 90);
+            this.txt_fecha_ini.Name = "txt_fecha_ini";
+            this.txt_fecha_ini.Size = new System.Drawing.Size(100, 22);
+            this.txt_fecha_ini.TabIndex = 57;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(194, 73);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 16);
+            this.label2.TabIndex = 60;
+            this.label2.Text = "Fecha Final";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 73);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(82, 16);
+            this.label4.TabIndex = 59;
+            this.label4.Text = "Fecha inicial";
             // 
             // btn_buscar_id
             // 
@@ -164,50 +209,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 80;
             this.pictureBox1.TabStop = false;
-            // 
-            // btn_fecha
-            // 
-            this.btn_fecha.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_fecha.BackgroundImage")));
-            this.btn_fecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_fecha.Location = new System.Drawing.Point(324, 89);
-            this.btn_fecha.Name = "btn_fecha";
-            this.btn_fecha.Size = new System.Drawing.Size(25, 20);
-            this.btn_fecha.TabIndex = 61;
-            this.btn_fecha.UseVisualStyleBackColor = true;
-            // 
-            // txt_fecha_fin
-            // 
-            this.txt_fecha_fin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txt_fecha_fin.Location = new System.Drawing.Point(197, 89);
-            this.txt_fecha_fin.Name = "txt_fecha_fin";
-            this.txt_fecha_fin.Size = new System.Drawing.Size(121, 22);
-            this.txt_fecha_fin.TabIndex = 58;
-            // 
-            // txt_fecha_ini
-            // 
-            this.txt_fecha_ini.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txt_fecha_ini.Location = new System.Drawing.Point(6, 90);
-            this.txt_fecha_ini.Name = "txt_fecha_ini";
-            this.txt_fecha_ini.Size = new System.Drawing.Size(100, 22);
-            this.txt_fecha_ini.TabIndex = 57;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(194, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 16);
-            this.label2.TabIndex = 60;
-            this.label2.Text = "Fecha Final";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 73);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 16);
-            this.label4.TabIndex = 59;
-            this.label4.Text = "Fecha inicial";
             // 
             // ProcesoDevolucion
             // 
