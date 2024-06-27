@@ -1,5 +1,6 @@
 ﻿using Diamond;
 using Entidades;
+using Microsoft.Reporting.WebForms;
 using Microsoft.Reporting.WinForms;
 using Negocios;
 using System;
@@ -205,6 +206,32 @@ namespace Irazu
                 frm.TipoPago = datasource.TipoVenta.ToString();
                 frm.MdiParent = this.MdiParent;
                 frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_fecha_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.txt_fecha_ini.Text != "" && this.txt_fecha_fin.Text != "")
+                {
+                    var FechaIni = Convert.ToDateTime(this.txt_fecha_ini.Text);
+                    var FechaFin = Convert.ToDateTime(this.txt_fecha_fin.Text).AddHours(23).AddMinutes(59).AddSeconds(59);
+                    NDevoluciones Negocios = new NDevoluciones();
+                    var Data = Negocios.MostrarId(int.Parse(this.txt_id.Text)).Select(Item => new
+                    {
+                        CantidadMedicamento = Item.CantidadProducto,
+                        ID_Cliente = Item.ID_Cliente,
+                        ID_Usuario = Item.ID_Usuario,
+                        Fecha_entrega = Item.Fecha_venta,
+                        Numero_entrega = Item.Numero_factura
+                    }).Where(x => x.Fecha_entrega >= FechaIni && x.Fecha_entrega <= FechaFin).ToList();
+                    this.dat_principal.DataSource = Data;
+                }
             }
             catch (Exception ex)
             {

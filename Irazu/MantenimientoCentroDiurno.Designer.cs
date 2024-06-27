@@ -342,7 +342,7 @@
             this.Controls.Add(this.grpdatos);
             this.MaximizeBox = false;
             this.Name = "MantenimientoCentroDiurno";
-            this.Text = "Mantenimiento de clientes";
+            this.Text = "Mantenimiento de pacientes";
             this.Load += new System.EventHandler(this.MantenimientoCentroDiurno_Load);
             this.grpdatos.ResumeLayout(false);
             this.grpdatos.PerformLayout();

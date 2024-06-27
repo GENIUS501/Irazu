@@ -41,7 +41,7 @@ namespace Diamond
                 parameters[2] = new ReportParameter("Num_Fact", Num_Fact.ToString());
                 parameters[3] = new ReportParameter("Cantidad_Lineas", Cantidad_Lineas.ToString());
                 parameters[4] = new ReportParameter("FechaVenta", DateTime.Now.ToString());
-                parameters[5] = new ReportParameter("Cliente", Cliente);
+                parameters[5] = new ReportParameter("Cliente", "Paciente: "+Cliente);
                 parameters[6] = new ReportParameter("TipoPago", TipoPago);
                 reportViewer1.LocalReport.SetParameters(parameters);
                 this.reportViewer1.RefreshReport();

@@ -146,9 +146,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 13);
+            this.label1.Size = new System.Drawing.Size(101, 13);
             this.label1.TabIndex = 35;
-            this.label1.Text = "Cédula del usuario";
+            this.label1.Text = "Cédula del paciente";
             // 
             // label3
             // 
@@ -189,6 +189,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dat_principal);
@@ -197,8 +198,9 @@
             this.Controls.Add(this.btn_editar);
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "ListaCentroDiurno";
-            this.Text = "Lista de clientes";
+            this.Text = "Lista de pacientes";
             this.Load += new System.EventHandler(this.ListaCentroDiurno_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dat_principal)).EndInit();

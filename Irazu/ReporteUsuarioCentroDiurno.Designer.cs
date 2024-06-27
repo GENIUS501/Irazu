@@ -169,12 +169,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "ReporteUsuarioCentroDiurno";
-            this.Text = "Reporte de clientes";
+            this.Text = "Reporte de pacientes";
             this.Load += new System.EventHandler(this.ReporteUsuarioCentroDiurno_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
