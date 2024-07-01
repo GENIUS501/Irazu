@@ -30,6 +30,7 @@ namespace Lienzos
             this.txt_id.Text = Obj.Id_Puesto.ToString();
             this.txt_nombre.Text = Obj.Nombre;
             this.txt_descripcion.Text = Obj.Descripcion;
+            this.txt_salario.Text = Obj.Salario.ToString();
         }
         private bool validar()
         {
