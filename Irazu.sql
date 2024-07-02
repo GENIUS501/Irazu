@@ -44,6 +44,8 @@ CREATE TABLE UsuarioCentroDiurno(
 	Medicamentos VARCHAR(MAX) NOT NULL,
 	Estado BIT,
 	Telefono VARCHAR(8) NOT NULL,
+	Fecha_Hora_Ingreso DATETIME NOT NULL,
+    Fecha_Hora_Salida DATETIME NULL
 );
 CREATE TABLE Puestos(
 	Id_Puesto INT IDENTITY (1,1) PRIMARY KEY NOT NULL,
@@ -62,6 +64,8 @@ CREATE TABLE Personal(
 	Telefono INT NULL,
 	Direccion VARCHAR(MAX) NOT NULL,
 	Id_Puesto INT NOT NULL,
+	Fecha_Hora_Ingreso DATETIME NOT NULL,
+    Fecha_Hora_Salida DATETIME NULL,
 	CONSTRAINT Fk_PERSONAL_PUESTOS FOREIGN KEY(Id_Puesto) REFERENCES Puestos(Id_Puesto),
 );
 CREATE TABLE Tipo_Medicamentos(

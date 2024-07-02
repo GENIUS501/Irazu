@@ -34,6 +34,8 @@ namespace AccesoDatos
         public string Medicamentos { get; set; }
         public Nullable<bool> Estado { get; set; }
         public string Telefono { get; set; }
+        public System.DateTime Fecha_Hora_Ingreso { get; set; }
+        public Nullable<System.DateTime> Fecha_Hora_Salida { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tab_Devoluciones> Tab_Devoluciones { get; set; }
