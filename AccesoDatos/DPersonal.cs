@@ -31,6 +31,7 @@ namespace AccesoDatos
                     Objbd.Telefono = obj.Telefono;
                     Objbd.Direccion = obj.Direccion;
                     Objbd.Id_Puesto = obj.Id_Puesto;
+                    Objbd.Fecha_Hora_Ingreso=DateTime.Now;
                     db.Personal.Add(Objbd);
 
                     int Resultado = db.SaveChanges();
@@ -39,7 +40,7 @@ namespace AccesoDatos
                     {
                         Ts.Complete();
                         Entidad_Movimientos.Id_Usuario = Id_Usuario;
-                        Entidad_Movimientos.modulo = "Clientes";
+                        Entidad_Movimientos.modulo = "Personal";
                         Entidad_Movimientos.tipo_movimiento = "Agregar";
                         Entidad_Movimientos.fecha_hora_movimiento = DateTime.Now;
                         Movimientos.Agregar(Entidad_Movimientos);
@@ -77,7 +78,8 @@ namespace AccesoDatos
                     Estado = x.Estado,
                     Telefono = x.Telefono,
                     Direccion = x.Direccion,
-                    Id_Puesto = x.Id_Puesto
+                    Id_Puesto = x.Id_Puesto,
+                    Fecha_Hora_Salida=x.Fecha_Hora_Salida
                 }).ToList();
                 return Lista;
             }
@@ -106,13 +108,17 @@ namespace AccesoDatos
                     Objbd.Telefono = obj.Telefono;
                     Objbd.Direccion = obj.Direccion;
                     Objbd.Id_Puesto = obj.Id_Puesto;
+                    if (obj.Fecha_Hora_Salida != null)
+                    {
+                        Objbd.Fecha_Hora_Salida = obj.Fecha_Hora_Salida;
+                    }
                     db.Entry(Objbd).State = EntityState.Modified;
                     int Resultado = db.SaveChanges();
                     if (Resultado > 0)
                     {
                         Ts.Complete();
                         Entidad_Movimientos.Id_Usuario = Id_Usuario;
-                        Entidad_Movimientos.modulo = "Clientes";
+                        Entidad_Movimientos.modulo = "Personal";
                         Entidad_Movimientos.tipo_movimiento = "Modificar";
                         Entidad_Movimientos.fecha_hora_movimiento = DateTime.Now;
                         Movimientos.Agregar(Entidad_Movimientos);
@@ -143,7 +149,7 @@ namespace AccesoDatos
                     {
                         Ts.Complete();
                         Entidad_Movimientos.Id_Usuario = Id_Usuario;
-                        Entidad_Movimientos.modulo = "Clientes";
+                        Entidad_Movimientos.modulo = "Personal";
                         Entidad_Movimientos.tipo_movimiento = "Eliminar";
                         Entidad_Movimientos.fecha_hora_movimiento = DateTime.Now;
                         Movimientos.Agregar(Entidad_Movimientos);

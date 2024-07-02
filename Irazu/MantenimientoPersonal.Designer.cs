@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MantenimientoPersonal));
             this.grpdatos = new System.Windows.Forms.GroupBox();
+            this.txt_fecha_egreso = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
             this.cbo_puestos = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -51,8 +53,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
+            this.btn_egresar = new System.Windows.Forms.Button();
             this.grpdatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -60,7 +61,8 @@
             // 
             // grpdatos
             // 
-            this.grpdatos.Controls.Add(this.dateTimePicker1);
+            this.grpdatos.Controls.Add(this.btn_egresar);
+            this.grpdatos.Controls.Add(this.txt_fecha_egreso);
             this.grpdatos.Controls.Add(this.label6);
             this.grpdatos.Controls.Add(this.cbo_puestos);
             this.grpdatos.Controls.Add(this.label5);
@@ -85,6 +87,22 @@
             this.grpdatos.TabIndex = 0;
             this.grpdatos.TabStop = false;
             this.grpdatos.Text = "Datos del personal";
+            // 
+            // txt_fecha_egreso
+            // 
+            this.txt_fecha_egreso.Location = new System.Drawing.Point(9, 202);
+            this.txt_fecha_egreso.Name = "txt_fecha_egreso";
+            this.txt_fecha_egreso.Size = new System.Drawing.Size(227, 20);
+            this.txt_fecha_egreso.TabIndex = 97;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 185);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(87, 13);
+            this.label6.TabIndex = 96;
+            this.label6.Text = "Fecha de egreso";
             // 
             // cbo_puestos
             // 
@@ -262,21 +280,15 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // dateTimePicker1
+            // btn_egresar
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(9, 202);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(227, 20);
-            this.dateTimePicker1.TabIndex = 97;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 185);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 13);
-            this.label6.TabIndex = 96;
-            this.label6.Text = "Fecha de egreso";
+            this.btn_egresar.Location = new System.Drawing.Point(241, 199);
+            this.btn_egresar.Name = "btn_egresar";
+            this.btn_egresar.Size = new System.Drawing.Size(75, 23);
+            this.btn_egresar.TabIndex = 98;
+            this.btn_egresar.Text = "Egresar";
+            this.btn_egresar.UseVisualStyleBackColor = true;
+            this.btn_egresar.Click += new System.EventHandler(this.btn_egresar_Click);
             // 
             // MantenimientoPersonal
             // 
@@ -322,7 +334,8 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ComboBox cbo_puestos;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker txt_fecha_egreso;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btn_egresar;
     }
 }

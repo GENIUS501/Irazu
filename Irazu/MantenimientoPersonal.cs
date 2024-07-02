@@ -22,6 +22,7 @@ namespace Lienzos
         public int Usuario { get; set; }
         public string Accion { get; set; }
         public int Id { get; set; }
+        public bool Egresar { get; set; }
         #endregion
         private void MantenimientoPersonal_Load(object sender, EventArgs e)
         {
@@ -204,6 +205,14 @@ namespace Lienzos
                         if (Accion == "M")
                         {
                             Obj.ID = Id;
+                            if (Egresar)
+                            {
+                                Obj.Fecha_Hora_Salida = Convert.ToDateTime(this.txt_fecha_egreso.Text);
+                            }
+                            else
+                            {
+                                Obj.Fecha_Hora_Salida = null;
+                            }
                             FilasAfectadas = Negocios.Modificar(Obj, Usuario);
                             if (FilasAfectadas > 0)
                             {
@@ -236,6 +245,12 @@ namespace Lienzos
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_egresar_Click(object sender, EventArgs e)
+        {
+            Egresar = true;
+            grpdatos.Enabled = false;
         }
     }
 }
