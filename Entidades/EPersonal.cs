@@ -18,5 +18,7 @@ namespace Entidades
         public Nullable<int> Telefono { get; set; }
         public string Direccion { get; set; }
         public int Id_Puesto { get; set; }
+        public System.DateTime Fecha_Hora_Ingreso { get; set; }
+        public Nullable<System.DateTime> Fecha_Hora_Salida { get; set; }
     }
 }
