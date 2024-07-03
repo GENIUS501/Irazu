@@ -79,7 +79,8 @@ namespace AccesoDatos
                     Telefono = x.Telefono,
                     Direccion = x.Direccion,
                     Id_Puesto = x.Id_Puesto,
-                    Fecha_Hora_Salida=x.Fecha_Hora_Salida
+                    Fecha_Hora_Ingreso = x.Fecha_Hora_Ingreso,
+                    Fecha_Hora_Salida =x.Fecha_Hora_Salida
                 }).ToList();
                 return Lista;
             }

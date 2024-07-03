@@ -84,6 +84,7 @@ namespace AccesoDatos
                     Medicamentos = x.Medicamentos,
                     Lugarvivienda = x.Lugarvivienda,
                     ID = x.ID,
+                    Fecha_Hora_Ingreso=x.Fecha_Hora_Ingreso,
                     Fecha_Hora_Salida=x.Fecha_Hora_Salida
                 }).ToList();
                 return Lista;

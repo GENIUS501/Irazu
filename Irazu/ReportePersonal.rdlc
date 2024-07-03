@@ -53,10 +53,18 @@
           <DataField>Direccion</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Fecha_Hora_Ingreso">
+          <DataField>Fecha_Hora_Ingreso</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Fecha_Hora_Salida">
+          <DataField>Fecha_Hora_Salida</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>IrazuDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Dell\source\repos\Irazu-Git\Irazu\Irazu\IrazuDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Genius501\source\repos\Irazu\Irazu\IrazuDataSet.xsd</rd:SchemaPath>
         <rd:TableName>Personal</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -91,6 +99,12 @@
                 </TablixColumn>
                 <TablixColumn>
                   <Width>2.5cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>3.58479cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>3.61125cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -294,6 +308,66 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox27</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Fecha Hora Ingreso</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox5">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Fecha Hora Egreso</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox5</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -522,12 +596,74 @@
                         </Textbox>
                       </CellContents>
                     </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Fecha_Hora_Ingreso">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Fecha_Hora_Ingreso.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Fecha_Hora_Ingreso</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Fecha_Hora_Salida">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Fecha_Hora_Salida.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Fecha_Hora_Salida</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
                   </TablixCells>
                 </TablixRow>
               </TablixRows>
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
+                <TablixMember />
+                <TablixMember />
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
@@ -551,7 +687,7 @@
             <Top>2.10717cm</Top>
             <Left>0.36724cm</Left>
             <Height>1.2cm</Height>
-            <Width>17.5cm</Width>
+            <Width>24.69604cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -562,7 +698,7 @@
         <Height>2in</Height>
         <Style />
       </Body>
-      <Width>7.25in</Width>
+      <Width>10in</Width>
       <Page>
         <PageHeader>
           <Height>2.81091cm</Height>
@@ -590,7 +726,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>1.40808cm</Top>
-              <Left>5.50172cm</Left>
+              <Left>9.31172cm</Left>
               <Height>0.83812cm</Height>
               <Width>6.78625cm</Width>
               <Style>
@@ -624,7 +760,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
               <Top>0.05842cm</Top>
-              <Left>5.1313cm</Left>
+              <Left>8.9413cm</Left>
               <Height>1.31438cm</Height>
               <Width>7.42125cm</Width>
               <ZIndex>1</ZIndex>
@@ -656,7 +792,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox3</rd:DefaultName>
               <Top>2.31676cm</Top>
-              <Left>7.43316cm</Left>
+              <Left>11.24316cm</Left>
               <Height>0.49415cm</Height>
               <Width>2.5cm</Width>
               <ZIndex>2</ZIndex>
@@ -674,7 +810,7 @@
               <Source>Embedded</Source>
               <Value>ImagendeWhatsApp20231122alas193010_be162142</Value>
               <Sizing>FitProportional</Sizing>
-              <Left>15.5937cm</Left>
+              <Left>22.5787cm</Left>
               <Height>2.70508cm</Height>
               <Width>2.77cm</Width>
               <ZIndex>3</ZIndex>
@@ -770,7 +906,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox14</rd:DefaultName>
               <Top>1.9225cm</Top>
-              <Left>16.08147cm</Left>
+              <Left>23.06647cm</Left>
               <Height>0.6cm</Height>
               <Width>1.3152cm</Width>
               <ZIndex>2</ZIndex>
@@ -800,7 +936,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox16</rd:DefaultName>
               <Top>1.9225cm</Top>
-              <Left>17.39667cm</Left>
+              <Left>24.38167cm</Left>
               <Height>0.6cm</Height>
               <Width>1.01833cm</Width>
               <ZIndex>3</ZIndex>

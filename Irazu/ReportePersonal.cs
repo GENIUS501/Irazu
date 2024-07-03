@@ -31,12 +31,14 @@ namespace Lienzos
                     Nombre = x.Nombre,
                     Primer_Apellido = x.Primer_Apellido,
                     Segundo_Apellido = x.Segundo_Apellido,
-                    Genero = (x.Genero==1)?"Masculino":"Femenino",
+                    Genero = (x.Genero == 1) ? "Masculino" : "Femenino",
                     ID = x.ID,
                     Estado = x.Estado,
                     Telefono = x.Telefono,
                     Direccion = x.Direccion,
-                    Id_Puesto = x.Id_Puesto
+                    Id_Puesto = x.Id_Puesto,
+                    Fecha_Hora_Ingreso = x.Fecha_Hora_Ingreso,
+                    Fecha_Hora_Salida = x.Fecha_Hora_Salida
                 }).ToList();
                 ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                 this.reportViewer1.LocalReport.DataSources.Clear();
@@ -72,7 +74,9 @@ namespace Lienzos
                         Estado = x.Estado,
                         Telefono = x.Telefono,
                         Direccion = x.Direccion,
-                        Id_Puesto = x.Id_Puesto
+                        Id_Puesto = x.Id_Puesto,
+                        Fecha_Hora_Ingreso = x.Fecha_Hora_Ingreso,
+                        Fecha_Hora_Salida = x.Fecha_Hora_Salida
                     }).Where(x => x.Cedula.Contains(this.txt_cedula.Text)).ToList();
                     ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                     this.reportViewer1.LocalReport.DataSources.Clear();
@@ -108,7 +112,9 @@ namespace Lienzos
                         Estado = x.Estado,
                         Telefono = x.Telefono,
                         Direccion = x.Direccion,
-                        Id_Puesto = x.Id_Puesto
+                        Id_Puesto = x.Id_Puesto,
+                        Fecha_Hora_Ingreso = x.Fecha_Hora_Ingreso,
+                        Fecha_Hora_Salida = x.Fecha_Hora_Salida
                     }).Where(x => x.Nombre.Contains(this.txt_nombre.Text)).ToList();
                     ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                     this.reportViewer1.LocalReport.DataSources.Clear();
