@@ -34,6 +34,7 @@ namespace AccesoDatos
                     Objbd.Padecimientos = obj.Padecimientos;
                     Objbd.Medicamentos = obj.Medicamentos;
                     Objbd.Lugarvivienda = obj.Lugarvivienda;
+                    Objbd.Fecha_Hora_Ingreso=DateTime.Now;
                     db.UsuarioCentroDiurno.Add(Objbd);
 
                     int Resultado = db.SaveChanges();
@@ -82,7 +83,8 @@ namespace AccesoDatos
                     Padecimientos = x.Padecimientos,
                     Medicamentos = x.Medicamentos,
                     Lugarvivienda = x.Lugarvivienda,
-                    ID = x.ID
+                    ID = x.ID,
+                    Fecha_Hora_Salida=x.Fecha_Hora_Salida
                 }).ToList();
                 return Lista;
             }
@@ -114,6 +116,10 @@ namespace AccesoDatos
                     Objbd.Padecimientos = obj.Padecimientos;
                     Objbd.Medicamentos = obj.Medicamentos;
                     Objbd.Lugarvivienda = obj.Lugarvivienda;
+                    if (obj.Fecha_Hora_Salida != null)
+                    {
+                        Objbd.Fecha_Hora_Salida = obj.Fecha_Hora_Salida;
+                    }
                     db.Entry(Objbd).State = EntityState.Modified;
                     int Resultado = db.SaveChanges();
                     if (Resultado > 0)

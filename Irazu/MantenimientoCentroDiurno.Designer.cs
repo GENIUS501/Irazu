@@ -58,6 +58,9 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btn_egresar = new System.Windows.Forms.Button();
+            this.txt_fecha_egreso = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             this.grpdatos.SuspendLayout();
             this.GrpOtros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,6 +69,9 @@
             // 
             // grpdatos
             // 
+            this.grpdatos.Controls.Add(this.btn_egresar);
+            this.grpdatos.Controls.Add(this.txt_fecha_egreso);
+            this.grpdatos.Controls.Add(this.label5);
             this.grpdatos.Controls.Add(this.txt_apellido2);
             this.grpdatos.Controls.Add(this.label4);
             this.grpdatos.Controls.Add(this.txt_apellido1);
@@ -119,7 +125,7 @@
             // 
             this.cbo_Genero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_Genero.FormattingEnabled = true;
-            this.cbo_Genero.Location = new System.Drawing.Point(9, 139);
+            this.cbo_Genero.Location = new System.Drawing.Point(7, 122);
             this.cbo_Genero.Name = "cbo_Genero";
             this.cbo_Genero.Size = new System.Drawing.Size(227, 21);
             this.cbo_Genero.TabIndex = 19;
@@ -151,7 +157,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 123);
+            this.label2.Location = new System.Drawing.Point(4, 106);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 18;
@@ -329,6 +335,32 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // btn_egresar
+            // 
+            this.btn_egresar.Location = new System.Drawing.Point(179, 158);
+            this.btn_egresar.Name = "btn_egresar";
+            this.btn_egresar.Size = new System.Drawing.Size(75, 23);
+            this.btn_egresar.TabIndex = 101;
+            this.btn_egresar.Text = "Egresar";
+            this.btn_egresar.UseVisualStyleBackColor = true;
+            this.btn_egresar.Click += new System.EventHandler(this.btn_egresar_Click);
+            // 
+            // txt_fecha_egreso
+            // 
+            this.txt_fecha_egreso.Location = new System.Drawing.Point(6, 161);
+            this.txt_fecha_egreso.Name = "txt_fecha_egreso";
+            this.txt_fecha_egreso.Size = new System.Drawing.Size(167, 20);
+            this.txt_fecha_egreso.TabIndex = 100;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 144);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 13);
+            this.label5.TabIndex = 99;
+            this.label5.Text = "Fecha de egreso";
+            // 
             // MantenimientoCentroDiurno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,5 +416,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MaskedTextBox TxtTelefono;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button btn_egresar;
+        private System.Windows.Forms.DateTimePicker txt_fecha_egreso;
+        private System.Windows.Forms.Label label5;
     }
 }

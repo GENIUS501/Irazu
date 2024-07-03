@@ -22,6 +22,7 @@ namespace Lienzos
         public int Usuario { get; set; }
         public string Accion { get; set; }
         public int Id { get; set; }
+        public bool Egresar { get; set; }
         #endregion
         private void MantenimientoCentroDiurno_Load(object sender, EventArgs e)
         {
@@ -257,6 +258,13 @@ namespace Lienzos
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_egresar_Click(object sender, EventArgs e)
+        {
+            Egresar = true;
+            grpdatos.Enabled = false;
+            GrpOtros.Enabled = false;
         }
     }
 }
