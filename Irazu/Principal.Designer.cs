@@ -127,7 +127,7 @@
             // 
             this.CentroDiurno.Name = "CentroDiurno";
             this.CentroDiurno.Size = new System.Drawing.Size(200, 22);
-            this.CentroDiurno.Text = "Clientes";
+            this.CentroDiurno.Text = "Pacientes";
             this.CentroDiurno.Click += new System.EventHandler(this.CentroDiurno_Click);
             // 
             // Puestos
@@ -190,7 +190,7 @@
             // 
             this.Reporte_centro_diurno.Name = "Reporte_centro_diurno";
             this.Reporte_centro_diurno.Size = new System.Drawing.Size(213, 22);
-            this.Reporte_centro_diurno.Text = "Reporte de clientes";
+            this.Reporte_centro_diurno.Text = "Reporte de pacientes";
             this.Reporte_centro_diurno.Click += new System.EventHandler(this.Reporte_centro_diurno_Click);
             // 
             // ReportePlanillas

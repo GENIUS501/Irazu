@@ -254,8 +254,15 @@ namespace Lienzos
 
         private void btn_egresar_Click(object sender, EventArgs e)
         {
-            Egresar = true;
-            grpdatos.Enabled = false;
+            if (Convert.ToDateTime(this.txt_fecha_egreso.Text.ToString()) > DateTime.Now)
+            {
+                Egresar = true;
+                grpdatos.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("La fecha debe ser mayor que la de hoy.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
