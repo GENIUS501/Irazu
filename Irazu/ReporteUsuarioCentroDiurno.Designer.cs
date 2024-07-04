@@ -174,7 +174,6 @@
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
-            this.MaximizeBox = false;
             this.Name = "ReporteUsuarioCentroDiurno";
             this.Text = "Reporte de pacientes";
             this.Load += new System.EventHandler(this.ReporteUsuarioCentroDiurno_Load);

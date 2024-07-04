@@ -1,4 +1,5 @@
-﻿using Microsoft.Reporting.WinForms;
+﻿using Entidades;
+using Microsoft.Reporting.WinForms;
 using Negocios;
 using System;
 using System.Collections.Generic;
@@ -25,7 +26,24 @@ namespace Lienzos
             try
             {
                 NUsuarioCentroDiurno Negocios = new NUsuarioCentroDiurno();
-                var datasource = Negocios.Mostrar();
+                var datasource = Negocios.Mostrar().Select(x => new
+                {
+                    Cedula = x.Cedula,
+                    Nombre = x.Nombre,
+                    PrimerApellido = x.PrimerApellido,
+                    SegundoApellido = x.SegundoApellido,
+                    Genero = x.Genero,
+                    Telefono = x.Telefono,
+                    Expediente = x.Expediente,
+                    Familiardirecto = x.Familiardirecto,
+                    Padecimientos = x.Padecimientos,
+                    Medicamentos = x.Medicamentos,
+                    Lugarvivienda = x.Lugarvivienda,
+                    ID = x.ID,
+                    Fecha_Hora_Ingreso = x.Fecha_Hora_Ingreso,
+                    Fecha_Hora_Salida = x.Fecha_Hora_Salida,
+                    Total_Dias = (x.Fecha_Hora_Salida != null) ? (x.Fecha_Hora_Salida - x.Fecha_Hora_Ingreso).Value.Days : (DateTime.Now - x.Fecha_Hora_Ingreso).Days
+                }).ToList();
                 ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                 this.reportViewer1.LocalReport.DataSources.Clear();
                 this.reportViewer1.LocalReport.DataSources.Add(Rds);
@@ -48,7 +66,24 @@ namespace Lienzos
                 if (this.txt_expediente.Text != "")
                 {
                     NUsuarioCentroDiurno Negocios = new NUsuarioCentroDiurno();
-                    var datasource = Negocios.Mostrar().Where(x => x.Cedula.Contains(this.txt_expediente.Text)).ToList();
+                    var datasource = Negocios.Mostrar().Where(x => x.Cedula.Contains(this.txt_expediente.Text)).Select(x => new
+                    {
+                        Cedula = x.Cedula,
+                        Nombre = x.Nombre,
+                        PrimerApellido = x.PrimerApellido,
+                        SegundoApellido = x.SegundoApellido,
+                        Genero = x.Genero,
+                        Telefono = x.Telefono,
+                        Expediente = x.Expediente,
+                        Familiardirecto = x.Familiardirecto,
+                        Padecimientos = x.Padecimientos,
+                        Medicamentos = x.Medicamentos,
+                        Lugarvivienda = x.Lugarvivienda,
+                        ID = x.ID,
+                        Fecha_Hora_Ingreso = x.Fecha_Hora_Ingreso,
+                        Fecha_Hora_Salida = x.Fecha_Hora_Salida,
+                        Total_Dias = (x.Fecha_Hora_Salida != null) ? (x.Fecha_Hora_Salida - x.Fecha_Hora_Ingreso).Value.Days : (DateTime.Now - x.Fecha_Hora_Ingreso).Days
+                    }).ToList();
                     ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                     this.reportViewer1.LocalReport.DataSources.Clear();
                     this.reportViewer1.LocalReport.DataSources.Add(Rds);
@@ -72,7 +107,24 @@ namespace Lienzos
                 if (this.txt_cedula.Text != "")
                 {
                     NUsuarioCentroDiurno Negocios = new NUsuarioCentroDiurno();
-                    var datasource = Negocios.Mostrar().Where(x => x.Cedula.Contains(this.txt_cedula.Text)).ToList();
+                    var datasource = Negocios.Mostrar().Where(x => x.Cedula.Contains(this.txt_cedula.Text)).Select(x => new
+                    {
+                        Cedula = x.Cedula,
+                        Nombre = x.Nombre,
+                        PrimerApellido = x.PrimerApellido,
+                        SegundoApellido = x.SegundoApellido,
+                        Genero = x.Genero,
+                        Telefono = x.Telefono,
+                        Expediente = x.Expediente,
+                        Familiardirecto = x.Familiardirecto,
+                        Padecimientos = x.Padecimientos,
+                        Medicamentos = x.Medicamentos,
+                        Lugarvivienda = x.Lugarvivienda,
+                        ID = x.ID,
+                        Fecha_Hora_Ingreso = x.Fecha_Hora_Ingreso,
+                        Fecha_Hora_Salida = x.Fecha_Hora_Salida,
+                        Total_Dias = (x.Fecha_Hora_Salida != null) ? (x.Fecha_Hora_Salida - x.Fecha_Hora_Ingreso).Value.Days : (DateTime.Now - x.Fecha_Hora_Ingreso).Days
+                    }).ToList();
                     ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                     this.reportViewer1.LocalReport.DataSources.Clear();
                     this.reportViewer1.LocalReport.DataSources.Add(Rds);
@@ -95,8 +147,25 @@ namespace Lienzos
             {
                 if (this.txt_nombre.Text != "")
                 {
-                    NPersonal Negocios = new NPersonal();
-                    var datasource = Negocios.Mostrar().Where(x => x.Nombre.Contains(this.txt_nombre.Text)).ToList();
+                    NUsuarioCentroDiurno Negocios = new NUsuarioCentroDiurno();
+                    var datasource = Negocios.Mostrar().Where(x => x.Nombre.Contains(this.txt_nombre.Text)).Select(x => new 
+                    {
+                        Cedula = x.Cedula,
+                        Nombre = x.Nombre,
+                        PrimerApellido = x.PrimerApellido,
+                        SegundoApellido = x.SegundoApellido,
+                        Genero = x.Genero,
+                        Telefono = x.Telefono,
+                        Expediente = x.Expediente,
+                        Familiardirecto = x.Familiardirecto,
+                        Padecimientos = x.Padecimientos,
+                        Medicamentos = x.Medicamentos,
+                        Lugarvivienda = x.Lugarvivienda,
+                        ID = x.ID,
+                        Fecha_Hora_Ingreso = x.Fecha_Hora_Ingreso,
+                        Fecha_Hora_Salida = x.Fecha_Hora_Salida,
+                        Total_Dias= (x.Fecha_Hora_Salida!=null)?(x.Fecha_Hora_Salida-x.Fecha_Hora_Ingreso).Value.Days: (DateTime.Now - x.Fecha_Hora_Ingreso).Days
+                    }).ToList();
                     ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                     this.reportViewer1.LocalReport.DataSources.Clear();
                     this.reportViewer1.LocalReport.DataSources.Add(Rds);
