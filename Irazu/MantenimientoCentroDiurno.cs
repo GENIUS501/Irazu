@@ -71,6 +71,11 @@ namespace Lienzos
             this.TxtLugar.Text = Obj.Lugarvivienda.ToString();
             this.TxtMedicamentos.Text = Obj.Medicamentos.ToString();
             this.cbo_Genero.SelectedValue = int.Parse(Obj.Genero);
+            if (Obj.Fecha_Hora_Salida != null)
+            {
+                this.txt_fecha_egreso.Text = Obj.Fecha_Hora_Salida.ToString();
+                Accion = "C";
+            }
         }
 
         private bool validar()
@@ -226,6 +231,14 @@ namespace Lienzos
                         if (Accion == "M")
                         {
                             Obj.ID = Id;
+                            if (Egresar)
+                            {
+                                Obj.Fecha_Hora_Salida = Convert.ToDateTime(this.txt_fecha_egreso.Text);
+                            }
+                            else
+                            {
+                                Obj.Fecha_Hora_Salida = null;
+                            }
                             FilasAfectadas = Negocios.Modificar(Obj, Usuario);
                             if (FilasAfectadas > 0)
                             {

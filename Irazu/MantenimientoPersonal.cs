@@ -81,6 +81,11 @@ namespace Lienzos
             this.TxtDireccion.Text = Obj.Direccion.ToString();
             this.TxtTelefono.Text = Obj.Telefono.ToString();
             this.cbo_puestos.SelectedValue = Obj.Id_Puesto;
+            if (Obj.Fecha_Hora_Salida != null)
+            {
+                this.txt_fecha_egreso.Text = Obj.Fecha_Hora_Salida.ToString();
+                Accion = "C";
+            }
         }
 
         private bool validar()
