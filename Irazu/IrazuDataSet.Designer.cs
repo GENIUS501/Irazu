@@ -2005,6 +2005,8 @@ namespace Lienzos {
             
             private global::System.Data.DataColumn columnFecha_Hora_Salida;
             
+            private global::System.Data.DataColumn columnTotal_Dias;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public PersonalDataTable() {
@@ -2128,6 +2130,14 @@ namespace Lienzos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Total_DiasColumn {
+                get {
+                    return this.columnTotal_Dias;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2163,7 +2173,7 @@ namespace Lienzos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PersonalRow AddPersonalRow(string Cedula, string Nombre, string Primer_Apellido, string Segundo_Apellido, int Genero, int Estado, int Telefono, string Direccion, System.DateTime Fecha_Hora_Ingreso, System.DateTime Fecha_Hora_Salida) {
+            public PersonalRow AddPersonalRow(string Cedula, string Nombre, string Primer_Apellido, string Segundo_Apellido, int Genero, int Estado, int Telefono, string Direccion, System.DateTime Fecha_Hora_Ingreso, System.DateTime Fecha_Hora_Salida, string Total_Dias) {
                 PersonalRow rowPersonalRow = ((PersonalRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2176,7 +2186,8 @@ namespace Lienzos {
                         Telefono,
                         Direccion,
                         Fecha_Hora_Ingreso,
-                        Fecha_Hora_Salida};
+                        Fecha_Hora_Salida,
+                        Total_Dias};
                 rowPersonalRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPersonalRow);
                 return rowPersonalRow;
@@ -2217,6 +2228,7 @@ namespace Lienzos {
                 this.columnDireccion = base.Columns["Direccion"];
                 this.columnFecha_Hora_Ingreso = base.Columns["Fecha_Hora_Ingreso"];
                 this.columnFecha_Hora_Salida = base.Columns["Fecha_Hora_Salida"];
+                this.columnTotal_Dias = base.Columns["Total_Dias"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2244,6 +2256,8 @@ namespace Lienzos {
                 base.Columns.Add(this.columnFecha_Hora_Ingreso);
                 this.columnFecha_Hora_Salida = new global::System.Data.DataColumn("Fecha_Hora_Salida", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFecha_Hora_Salida);
+                this.columnTotal_Dias = new global::System.Data.DataColumn("Total_Dias", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotal_Dias);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -5398,6 +5412,22 @@ namespace Lienzos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Total_Dias {
+                get {
+                    try {
+                        return ((string)(this[this.tablePersonal.Total_DiasColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Total_Dias\' de la tabla \'Personal\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePersonal.Total_DiasColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsTelefonoNull() {
                 return this.IsNull(this.tablePersonal.TelefonoColumn);
             }
@@ -5418,6 +5448,18 @@ namespace Lienzos {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetFecha_Hora_SalidaNull() {
                 this[this.tablePersonal.Fecha_Hora_SalidaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTotal_DiasNull() {
+                return this.IsNull(this.tablePersonal.Total_DiasColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTotal_DiasNull() {
+                this[this.tablePersonal.Total_DiasColumn] = global::System.Convert.DBNull;
             }
         }
         

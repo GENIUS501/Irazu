@@ -38,7 +38,8 @@ namespace Lienzos
                     Direccion = x.Direccion,
                     Id_Puesto = x.Id_Puesto,
                     Fecha_Hora_Ingreso = x.Fecha_Hora_Ingreso,
-                    Fecha_Hora_Salida = x.Fecha_Hora_Salida
+                    Fecha_Hora_Salida = x.Fecha_Hora_Salida,
+                    Total_Dias = (x.Fecha_Hora_Salida != null) ? (x.Fecha_Hora_Salida - x.Fecha_Hora_Ingreso).Value.Days : (DateTime.Now - x.Fecha_Hora_Ingreso).Days
                 }).ToList();
                 ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                 this.reportViewer1.LocalReport.DataSources.Clear();
@@ -76,7 +77,8 @@ namespace Lienzos
                         Direccion = x.Direccion,
                         Id_Puesto = x.Id_Puesto,
                         Fecha_Hora_Ingreso = x.Fecha_Hora_Ingreso,
-                        Fecha_Hora_Salida = x.Fecha_Hora_Salida
+                        Fecha_Hora_Salida = x.Fecha_Hora_Salida,
+                        Total_Dias = (x.Fecha_Hora_Salida != null) ? (x.Fecha_Hora_Salida - x.Fecha_Hora_Ingreso).Value.Days : (DateTime.Now - x.Fecha_Hora_Ingreso).Days
                     }).Where(x => x.Cedula.Contains(this.txt_cedula.Text)).ToList();
                     ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                     this.reportViewer1.LocalReport.DataSources.Clear();
@@ -114,7 +116,8 @@ namespace Lienzos
                         Direccion = x.Direccion,
                         Id_Puesto = x.Id_Puesto,
                         Fecha_Hora_Ingreso = x.Fecha_Hora_Ingreso,
-                        Fecha_Hora_Salida = x.Fecha_Hora_Salida
+                        Fecha_Hora_Salida = x.Fecha_Hora_Salida,
+                        Total_Dias = (x.Fecha_Hora_Salida != null) ? (x.Fecha_Hora_Salida - x.Fecha_Hora_Ingreso).Value.Days : (DateTime.Now - x.Fecha_Hora_Ingreso).Days
                     }).Where(x => x.Nombre.Contains(this.txt_nombre.Text)).ToList();
                     ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                     this.reportViewer1.LocalReport.DataSources.Clear();
