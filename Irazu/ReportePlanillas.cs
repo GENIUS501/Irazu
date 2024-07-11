@@ -37,7 +37,7 @@ namespace Lienzos
                 this.cbo_puestos.DataSource = PuestosDataSource.ToArray();
                 #endregion
                 NPersonal Negocios = new NPersonal();
-                var datasource = Negocios.Mostrar().Select(x => new
+                var datasource = Negocios.Mostrar().Where(z => z.Fecha_Hora_Salida == null).Select(x => new
                 {
                     x.Cedula,
                     x.Nombre,
@@ -69,7 +69,7 @@ namespace Lienzos
                 {
                     NPersonal Negocios = new NPersonal();
                     NPuestos NegociosPuestos = new NPuestos();
-                    var datasource = Negocios.Mostrar().Select(x => new
+                    var datasource = Negocios.Mostrar().Where(z => z.Fecha_Hora_Salida == null).Select(x => new
                     {
                         x.Cedula,
                         x.Nombre,
@@ -102,7 +102,7 @@ namespace Lienzos
                 {
                     NPersonal Negocios = new NPersonal();
                     NPuestos NegociosPuestos = new NPuestos();
-                    var datasource = Negocios.Mostrar().Select(x => new
+                    var datasource = Negocios.Mostrar().Where(z => z.Fecha_Hora_Salida == null).Select(x => new
                     {
                         x.Cedula,
                         x.Nombre,
@@ -133,7 +133,7 @@ namespace Lienzos
             {
                 NPersonal Negocios = new NPersonal();
                 NPuestos NegociosPuestos = new NPuestos();
-                var datasource = Negocios.Mostrar().Select(x => new
+                var datasource = Negocios.Mostrar().Where(z => z.Fecha_Hora_Salida == null).Select(x => new
                 {
                     x.Cedula,
                     x.Nombre,
