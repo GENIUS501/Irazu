@@ -775,7 +775,7 @@ namespace Irazu
                     Permisos.Accion = "TipoMedicamento";
                     Lista_Permisos.Add(Permisos);
                     Permisos = new EPermisos();
-                    if (this.grp_Centro_Diurno.Enabled == true)
+                    if (this.grp_TipoMedicamento.Enabled == true)
                     {
                         if (chk_Tipo_Mediacamento_Agregar.Checked == true)
                         {

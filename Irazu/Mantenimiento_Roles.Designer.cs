@@ -36,6 +36,9 @@
             this.txt_id_perfil = new System.Windows.Forms.TextBox();
             this.Lbl_Perfil = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.chb_devoluciones = new System.Windows.Forms.CheckBox();
+            this.chb_ventas = new System.Windows.Forms.CheckBox();
             this.chb_Puestos = new System.Windows.Forms.CheckBox();
             this.grp_Puestos = new System.Windows.Forms.GroupBox();
             this.chk_Puestos_Consultar = new System.Windows.Forms.CheckBox();
@@ -89,11 +92,9 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.chb_devoluciones = new System.Windows.Forms.CheckBox();
-            this.chb_ventas = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.grp_Puestos.SuspendLayout();
             this.grp_TipoMedicamento.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -104,7 +105,6 @@
             this.grp_roles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -176,6 +176,38 @@
             this.groupBox2.TabIndex = 20;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos de permisos";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.chb_devoluciones);
+            this.groupBox3.Controls.Add(this.chb_ventas);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(6, 363);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(318, 51);
+            this.groupBox3.TabIndex = 94;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Procesos";
+            // 
+            // chb_devoluciones
+            // 
+            this.chb_devoluciones.AutoSize = true;
+            this.chb_devoluciones.Location = new System.Drawing.Point(183, 19);
+            this.chb_devoluciones.Name = "chb_devoluciones";
+            this.chb_devoluciones.Size = new System.Drawing.Size(119, 20);
+            this.chb_devoluciones.TabIndex = 37;
+            this.chb_devoluciones.Text = "Reimpresiones";
+            this.chb_devoluciones.UseVisualStyleBackColor = true;
+            // 
+            // chb_ventas
+            // 
+            this.chb_ventas.AutoSize = true;
+            this.chb_ventas.Location = new System.Drawing.Point(7, 19);
+            this.chb_ventas.Name = "chb_ventas";
+            this.chb_ventas.Size = new System.Drawing.Size(170, 20);
+            this.chb_ventas.TabIndex = 36;
+            this.chb_ventas.Text = "Salida de medicamento";
+            this.chb_ventas.UseVisualStyleBackColor = true;
             // 
             // chb_Puestos
             // 
@@ -749,38 +781,6 @@
             this.pictureBox1.TabIndex = 89;
             this.pictureBox1.TabStop = false;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.chb_devoluciones);
-            this.groupBox3.Controls.Add(this.chb_ventas);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(6, 363);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(278, 51);
-            this.groupBox3.TabIndex = 94;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Procesos";
-            // 
-            // chb_devoluciones
-            // 
-            this.chb_devoluciones.AutoSize = true;
-            this.chb_devoluciones.Location = new System.Drawing.Point(94, 19);
-            this.chb_devoluciones.Name = "chb_devoluciones";
-            this.chb_devoluciones.Size = new System.Drawing.Size(109, 20);
-            this.chb_devoluciones.TabIndex = 37;
-            this.chb_devoluciones.Text = "Devoluciones";
-            this.chb_devoluciones.UseVisualStyleBackColor = true;
-            // 
-            // chb_ventas
-            // 
-            this.chb_ventas.AutoSize = true;
-            this.chb_ventas.Location = new System.Drawing.Point(7, 19);
-            this.chb_ventas.Name = "chb_ventas";
-            this.chb_ventas.Size = new System.Drawing.Size(68, 20);
-            this.chb_ventas.TabIndex = 36;
-            this.chb_ventas.Text = "Ventas";
-            this.chb_ventas.UseVisualStyleBackColor = true;
-            // 
             // Mantenimiento_Roles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -800,6 +800,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.grp_Puestos.ResumeLayout(false);
             this.grp_Puestos.PerformLayout();
             this.grp_TipoMedicamento.ResumeLayout(false);
@@ -818,8 +820,6 @@
             this.grp_roles.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }

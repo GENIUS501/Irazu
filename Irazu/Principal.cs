@@ -53,6 +53,9 @@ namespace Irazu
                 Bitacora_Movimientos.Visible = false;
                 Puestos.Visible = false;
                 ReportePlanillas.Visible = false;
+                Procesos.Visible = false;
+                Venta.Visible = false;
+                Devolucion.Visible = false;
                 perm = Negocios.llenar_Permisos(UsuarioLogueado.Id_Rol);
                 if (perm.Where(x => x.Modulo == "Usuarios").FirstOrDefault() != null)
                 {
